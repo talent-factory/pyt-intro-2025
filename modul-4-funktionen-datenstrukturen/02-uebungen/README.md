@@ -1,0 +1,27 @@
+# Übungen Modul 4
+
+**Während der Präsenzzeit**
+
+## 🎯 Übersicht
+
+| Übung | Thema | Dauer | Schwierigkeit |
+|-------|-------|-------|---------------|
+| 1 | Einfache Funktionen | 15 Min | ⭐ Einfach |
+| 2 | Funktionen mit Return | 15 Min | ⭐ Einfach |
+| 3 | Parameter-Varianten | 15 Min | ⭐⭐ Mittel |
+| 4 | Funktionen & Listen | 15 Min | ⭐⭐ Mittel |
+| 5 | Listen-Methoden | 15 Min | ⭐⭐ Mittel |
+| 6 | Dictionary-Operationen | 15 Min | ⭐⭐ Mittel |
+| 7 | Verschachtelte Daten | 15 Min | ⭐⭐⭐ Schwer |
+| 8 | Datenverarbeitung | 15 Min | ⭐⭐⭐ Schwer |
+
+## 📝 Übungen
+
+1. [Übung 1: Einfache Funktionen](./uebung-1-funktionen.md)
+2. [Übung 2: Funktionen mit Return](./uebung-2-return.md)
+3. [Übung 3: Parameter-Varianten](./uebung-3-parameter.md)
+4. [Übung 4: Funktionen & Listen](./uebung-4-listen.md)
+5. [Übung 5: Listen-Methoden](./uebung-5-methoden.md)
+6. [Übung 6: Dictionary-Operationen](./uebung-6-dict.md)
+7. [Übung 7: Verschachtelte Daten](./uebung-7-verschachtelt.md)
+8. [Übung 8: Datenverarbeitung](./uebung-8-verarbeitung.md)
