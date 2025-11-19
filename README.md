@@ -28,7 +28,7 @@ Der Kurs umfasst **5 Module** mit je **4 Lektionen à 50 Minuten**:
 - VS Code als Entwicklungsumgebung
 - Variablen, Zahlen und einfache Operationen
 
-### Modul 2: Grundlegende Datentypen und Operatoren
+### [Modul 2: Grundlegende Datentypen und Operatoren](./modul-2-datentypen/)
 
 **Mit Daten arbeiten**
 
@@ -37,7 +37,7 @@ Der Kurs umfasst **5 Module** mit je **4 Lektionen à 50 Minuten**:
 - Typkonvertierung und Input/Output
 - Interaktive Programme erstellen
 
-### Modul 3: Kontrollstrukturen und Prozedurale Programmierung
+### [Modul 3: Kontrollstrukturen und Prozedurale Programmierung](./modul-3-kontrollstrukturen/)
 
 **Programmfluss steuern**
 
@@ -46,7 +46,7 @@ Der Kurs umfasst **5 Module** mit je **4 Lektionen à 50 Minuten**:
 - While-Schleifen und Schleifenkontrolle
 - Verschachtelte Strukturen und Algorithmen
 
-### Modul 4: Datenstrukturen und Funktionen
+### [Modul 4: Datenstrukturen und Funktionen](./modul-4-funktionen-datenstrukturen/)
 
 **Code organisieren und wiederverwenden**
 
@@ -55,7 +55,7 @@ Der Kurs umfasst **5 Module** mit je **4 Lektionen à 50 Minuten**:
 - Funktionen definieren und aufrufen
 - Code modular strukturieren
 
-### Modul 5: Dateien, Module und Mini-Projekte
+### [Modul 5: Dateien, Module und Mini-Projekte](./modul-5-dateien-module/)
 
 **Reale Anwendungen entwickeln**
 
