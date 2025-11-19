@@ -1,6 +1,6 @@
 # Praxis: Präsenzunterricht Modul 2
 
-**Dauer:** 4 Lektionen à 50 Minuten = 200 Minuten (3h 20min)
+**Dauer:** 5 Lektionen à 50 Minuten = 250 Minuten (4h 10min)
 
 ## 🎯 Lernziele
 
@@ -10,6 +10,7 @@ Nach den Praxis-Lektionen können Sie:
 - Boolsche Werte und Vergleichsoperatoren anwenden
 - Typkonvertierung durchführen
 - Interaktive Programme mit `input()` erstellen
+- Erweiterte String-Methoden und Validierung anwenden
 
 ## 📚 Lektionsübersicht
 
@@ -73,6 +74,21 @@ Nach den Praxis-Lektionen können Sie:
 
 ---
 
+### [Lektion 5: Vertiefung & Praxis](./lektion-5-vertiefung.md) (50 Min)
+
+**Inhalt:**
+- Erweiterte String-Methoden
+- Komplexe Formatierung
+- Input-Validierung
+- Fehlerbehandlung (try-except)
+
+**Format:**
+- 10 Min: Theorie
+- 25 Min: Live-Coding (3 Beispiele)
+- 15 Min: Übungen 5-8
+
+---
+
 ## 🎓 Didaktisches Konzept
 
 Jede Lektion folgt dem gleichen Muster:
@@ -124,6 +140,10 @@ Die Übungen finden Sie im Ordner [02-uebungen](../02-uebungen/):
 2. **Übung 2:** Vergleiche und Bedingungen (15 Min)
 3. **Übung 3:** Benutzereingaben verarbeiten (15 Min)
 4. **Übung 4:** Interaktiver Rechner (20 Min)
+5. **Übung 5:** String-Methoden (15 Min)
+6. **Übung 6:** Formatierung (15 Min)
+7. **Übung 7:** Input-Validierung (15 Min)
+8. **Übung 8:** Textanalyse (15 Min)
 
 ## 🎯 Lernzielkontrolle
 
@@ -135,7 +155,8 @@ Nach den Praxis-Lektionen sollten Studierende:
 - ✅ Logische Operatoren verstehen
 - ✅ Typkonvertierung durchführen
 - ✅ Interaktive Programme schreiben
-- ✅ Alle 4 Übungen gelöst haben
+- ✅ Alle 8 Übungen gelöst haben
+- ✅ Fehlerbehandlung mit try-except verstehen
 
 ## 💡 Tipps für Dozierende
 
