@@ -1,0 +1,27 @@
+[project]
+name = "pyt-intro-2025"
+version = "1.0.0"
+description = "Python Programmierung Basis - Einführungskurs für Anfänger"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [
+    { name = "Daniel Senften", email = "daniel.senften@talent-factory.ch" }
+]
+
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/talent-factory/pyt-intro-2025"
+Repository = "https://github.com/talent-factory/pyt-intro-2025"
+
+[tool.uv]
+dev-dependencies = [
+    "jupyter>=1.0.0",
+    "ipython>=8.20.0",
+    "black>=24.0.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

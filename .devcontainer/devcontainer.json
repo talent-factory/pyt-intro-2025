@@ -1,0 +1,54 @@
+{
+  "name": "Python Programmierung Basis 2025",
+  "image": "mcr.microsoft.com/devcontainers/python:1-3.12-bullseye",
+  
+  "features": {
+    "ghcr.io/devcontainers/features/python:1": {
+      "version": "3.12",
+      "installTools": true
+    },
+    "ghcr.io/devcontainers/features/git:1": {
+      "version": "latest"
+    }
+  },
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-toolsai.jupyter",
+        "ms-python.debugpy"
+      ],
+      "settings": {
+        "python.defaultInterpreterPath": "/usr/local/bin/python",
+        "python.linting.enabled": true,
+        "python.linting.pylintEnabled": false,
+        "python.formatting.provider": "black",
+        "editor.formatOnSave": true,
+        "editor.rulers": [88, 100],
+        "files.autoSave": "afterDelay",
+        "files.autoSaveDelay": 1000,
+        "terminal.integrated.defaultProfile.linux": "bash"
+      }
+    }
+  },
+
+  "postCreateCommand": "pip install --upgrade pip && pip install uv && uv sync",
+  
+  "remoteUser": "vscode",
+  
+  "forwardPorts": [8000, 8888],
+  
+  "portsAttributes": {
+    "8000": {
+      "label": "Python App",
+      "onAutoForward": "notify"
+    },
+    "8888": {
+      "label": "Jupyter",
+      "onAutoForward": "notify"
+    }
+  }
+}
+
