@@ -23,15 +23,15 @@ Lesen Sie die folgenden Dokumente:
 
 Schauen Sie sich folgende Videos an (optional, aber empfohlen):
 
-- **Strings in Python** (15 Min)
+- **[Strings in Python](https://www.youtube.com/watch?v=k9TUPpGqYTo)** (15 Min)
   - String-Erstellung und Formatierung
   - String-Methoden
   
-- **Boolsche Werte** (10 Min)
+- **[Boolsche Werte](https://studyflix.de/informatik/boolesche-operatoren-6897)** (10 Min)
   - True/False
   - Vergleichsoperatoren
   
-- **Input/Output** (10 Min)
+- **[Input/Output](https://www.youtube.com/watch?v=W_Lf7m2r6XA)** (10 Min)
   - `input()` Funktion
   - Interaktive Programme
 
