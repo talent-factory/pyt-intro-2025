@@ -1,6 +1,6 @@
 # Modul 4: Funktionen & Datenstrukturen
 
-**Dauer:** 1 Tag (5 Lektionen à 50 Minuten)  
+**Dauer:** 1 Tag (4 Lektionen à 50 Minuten)
 **Voraussetzung:** Module 1-3
 
 ## 🎯 Lernziele
@@ -28,13 +28,12 @@ Bereiten Sie sich auf den Präsenztag vor.
 
 ### [01-praxis/](./01-praxis/)
 
-**Präsenzunterricht:** 5 Lektionen à 50 Minuten
+**Präsenzunterricht:** 4 Lektionen à 50 Minuten
 
-- 📖 [Lektion 1: Funktionen definieren](./01-praxis/) (50 Min)
-- 📖 [Lektion 2: Parameter & Rückgabewerte](./01-praxis/) (50 Min)
-- 📖 [Lektion 3: Listen vertiefen](./01-praxis/) (50 Min)
-- 📖 [Lektion 4: Dictionaries](./01-praxis/) (50 Min)
-- 📖 [Lektion 5: Tupel & Sets](./01-praxis/) (50 Min)
+- 📖 [Lektion 1: Funktionen definieren](./01-praxis/lektion-1-funktionen.md) (50 Min)
+- 📖 [Lektion 2: Parameter & Rückgabewerte](./01-praxis/lektion-2-parameter.md) (50 Min)
+- 📖 [Lektion 3: Listen vertiefen](./01-praxis/lektion-3-listen.md) (50 Min)
+- 📖 [Lektion 4: Dictionaries, Tupel & Sets](./01-praxis/lektion-4-dictionaries.md) (50 Min)
 
 ### [02-uebungen/](./02-uebungen/)
 
@@ -71,7 +70,7 @@ Bereiten Sie sich auf den Präsenztag vor.
 | Phase | Dauer | Beschreibung |
 |-------|-------|--------------|
 | Vorbereitung | 2-3 Std | Leseauftrag, Experimente, Quiz |
-| Präsenz | 250 Min | 5 Lektionen à 50 Min |
+| Präsenz | 200 Min | 4 Lektionen à 50 Min |
 | Nachbearbeitung | 4-6 Std | 3 Hausaufgaben + Reflexion |
 | **Gesamt** | **10-13 Std** | Komplettes Modul |
 

@@ -1,6 +1,6 @@
 # Präsenzunterricht Modul 3
 
-**Dauer:** 5 Lektionen à 50 Minuten
+**Dauer:** 4 Lektionen à 50 Minuten
 
 ## 📚 Lektionen
 
@@ -9,39 +9,38 @@
 | 1 | [Bedingte Anweisungen](./lektion-1-bedingungen.md) | 50 Min | 2 |
 | 2 | [While-Schleifen](./lektion-2-while-schleifen.md) | 50 Min | 2 |
 | 3 | [For-Schleifen & Listen](./lektion-3-for-listen.md) | 50 Min | 2 |
-| 4 | [Verschachtelte Strukturen](./lektion-4-verschachtelt.md) | 50 Min | 2 |
-| 5 | [Mini-Projekt](./lektion-5-projekt.md) | 50 Min | Projekt |
+| 4 | [Verschachtelte Strukturen & Mini-Projekt](./lektion-4-verschachtelt.md) | 50 Min | 2 + Projekt |
 
 ## ⏱️ Zeitplan
 
 ### Lektion 1: Bedingte Anweisungen (50 Min)
+
 - 00-15: Theorie (if, elif, else)
 - 15-35: Live-Coding (3 Beispiele)
 - 35-50: Übungen 1-2
 
 ### Lektion 2: While-Schleifen (50 Min)
+
 - 00-15: Theorie (while, break, continue)
 - 15-35: Live-Coding (3 Beispiele)
 - 35-50: Übungen 3-4
 
 ### Lektion 3: For-Schleifen & Listen (50 Min)
+
 - 00-15: Theorie (for, range, Listen)
 - 15-35: Live-Coding (3 Beispiele)
 - 35-50: Übungen 5-6
 
-### Lektion 4: Verschachtelte Strukturen (50 Min)
-- 00-15: Theorie (Verschachtelung)
-- 15-35: Live-Coding (3 Beispiele)
-- 35-50: Übungen 7-8
+### Lektion 4: Verschachtelte Strukturen & Mini-Projekt (50 Min)
 
-### Lektion 5: Mini-Projekt (50 Min)
-- 00-05: Einführung & Projekt-Auswahl
-- 05-45: Eigenständige Projekt-Arbeit
-- 45-50: Präsentation & Abschluss
+- 00-10: Theorie (Verschachtelung)
+- 10-30: Live-Coding (3 Beispiele)
+- 30-50: Mini-Projekt (Kontakt-Manager, Zahlenraten oder Hangman)
 
 ## 🎯 Lernziele
 
-Nach den 5 Lektionen können Sie:
+Nach den 4 Lektionen können Sie:
+
 - ✅ If/elif/else für Entscheidungen nutzen
 - ✅ While-Schleifen für Wiederholungen einsetzen
 - ✅ For-Schleifen für Iteration verwenden
@@ -66,4 +65,3 @@ Alle Übungen finden Sie in [02-uebungen](../02-uebungen/)
 
 - [Beispiele](../05-beispiele/)
 - [Materialien](../04-materialien/)
-

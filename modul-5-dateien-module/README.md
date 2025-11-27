@@ -1,6 +1,6 @@
 # Modul 5: Dateien & Module
 
-**Dauer:** 1 Tag (5 Lektionen à 50 Minuten)
+**Dauer:** 1 Tag (4 Lektionen à 50 Minuten)
 **Voraussetzung:** Module 1-4 abgeschlossen
 **Besonderheit:** Abschlussmodul mit Mini-Projekt
 
@@ -70,14 +70,13 @@ Nach diesem Modul können Sie:
 - Quiz zur Selbstkontrolle (10 Fragen)
 - Beispieldateien herunterladen
 
-### [01-praxis](./01-praxis/) - Präsenzunterricht (5 × 50 Min)
+### [01-praxis](./01-praxis/) - Präsenzunterricht (4 × 50 Min)
 
 **Am Kurstag:**
 - **Lektion 1:** Textdateien lesen und schreiben (50 Min)
 - **Lektion 2:** CSV-Dateien verarbeiten (50 Min)
 - **Lektion 3:** JSON-Daten manipulieren (50 Min)
-- **Lektion 4:** Fehlerbehandlung und Module (50 Min)
-- **Lektion 5:** Mini-Projekt Workshop (50 Min)
+- **Lektion 4:** Module & Abschluss-Projekt (50 Min)
 
 ### [02-uebungen](./02-uebungen/) - Übungen während der Präsenz
 
@@ -126,8 +125,8 @@ Nach diesem Modul können Sie:
 | Phase | Aktivität | Dauer |
 |-------|-----------|-------|
 | **Vor Tag 5** | Leseauftrag + Experimente | 2-3 Std |
-| **Tag 5** | 5 Lektionen Präsenzunterricht | 5 × 50 Min |
-| **Tag 5** | Pausen | 50 Min |
+| **Tag 5** | 4 Lektionen Präsenzunterricht | 4 × 50 Min |
+| **Tag 5** | Pausen | 40 Min |
 | **Nach Tag 5** | 3 Aufgaben + Reflexion | 6-8 Std |
 | **Gesamt** | | **12-15 Std** |
 
@@ -136,7 +135,7 @@ Nach diesem Modul können Sie:
 Nach erfolgreichem Abschluss des Moduls:
 
 - [ ] Alle Vorbereitungsaufgaben erledigt
-- [ ] Alle 5 Lektionen besucht
+- [ ] Alle 4 Lektionen besucht
 - [ ] Mindestens 6 von 8 Übungen gelöst
 - [ ] Alle 3 Nachbearbeitungsaufgaben eingereicht
 - [ ] Mini-Projekt abgeschlossen
