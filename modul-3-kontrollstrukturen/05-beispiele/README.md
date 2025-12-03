@@ -16,6 +16,7 @@ Vollständige Beispielprogramme für Modul 3.
 | `primzahlen.py` | Primzahlen-Finder | For, if, Mathematik |
 | `muster.py` | Muster zeichnen | Verschachtelte Schleifen |
 | `menu.py` | Menü-System | While, if-elif-else |
+| `notensystem.py` | Punkte in Noten umwandeln | While, if-elif-else, Validierung |
 
 ## 🚀 Verwendung
 
