@@ -100,7 +100,7 @@ Nach diesem Modul können Sie:
 
 ### [05-beispiele](./05-beispiele/) - Beispielprogramme
 
-**11 vollständige Python-Programme:**
+**13 vollständige Python-Programme:**
 - bedingungen.py - If/elif/else Beispiele
 - while_schleifen.py - While-Loop Patterns
 - for_schleifen.py - For-Loop Varianten
@@ -112,6 +112,8 @@ Nach diesem Modul können Sie:
 - muster.py - Muster und Pyramiden
 - menu.py - Menü-gesteuertes Programm
 - notensystem.py - Punkte in Noten umwandeln
+- gerade_zahlen.py - Gerade Zahlen filtern
+- notenliste.py - Notenstatistik berechnen
 
 ## ⏱️ Zeitplan
 
