@@ -5,7 +5,7 @@
 ## 📚 Lektionen
 
 1. **[Lektion 1: Dateien lesen & schreiben](./lektion-1-dateien.md)** (50 Min)
-   - Textdateien öffnen und schließen
+   - Textdateien öffnen und schliessen
    - Lesen mit verschiedenen Methoden
    - In Dateien schreiben
    - Context Manager (`with`)

@@ -5,7 +5,7 @@
 Schreiben Sie:
 
 1. `summe(zahlen)` - Gibt Summe aller Zahlen zurück
-2. `finde_maximum(zahlen)` - Gibt größte Zahl zurück
+2. `finde_maximum(zahlen)` - Gibt grösste Zahl zurück
 3. `nur_positive(zahlen)` - Gibt Liste nur mit positiven Zahlen zurück
 
 **Lösung:**

@@ -13,7 +13,7 @@
 
 ### 2. Was macht `with open(...)`?
 - [ ] A) Öffnet Datei permanent
-- [ ] B) Schließt Datei automatisch
+- [ ] B) Schliesst Datei automatisch
 - [ ] C) Löscht Datei
 - [ ] D) Erstellt Datei
 
@@ -71,7 +71,7 @@
 <summary>Klicken für Lösungen</summary>
 
 1. **B** - "w"
-2. **B** - Schließt Datei automatisch
+2. **B** - Schliesst Datei automatisch
 3. **B** - Comma-Separated Values
 4. **C** - JSON
 5. **B** - `import math`

@@ -5,7 +5,7 @@
 
 ## 🎯 Lernziele
 
-- Textdateien öffnen und schließen
+- Textdateien öffnen und schliessen
 - Dateien lesen mit verschiedenen Methoden
 - In Dateien schreiben
 - Context Manager (`with`) verwenden

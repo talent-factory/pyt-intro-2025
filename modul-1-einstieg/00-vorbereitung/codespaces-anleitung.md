@@ -156,7 +156,7 @@ Bereits installiert:
 1. Klicken Sie auf Ihren Namen (unten links)
 2. Wählen Sie "Stop Current Codespace"
 
-**Oder:** Schließen Sie einfach den Browser-Tab. Der Codespace stoppt nach 30 Min. Inaktivität automatisch.
+**Oder:** Schliessen Sie einfach den Browser-Tab. Der Codespace stoppt nach 30 Min. Inaktivität automatisch.
 
 ### Codespace wieder starten
 
@@ -190,7 +190,7 @@ Wenn Sie ihn nicht mehr brauchen:
 ### Shortcuts
 
 - `Ctrl+Shift+P` / `Cmd+Shift+P`: Command Palette
-- `Ctrl+` ` / `Cmd+` `: Terminal öffnen/schließen
+- `Ctrl+` ` / `Cmd+` `: Terminal öffnen/schliessen
 - `Ctrl+B` / `Cmd+B`: Explorer ein/ausblenden
 
 ### Dateien hochladen

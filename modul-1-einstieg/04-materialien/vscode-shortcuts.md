@@ -15,8 +15,8 @@ Wichtige Tastenkombinationen für effizientes Arbeiten.
 | Datei öffnen | `Ctrl+O` | `Cmd+O` |
 | Speichern | `Ctrl+S` | `Cmd+S` |
 | Speichern unter | `Ctrl+Shift+S` | `Cmd+Shift+S` |
-| Datei schließen | `Ctrl+W` | `Cmd+W` |
-| Alle schließen | `Ctrl+K W` | `Cmd+K W` |
+| Datei schliessen | `Ctrl+W` | `Cmd+W` |
+| Alle schliessen | `Ctrl+K W` | `Cmd+K W` |
 | Zwischen Dateien wechseln | `Ctrl+Tab` | `Cmd+Tab` |
 
 ## ✏️ Bearbeiten
@@ -51,7 +51,7 @@ Wichtige Tastenkombinationen für effizientes Arbeiten.
 
 | Aktion | Windows/Linux | macOS |
 |--------|---------------|-------|
-| Terminal öffnen/schließen | `Ctrl+` ` | `Cmd+` ` |
+| Terminal öffnen/schliessen | `Ctrl+` ` | `Cmd+` ` |
 | Neues Terminal | `Ctrl+Shift+` ` | `Cmd+Shift+` ` |
 
 ## ▶️ Code ausführen

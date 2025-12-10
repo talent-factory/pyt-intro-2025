@@ -50,7 +50,7 @@ Python ist eine der **beliebtesten Programmiersprachen** weltweit.
 
 ✅ **Einfache Syntax** - Liest sich fast wie Englisch  
 ✅ **Vielseitig** - Web, Datenanalyse, KI, Automatisierung  
-✅ **Große Community** - Viele Hilfsressourcen  
+✅ **Grosse Community** - Viele Hilfsressourcen  
 ✅ **Schnelle Ergebnisse** - Sofort sichtbare Erfolge  
 
 ### Beispiel: "Hello World"
@@ -197,7 +197,7 @@ ist_gleich = 3 == 3  # True
 
 **3. Denken Sie in kleinen Schritten**
 
-- Zerlegen Sie große Probleme in kleine Teile
+- Zerlegen Sie grosse Probleme in kleine Teile
 - Lösen Sie ein Teil nach dem anderen
 - Testen Sie jeden Schritt
 

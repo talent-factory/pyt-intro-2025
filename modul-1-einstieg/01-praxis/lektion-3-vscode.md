@@ -21,6 +21,7 @@ Nach dieser Lektion können Sie:
 **Visual Studio Code** = Professioneller Code-Editor von Microsoft
 
 **Vorteile:**
+
 - ✅ Kostenlos und Open Source
 - ✅ Viele Extensions
 - ✅ Syntax-Highlighting
@@ -30,7 +31,7 @@ Nach dieser Lektion können Sie:
 
 ### 2. VS Code Oberfläche
 
-```
+```text
 ┌─────────────────────────────────────────┐
 │  Menü                                   │
 ├──────┬──────────────────────────────────┤
@@ -45,6 +46,7 @@ Nach dieser Lektion können Sie:
 ```
 
 **Wichtige Bereiche:**
+
 - **Explorer:** Dateien und Ordner (links)
 - **Editor:** Code schreiben (Mitte)
 - **Terminal:** Befehle ausführen (unten)
@@ -52,11 +54,13 @@ Nach dieser Lektion können Sie:
 ### 3. Python-Datei vs. Shell
 
 **Shell (REPL):**
+
 - Interaktiv
 - Sofortige Ergebnisse
 - Nicht gespeichert
 
 **Python-Datei (.py):**
+
 - Gespeichert
 - Wiederverwendbar
 - Professionell
@@ -97,18 +101,21 @@ print(f"{x} + {y} = {summe}")
 ### Demo 3: Code ausführen (4 Min.)
 
 **Methode 1: Run-Button**
+
 - Klick auf ▶️ (oben rechts)
 
 **Methode 2: Terminal**
+
 ```bash
 python hello.py
 ```
 
 **Methode 3: Rechtsklick**
+
 - Rechtsklick im Editor → "Run Python File in Terminal"
 
 **Ausgabe im Terminal:**
-```
+```text
 Hello, VS Code!
 Ich lerne Python
 10 + 5 = 15
@@ -123,6 +130,7 @@ print("Hallo"  # Klammer vergessen
 ```
 
 **VS Code zeigt:**
+
 - Rote Wellenlinie
 - Fehlermeldung beim Ausführen
 
@@ -166,28 +174,33 @@ print(f"Sie sind {alter} Jahre alt")
 ### Wichtige Shortcuts
 
 **Windows/Linux:**
+
 - `Ctrl+S` - Speichern
 - `Ctrl+N` - Neue Datei
-- `Ctrl+` ` - Terminal öffnen/schließen
+- `Ctrl+` ` - Terminal öffnen/schliessen
 - `Ctrl+/` - Kommentar ein/aus
 
 **macOS:**
+
 - `Cmd+S` - Speichern
 - `Cmd+N` - Neue Datei
-- `Cmd+` ` - Terminal öffnen/schließen
+- `Cmd+` ` - Terminal öffnen/schliessen
 - `Cmd+/` - Kommentar ein/aus
 
 ### Nützliche Features
 
 **Auto-Vervollständigung:**
+
 - Tippen Sie `pri` → VS Code schlägt `print()` vor
 - `Tab` zum Akzeptieren
 
 **Mehrere Zeilen kommentieren:**
+
 - Zeilen markieren
 - `Ctrl+/` / `Cmd+/`
 
 **Code formatieren:**
+
 - `Shift+Alt+F` (Windows/Linux)
 - `Shift+Option+F` (macOS)
 
@@ -229,14 +242,15 @@ print(f"Sie sind {alter} Jahre alt")
 ### Häufige Probleme
 
 **Python nicht gefunden:**
+
 - `Ctrl+Shift+P` → "Python: Select Interpreter"
 - Python-Installation wählen
 
 **Terminal öffnet nicht:**
+
 - `View` → `Terminal`
 - Oder `Ctrl+` `
 
 ---
 
 **Nächste Lektion:** [Lektion 4: Variablen und Zahlen](./lektion-4-variablen-zahlen.md)
-

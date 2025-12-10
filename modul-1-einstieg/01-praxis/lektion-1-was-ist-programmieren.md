@@ -54,9 +54,10 @@ public class HelloWorld {
 ```
 
 **Vorteile:**
+
 - ✅ Einfache, lesbare Syntax
 - ✅ Vielseitig (Web, Daten, KI, Automatisierung)
-- ✅ Große Community
+- ✅ Grosse Community
 - ✅ Schnelle Ergebnisse
 
 ### 3. Wie denkt ein Computer?
@@ -116,6 +117,7 @@ Hello, World!
 ```
 
 **Erklären:**
+
 - Python kann als Taschenrechner genutzt werden
 - Ergebnis wird sofort angezeigt
 - `/` gibt immer Dezimalzahl zurück (25.0)
@@ -136,6 +138,7 @@ Anna ist 25 Jahre alt
 ```
 
 **Erklären:**
+
 - Variablen = Speicherplätze mit Namen
 - `=` bedeutet "speichere in"
 - F-Strings (`f"..."`) für formatierte Ausgabe
@@ -153,6 +156,7 @@ SyntaxError: '(' was never closed
 ```
 
 **Erklären:**
+
 - Fehler sind **normal** und **hilfreich**
 - Python sagt uns, **wo** der Fehler ist
 - Fehler = Lernchance
@@ -180,6 +184,7 @@ Studierende sollen:
 4. Erste Variablen erstellen
 
 **Dozent:**
+
 - Zirkulieren und helfen
 - Fragen beantworten
 - Ermutigend sein
@@ -196,6 +201,7 @@ Studierende sollen:
 4. Fehler sind normal und hilfreich
 
 **Ausblick auf Lektion 2:**
+
 - Mehr Python Shell
 - Variablen vertiefen
 - Datentypen kennenlernen
@@ -231,4 +237,3 @@ A: Am Anfang ungewohnt, aber mit Übung wird es einfacher.
 ---
 
 **Nächste Lektion:** [Lektion 2: Python Shell](./lektion-2-python-shell.md)
-

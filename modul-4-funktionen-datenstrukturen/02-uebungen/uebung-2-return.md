@@ -6,7 +6,7 @@ Schreiben Sie Funktionen mit Rückgabewerten:
 
 1. `quadrat(x)` - Gibt x² zurück
 2. `ist_volljährig(alter)` - Gibt True/False zurück
-3. `max_von_drei(a, b, c)` - Gibt größte Zahl zurück
+3. `max_von_drei(a, b, c)` - Gibt grösste Zahl zurück
 
 **Lösung:**
 ```python

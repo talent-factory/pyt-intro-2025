@@ -21,7 +21,7 @@
 ```python
 >>> print("Hello, World!")
 >>> print("Mein erstes Python-Programm!")
->>> print("Python macht Spaß!")
+>>> print("Python macht Spass!")
 ```
 
 ### Teil 2: Variablen (5 Min.)

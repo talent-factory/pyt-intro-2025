@@ -16,7 +16,7 @@ Erstellen Sie `bmi_rechner.py`, der den Body-Mass-Index berechnet.
 ### Formel
 
 ```
-BMI = Gewicht (kg) / (Größe (m))²
+BMI = Gewicht (kg) / (Grösse (m))²
 ```
 
 ### Anforderungen
@@ -38,13 +38,13 @@ BMI = Gewicht (kg) / (Größe (m))²
 === BMI-Rechner ===
 
 Person 1:
-Größe: 1.75 m
+Grösse: 1.75 m
 Gewicht: 70 kg
 BMI: 22.9
 Kategorie: Normalgewicht
 
 Person 2:
-Größe: 1.80 m
+Grösse: 1.80 m
 Gewicht: 90 kg
 BMI: 27.8
 Kategorie: Übergewicht

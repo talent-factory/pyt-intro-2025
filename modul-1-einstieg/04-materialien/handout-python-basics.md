@@ -26,7 +26,7 @@ Zusammenfassung aller Grundlagen aus Modul 1.
 **Warum Python?**
 - Einfache Syntax
 - Vielseitig einsetzbar
-- Große Community
+- Grosse Community
 
 ---
 
@@ -124,7 +124,7 @@ temperatur = 36.5
 ```python
 name = "Anna"
 stadt = "Zürich"
-text = "Python macht Spaß!"
+text = "Python macht Spass!"
 ```
 
 ### bool (Wahrheitswerte)
