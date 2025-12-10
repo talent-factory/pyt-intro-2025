@@ -371,5 +371,4 @@ Am Präsenztag werden wir:
 
 ---
 
-**Gut gemacht! Sie haben Ihre ersten Schritte mit Python gemeistert! 🎉**
-
+## Gut gemacht! Sie haben Ihre ersten Schritte mit Python gemeistert! 🎉

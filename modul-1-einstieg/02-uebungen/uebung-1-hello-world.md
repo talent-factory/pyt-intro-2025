@@ -69,6 +69,5 @@ Wenn Sie fertig sind:
 **Problem:** Python Shell öffnet nicht  
 **Lösung:** Terminal öffnen, `python` oder `python3` eingeben
 
-**Problem:** Fehler bei `print()`  
+**Problem:** Fehler bei `print()`
 **Lösung:** Klammern und Anführungszeichen prüfen
-

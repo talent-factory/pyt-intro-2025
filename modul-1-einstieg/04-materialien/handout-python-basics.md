@@ -304,4 +304,3 @@ print(f"Umfang: {umfang} m")
 ---
 
 **Viel Erfolg mit Python! 🐍**
-

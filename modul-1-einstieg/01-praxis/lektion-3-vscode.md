@@ -100,21 +100,22 @@ print(f"{x} + {y} = {summe}")
 
 ### Demo 3: Code ausführen (4 Min.)
 
-**Methode 1: Run-Button**
+#### Methode 1: Run-Button
 
 - Klick auf ▶️ (oben rechts)
 
-**Methode 2: Terminal**
+#### Methode 2: Terminal
 
 ```bash
 python hello.py
 ```
 
-**Methode 3: Rechtsklick**
+#### Methode 3: Rechtsklick
 
 - Rechtsklick im Editor → "Run Python File in Terminal"
 
 **Ausgabe im Terminal:**
+
 ```text
 Hello, VS Code!
 Ich lerne Python
@@ -135,11 +136,13 @@ print("Hallo"  # Klammer vergessen
 - Fehlermeldung beim Ausführen
 
 **Korrigieren:**
+
 ```python
 print("Hallo")  # Klammer hinzugefügt
 ```
 
 **Erklären:**
+
 - VS Code hilft Fehler zu finden
 - Rote Wellenlinien = Syntaxfehler
 - Fehler vor dem Ausführen sichtbar
@@ -163,6 +166,7 @@ print(f"Sie sind {alter} Jahre alt")
 ```
 
 **Erweitern Sie:**
+
 - Verschiedene Geburtsjahre testen
 - Ausgabe formatieren
 - Kommentare hinzufügen
@@ -177,14 +181,14 @@ print(f"Sie sind {alter} Jahre alt")
 
 - `Ctrl+S` - Speichern
 - `Ctrl+N` - Neue Datei
-- `Ctrl+` ` - Terminal öffnen/schliessen
+- Ctrl+` - Terminal öffnen/schliessen
 - `Ctrl+/` - Kommentar ein/aus
 
 **macOS:**
 
 - `Cmd+S` - Speichern
 - `Cmd+N` - Neue Datei
-- `Cmd+` ` - Terminal öffnen/schliessen
+- Cmd+` - Terminal öffnen/schliessen
 - `Cmd+/` - Kommentar ein/aus
 
 ### Nützliche Features
@@ -217,6 +221,7 @@ print(f"Sie sind {alter} Jahre alt")
 5. Shortcuts sparen Zeit
 
 **Ausblick auf Lektion 4:**
+
 - Variablen vertiefen
 - Datentypen int und float
 - Operatoren und Berechnungen
@@ -249,7 +254,7 @@ print(f"Sie sind {alter} Jahre alt")
 **Terminal öffnet nicht:**
 
 - `View` → `Terminal`
-- Oder `Ctrl+` `
+- Oder Ctrl+`
 
 ---
 

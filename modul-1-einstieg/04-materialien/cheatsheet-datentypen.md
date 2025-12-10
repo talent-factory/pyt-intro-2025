@@ -171,4 +171,3 @@ int("5") + 5     # 10
 - `bool` für Ja/Nein-Entscheidungen
 - Immer passenden Typ verwenden
 - Bei Unsicherheit: `type()` nutzen
-

@@ -150,4 +150,3 @@ kopiere_datei("tagebuch.txt", "tagebuch_backup.txt")
 
 - [Lektion 2: CSV-Dateien](./lektion-2-csv.md)
 - [Beispiele](../05-beispiele/textdateien.py)
-

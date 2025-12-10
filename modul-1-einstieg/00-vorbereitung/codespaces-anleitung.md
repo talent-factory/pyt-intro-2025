@@ -104,16 +104,16 @@ Hello from Codespaces!
 2. Nennen Sie sie `test.py`
 3. Schreiben Sie:
 
-```python
-print("Mein erstes Python-Programm!")
-```
+   ```python
+   print("Mein erstes Python-Programm!")
+   ```
 
 4. Speichern Sie mit `Ctrl+S` (Windows/Linux) oder `Cmd+S` (macOS)
 5. Führen Sie aus:
 
-```bash
-python test.py
-```
+   ```bash
+   python test.py
+   ```
 
 ---
 
@@ -264,6 +264,5 @@ Codespaces ist perfekt für:
 
 ---
 
-**Viel Erfolg mit Codespaces!**  
+**Viel Erfolg mit Codespaces!**
 Bei Fragen: Notieren Sie sie für den Präsenztag.
-

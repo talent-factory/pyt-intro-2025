@@ -21,12 +21,14 @@ Nach dieser Lektion können Sie:
 **Definition:**  
 Programmieren = Einem Computer **präzise Anweisungen** geben, um ein Problem zu lösen.
 
-**Analogie: Kochrezept**
+### Analogie: Kochrezept
 
 Mensch (unpräzise):
+
 > "Mach mal Pfannkuchen"
 
 Computer (braucht Präzision):
+
 > 1. Nimm 200g Mehl
 > 2. Füge 300ml Milch hinzu
 > 3. Rühre 2 Minuten
@@ -40,11 +42,13 @@ Computer (braucht Präzision):
 **Vergleich:**
 
 Python:
+
 ```python
 print("Hello, World!")
 ```
 
 Java:
+
 ```java
 public class HelloWorld {
     public static void main(String[] args) {

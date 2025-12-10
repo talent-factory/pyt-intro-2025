@@ -22,7 +22,7 @@ Nach diesem Leseauftrag verstehen Sie:
 
 Stellen Sie sich vor, Sie schreiben ein Kochrezept:
 
-```
+```text
 1. Nehmen Sie 200g Mehl
 2. Fügen Sie 100ml Wasser hinzu
 3. Kneten Sie den Teig 5 Minuten
@@ -183,25 +183,25 @@ ist_gleich = 3 == 3  # True
 
 ### Wichtige Prinzipien
 
-**1. Fehler sind normal**
+#### 1. Fehler sind normal
 
 - Jeder macht Fehler - auch Profis!
 - Fehler sind Lernchancen
 - Python zeigt Ihnen, wo der Fehler ist
 
-**2. Experimentieren Sie**
+#### 2. Experimentieren Sie
 
 - Probieren Sie Dinge aus
 - Ändern Sie Code und schauen Sie, was passiert
 - Die Python Shell ist perfekt zum Experimentieren
 
-**3. Denken Sie in kleinen Schritten**
+#### 3. Denken Sie in kleinen Schritten
 
 - Zerlegen Sie grosse Probleme in kleine Teile
 - Lösen Sie ein Teil nach dem anderen
 - Testen Sie jeden Schritt
 
-**4. Fragen Sie**
+#### 4. Fragen Sie
 
 - Es gibt keine dummen Fragen
 - Die Community hilft gerne
@@ -265,4 +265,3 @@ Nach diesem Leseauftrag sollten Sie:
 ---
 
 **Nächster Schritt:** [Erste Schritte mit Python](./erste-schritte.md)
-
