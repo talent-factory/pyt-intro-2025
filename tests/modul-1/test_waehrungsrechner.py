@@ -13,7 +13,7 @@ sys.path.insert(0, str(modul_pfad))
 
 
 @pytest.mark.modul1
-def test_modul_import():
+def test_modul_import() -> None:
     """Test: Modul kann importiert werden."""
     try:
         import waehrungsrechner
@@ -29,7 +29,7 @@ def test_modul_import():
     (100, 0.85, 85.0),    # EUR zu GBP
     (50, 0.95, 47.5),
 ])
-def test_eur_umrechnung(eur, kurs, expected_zielwaehrung):
+def test_eur_umrechnung(eur: int | float | str | bool, kurs: int | float | str | bool, expected_zielwaehrung: int | float | str | bool) -> None:
     """Test: EUR zu andere Währungen."""
     zielwaehrung = eur * kurs
     assert abs(zielwaehrung - expected_zielwaehrung) < 0.01
@@ -41,14 +41,14 @@ def test_eur_umrechnung(eur, kurs, expected_zielwaehrung):
     (110.0, 1.10, 100.0),  # USD zu EUR
     (85.0, 0.85, 100.0),   # GBP zu EUR
 ])
-def test_rueckrechnung_zu_eur(quellwaehrung, kurs, expected_eur):
+def test_rueckrechnung_zu_eur(quellwaehrung: int | float | str | bool, kurs: int | float | str | bool, expected_eur: int | float | str | bool) -> None:
     """Test: Rückrechnung zu EUR."""
     eur = quellwaehrung / kurs
     assert abs(eur - expected_eur) < 0.01
 
 
 @pytest.mark.modul1
-def test_wechselgebuehr_berechnung():
+def test_wechselgebuehr_berechnung() -> None:
     """Test: Berechnung mit Wechselgebühren."""
     betrag_eur = 100.00
     kurs = 0.95
@@ -66,7 +66,7 @@ def test_wechselgebuehr_berechnung():
     (100, 1.10, 1.20, 10.0),  # USD steigt
     (100, 0.95, 1.00, 5.0),   # CHF steigt
 ])
-def test_kursgewinn(betrag, kurs_alt, kurs_neu, expected_gewinn):
+def test_kursgewinn(betrag: int | float | str | bool, kurs_alt: int | float | str | bool, kurs_neu: int | float | str | bool, expected_gewinn: int | float | str | bool) -> None:
     """Test: Gewinn bei Kursänderung."""
     wert_alt = betrag * kurs_alt
     wert_neu = betrag * kurs_neu

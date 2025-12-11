@@ -14,7 +14,7 @@ sys.path.insert(0, str(modul_pfad))
 
 
 @pytest.mark.modul2
-def test_modul_import():
+def test_modul_import() -> None:
     """Test: Modul kann importiert werden (wird interaktiv sein)."""
     # Hinweis: Das Modul verwendet input(), daher mocken wir das
     try:
@@ -27,7 +27,7 @@ def test_modul_import():
 
 
 @pytest.mark.modul2
-def test_input_gibt_string_zurueck():
+def test_input_gibt_string_zurueck() -> None:
     """Test: input() gibt immer String zurück."""
     with patch('builtins.input', return_value='42'):
         eingabe = input("Test: ")
@@ -36,7 +36,7 @@ def test_input_gibt_string_zurueck():
 
 
 @pytest.mark.modul2
-def test_input_zu_int_konvertierung():
+def test_input_zu_int_konvertierung() -> None:
     """Test: Input-String wird zu Int konvertiert."""
     with patch('builtins.input', return_value='25'):
         alter_str = input("Alter: ")
@@ -47,7 +47,7 @@ def test_input_zu_int_konvertierung():
 
 
 @pytest.mark.modul2
-def test_input_direkte_konvertierung():
+def test_input_direkte_konvertierung() -> None:
     """Test: Direkte Konvertierung bei input()."""
     with patch('builtins.input', return_value='1.75'):
         groesse = float(input("Grösse: "))
@@ -62,7 +62,7 @@ def test_input_direkte_konvertierung():
     ("-", "A-B-C"),
     (" | ", "A | B | C"),
 ])
-def test_print_mit_sep_parameter(sep, expected):
+def test_print_mit_sep_parameter(sep: int | float | str | bool, expected: int | float | str | bool) -> None:
     """Test: print() mit sep Parameter."""
     old_stdout = sys.stdout
     sys.stdout = captured = StringIO()
@@ -77,7 +77,7 @@ def test_print_mit_sep_parameter(sep, expected):
 
 
 @pytest.mark.modul2
-def test_print_mit_end_parameter():
+def test_print_mit_end_parameter() -> None:
     """Test: print() mit end Parameter."""
     old_stdout = sys.stdout
     sys.stdout = captured = StringIO()
@@ -95,7 +95,7 @@ def test_print_mit_end_parameter():
 
 
 @pytest.mark.modul2
-def test_formatierte_ausgabe():
+def test_formatierte_ausgabe() -> None:
     """Test: Formatierte Ausgabe mit F-Strings."""
     name = "Anna"
     alter = 25
@@ -109,7 +109,7 @@ def test_formatierte_ausgabe():
 
 
 @pytest.mark.modul2
-def test_tabellen_ausgabe():
+def test_tabellen_ausgabe() -> None:
     """Test: Tabellen-formatierte Ausgabe."""
     header = f"{'Name':<15} {'Alter':>5} {'Preis':>10}"
     zeile = f"{'Anna':<15} {25:>5} {19.99:>10.2f}"

@@ -4,6 +4,7 @@ Testet JSON-Operationen mit temporären Dateien
 """
 
 import sys
+from typing import Any
 import pytest
 from pathlib import Path
 from io import StringIO
@@ -15,7 +16,7 @@ sys.path.insert(0, str(modul_pfad))
 
 
 @pytest.mark.modul5
-def test_modul_kann_importiert_werden():
+def test_modul_kann_importiert_werden() -> None:
     """Test: Modul kann ohne Fehler importiert werden."""
     try:
         import json_beispiel
@@ -25,7 +26,7 @@ def test_modul_kann_importiert_werden():
 
 
 @pytest.mark.modul5
-def test_config_erstellen(tmp_path, monkeypatch):
+def test_config_erstellen(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:
     """Test: config_erstellen() erstellt JSON-Datei."""
     import json_beispiel
 
@@ -45,7 +46,7 @@ def test_config_erstellen(tmp_path, monkeypatch):
 
 
 @pytest.mark.modul5
-def test_config_erstellen_struktur(tmp_path, monkeypatch):
+def test_config_erstellen_struktur(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:
     """Test: config_erstellen() erstellt korrekte Struktur."""
     import json_beispiel
 
@@ -70,7 +71,7 @@ def test_config_erstellen_struktur(tmp_path, monkeypatch):
 
 
 @pytest.mark.modul5
-def test_config_erstellen_werte(tmp_path, monkeypatch):
+def test_config_erstellen_werte(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:
     """Test: config_erstellen() setzt korrekte Werte."""
     import json_beispiel
 
@@ -97,7 +98,7 @@ def test_config_erstellen_werte(tmp_path, monkeypatch):
 
 
 @pytest.mark.modul5
-def test_config_laden(tmp_path, monkeypatch):
+def test_config_laden(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:
     """Test: config_laden() lädt Konfiguration."""
     import json_beispiel
 
@@ -120,7 +121,7 @@ def test_config_laden(tmp_path, monkeypatch):
 
 
 @pytest.mark.modul5
-def test_config_laden_nicht_vorhanden(tmp_path, monkeypatch):
+def test_config_laden_nicht_vorhanden(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:
     """Test: config_laden() gibt None wenn Datei fehlt."""
     import json_beispiel
 
@@ -132,7 +133,7 @@ def test_config_laden_nicht_vorhanden(tmp_path, monkeypatch):
 
 
 @pytest.mark.modul5
-def test_config_anzeigen(tmp_path, monkeypatch):
+def test_config_anzeigen(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:
     """Test: config_anzeigen() zeigt Konfiguration."""
     import json_beispiel
 
@@ -162,7 +163,7 @@ def test_config_anzeigen(tmp_path, monkeypatch):
 
 
 @pytest.mark.modul5
-def test_einstellung_aendern(tmp_path, monkeypatch):
+def test_einstellung_aendern(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:
     """Test: einstellung_aendern() ändert Einstellung."""
     import json_beispiel
 
@@ -186,7 +187,7 @@ def test_einstellung_aendern(tmp_path, monkeypatch):
 
 
 @pytest.mark.modul5
-def test_einstellung_aendern_verschiedene_werte(tmp_path, monkeypatch):
+def test_einstellung_aendern_verschiedene_werte(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:
     """Test: einstellung_aendern() mit verschiedenen Werten."""
     import json_beispiel
 
@@ -211,7 +212,7 @@ def test_einstellung_aendern_verschiedene_werte(tmp_path, monkeypatch):
 
 
 @pytest.mark.modul5
-def test_json_formatierung(tmp_path, monkeypatch):
+def test_json_formatierung(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:
     """Test: JSON-Datei ist lesbar formatiert (indent)."""
     import json_beispiel
 

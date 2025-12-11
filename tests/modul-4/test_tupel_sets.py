@@ -15,7 +15,7 @@ sys.path.insert(0, str(modul_pfad))
 
 
 @pytest.mark.modul4
-def test_modul_kann_importiert_werden():
+def test_modul_kann_importiert_werden() -> None:
     """Test: Modul kann ohne Fehler importiert werden."""
     try:
         import tupel_sets
@@ -32,7 +32,7 @@ def test_modul_kann_importiert_werden():
     ((0, 0), (1, 0), 1.0),
     ((0, 0), (0, 1), 1.0),
 ])
-def test_berechne_distanz(punkt1, punkt2, erwartete_distanz):
+def test_berechne_distanz(punkt1: int | float | str | bool, punkt2: int | float | str | bool, erwartete_distanz: int | float | str | bool) -> None:
     """Test: berechne_distanz() berechnet Distanz korrekt."""
     import tupel_sets
 
@@ -42,7 +42,7 @@ def test_berechne_distanz(punkt1, punkt2, erwartete_distanz):
 
 
 @pytest.mark.modul4
-def test_berechne_distanz_pythagoras():
+def test_berechne_distanz_pythagoras() -> None:
     """Test: berechne_distanz() nutzt Pythagoras korrekt."""
     import tupel_sets
 
@@ -56,7 +56,7 @@ def test_berechne_distanz_pythagoras():
 
 
 @pytest.mark.modul4
-def test_eindeutige_woerter_einfach():
+def test_eindeutige_woerter_einfach() -> None:
     """Test: eindeutige_woerter() findet eindeutige Wörter."""
     import tupel_sets
 
@@ -78,7 +78,7 @@ def test_eindeutige_woerter_einfach():
     ("a b c d e", 5),
     ("Python Python", 1),
 ])
-def test_eindeutige_woerter_anzahl(text, erwartete_anzahl):
+def test_eindeutige_woerter_anzahl(text: int | float | str | bool, erwartete_anzahl: int | float | str | bool) -> None:
     """Test: eindeutige_woerter() zählt korrekt."""
     import tupel_sets
 
@@ -88,7 +88,7 @@ def test_eindeutige_woerter_anzahl(text, erwartete_anzahl):
 
 
 @pytest.mark.modul4
-def test_eindeutige_woerter_lowercase():
+def test_eindeutige_woerter_lowercase() -> None:
     """Test: eindeutige_woerter() konvertiert zu lowercase."""
     import tupel_sets
 
@@ -100,7 +100,7 @@ def test_eindeutige_woerter_lowercase():
 
 
 @pytest.mark.modul4
-def test_gemeinsame_elemente():
+def test_gemeinsame_elemente() -> None:
     """Test: gemeinsame_elemente() findet Schnittmenge."""
     import tupel_sets
 
@@ -120,7 +120,7 @@ def test_gemeinsame_elemente():
     ({"a"}, {"b"}, set()),
     (set(), {"a"}, set()),
 ])
-def test_gemeinsame_elemente_verschiedene_sets(set1, set2, erwartet):
+def test_gemeinsame_elemente_verschiedene_sets(set1: int | float | str | bool, set2: int | float | str | bool, erwartet: int | float | str | bool) -> None:
     """Test: gemeinsame_elemente() mit verschiedenen Sets."""
     import tupel_sets
 
@@ -130,7 +130,7 @@ def test_gemeinsame_elemente_verschiedene_sets(set1, set2, erwartet):
 
 
 @pytest.mark.modul4
-def test_berechne_distanz_negative_koordinaten():
+def test_berechne_distanz_negative_koordinaten() -> None:
     """Test: berechne_distanz() funktioniert mit negativen Koordinaten."""
     import tupel_sets
 

@@ -14,7 +14,7 @@ sys.path.insert(0, str(modul_pfad))
 
 
 @pytest.mark.modul1
-def test_modul_import():
+def test_modul_import() -> None:
     """Test: Modul kann importiert werden."""
     try:
         import taschenrechner
@@ -24,7 +24,7 @@ def test_modul_import():
 
 
 @pytest.mark.modul1
-def test_grundrechenarten_ausgabe():
+def test_grundrechenarten_ausgabe() -> None:
     """Test: Grundrechenarten werden ausgegeben."""
     old_stdout = sys.stdout
     sys.stdout = captured = StringIO()
@@ -52,7 +52,7 @@ def test_grundrechenarten_ausgabe():
     (25, 5, "mul", 125),
     (25, 5, "div", 5.0),
 ])
-def test_rechenoperationen(a, b, operation, expected):
+def test_rechenoperationen(a: int | float | str | bool, b: int | float | str | bool, operation: int | float | str | bool, expected: int | float | str | bool) -> None:
     """Test: Rechenoperationen funktionieren korrekt."""
     if operation == "add":
         result = a + b
@@ -67,7 +67,7 @@ def test_rechenoperationen(a, b, operation, expected):
 
 
 @pytest.mark.modul1
-def test_kreisflaeche_berechnung():
+def test_kreisflaeche_berechnung() -> None:
     """Test: Kreisfläche wird korrekt berechnet."""
     radius = 5
     PI = 3.14159
@@ -77,7 +77,7 @@ def test_kreisflaeche_berechnung():
 
 
 @pytest.mark.modul1
-def test_durchschnitt_berechnung():
+def test_durchschnitt_berechnung() -> None:
     """Test: Durchschnitt wird korrekt berechnet."""
     note1, note2, note3 = 5.5, 6.0, 5.0
     durchschnitt = (note1 + note2 + note3) / 3

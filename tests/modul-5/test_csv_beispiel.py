@@ -4,6 +4,7 @@ Testet CSV-Operationen mit temporären Dateien
 """
 
 import sys
+from typing import Any
 import pytest
 from pathlib import Path
 from io import StringIO
@@ -15,7 +16,7 @@ sys.path.insert(0, str(modul_pfad))
 
 
 @pytest.mark.modul5
-def test_modul_kann_importiert_werden():
+def test_modul_kann_importiert_werden() -> None:
     """Test: Modul kann ohne Fehler importiert werden."""
     try:
         import csv_beispiel
@@ -25,7 +26,7 @@ def test_modul_kann_importiert_werden():
 
 
 @pytest.mark.modul5
-def test_kontakte_erstellen(tmp_path, monkeypatch):
+def test_kontakte_erstellen(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:
     """Test: kontakte_erstellen() erstellt CSV-Datei."""
     import csv_beispiel
 
@@ -45,7 +46,7 @@ def test_kontakte_erstellen(tmp_path, monkeypatch):
 
 
 @pytest.mark.modul5
-def test_kontakte_erstellen_inhalt(tmp_path, monkeypatch):
+def test_kontakte_erstellen_inhalt(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:
     """Test: kontakte_erstellen() schreibt korrekte Daten."""
     import csv_beispiel
 
@@ -72,7 +73,7 @@ def test_kontakte_erstellen_inhalt(tmp_path, monkeypatch):
 
 
 @pytest.mark.modul5
-def test_kontakte_erstellen_hat_header(tmp_path, monkeypatch):
+def test_kontakte_erstellen_hat_header(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:
     """Test: CSV-Datei hat korrekten Header."""
     import csv_beispiel
 
@@ -98,7 +99,7 @@ def test_kontakte_erstellen_hat_header(tmp_path, monkeypatch):
 
 
 @pytest.mark.modul5
-def test_kontakte_anzeigen(tmp_path, monkeypatch):
+def test_kontakte_anzeigen(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:
     """Test: kontakte_anzeigen() zeigt alle Kontakte."""
     import csv_beispiel
 
@@ -130,7 +131,7 @@ def test_kontakte_anzeigen(tmp_path, monkeypatch):
 
 
 @pytest.mark.modul5
-def test_kontakt_suchen_findet_exakt(tmp_path, monkeypatch):
+def test_kontakt_suchen_findet_exakt(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:
     """Test: kontakt_suchen() findet exakten Kontakt."""
     import csv_beispiel
 
@@ -153,7 +154,7 @@ def test_kontakt_suchen_findet_exakt(tmp_path, monkeypatch):
 
 
 @pytest.mark.modul5
-def test_kontakt_suchen_case_insensitive(tmp_path, monkeypatch):
+def test_kontakt_suchen_case_insensitive(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:
     """Test: kontakt_suchen() ist case-insensitive."""
     import csv_beispiel
 
@@ -175,7 +176,7 @@ def test_kontakt_suchen_case_insensitive(tmp_path, monkeypatch):
 
 
 @pytest.mark.modul5
-def test_kontakt_suchen_nicht_gefunden(tmp_path, monkeypatch):
+def test_kontakt_suchen_nicht_gefunden(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:
     """Test: kontakt_suchen() gibt None wenn nicht gefunden."""
     import csv_beispiel
 
@@ -196,7 +197,7 @@ def test_kontakt_suchen_nicht_gefunden(tmp_path, monkeypatch):
 
 
 @pytest.mark.modul5
-def test_kontakt_suchen_teilstring(tmp_path, monkeypatch):
+def test_kontakt_suchen_teilstring(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:
     """Test: kontakt_suchen() findet Teilstring."""
     import csv_beispiel
 

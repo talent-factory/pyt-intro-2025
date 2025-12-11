@@ -7,21 +7,21 @@ Zeigt:
 - Listen als Parameter
 """
 
-def zeige_liste(liste, titel="Liste"):
+def zeige_liste(liste: list[int], titel: str = "Liste") -> None:
     """Zeigt eine Liste formatiert an."""
     print(f"\n{titel}:")
     print(f"  {liste}")
     print(f"  Länge: {len(liste)}")
 
-def nur_gerade(zahlen):
+def nur_gerade(zahlen: list[int]) -> list[int]:
     """Filtert gerade Zahlen."""
     return [x for x in zahlen if x % 2 == 0]
 
-def verdopple(zahlen):
+def verdopple(zahlen: list[int]) -> list[int]:
     """Verdoppelt alle Werte."""
     return [x * 2 for x in zahlen]
 
-def statistik(zahlen):
+def statistik(zahlen: list[int]) -> dict[str, int | float]:
     """Berechnet Statistiken."""
     return {
         "min": min(zahlen),

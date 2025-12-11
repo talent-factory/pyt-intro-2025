@@ -13,7 +13,7 @@ sys.path.insert(0, str(modul_pfad))
 
 
 @pytest.mark.modul1
-def test_modul_import():
+def test_modul_import() -> None:
     """Test: Modul kann importiert werden."""
     try:
         import bmi_rechner
@@ -29,7 +29,7 @@ def test_modul_import():
     (55, 1.65, 20.2),
     (80, 1.70, 27.7),
 ])
-def test_bmi_berechnung(gewicht, groesse, expected_bmi):
+def test_bmi_berechnung(gewicht: int | float | str | bool, groesse: int | float | str | bool, expected_bmi: int | float | str | bool) -> None:
     """Test: BMI wird korrekt berechnet."""
     bmi = gewicht / (groesse ** 2)
     assert abs(bmi - expected_bmi) < 0.1
@@ -42,7 +42,7 @@ def test_bmi_berechnung(gewicht, groesse, expected_bmi):
     (26.0, "Übergewicht"),
     (32.0, "Adipositas"),
 ])
-def test_bmi_kategorisierung(bmi, expected_kategorie):
+def test_bmi_kategorisierung(bmi: int | float | str | bool, expected_kategorie: int | float | str | bool) -> None:
     """Test: BMI-Kategorisierung ist korrekt."""
     if bmi < 18.5:
         kategorie = "Untergewicht"
@@ -62,14 +62,14 @@ def test_bmi_kategorisierung(bmi, expected_kategorie):
     (1.80, 22, 71.3),
     (1.65, 22, 59.9),
 ])
-def test_idealgewicht_berechnung(groesse, ideal_bmi, expected_gewicht):
+def test_idealgewicht_berechnung(groesse: int | float | str | bool, ideal_bmi: int | float | str | bool, expected_gewicht: int | float | str | bool) -> None:
     """Test: Idealgewicht wird korrekt berechnet."""
     idealgewicht = ideal_bmi * (groesse ** 2)
     assert abs(idealgewicht - expected_gewicht) < 0.1
 
 
 @pytest.mark.modul1
-def test_bmi_grenzwerte():
+def test_bmi_grenzwerte() -> None:
     """Test: BMI-Grenzwerte sind korrekt."""
     # Grenzwert Untergewicht/Normalgewicht
     assert 18.5 > 18.4
@@ -87,7 +87,7 @@ def test_bmi_grenzwerte():
     (90, 1.80),
     (55, 1.65),
 ])
-def test_bmi_ist_positiv(gewicht, groesse):
+def test_bmi_ist_positiv(gewicht: int | float | str | bool, groesse: int | float | str | bool) -> None:
     """Test: BMI ist immer positiv bei gültigen Eingaben."""
     bmi = gewicht / (groesse ** 2)
     assert bmi > 0

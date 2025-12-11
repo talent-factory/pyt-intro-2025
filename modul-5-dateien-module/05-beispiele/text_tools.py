@@ -4,7 +4,7 @@ Beispiel: Text-Verarbeitungs-Modul
 Kombiniert Datei-Operationen mit Funktionen und Datenstrukturen.
 """
 
-def main():
+def main() -> None:
     """Hauptfunktion."""
     print("=" * 50)
     print("TEXT-VERARBEITUNGS-MODUL")

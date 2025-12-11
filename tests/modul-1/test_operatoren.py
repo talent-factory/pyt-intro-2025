@@ -13,7 +13,7 @@ sys.path.insert(0, str(modul_pfad))
 
 
 @pytest.mark.modul1
-def test_modul_import():
+def test_modul_import() -> None:
     """Test: Modul kann importiert werden."""
     try:
         import operatoren
@@ -23,7 +23,7 @@ def test_modul_import():
 
 
 @pytest.mark.modul1
-def test_grundrechenarten():
+def test_grundrechenarten() -> None:
     """Test: Grundrechenarten werden demonstriert."""
     old_stdout = sys.stdout
     sys.stdout = captured = StringIO()
@@ -46,7 +46,7 @@ def test_grundrechenarten():
 
 
 @pytest.mark.modul1
-def test_erweiterte_operationen():
+def test_erweiterte_operationen() -> None:
     """Test: Erweiterte Operationen werden gezeigt."""
     old_stdout = sys.stdout
     sys.stdout = captured = StringIO()
@@ -72,7 +72,7 @@ def test_erweiterte_operationen():
     (10, 20, 30),
     (0, 0, 0),
 ])
-def test_addition_berechnung(a, b, expected_sum):
+def test_addition_berechnung(a: int | float | str | bool, b: int | float | str | bool, expected_sum: int | float | str | bool) -> None:
     """Test: Addition wird korrekt berechnet."""
     result = a + b
     assert result == expected_sum
@@ -84,7 +84,7 @@ def test_addition_berechnung(a, b, expected_sum):
     (10, 3, 1),
     (20, 4, 0),
 ])
-def test_modulo_berechnung(a, b, expected_mod):
+def test_modulo_berechnung(a: int | float | str | bool, b: int | float | str | bool, expected_mod: int | float | str | bool) -> None:
     """Test: Modulo wird korrekt berechnet."""
     result = a % b
     assert result == expected_mod

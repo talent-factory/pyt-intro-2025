@@ -4,7 +4,7 @@ Beispiel: CSV ↔ JSON Konverter
 Kombiniert Datei-Operationen mit Funktionen und Datenstrukturen.
 """
 
-def main():
+def main() -> None:
     """Hauptfunktion."""
     print("=" * 50)
     print("CSV ↔ JSON KONVERTER")

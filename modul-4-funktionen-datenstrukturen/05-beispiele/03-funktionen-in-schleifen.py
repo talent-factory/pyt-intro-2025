@@ -1,8 +1,11 @@
-# Beispiel 3: Funktionen in Schleifen aufrufen
-# Dieses Beispiel zeigt, wie man eine Funktion wiederholt in einer
-# Schleife aufrufen kann, um repetitive Aufgaben zu erledigen.
+"""
+Beispiel: Funktionen in Schleifen aufrufen
 
-def zeige_stern():
+Dieses Beispiel zeigt, wie man eine Funktion wiederholt in einer
+Schleife aufrufen kann, um repetitive Aufgaben zu erledigen.
+"""
+
+def zeige_stern() -> None:
     """Zeigt einen Stern."""
     print("⭐", end=" ")
 

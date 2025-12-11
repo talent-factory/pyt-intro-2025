@@ -13,7 +13,7 @@ sys.path.insert(0, str(modul_pfad))
 
 
 @pytest.mark.modul2
-def test_modul_import():
+def test_modul_import() -> None:
     """Test: Modul kann importiert werden."""
     # Mocke input() um Endlosschleife zu vermeiden
     with patch('builtins.input', return_value='q'):
@@ -25,7 +25,7 @@ def test_modul_import():
 
 
 @pytest.mark.modul2
-def test_validiere_passwort_funktion_existiert():
+def test_validiere_passwort_funktion_existiert() -> None:
     """Test: validiere_passwort Funktion existiert."""
     with patch('builtins.input', return_value='q'):
         import passwort_validator
@@ -43,7 +43,7 @@ def test_validiere_passwort_funktion_existiert():
     ("KeinZahl!", False),  # Keine Zahl
     ("KeineSonder123", False),  # Kein Sonderzeichen
 ])
-def test_passwort_validierung(passwort, sollte_gueltig_sein):
+def test_passwort_validierung(passwort: int | float | str | bool, sollte_gueltig_sein: int | float | str | bool) -> None:
     """Test: Passwort-Validierung mit verschiedenen Eingaben."""
     with patch('builtins.input', return_value='q'):
         import passwort_validator
@@ -61,7 +61,7 @@ def test_passwort_validierung(passwort, sollte_gueltig_sein):
 
 
 @pytest.mark.modul2
-def test_passwort_mindestlaenge():
+def test_passwort_mindestlaenge() -> None:
     """Test: Mindestlänge wird geprüft."""
     with patch('builtins.input', return_value='q'):
         import passwort_validator
@@ -75,7 +75,7 @@ def test_passwort_mindestlaenge():
 
 
 @pytest.mark.modul2
-def test_passwort_grossbuchstabe():
+def test_passwort_grossbuchstabe() -> None:
     """Test: Grossbuchstabe erforderlich."""
     with patch('builtins.input', return_value='q'):
         import passwort_validator
@@ -89,7 +89,7 @@ def test_passwort_grossbuchstabe():
 
 
 @pytest.mark.modul2
-def test_passwort_kleinbuchstabe():
+def test_passwort_kleinbuchstabe() -> None:
     """Test: Kleinbuchstabe erforderlich."""
     with patch('builtins.input', return_value='q'):
         import passwort_validator
@@ -103,7 +103,7 @@ def test_passwort_kleinbuchstabe():
 
 
 @pytest.mark.modul2
-def test_passwort_zahl():
+def test_passwort_zahl() -> None:
     """Test: Zahl erforderlich."""
     with patch('builtins.input', return_value='q'):
         import passwort_validator
@@ -117,7 +117,7 @@ def test_passwort_zahl():
 
 
 @pytest.mark.modul2
-def test_passwort_sonderzeichen():
+def test_passwort_sonderzeichen() -> None:
     """Test: Sonderzeichen erforderlich."""
     with patch('builtins.input', return_value='q'):
         import passwort_validator

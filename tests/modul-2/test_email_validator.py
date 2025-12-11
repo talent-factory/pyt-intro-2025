@@ -13,7 +13,7 @@ sys.path.insert(0, str(modul_pfad))
 
 
 @pytest.mark.modul2
-def test_modul_import():
+def test_modul_import() -> None:
     """Test: Modul kann importiert werden."""
     with patch('builtins.input', return_value='q'):
         try:
@@ -24,7 +24,7 @@ def test_modul_import():
 
 
 @pytest.mark.modul2
-def test_validiere_email_funktion_existiert():
+def test_validiere_email_funktion_existiert() -> None:
     """Test: validiere_email Funktion existiert."""
     with patch('builtins.input', return_value='q'):
         import email_validator
@@ -44,7 +44,7 @@ def test_validiere_email_funktion_existiert():
     ("test@example", False),  # Kein . in Domain
     ("test@example.c", False),  # TLD zu kurz
 ])
-def test_email_validierung(email, sollte_gueltig_sein):
+def test_email_validierung(email: int | float | str | bool, sollte_gueltig_sein: int | float | str | bool) -> None:
     """Test: E-Mail-Validierung mit verschiedenen Eingaben."""
     with patch('builtins.input', return_value='q'):
         import email_validator
@@ -60,7 +60,7 @@ def test_email_validierung(email, sollte_gueltig_sein):
 
 
 @pytest.mark.modul2
-def test_email_leer():
+def test_email_leer() -> None:
     """Test: Leere E-Mail wird abgelehnt."""
     with patch('builtins.input', return_value='q'):
         import email_validator
@@ -74,7 +74,7 @@ def test_email_leer():
 
 
 @pytest.mark.modul2
-def test_email_ohne_at():
+def test_email_ohne_at() -> None:
     """Test: E-Mail ohne @ wird abgelehnt."""
     with patch('builtins.input', return_value='q'):
         import email_validator
@@ -88,7 +88,7 @@ def test_email_ohne_at():
 
 
 @pytest.mark.modul2
-def test_email_mehrere_at():
+def test_email_mehrere_at() -> None:
     """Test: E-Mail mit mehreren @ wird abgelehnt."""
     with patch('builtins.input', return_value='q'):
         import email_validator
@@ -101,7 +101,7 @@ def test_email_mehrere_at():
 
 
 @pytest.mark.modul2
-def test_email_ohne_punkt_in_domain():
+def test_email_ohne_punkt_in_domain() -> None:
     """Test: E-Mail ohne . in Domain wird abgelehnt."""
     with patch('builtins.input', return_value='q'):
         import email_validator
@@ -115,7 +115,7 @@ def test_email_ohne_punkt_in_domain():
 
 
 @pytest.mark.modul2
-def test_email_whitespace_trimming():
+def test_email_whitespace_trimming() -> None:
     """Test: Leerzeichen werden entfernt."""
     with patch('builtins.input', return_value='q'):
         import email_validator
@@ -129,7 +129,7 @@ def test_email_whitespace_trimming():
 
 
 @pytest.mark.modul2
-def test_email_teile_aufsplitten():
+def test_email_teile_aufsplitten() -> None:
     """Test: E-Mail-Teile werden korrekt aufgesplittet."""
     email = "user@domain.com"
     teile = email.split("@")
@@ -140,7 +140,7 @@ def test_email_teile_aufsplitten():
 
 
 @pytest.mark.modul2
-def test_domain_teile():
+def test_domain_teile() -> None:
     """Test: Domain-Teile werden korrekt aufgesplittet."""
     domain = "example.com"
     teile = domain.split(".")

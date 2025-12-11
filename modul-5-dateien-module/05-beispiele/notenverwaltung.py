@@ -4,7 +4,7 @@ Beispiel: Notenverwaltung mit CSV
 Kombiniert Datei-Operationen mit Funktionen und Datenstrukturen.
 """
 
-def main():
+def main() -> None:
     """Hauptfunktion."""
     print("=" * 50)
     print("NOTENVERWALTUNG MIT CSV")

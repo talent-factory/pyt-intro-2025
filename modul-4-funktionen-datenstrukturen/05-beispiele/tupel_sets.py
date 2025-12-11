@@ -7,17 +7,17 @@ Zeigt:
 - Mengenoperationen
 """
 
-def berechne_distanz(punkt1, punkt2):
+def berechne_distanz(punkt1: tuple[int | float, int | float], punkt2: tuple[int | float, int | float]) -> float:
     """Berechnet Distanz zwischen zwei Punkten."""
     x1, y1 = punkt1
     x2, y2 = punkt2
     return ((x2-x1)**2 + (y2-y1)**2) ** 0.5
 
-def eindeutige_woerter(text):
+def eindeutige_woerter(text: str) -> set[str]:
     """Findet eindeutige Wörter."""
     return set(text.lower().split())
 
-def gemeinsame_elemente(set1, set2):
+def gemeinsame_elemente(set1: set[str], set2: set[str]) -> set[str]:
     """Findet gemeinsame Elemente."""
     return set1 & set2
 

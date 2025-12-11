@@ -4,7 +4,7 @@ Beispiel: Aufgabenverwaltung mit JSON
 Kombiniert Datei-Operationen mit Funktionen und Datenstrukturen.
 """
 
-def main():
+def main() -> None:
     """Hauptfunktion."""
     print("=" * 50)
     print("AUFGABENVERWALTUNG MIT JSON")

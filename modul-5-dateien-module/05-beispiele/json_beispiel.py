@@ -9,7 +9,7 @@ Zeigt:
 
 import json
 
-def config_erstellen():
+def config_erstellen() -> None:
     """Erstellt Standard-Konfiguration."""
     config = {
         "app": {
@@ -26,13 +26,13 @@ def config_erstellen():
             "email": "max@example.com"
         }
     }
-    
+
     with open("config.json", "w") as f:
         json.dump(config, f, indent=2, ensure_ascii=False)
-    
+
     print("✓ Konfiguration erstellt")
 
-def config_laden():
+def config_laden() -> dict | None:
     """Lädt Konfiguration."""
     try:
         with open("config.json", "r") as f:
@@ -40,7 +40,7 @@ def config_laden():
     except FileNotFoundError:
         return None
 
-def config_anzeigen():
+def config_anzeigen() -> None:
     """Zeigt Konfiguration."""
     config = config_laden()
     if config:
@@ -49,7 +49,7 @@ def config_anzeigen():
         print("=" * 50)
         print(json.dumps(config, indent=2, ensure_ascii=False))
 
-def einstellung_aendern(kategorie, key, wert):
+def einstellung_aendern(kategorie: str, key: str, wert: str | bool | int) -> None:
     """Ändert eine Einstellung."""
     config = config_laden()
     if config and kategorie in config:

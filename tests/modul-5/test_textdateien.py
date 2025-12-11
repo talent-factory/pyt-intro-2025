@@ -4,6 +4,7 @@ Testet Textdatei-Operationen mit temporären Dateien
 """
 
 import sys
+from typing import Any
 import pytest
 from pathlib import Path
 from io import StringIO
@@ -16,7 +17,7 @@ sys.path.insert(0, str(modul_pfad))
 
 
 @pytest.mark.modul5
-def test_modul_kann_importiert_werden():
+def test_modul_kann_importiert_werden() -> None:
     """Test: Modul kann ohne Fehler importiert werden."""
     try:
         import textdateien
@@ -26,7 +27,7 @@ def test_modul_kann_importiert_werden():
 
 
 @pytest.mark.modul5
-def test_tagebuch_eintrag_erstellt_datei(tmp_path, monkeypatch):
+def test_tagebuch_eintrag_erstellt_datei(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:
     """Test: tagebuch_eintrag() erstellt Datei."""
     import textdateien
 
@@ -47,7 +48,7 @@ def test_tagebuch_eintrag_erstellt_datei(tmp_path, monkeypatch):
 
 
 @pytest.mark.modul5
-def test_tagebuch_eintrag_schreibt_inhalt(tmp_path, monkeypatch):
+def test_tagebuch_eintrag_schreibt_inhalt(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:
     """Test: tagebuch_eintrag() schreibt korrekten Inhalt."""
     import textdateien
 
@@ -72,7 +73,7 @@ def test_tagebuch_eintrag_schreibt_inhalt(tmp_path, monkeypatch):
 
 
 @pytest.mark.modul5
-def test_tagebuch_eintrag_append_modus(tmp_path, monkeypatch):
+def test_tagebuch_eintrag_append_modus(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:
     """Test: tagebuch_eintrag() hängt an (append mode)."""
     import textdateien
 
@@ -97,7 +98,7 @@ def test_tagebuch_eintrag_append_modus(tmp_path, monkeypatch):
 
 
 @pytest.mark.modul5
-def test_tagebuch_anzeigen_ohne_datei(tmp_path, monkeypatch):
+def test_tagebuch_anzeigen_ohne_datei(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:
     """Test: tagebuch_anzeigen() behandelt fehlende Datei."""
     import textdateien
 
@@ -117,7 +118,7 @@ def test_tagebuch_anzeigen_ohne_datei(tmp_path, monkeypatch):
 
 
 @pytest.mark.modul5
-def test_tagebuch_anzeigen_mit_eintraegen(tmp_path, monkeypatch):
+def test_tagebuch_anzeigen_mit_eintraegen(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:
     """Test: tagebuch_anzeigen() zeigt Einträge."""
     import textdateien
 
@@ -151,7 +152,7 @@ def test_tagebuch_anzeigen_mit_eintraegen(tmp_path, monkeypatch):
 
 
 @pytest.mark.modul5
-def test_datei_analysieren(tmp_path):
+def test_datei_analysieren(tmp_path: Path) -> None:
     """Test: datei_analysieren() analysiert Datei korrekt."""
     import textdateien
 
@@ -175,7 +176,7 @@ def test_datei_analysieren(tmp_path):
 
 
 @pytest.mark.modul5
-def test_datei_analysieren_zaehlt_korrekt(tmp_path):
+def test_datei_analysieren_zaehlt_korrekt(tmp_path: Path) -> None:
     """Test: datei_analysieren() zählt Zeilen, Wörter, Zeichen."""
     import textdateien
 

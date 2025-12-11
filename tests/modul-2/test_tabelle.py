@@ -13,7 +13,7 @@ sys.path.insert(0, str(modul_pfad))
 
 
 @pytest.mark.modul2
-def test_modul_import():
+def test_modul_import() -> None:
     """Test: Modul kann importiert werden."""
     try:
         import tabelle
@@ -23,7 +23,7 @@ def test_modul_import():
 
 
 @pytest.mark.modul2
-def test_tabelle_hat_ausgabe():
+def test_tabelle_hat_ausgabe() -> None:
     """Test: Tabelle erzeugt Ausgabe."""
     old_stdout = sys.stdout
     sys.stdout = captured = StringIO()
@@ -47,7 +47,7 @@ def test_tabelle_hat_ausgabe():
     {"name": "Apfel", "menge": 10, "preis": 2.50},
     {"name": "Banane", "menge": 5, "preis": 3.20},
 ])
-def test_berechnung_total(produkt_daten):
+def test_berechnung_total(produkt_daten: int | float | str | bool) -> None:
     """Test: Total wird korrekt berechnet."""
     total = produkt_daten["menge"] * produkt_daten["preis"]
     expected_total = produkt_daten["menge"] * produkt_daten["preis"]
@@ -56,7 +56,7 @@ def test_berechnung_total(produkt_daten):
 
 
 @pytest.mark.modul2
-def test_summen_berechnung():
+def test_summen_berechnung() -> None:
     """Test: Gesamtsumme wird korrekt berechnet."""
     produkte = [
         {"name": "Apfel", "menge": 10, "preis": 2.50},
@@ -71,7 +71,7 @@ def test_summen_berechnung():
 
 
 @pytest.mark.modul2
-def test_durchschnittspreis():
+def test_durchschnittspreis() -> None:
     """Test: Durchschnittspreis wird berechnet."""
     gesamt_preis = 41.00
     gesamt_menge = 15
@@ -82,7 +82,7 @@ def test_durchschnittspreis():
 
 
 @pytest.mark.modul2
-def test_formatierung_in_tabelle():
+def test_formatierung_in_tabelle() -> None:
     """Test: Zahlen-Formatierung in Tabelle."""
     preis = 2.50
     formatiert = f"{preis:12.2f}"

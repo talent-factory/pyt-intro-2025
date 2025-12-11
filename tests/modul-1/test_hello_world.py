@@ -14,7 +14,7 @@ sys.path.insert(0, str(modul_pfad))
 
 
 @pytest.mark.modul1
-def test_modul_kann_importiert_werden():
+def test_modul_kann_importiert_werden() -> None:
     """Test: Modul kann ohne Fehler importiert werden."""
     try:
         import hello_world
@@ -24,7 +24,7 @@ def test_modul_kann_importiert_werden():
 
 
 @pytest.mark.modul1
-def test_modul_hat_ausgaben():
+def test_modul_hat_ausgaben() -> None:
     """Test: Modul erzeugt Ausgaben beim Import."""
     old_stdout = sys.stdout
     sys.stdout = captured = StringIO()
@@ -46,7 +46,7 @@ def test_modul_hat_ausgaben():
 
 
 @pytest.mark.modul1
-def test_ausgabe_enthaelt_erwartete_begriffe():
+def test_ausgabe_enthaelt_erwartete_begriffe() -> None:
     """Test: Ausgabe enthält erwartete Begriffe."""
     old_stdout = sys.stdout
     sys.stdout = captured = StringIO()
@@ -67,7 +67,7 @@ def test_ausgabe_enthaelt_erwartete_begriffe():
 
 
 @pytest.mark.modul1
-def test_ausgabe_hat_mehrere_zeilen():
+def test_ausgabe_hat_mehrere_zeilen() -> None:
     """Test: Ausgabe besteht aus mehreren Zeilen."""
     old_stdout = sys.stdout
     sys.stdout = captured = StringIO()

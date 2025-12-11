@@ -4,7 +4,7 @@ Beispiel: Log-Datei Analyzer
 Kombiniert Datei-Operationen mit Funktionen und Datenstrukturen.
 """
 
-def main():
+def main() -> None:
     """Hauptfunktion."""
     print("=" * 50)
     print("LOG-DATEI ANALYZER")

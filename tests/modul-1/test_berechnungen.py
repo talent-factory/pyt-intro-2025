@@ -13,7 +13,7 @@ sys.path.insert(0, str(modul_pfad))
 
 
 @pytest.mark.modul1
-def test_modul_import():
+def test_modul_import() -> None:
     """Test: Modul kann importiert werden."""
     try:
         import berechnungen
@@ -23,7 +23,7 @@ def test_modul_import():
 
 
 @pytest.mark.modul1
-def test_zinsrechnung():
+def test_zinsrechnung() -> None:
     """Test: Zinsrechnung wird demonstriert."""
     old_stdout = sys.stdout
     sys.stdout = captured = StringIO()
@@ -43,7 +43,7 @@ def test_zinsrechnung():
 
 
 @pytest.mark.modul1
-def test_benzinverbrauch():
+def test_benzinverbrauch() -> None:
     """Test: Benzinverbrauch wird berechnet."""
     old_stdout = sys.stdout
     sys.stdout = captured = StringIO()
@@ -67,7 +67,7 @@ def test_benzinverbrauch():
     (5000, 0.05, 3, 5788.13),
     (10000, 0.02, 10, 12189.94),
 ])
-def test_zinsberechnung_formel(kapital, zinssatz, jahre, erwartetes_endkapital):
+def test_zinsberechnung_formel(kapital: int | float | str | bool, zinssatz: int | float | str | bool, jahre: int | float | str | bool, erwartetes_endkapital: int | float | str | bool) -> None:
     """Test: Zinsberechnung funktioniert korrekt."""
     endkapital = kapital * ((1 + zinssatz) ** jahre)
     assert abs(endkapital - erwartetes_endkapital) < 0.01
@@ -79,7 +79,7 @@ def test_zinsberechnung_formel(kapital, zinssatz, jahre, erwartetes_endkapital):
     (350, 6.5, 22.75),
     (200, 5.0, 10.0),
 ])
-def test_benzinverbrauch_berechnung(strecke, verbrauch, erwartete_liter):
+def test_benzinverbrauch_berechnung(strecke: int | float | str | bool, verbrauch: int | float | str | bool, erwartete_liter: int | float | str | bool) -> None:
     """Test: Benzinverbrauch wird korrekt berechnet."""
     liter = strecke * verbrauch / 100
     assert abs(liter - erwartete_liter) < 0.01
@@ -91,7 +91,7 @@ def test_benzinverbrauch_berechnung(strecke, verbrauch, erwartete_liter):
     (3600, 1, 0, 0),
     (3661, 1, 1, 1),
 ])
-def test_zeitumrechnung(sekunden, stunden, minuten, rest_sek):
+def test_zeitumrechnung(sekunden: int | float | str | bool, stunden: int | float | str | bool, minuten: int | float | str | bool, rest_sek: int | float | str | bool) -> None:
     """Test: Zeitumrechnung funktioniert korrekt."""
     berechnet_stunden = sekunden // 3600
     rest = sekunden % 3600

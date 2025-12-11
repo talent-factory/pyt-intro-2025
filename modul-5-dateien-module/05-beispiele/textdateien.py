@@ -7,7 +7,7 @@ Zeigt:
 - Zeile für Zeile verarbeiten
 """
 
-def tagebuch_eintrag(text):
+def tagebuch_eintrag(text: str) -> None:
     """Fügt Tagebuch-Eintrag hinzu."""
     from datetime import datetime
     with open("tagebuch.txt", "a") as f:
@@ -15,7 +15,7 @@ def tagebuch_eintrag(text):
         f.write(f"[{zeit}] {text}\n")
     print("✓ Eintrag gespeichert")
 
-def tagebuch_anzeigen():
+def tagebuch_anzeigen() -> None:
     """Zeigt alle Einträge."""
     try:
         with open("tagebuch.txt", "r") as f:
@@ -27,11 +27,11 @@ def tagebuch_anzeigen():
     except FileNotFoundError:
         print("Noch keine Einträge.")
 
-def datei_analysieren(dateiname):
+def datei_analysieren(dateiname: str) -> None:
     """Analysiert Textdatei."""
     with open(dateiname, "r") as f:
         zeilen = f.readlines()
-    
+
     print(f"\nAnalyse von {dateiname}:")
     print(f"  Zeilen: {len(zeilen)}")
     print(f"  Wörter: {sum(len(z.split()) for z in zeilen)}")
