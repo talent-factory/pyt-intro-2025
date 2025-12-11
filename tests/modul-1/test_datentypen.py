@@ -14,7 +14,7 @@ sys.path.insert(0, str(modul_pfad))
 
 
 @pytest.mark.modul1
-def test_modul_import():
+def test_modul_import() -> None:
     """Test: Modul kann importiert werden."""
     try:
         import datentypen
@@ -25,7 +25,7 @@ def test_modul_import():
 
 
 @pytest.mark.modul1
-def test_datentypen_ausgabe():
+def test_datentypen_ausgabe() -> None:
     """Test: Verschiedene Datentypen werden ausgegeben."""
     old_stdout = sys.stdout
     sys.stdout = captured = StringIO()
@@ -50,7 +50,7 @@ def test_datentypen_ausgabe():
 
 
 @pytest.mark.modul1
-def test_typkonvertierung():
+def test_typkonvertierung() -> None:
     """Test: Typkonvertierung wird demonstriert."""
     old_stdout = sys.stdout
     sys.stdout = captured = StringIO()

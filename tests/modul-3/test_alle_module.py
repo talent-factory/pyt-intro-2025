@@ -4,6 +4,7 @@ Diese Tests prüfen Import und grundlegende Funktionalität
 """
 
 import sys
+from io import StringIO
 from pathlib import Path
 from unittest.mock import patch
 
@@ -19,7 +20,7 @@ sys.path.insert(0, str(modul_pfad))
 
 
 @pytest.mark.modul3
-def test_bedingungen_import():
+def test_bedingungen_import() -> None:
     """Test: bedingungen.py kann importiert werden."""
     try:
         import bedingungen
@@ -38,7 +39,9 @@ def test_bedingungen_import():
         (18, True),
     ],
 )
-def test_volljaehrigkeit(alter, expected):
+def test_volljaehrigkeit(
+    alter: int | float | str | bool, expected: int | float | str | bool
+) -> None:
     """Test: Volljährigkeits-Prüfung."""
     ist_volljaehrig = alter >= 18
     assert ist_volljaehrig == expected
@@ -55,7 +58,9 @@ def test_volljaehrigkeit(alter, expected):
         (55, 2),
     ],
 )
-def test_notenberechnung(punkte, expected_note):
+def test_notenberechnung(
+    punkte: int | float | str | bool, expected_note: int | float | str | bool
+) -> None:
     """Test: Notenberechnung mit if-elif-else."""
     if punkte >= 90:
         note = 6
@@ -75,7 +80,7 @@ def test_notenberechnung(punkte, expected_note):
 
 
 @pytest.mark.modul3
-def test_while_schleifen_import():
+def test_while_schleifen_import() -> None:
     """Test: while_schleifen.py kann importiert werden."""
     try:
         import while_schleifen
@@ -86,7 +91,7 @@ def test_while_schleifen_import():
 
 
 @pytest.mark.modul3
-def test_summe_mit_while():
+def test_summe_mit_while() -> None:
     """Test: Summe berechnen mit while-Schleife."""
     summe = 0
     zahl = 1
@@ -99,7 +104,7 @@ def test_summe_mit_while():
 
 
 @pytest.mark.modul3
-def test_fakultaet_mit_while():
+def test_fakultaet_mit_while() -> None:
     """Test: Fakultät berechnen mit while-Schleife."""
     n = 5
     fakultaet = 1
@@ -116,7 +121,7 @@ def test_fakultaet_mit_while():
 
 
 @pytest.mark.modul3
-def test_for_schleifen_import():
+def test_for_schleifen_import() -> None:
     """Test: for_schleifen.py kann importiert werden."""
     try:
         import for_schleifen
@@ -135,14 +140,14 @@ def test_for_schleifen_import():
         (5, 10, [5, 6, 7, 8, 9]),
     ],
 )
-def test_range_erzeugung(start, end, expected_list):
+def test_range_erzeugung(start: int, end: int, expected_list: list[int]) -> None:
     """Test: range() erzeugt erwartete Listen."""
     result = list(range(start, end))
     assert result == expected_list
 
 
 @pytest.mark.modul3
-def test_liste_iteration():
+def test_liste_iteration() -> None:
     """Test: Iteration über Listen."""
     fruechte = ["Apfel", "Banane", "Orange"]
     gefunden = []
@@ -154,7 +159,7 @@ def test_liste_iteration():
 
 
 @pytest.mark.modul3
-def test_summe_mit_for():
+def test_summe_mit_for() -> None:
     """Test: Summe berechnen mit for-Schleife."""
     zahlen = [10, 20, 30, 40, 50]
     summe = 0
@@ -169,7 +174,7 @@ def test_summe_mit_for():
 
 
 @pytest.mark.modul3
-def test_listen_import():
+def test_listen_import() -> None:
     """Test: listen.py kann importiert werden."""
     try:
         import listen
@@ -180,7 +185,7 @@ def test_listen_import():
 
 
 @pytest.mark.modul3
-def test_liste_erstellen():
+def test_liste_erstellen() -> None:
     """Test: Listen erstellen."""
     zahlen = [1, 2, 3, 4, 5]
     namen = ["Anna", "Max", "Lisa"]
@@ -190,7 +195,7 @@ def test_liste_erstellen():
 
 
 @pytest.mark.modul3
-def test_liste_indexierung():
+def test_liste_indexierung() -> None:
     """Test: Auf Listenelemente zugreifen."""
     fruechte = ["Apfel", "Banane", "Orange"]
 
@@ -199,7 +204,7 @@ def test_liste_indexierung():
 
 
 @pytest.mark.modul3
-def test_liste_append():
+def test_liste_append() -> None:
     """Test: Elemente hinzufügen."""
     liste = ["Apfel", "Banane"]
     liste.append("Orange")
@@ -209,7 +214,7 @@ def test_liste_append():
 
 
 @pytest.mark.modul3
-def test_liste_remove():
+def test_liste_remove() -> None:
     """Test: Elemente entfernen."""
     liste = ["Apfel", "Banane", "Orange"]
     liste.remove("Banane")
@@ -222,7 +227,7 @@ def test_liste_remove():
 
 
 @pytest.mark.modul3
-def test_verschachtelt_import():
+def test_verschachtelt_import() -> None:
     """Test: verschachtelt.py kann importiert werden."""
     try:
         import verschachtelt
@@ -233,7 +238,7 @@ def test_verschachtelt_import():
 
 
 @pytest.mark.modul3
-def test_verschachtelte_schleifen():
+def test_verschachtelte_schleifen() -> None:
     """Test: Verschachtelte Schleifen."""
     result = []
     for i in range(3):
@@ -246,7 +251,7 @@ def test_verschachtelte_schleifen():
 
 
 @pytest.mark.modul3
-def test_multiplikationstabelle():
+def test_multiplikationstabelle() -> None:
     """Test: Multiplikationstabelle."""
     tabelle = []
     for i in range(1, 4):
@@ -263,13 +268,15 @@ def test_multiplikationstabelle():
 
 
 @pytest.mark.modul3
-def test_zahlenraten_import():
-    """Test: zahlenraten.py kann importiert werden (ohne Funktionen)."""
-    # Dieses Modul ist interaktiv und hat keine Funktionen mehr (Modul 3)
-    # Es wird direkt ausgeführt, daher überspringen wir den Import-Test
-    pytest.skip(
-        "Interaktives Modul ohne Funktionen - wird in Modul 4 mit Funktionen umgesetzt"
-    )
+def test_zahlenraten_import() -> None:
+    """Test: zahlenraten.py kann importiert werden."""
+    with patch("builtins.input", return_value="50"):
+        try:
+            import zahlenraten
+
+            assert hasattr(zahlenraten, "main")
+        except Exception as e:
+            pytest.skip(f"Interaktives Modul: {e}")
 
 
 @pytest.mark.modul3
@@ -281,7 +288,11 @@ def test_zahlenraten_import():
         (50, 50, "richtig"),
     ],
 )
-def test_zahlenvergleich(geheim, geraten, expected_msg):
+def test_zahlenvergleich(
+    geheim: int | float | str | bool,
+    geraten: int | float | str | bool,
+    expected_msg: int | float | str | bool,
+) -> None:
     """Test: Zahlenvergleich-Logik."""
     if geraten < geheim:
         msg = "niedrig"
@@ -297,47 +308,40 @@ def test_zahlenvergleich(geheim, geraten, expected_msg):
 
 
 @pytest.mark.modul3
-def test_einkaufsliste_import():
-    """Test: einkaufsliste.py kann importiert werden (ohne Funktionen)."""
-    # Dieses Modul ist interaktiv und hat keine Funktionen mehr (Modul 3)
-    # Es wird direkt ausgeführt, daher überspringen wir den Import-Test
-    pytest.skip(
-        "Interaktives Modul ohne Funktionen - wird in Modul 4 mit Funktionen umgesetzt"
-    )
+def test_einkaufsliste_import() -> None:
+    """Test: einkaufsliste.py kann importiert werden."""
+    with patch("builtins.input", return_value="5"):
+        try:
+            import einkaufsliste
+
+            assert hasattr(einkaufsliste, "main")
+        except Exception as e:
+            pytest.skip(f"Interaktives Modul: {e}")
 
 
 @pytest.mark.modul3
-def test_einkaufsliste_listen_operationen():
-    """Test: Listen-Operationen wie in einkaufsliste.py."""
-    # Test der Logik ohne Funktionen
-    einkaufsliste = []
+def test_einkaufsliste_funktionen_existieren() -> None:
+    """Test: Einkaufslisten-Funktionen existieren."""
+    with patch("builtins.input", return_value="5"):
+        import einkaufsliste
 
-    # Artikel hinzufügen
-    einkaufsliste.append("Milch")
-    einkaufsliste.append("Brot")
-    assert len(einkaufsliste) == 2
-
-    # Artikel löschen
-    einkaufsliste.pop(0)
-    assert len(einkaufsliste) == 1
-    assert einkaufsliste[0] == "Brot"
-
-    # Liste leeren
-    einkaufsliste.clear()
-    assert len(einkaufsliste) == 0
+        assert hasattr(einkaufsliste, "artikel_hinzufuegen")
+        assert hasattr(einkaufsliste, "liste_anzeigen")
 
 
 # ===== primzahlen.py =====
 
 
 @pytest.mark.modul3
-def test_primzahlen_import():
-    """Test: primzahlen.py kann importiert werden (ohne Funktionen)."""
-    # Dieses Modul ist interaktiv und hat keine Funktionen mehr (Modul 3)
-    # Es wird direkt ausgeführt, daher überspringen wir den Import-Test
-    pytest.skip(
-        "Interaktives Modul ohne Funktionen - wird in Modul 4 mit Funktionen umgesetzt"
-    )
+def test_primzahlen_import() -> None:
+    """Test: primzahlen.py kann importiert werden."""
+    with patch("builtins.input", return_value="5"):
+        try:
+            import primzahlen
+
+            assert hasattr(primzahlen, "ist_primzahl")
+        except Exception as e:
+            pytest.skip(f"Interaktives Modul: {e}")
 
 
 @pytest.mark.modul3
@@ -354,59 +358,40 @@ def test_primzahlen_import():
         (11, True),
     ],
 )
-def test_ist_primzahl_logik(n, expected):
-    """Test: Primzahl-Prüfung Logik (ohne Funktion)."""
-    # Test der Primzahl-Logik wie in primzahlen.py implementiert
-    ist_prim = False
+def test_ist_primzahl(
+    n: int | float | str | bool, expected: int | float | str | bool
+) -> None:
+    """Test: Primzahl-Prüfung."""
+    with patch("builtins.input", return_value="5"):
+        import importlib
 
-    if n < 2:
-        ist_prim = False
-    elif n == 2:
-        ist_prim = True
-    elif n % 2 == 0:
-        ist_prim = False
-    else:
-        ist_prim = True
-        for teiler in range(3, int(n**0.5) + 1, 2):
-            if n % teiler == 0:
-                ist_prim = False
-                break
+        import primzahlen
 
-    assert ist_prim == expected
+        importlib.reload(primzahlen)
+
+        result = primzahlen.ist_primzahl(n)
+        assert result == expected
 
 
 @pytest.mark.modul3
-def test_finde_primzahlen_logik():
-    """Test: Primzahlen bis N finden (ohne Funktion)."""
-    # Test der Logik wie in primzahlen.py implementiert
-    bis = 10
-    primzahlen = []
+def test_finde_primzahlen() -> None:
+    """Test: Primzahlen bis N finden."""
+    with patch("builtins.input", return_value="5"):
+        import importlib
 
-    for zahl in range(2, bis + 1):
-        ist_prim = False
+        import primzahlen
 
-        if zahl == 2:
-            ist_prim = True
-        elif zahl % 2 == 0:
-            ist_prim = False
-        else:
-            ist_prim = True
-            for teiler in range(3, int(zahl**0.5) + 1, 2):
-                if zahl % teiler == 0:
-                    ist_prim = False
-                    break
+        importlib.reload(primzahlen)
 
-        if ist_prim:
-            primzahlen.append(zahl)
-
-    assert primzahlen == [2, 3, 5, 7]
+        primes = primzahlen.finde_primzahlen(10)
+        assert primes == [2, 3, 5, 7]
 
 
 # ===== muster.py =====
 
 
 @pytest.mark.modul3
-def test_muster_import():
+def test_muster_import() -> None:
     """Test: muster.py kann importiert werden."""
     with patch("builtins.input", return_value="test"):
         try:
@@ -418,7 +403,7 @@ def test_muster_import():
 
 
 @pytest.mark.modul3
-def test_muster_funktionen_existieren():
+def test_muster_funktionen_existieren() -> None:
     """Test: Muster-Funktionen existieren."""
     with patch("builtins.input", return_value="test"):
         import muster
@@ -431,7 +416,7 @@ def test_muster_funktionen_existieren():
 
 
 @pytest.mark.modul3
-def test_menu_import():
+def test_menu_import() -> None:
     """Test: menu.py kann importiert werden."""
     with patch("builtins.input", return_value="6"):
         try:
@@ -443,7 +428,7 @@ def test_menu_import():
 
 
 @pytest.mark.modul3
-def test_menu_funktionen_existieren():
+def test_menu_funktionen_existieren() -> None:
     """Test: Menü-Funktionen existieren."""
     with patch("builtins.input", return_value="6"):
         import menu
@@ -461,7 +446,11 @@ def test_menu_funktionen_existieren():
         (80, 1.80, 24.7),
     ],
 )
-def test_bmi_berechnung_in_menu(gewicht, groesse, expected_bmi):
+def test_bmi_berechnung_in_menu(
+    gewicht: int | float | str | bool,
+    groesse: int | float | str | bool,
+    expected_bmi: int | float | str | bool,
+) -> None:
     """Test: BMI-Berechnung im Menü."""
     bmi = gewicht / (groesse**2)
     assert abs(bmi - expected_bmi) < 0.1

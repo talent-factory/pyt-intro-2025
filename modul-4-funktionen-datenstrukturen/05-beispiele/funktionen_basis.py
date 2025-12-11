@@ -8,27 +8,27 @@ Zeigt:
 """
 
 
-def zeige_header():
+def zeige_header() -> None:
     """Zeigt einen Header."""
     print("=" * 50)
     print("FUNKTIONEN DEMO")
     print("=" * 50)
 
 
-def zeige_menu():
+def zeige_menu() -> None:
     """Zeigt ein Menü."""
     print("\n1. Begrüssung")
     print("2. Rechner")
     print("3. Beenden")
 
 
-def begruessung():
+def begruessung() -> None:
     """Gibt eine Begrüssung aus."""
     print("\nWillkommen zum Python-Kurs!")
     print("Schön, dass Sie da sind!")
 
 
-def zeige_footer():
+def zeige_footer() -> None:
     """Zeigt einen Footer."""
     print("\n" + "-" * 50)
     print("© 2025 Python Kurs")

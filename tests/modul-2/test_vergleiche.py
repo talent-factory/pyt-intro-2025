@@ -5,6 +5,7 @@ Testet Boolsche Werte und Vergleiche
 
 import sys
 from pathlib import Path
+from typing import Any
 
 import pytest
 
@@ -13,7 +14,7 @@ sys.path.insert(0, str(modul_pfad))
 
 
 @pytest.mark.modul2
-def test_modul_import():
+def test_modul_import() -> None:
     """Test: Modul kann importiert werden."""
     try:
         import vergleiche
@@ -24,7 +25,7 @@ def test_modul_import():
 
 
 @pytest.mark.modul2
-def test_bool_typ():
+def test_bool_typ() -> None:
     """Test: Boolean-Typ existiert."""
     assert bool == bool
     assert bool == bool
@@ -39,7 +40,12 @@ def test_bool_typ():
         (0, 0, True, False),
     ],
 )
-def test_vergleichsoperatoren_gleich_ungleich(a, b, expected_eq, expected_ne):
+def test_vergleichsoperatoren_gleich_ungleich(
+    a: int | float | str | bool,
+    b: int | float | str | bool,
+    expected_eq: int | float | str | bool,
+    expected_ne: int | float | str | bool,
+) -> None:
     """Test: Gleich (==) und Ungleich (!=) Operatoren."""
     assert (a == b) == expected_eq
     assert (a != b) == expected_ne
@@ -54,7 +60,12 @@ def test_vergleichsoperatoren_gleich_ungleich(a, b, expected_eq, expected_ne):
         (10, 10, False, False),
     ],
 )
-def test_vergleichsoperatoren_kleiner_groesser(a, b, expected_lt, expected_gt):
+def test_vergleichsoperatoren_kleiner_groesser(
+    a: int | float | str | bool,
+    b: int | float | str | bool,
+    expected_lt: int | float | str | bool,
+    expected_gt: int | float | str | bool,
+) -> None:
     """Test: Kleiner (<) und Grösser (>) Operatoren."""
     assert (a < b) == expected_lt
     assert (a > b) == expected_gt
@@ -70,8 +81,11 @@ def test_vergleichsoperatoren_kleiner_groesser(a, b, expected_lt, expected_gt):
     ],
 )
 def test_vergleichsoperatoren_kleiner_gleich_groesser_gleich(
-    a, b, expected_le, expected_ge
-):
+    a: int | float | str | bool,
+    b: int | float | str | bool,
+    expected_le: int | float | str | bool,
+    expected_ge: int | float | str | bool,
+) -> None:
     """Test: Kleiner-gleich (<=) und Grösser-gleich (>=) Operatoren."""
     assert (a <= b) == expected_le
     assert (a >= b) == expected_ge
@@ -87,7 +101,11 @@ def test_vergleichsoperatoren_kleiner_gleich_groesser_gleich(
         (False, False, False),
     ],
 )
-def test_logischer_operator_and(a, b, expected):
+def test_logischer_operator_and(
+    a: int | float | str | bool,
+    b: int | float | str | bool,
+    expected: int | float | str | bool,
+) -> None:
     """Test: Logischer AND-Operator."""
     assert (a and b) == expected
 
@@ -102,7 +120,11 @@ def test_logischer_operator_and(a, b, expected):
         (False, False, False),
     ],
 )
-def test_logischer_operator_or(a, b, expected):
+def test_logischer_operator_or(
+    a: int | float | str | bool,
+    b: int | float | str | bool,
+    expected: int | float | str | bool,
+) -> None:
     """Test: Logischer OR-Operator."""
     assert (a or b) == expected
 
@@ -115,13 +137,15 @@ def test_logischer_operator_or(a, b, expected):
         (False, True),
     ],
 )
-def test_logischer_operator_not(a, expected):
+def test_logischer_operator_not(
+    a: int | float | str | bool, expected: int | float | str | bool
+) -> None:
     """Test: Logischer NOT-Operator."""
     assert (not a) == expected
 
 
 @pytest.mark.modul2
-def test_kombinierte_bedingungen():
+def test_kombinierte_bedingungen() -> None:
     """Test: Kombinierte logische Bedingungen."""
     alter = 25
     hat_ticket = True
@@ -141,13 +165,17 @@ def test_kombinierte_bedingungen():
         ("test", "test", True),
     ],
 )
-def test_string_vergleiche(s1, s2, expected):
+def test_string_vergleiche(
+    s1: int | float | str | bool,
+    s2: int | float | str | bool,
+    expected: int | float | str | bool,
+) -> None:
     """Test: String-Vergleiche sind case-sensitive."""
     assert (s1 == s2) == expected
 
 
 @pytest.mark.modul2
-def test_case_insensitive_vergleich():
+def test_case_insensitive_vergleich() -> None:
     """Test: Case-insensitive String-Vergleich."""
     name1 = "Anna"
     name2 = "anna"
@@ -170,13 +198,13 @@ def test_case_insensitive_vergleich():
         (None, False),
     ],
 )
-def test_wahrheitswerte_anderer_typen(wert, expected_bool):
+def test_wahrheitswerte_anderer_typen(wert: Any, expected_bool: bool) -> None:
     """Test: Wahrheitswerte verschiedener Typen."""
     assert bool(wert) == expected_bool
 
 
 @pytest.mark.modul2
-def test_bereichspruefung():
+def test_bereichspruefung() -> None:
     """Test: Bereichsprüfung mit kombinierten Vergleichen."""
     zahl = 15
     assert 10 <= zahl <= 20

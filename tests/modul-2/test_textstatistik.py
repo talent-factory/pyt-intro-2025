@@ -14,17 +14,19 @@ sys.path.insert(0, str(modul_pfad))
 
 
 @pytest.mark.modul2
-def test_modul_import():
+def test_modul_import() -> None:
     """Test: Modul kann importiert werden."""
     with patch("builtins.input", return_value="Test"):
         try:
+            import textstatistik
+
             assert True
         except Exception as e:
             pytest.skip(f"Interaktives Modul: {e}")
 
 
 @pytest.mark.modul2
-def test_analysiere_text_funktion_existiert():
+def test_analysiere_text_funktion_existiert() -> None:
     """Test: analysiere_text Funktion existiert."""
     with patch("builtins.input", return_value="Test"):
         import textstatistik
@@ -41,7 +43,11 @@ def test_analysiere_text_funktion_existiert():
         ("Test", 4, 1),
     ],
 )
-def test_text_grundstatistiken(text, expected_zeichen, expected_woerter):
+def test_text_grundstatistiken(
+    text: int | float | str | bool,
+    expected_zeichen: int | float | str | bool,
+    expected_woerter: int | float | str | bool,
+) -> None:
     """Test: Grundlegende Textstatistiken."""
     with patch("builtins.input", return_value="Test"):
         import importlib
@@ -57,7 +63,7 @@ def test_text_grundstatistiken(text, expected_zeichen, expected_woerter):
 
 
 @pytest.mark.modul2
-def test_zeichen_ohne_leerzeichen():
+def test_zeichen_ohne_leerzeichen() -> None:
     """Test: Zeichen ohne Leerzeichen zählen."""
     with patch("builtins.input", return_value="Test"):
         import importlib
@@ -73,7 +79,7 @@ def test_zeichen_ohne_leerzeichen():
 
 
 @pytest.mark.modul2
-def test_saetze_zaehlen():
+def test_saetze_zaehlen() -> None:
     """Test: Sätze zählen."""
     with patch("builtins.input", return_value="Test"):
         import importlib
@@ -89,7 +95,7 @@ def test_saetze_zaehlen():
 
 
 @pytest.mark.modul2
-def test_gross_und_kleinbuchstaben():
+def test_gross_und_kleinbuchstaben() -> None:
     """Test: Gross- und Kleinbuchstaben zählen."""
     with patch("builtins.input", return_value="Test"):
         import importlib
@@ -106,7 +112,7 @@ def test_gross_und_kleinbuchstaben():
 
 
 @pytest.mark.modul2
-def test_zahlen_im_text():
+def test_zahlen_im_text() -> None:
     """Test: Zahlen im Text zählen."""
     with patch("builtins.input", return_value="Test"):
         import importlib
@@ -122,7 +128,7 @@ def test_zahlen_im_text():
 
 
 @pytest.mark.modul2
-def test_durchschnittliche_wortlaenge():
+def test_durchschnittliche_wortlaenge() -> None:
     """Test: Durchschnittliche Wortlänge."""
     with patch("builtins.input", return_value="Test"):
         import importlib
@@ -139,7 +145,7 @@ def test_durchschnittliche_wortlaenge():
 
 
 @pytest.mark.modul2
-def test_leerer_text():
+def test_leerer_text() -> None:
     """Test: Leerer Text wird korrekt behandelt."""
     with patch("builtins.input", return_value="Test"):
         import importlib

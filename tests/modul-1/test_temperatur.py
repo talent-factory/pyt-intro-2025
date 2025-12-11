@@ -4,6 +4,7 @@ Testet Temperaturumrechnungen
 """
 
 import sys
+from io import StringIO
 from pathlib import Path
 
 import pytest
@@ -13,7 +14,7 @@ sys.path.insert(0, str(modul_pfad))
 
 
 @pytest.mark.modul1
-def test_modul_import():
+def test_modul_import() -> None:
     """Test: Modul kann importiert werden."""
     try:
         import temperatur
@@ -34,7 +35,9 @@ def test_modul_import():
         (-40, -40),
     ],
 )
-def test_celsius_zu_fahrenheit(celsius, expected_fahrenheit):
+def test_celsius_zu_fahrenheit(
+    celsius: int | float | str | bool, expected_fahrenheit: int | float | str | bool
+) -> None:
     """Test: Celsius zu Fahrenheit Umrechnung."""
     fahrenheit = (celsius * 9 / 5) + 32
     assert abs(fahrenheit - expected_fahrenheit) < 0.1
@@ -51,7 +54,9 @@ def test_celsius_zu_fahrenheit(celsius, expected_fahrenheit):
         (-40, -40),
     ],
 )
-def test_fahrenheit_zu_celsius(fahrenheit, expected_celsius):
+def test_fahrenheit_zu_celsius(
+    fahrenheit: int | float | str | bool, expected_celsius: int | float | str | bool
+) -> None:
     """Test: Fahrenheit zu Celsius Umrechnung."""
     celsius = (fahrenheit - 32) * 5 / 9
     assert abs(celsius - expected_celsius) < 0.1
@@ -67,7 +72,9 @@ def test_fahrenheit_zu_celsius(fahrenheit, expected_celsius):
         (-273.15, 0),
     ],
 )
-def test_celsius_zu_kelvin(celsius, expected_kelvin):
+def test_celsius_zu_kelvin(
+    celsius: int | float | str | bool, expected_kelvin: int | float | str | bool
+) -> None:
     """Test: Celsius zu Kelvin Umrechnung."""
     kelvin = celsius + 273.15
     assert abs(kelvin - expected_kelvin) < 0.01
@@ -83,14 +90,16 @@ def test_celsius_zu_kelvin(celsius, expected_kelvin):
         (300, 26.85),
     ],
 )
-def test_kelvin_zu_celsius(kelvin, expected_celsius):
+def test_kelvin_zu_celsius(
+    kelvin: int | float | str | bool, expected_celsius: int | float | str | bool
+) -> None:
     """Test: Kelvin zu Celsius Umrechnung."""
     celsius = kelvin - 273.15
     assert abs(celsius - expected_celsius) < 0.01
 
 
 @pytest.mark.modul1
-def test_gefrierpunkt_und_siedepunkt():
+def test_gefrierpunkt_und_siedepunkt() -> None:
     """Test: Wichtige Temperaturpunkte sind korrekt."""
     # Gefrierpunkt
     assert (0 * 9 / 5) + 32 == 32  # 0°C = 32°F

@@ -19,7 +19,7 @@ sys.path.insert(0, str(modul_pfad))
 
 
 @pytest.mark.modul4
-def test_modul_kann_importiert_werden():
+def test_modul_kann_importiert_werden() -> None:
     """Test: Modul kann ohne Fehler importiert werden."""
     try:
         import dictionaries
@@ -30,7 +30,7 @@ def test_modul_kann_importiert_werden():
 
 
 @pytest.mark.modul4
-def test_zeige_person_funktion():
+def test_zeige_person_funktion() -> None:
     """Test: zeige_person() zeigt Person formatiert an."""
     import dictionaries
 
@@ -51,7 +51,7 @@ def test_zeige_person_funktion():
 
 
 @pytest.mark.modul4
-def test_erstelle_kontakt():
+def test_erstelle_kontakt() -> None:
     """Test: erstelle_kontakt() erstellt Dictionary korrekt."""
     import dictionaries
 
@@ -66,7 +66,7 @@ def test_erstelle_kontakt():
 
 
 @pytest.mark.modul4
-def test_erstelle_kontakt_hat_richtige_keys():
+def test_erstelle_kontakt_hat_richtige_keys() -> None:
     """Test: erstelle_kontakt() hat die richtigen Keys."""
     import dictionaries
 
@@ -79,7 +79,7 @@ def test_erstelle_kontakt_hat_richtige_keys():
 
 
 @pytest.mark.modul4
-def test_suche_kontakt_findet_exakt():
+def test_suche_kontakt_findet_exakt() -> None:
     """Test: suche_kontakt() findet exakten Namen."""
     import dictionaries
 
@@ -96,7 +96,7 @@ def test_suche_kontakt_findet_exakt():
 
 
 @pytest.mark.modul4
-def test_suche_kontakt_case_insensitive():
+def test_suche_kontakt_case_insensitive() -> None:
     """Test: suche_kontakt() ist case-insensitive bei exakter Suche."""
     import dictionaries
 
@@ -111,7 +111,7 @@ def test_suche_kontakt_case_insensitive():
 
 
 @pytest.mark.modul4
-def test_suche_kontakt_nicht_gefunden():
+def test_suche_kontakt_nicht_gefunden() -> None:
     """Test: suche_kontakt() gibt None wenn nicht gefunden."""
     import dictionaries
 
@@ -125,7 +125,7 @@ def test_suche_kontakt_nicht_gefunden():
 
 
 @pytest.mark.modul4
-def test_suche_kontakt_leere_liste():
+def test_suche_kontakt_leere_liste() -> None:
     """Test: suche_kontakt() funktioniert mit leerer Liste."""
     import dictionaries
 

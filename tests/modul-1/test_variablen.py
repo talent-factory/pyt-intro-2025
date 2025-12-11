@@ -14,7 +14,7 @@ sys.path.insert(0, str(modul_pfad))
 
 
 @pytest.mark.modul1
-def test_modul_import():
+def test_modul_import() -> None:
     """Test: Modul kann importiert werden."""
     try:
         import variablen
@@ -25,7 +25,7 @@ def test_modul_import():
 
 
 @pytest.mark.modul1
-def test_variablen_ausgabe():
+def test_variablen_ausgabe() -> None:
     """Test: Variablen werden korrekt ausgegeben."""
     old_stdout = sys.stdout
     sys.stdout = captured = StringIO()
@@ -49,7 +49,7 @@ def test_variablen_ausgabe():
 
 
 @pytest.mark.modul1
-def test_berechnungen():
+def test_berechnungen() -> None:
     """Test: Berechnungen werden durchgeführt."""
     old_stdout = sys.stdout
     sys.stdout = captured = StringIO()

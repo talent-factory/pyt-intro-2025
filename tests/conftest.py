@@ -4,7 +4,7 @@ Für alle Test-Module
 """
 
 import sys
-from collections.abc import Generator
+from collections.abc import Callable, Generator
 from io import StringIO
 from pathlib import Path
 
@@ -35,7 +35,7 @@ def captured_output() -> Generator[StringIO, None, None]:
 
 
 @pytest.fixture
-def mock_input(monkeypatch):
+def mock_input(monkeypatch: pytest.MonkeyPatch) -> Callable[[list[str]], None]:
     """
     Fixture zum Mocken von input()-Aufrufen.
 
@@ -45,7 +45,7 @@ def mock_input(monkeypatch):
             # Code der input() aufruft
     """
 
-    def _mock_input(values: list[str]):
+    def _mock_input(values: list[str]) -> None:
         """
         Setzt eine Liste von Werten für aufeinanderfolgende input()-Aufrufe.
 
@@ -59,7 +59,7 @@ def mock_input(monkeypatch):
 
 
 @pytest.fixture
-def temp_file(tmp_path):
+def temp_file(tmp_path: Path) -> Callable[[str, str], Path]:
     """
     Fixture für temporäre Dateien.
 

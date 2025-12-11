@@ -11,7 +11,7 @@ Konvertiert Punkte (0-100) in Schweizer Noten (2-6):
 """
 
 
-def eingabe_zahl(prompt, minimum=0, maximum=100):
+def eingabe_zahl(prompt: str, minimum: int = 0, maximum: int = 100) -> int:
     """
     Fragt nach einer Zahl und validiert die Eingabe.
 

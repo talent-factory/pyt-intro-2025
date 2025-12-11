@@ -13,7 +13,7 @@ sys.path.insert(0, str(modul_pfad))
 
 
 @pytest.mark.modul2
-def test_modul_import():
+def test_modul_import() -> None:
     """Test: Modul kann importiert werden."""
     try:
         import typkonvertierung
@@ -33,7 +33,9 @@ def test_modul_import():
         ("999", 999),
     ],
 )
-def test_string_zu_int(string_zahl, expected_int):
+def test_string_zu_int(
+    string_zahl: int | float | str | bool, expected_int: int | float | str | bool
+) -> None:
     """Test: String zu Integer Konvertierung."""
     result = int(string_zahl)
     assert result == expected_int
@@ -50,7 +52,9 @@ def test_string_zu_int(string_zahl, expected_int):
         ("-2.5", -2.5),
     ],
 )
-def test_string_zu_float(string_zahl, expected_float):
+def test_string_zu_float(
+    string_zahl: int | float | str | bool, expected_float: int | float | str | bool
+) -> None:
     """Test: String zu Float Konvertierung."""
     result = float(string_zahl)
     assert abs(result - expected_float) < 0.001
@@ -67,7 +71,9 @@ def test_string_zu_float(string_zahl, expected_float):
         (3.14, "3.14"),
     ],
 )
-def test_zahl_zu_string(zahl, expected_string):
+def test_zahl_zu_string(
+    zahl: int | float | str | bool, expected_string: int | float | str | bool
+) -> None:
     """Test: Zahl zu String Konvertierung."""
     result = str(zahl)
     assert result == expected_string
@@ -75,7 +81,7 @@ def test_zahl_zu_string(zahl, expected_string):
 
 
 @pytest.mark.modul2
-def test_string_konkatenation_ohne_konvertierung():
+def test_string_konkatenation_ohne_konvertierung() -> None:
     """Test: String-Konkatenation ohne Typkonvertierung."""
     zahl1_str = "10"
     zahl2_str = "20"
@@ -86,7 +92,7 @@ def test_string_konkatenation_ohne_konvertierung():
 
 
 @pytest.mark.modul2
-def test_addition_mit_konvertierung():
+def test_addition_mit_konvertierung() -> None:
     """Test: Addition nach Typkonvertierung."""
     zahl1_str = "10"
     zahl2_str = "20"
@@ -109,7 +115,9 @@ def test_addition_mit_konvertierung():
         (-2.7, -2),
     ],
 )
-def test_float_zu_int(float_zahl, expected_int):
+def test_float_zu_int(
+    float_zahl: int | float | str | bool, expected_int: int | float | str | bool
+) -> None:
     """Test: Float zu Int (Nachkommastellen werden abgeschnitten)."""
     result = int(float_zahl)
     assert result == expected_int
@@ -124,7 +132,9 @@ def test_float_zu_int(float_zahl, expected_int):
         (-10, -10.0),
     ],
 )
-def test_int_zu_float(int_zahl, expected_float):
+def test_int_zu_float(
+    int_zahl: int | float | str | bool, expected_float: int | float | str | bool
+) -> None:
     """Test: Int zu Float Konvertierung."""
     result = float(int_zahl)
     assert result == expected_float
@@ -145,14 +155,16 @@ def test_int_zu_float(int_zahl, expected_float):
         ("False", True),  # Nicht-leerer String ist True!
     ],
 )
-def test_zu_boolean(wert, expected_bool):
+def test_zu_boolean(
+    wert: int | float | str | bool, expected_bool: int | float | str | bool
+) -> None:
     """Test: Konvertierung zu Boolean."""
     result = bool(wert)
     assert result == expected_bool
 
 
 @pytest.mark.modul2
-def test_fehlerhafte_konvertierung_int():
+def test_fehlerhafte_konvertierung_int() -> None:
     """Test: Fehlerhafte String zu Int Konvertierung."""
     with pytest.raises(ValueError):
         int("Hallo")
@@ -162,14 +174,14 @@ def test_fehlerhafte_konvertierung_int():
 
 
 @pytest.mark.modul2
-def test_fehlerhafte_konvertierung_float():
+def test_fehlerhafte_konvertierung_float() -> None:
     """Test: Fehlerhafte String zu Float Konvertierung."""
     with pytest.raises(ValueError):
         float("abc")
 
 
 @pytest.mark.modul2
-def test_float_string_zu_int_korrekt():
+def test_float_string_zu_int_korrekt() -> None:
     """Test: Korrekte Konvertierung von Float-String zu Int."""
     preis_str = "19.99"
 
@@ -181,7 +193,7 @@ def test_float_string_zu_int_korrekt():
 
 
 @pytest.mark.modul2
-def test_typ_ermitteln():
+def test_typ_ermitteln() -> None:
     """Test: type() ermittelt den Typ korrekt."""
     assert int == int
     assert float == float

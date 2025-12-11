@@ -8,19 +8,19 @@ Zeigt:
 """
 
 
-def zeige_person(person):
+def zeige_person(person: dict[str, str]) -> None:
     """Zeigt Person formatiert."""
     print("\nPerson:")
     for key, value in person.items():
         print(f"  {key}: {value}")
 
 
-def erstelle_kontakt(name, email, telefon):
+def erstelle_kontakt(name: str, email: str, telefon: str) -> dict[str, str]:
     """Erstellt einen Kontakt."""
     return {"name": name, "email": email, "telefon": telefon}
 
 
-def suche_kontakt(kontakte, name):
+def suche_kontakt(kontakte: list[dict[str, str]], name: str) -> dict[str, str] | None:
     """Sucht Kontakt nach Name."""
     for kontakt in kontakte:
         if kontakt["name"].lower() == name.lower():

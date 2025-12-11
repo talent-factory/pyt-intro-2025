@@ -5,7 +5,7 @@ Die Funktion begruessung() gibt eine Willkommensnachricht aus.
 """
 
 
-def begruessung():
+def begruessung() -> None:
     """Gibt eine freundliche Begrüssung aus."""
     print("Willkommen zum Python-Kurs!")
     print("Schön, dass Sie da sind!")

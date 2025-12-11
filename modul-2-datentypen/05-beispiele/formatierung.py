@@ -90,7 +90,7 @@ print(nachricht)
 print("=== Alte Formatierungs-Methoden ===\n")
 
 # format()-Methode
-text1 = f"Ich heisse {name} und bin {alter} Jahre alt"
+text1 = "Ich heisse {} und bin {} Jahre alt".format(name, alter)
 print(f"format(): {text1}")
 
 # %-Formatierung (sehr alt)
