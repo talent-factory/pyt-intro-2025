@@ -6,7 +6,7 @@
 == Was du brauchst
 
 * Visual Studio Code (https://code.visualstudio.com/)
-* Python 3.10 oder neuer
+* Python 3.11 oder neuer
 * Ca. 15 Minuten Zeit
 
 == Schritt-für-Schritt-Anleitung
@@ -15,7 +15,7 @@
 
 . Öffne VS Code
 . Wähle `File` → `Open Folder...`
-. Navigiere zu deinem `pyt-intro` Ordner
+. Navigiere zu deinem `pyt-intro-2025` Ordner
 . Klicke auf `Öffnen`
 
 TIP: VS Code erkennt automatisch die `.vscode` Konfiguration!
@@ -39,20 +39,17 @@ ____
 . Tippe: `Extensions: Show Recommended Extensions`
 . Klicke bei jeder Extension auf `Install`
 
-=== 3. Ruff installieren
+=== 3. Dependencies installieren
 
-Öffne das Terminal in VS Code (`Ctrl+ö` oder `View` → `Terminal`):
+Öffne das Terminal in VS Code (`Ctrl+`` ` `` oder `View` → `Terminal`):
 
 [source,bash]
 ----
-# Aktiviere deine virtuelle Umgebung (falls vorhanden)
-source .venv/bin/activate  # Mac/Linux
-# oder
-.venv\Scripts\activate     # Windows
-
-# Installiere Ruff
-pip install ruff
+# Synchronisiere alle Dependencies (inkl. Ruff)
+uv sync
 ----
+
+TIP: Das Projekt verwendet `uv` als Package Manager. Alle Dependencies (inkl. Ruff, pytest) sind bereits in `pyproject.toml` definiert und werden mit `uv sync` automatisch installiert.
 
 === 4. Python-Interpreter auswählen
 
@@ -131,13 +128,23 @@ Function name should be lowercase (N802)
 |`Ctrl+Shift+P`
 
 |Terminal öffnen
-|`Ctrl+ö`
-|`Ctrl+ö`
+|`Cmd+J`
+|`Ctrl+J`
 
 |Datei speichern
 |`Cmd+S`
 |`Ctrl+S`
+
+|Sidebar ein/aus
+|`Cmd+B`
+|`Ctrl+B`
+
+|Datei suchen
+|`Cmd+P`
+|`Ctrl+P`
 |===
+
+NOTE: Das Backtick-Zeichen `` ` `` befindet sich auf Schweizer/Deutschen Tastaturen auf der Taste links neben der Backspace-Taste (zusammen mit `^` und `~`).
 
 == Was zeigen dir die farbigen Unterstreichungen?
 
@@ -166,8 +173,8 @@ TIP: Mit `Cmd+.` (Mac) oder `Ctrl+.` (Windows) kannst du viele Probleme automati
 
 **Lösung:**
 
-. Stelle sicher, dass Ruff installiert ist: `pip install ruff`
-. Prüfe, ob der richtige Python-Interpreter ausgewählt ist
+. Stelle sicher, dass alle Dependencies installiert sind: `uv sync`
+. Prüfe, ob der richtige Python-Interpreter ausgewählt ist (`.venv/bin/python`)
 . Starte VS Code neu
 
 === Extensions werden nicht empfohlen
