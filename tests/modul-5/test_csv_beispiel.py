@@ -98,6 +98,7 @@ def test_kontakte_erstellen_hat_header(
             reader = csv.DictReader(f)
             fieldnames = reader.fieldnames
 
+        assert fieldnames is not None
         assert "name" in fieldnames
         assert "email" in fieldnames
         assert "telefon" in fieldnames
