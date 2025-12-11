@@ -52,8 +52,8 @@ def test_f_string_mit_berechnungen() -> None:
     ],
 )
 def test_formatierung_dezimalstellen(
-    zahl: int | float | str | bool,
-    dezimalstellen: int | float | str | bool,
+    zahl: int | float,
+    dezimalstellen: int,
     expected: int | float | str | bool,
 ) -> None:
     """Test: Formatierung mit Dezimalstellen."""
@@ -71,7 +71,7 @@ def test_formatierung_dezimalstellen(
     ],
 )
 def test_prozent_formatierung(
-    prozent: int | float | str | bool, expected: int | float | str | bool
+    prozent: int | float, expected: int | float | str | bool
 ) -> None:
     """Test: Prozent-Formatierung."""
     result = f"{prozent:.0%}"

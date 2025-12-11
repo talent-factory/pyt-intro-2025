@@ -33,9 +33,7 @@ def test_modul_import() -> None:
         ("999", 999),
     ],
 )
-def test_string_zu_int(
-    string_zahl: int | float | str | bool, expected_int: int | float | str | bool
-) -> None:
+def test_string_zu_int(string_zahl: str, expected_int: int) -> None:
     """Test: String zu Integer Konvertierung."""
     result = int(string_zahl)
     assert result == expected_int
@@ -52,9 +50,7 @@ def test_string_zu_int(
         ("-2.5", -2.5),
     ],
 )
-def test_string_zu_float(
-    string_zahl: int | float | str | bool, expected_float: int | float | str | bool
-) -> None:
+def test_string_zu_float(string_zahl: str, expected_float: float) -> None:
     """Test: String zu Float Konvertierung."""
     result = float(string_zahl)
     assert abs(result - expected_float) < 0.001
@@ -71,9 +67,7 @@ def test_string_zu_float(
         (3.14, "3.14"),
     ],
 )
-def test_zahl_zu_string(
-    zahl: int | float | str | bool, expected_string: int | float | str | bool
-) -> None:
+def test_zahl_zu_string(zahl: int | float, expected_string: str) -> None:
     """Test: Zahl zu String Konvertierung."""
     result = str(zahl)
     assert result == expected_string
@@ -115,9 +109,7 @@ def test_addition_mit_konvertierung() -> None:
         (-2.7, -2),
     ],
 )
-def test_float_zu_int(
-    float_zahl: int | float | str | bool, expected_int: int | float | str | bool
-) -> None:
+def test_float_zu_int(float_zahl: int | float, expected_int: int) -> None:
     """Test: Float zu Int (Nachkommastellen werden abgeschnitten)."""
     result = int(float_zahl)
     assert result == expected_int
@@ -132,9 +124,7 @@ def test_float_zu_int(
         (-10, -10.0),
     ],
 )
-def test_int_zu_float(
-    int_zahl: int | float | str | bool, expected_float: int | float | str | bool
-) -> None:
+def test_int_zu_float(int_zahl: int | float, expected_float: float) -> None:
     """Test: Int zu Float Konvertierung."""
     result = float(int_zahl)
     assert result == expected_float

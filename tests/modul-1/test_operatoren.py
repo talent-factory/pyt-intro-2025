@@ -82,8 +82,8 @@ def test_erweiterte_operationen() -> None:
     ],
 )
 def test_addition_berechnung(
-    a: int | float | str | bool,
-    b: int | float | str | bool,
+    a: int | float,
+    b: int | float,
     expected_sum: int | float | str | bool,
 ) -> None:
     """Test: Addition wird korrekt berechnet."""
@@ -101,8 +101,8 @@ def test_addition_berechnung(
     ],
 )
 def test_modulo_berechnung(
-    a: int | float | str | bool,
-    b: int | float | str | bool,
+    a: int | float,
+    b: int | float,
     expected_mod: int | float | str | bool,
 ) -> None:
     """Test: Modulo wird korrekt berechnet."""

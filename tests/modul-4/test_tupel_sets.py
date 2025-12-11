@@ -42,9 +42,9 @@ def test_modul_kann_importiert_werden() -> None:
     ],
 )
 def test_berechne_distanz(
-    punkt1: int | float | str | bool,
-    punkt2: int | float | str | bool,
-    erwartete_distanz: int | float | str | bool,
+    punkt1: tuple[int | float, int | float],
+    punkt2: tuple[int | float, int | float],
+    erwartete_distanz: float,
 ) -> None:
     """Test: berechne_distanz() berechnet Distanz korrekt."""
     import tupel_sets
@@ -94,9 +94,7 @@ def test_eindeutige_woerter_einfach() -> None:
         ("Python Python", 1),
     ],
 )
-def test_eindeutige_woerter_anzahl(
-    text: int | float | str | bool, erwartete_anzahl: int | float | str | bool
-) -> None:
+def test_eindeutige_woerter_anzahl(text: str, erwartete_anzahl: int | float) -> None:
     """Test: eindeutige_woerter() zählt korrekt."""
     import tupel_sets
 
@@ -142,8 +140,8 @@ def test_gemeinsame_elemente() -> None:
     ],
 )
 def test_gemeinsame_elemente_verschiedene_sets(
-    set1: int | float | str | bool,
-    set2: int | float | str | bool,
+    set1: set[str],
+    set2: set[str],
     erwartet: int | float | str | bool,
 ) -> None:
     """Test: gemeinsame_elemente() mit verschiedenen Sets."""

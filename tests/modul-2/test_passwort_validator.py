@@ -50,7 +50,7 @@ def test_validiere_passwort_funktion_existiert() -> None:
     ],
 )
 def test_passwort_validierung(
-    passwort: int | float | str | bool, sollte_gueltig_sein: int | float | str | bool
+    passwort: str, sollte_gueltig_sein: int | float | str | bool
 ) -> None:
     """Test: Passwort-Validierung mit verschiedenen Eingaben."""
     with patch("builtins.input", return_value="q"):

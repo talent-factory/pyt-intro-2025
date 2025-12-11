@@ -35,9 +35,9 @@ def test_modul_import() -> None:
     ],
 )
 def test_altersberechnung(
-    geburtsjahr: int | float | str | bool,
-    aktuelles_jahr: int | float | str | bool,
-    expected_alter: int | float | str | bool,
+    geburtsjahr: int | float,
+    aktuelles_jahr: int | float,
+    expected_alter: int | float,
 ) -> None:
     """Test: Alter wird korrekt berechnet."""
     alter = aktuelles_jahr - geburtsjahr
@@ -54,7 +54,7 @@ def test_altersberechnung(
     ],
 )
 def test_alter_in_monaten(
-    alter: int | float | str | bool, expected_monate: int | float | str | bool
+    alter: int, expected_monate: int | float | str | bool
 ) -> None:
     """Test: Umrechnung in Monate."""
     monate = alter * 12
@@ -70,9 +70,7 @@ def test_alter_in_monaten(
         (20, 7300),
     ],
 )
-def test_alter_in_tagen(
-    alter: int | float | str | bool, expected_tage: int | float | str | bool
-) -> None:
+def test_alter_in_tagen(alter: int, expected_tage: int | float | str | bool) -> None:
     """Test: Umrechnung in Tage (ungefähr)."""
     tage = alter * 365
     assert tage == expected_tage
@@ -89,7 +87,7 @@ def test_alter_in_tagen(
     ],
 )
 def test_naechster_runder_geburtstag(
-    alter: int | float | str | bool, expected_naechster_runder: int | float | str | bool
+    alter: int | float, expected_naechster_runder: int | float
 ) -> None:
     """Test: Berechnung des nächsten runden Geburtstags."""
     naechster_runder = ((alter // 10) + 1) * 10

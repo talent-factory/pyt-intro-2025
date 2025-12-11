@@ -39,9 +39,7 @@ def test_bedingungen_import() -> None:
         (18, True),
     ],
 )
-def test_volljaehrigkeit(
-    alter: int | float | str | bool, expected: int | float | str | bool
-) -> None:
+def test_volljaehrigkeit(alter: int, expected: int | float | str | bool) -> None:
     """Test: Volljährigkeits-Prüfung."""
     ist_volljaehrig = alter >= 18
     assert ist_volljaehrig == expected
@@ -58,9 +56,7 @@ def test_volljaehrigkeit(
         (55, 2),
     ],
 )
-def test_notenberechnung(
-    punkte: int | float | str | bool, expected_note: int | float | str | bool
-) -> None:
+def test_notenberechnung(punkte: int, expected_note: int) -> None:
     """Test: Notenberechnung mit if-elif-else."""
     if punkte >= 90:
         note = 6
@@ -289,9 +285,9 @@ def test_zahlenraten_import() -> None:
     ],
 )
 def test_zahlenvergleich(
-    geheim: int | float | str | bool,
-    geraten: int | float | str | bool,
-    expected_msg: int | float | str | bool,
+    geheim: int | float,
+    geraten: int | float,
+    expected_msg: str,
 ) -> None:
     """Test: Zahlenvergleich-Logik."""
     if geraten < geheim:
@@ -358,9 +354,7 @@ def test_primzahlen_import() -> None:
         (11, True),
     ],
 )
-def test_ist_primzahl(
-    n: int | float | str | bool, expected: int | float | str | bool
-) -> None:
+def test_ist_primzahl(n: int, expected: bool) -> None:
     """Test: Primzahl-Prüfung."""
     with patch("builtins.input", return_value="5"):
         import importlib
@@ -447,9 +441,9 @@ def test_menu_funktionen_existieren() -> None:
     ],
 )
 def test_bmi_berechnung_in_menu(
-    gewicht: int | float | str | bool,
+    gewicht: int | float,
     groesse: int | float | str | bool,
-    expected_bmi: int | float | str | bool,
+    expected_bmi: int | float,
 ) -> None:
     """Test: BMI-Berechnung im Menü."""
     bmi = gewicht / (groesse**2)

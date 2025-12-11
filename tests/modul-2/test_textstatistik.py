@@ -44,7 +44,7 @@ def test_analysiere_text_funktion_existiert() -> None:
     ],
 )
 def test_text_grundstatistiken(
-    text: int | float | str | bool,
+    text: str,
     expected_zeichen: int | float | str | bool,
     expected_woerter: int | float | str | bool,
 ) -> None:

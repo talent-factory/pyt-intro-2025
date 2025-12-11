@@ -51,7 +51,7 @@ def test_validiere_email_funktion_existiert() -> None:
     ],
 )
 def test_email_validierung(
-    email: int | float | str | bool, sollte_gueltig_sein: int | float | str | bool
+    email: str, sollte_gueltig_sein: int | float | str | bool
 ) -> None:
     """Test: E-Mail-Validierung mit verschiedenen Eingaben."""
     with patch("builtins.input", return_value="q"):

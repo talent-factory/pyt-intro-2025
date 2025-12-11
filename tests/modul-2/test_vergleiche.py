@@ -61,8 +61,8 @@ def test_vergleichsoperatoren_gleich_ungleich(
     ],
 )
 def test_vergleichsoperatoren_kleiner_groesser(
-    a: int | float | str | bool,
-    b: int | float | str | bool,
+    a: int | float,
+    b: int | float,
     expected_lt: int | float | str | bool,
     expected_gt: int | float | str | bool,
 ) -> None:
@@ -81,10 +81,10 @@ def test_vergleichsoperatoren_kleiner_groesser(
     ],
 )
 def test_vergleichsoperatoren_kleiner_gleich_groesser_gleich(
-    a: int | float | str | bool,
-    b: int | float | str | bool,
-    expected_le: int | float | str | bool,
-    expected_ge: int | float | str | bool,
+    a: int | float,
+    b: int | float,
+    expected_le: int | float,
+    expected_ge: int | float,
 ) -> None:
     """Test: Kleiner-gleich (<=) und Grösser-gleich (>=) Operatoren."""
     assert (a <= b) == expected_le
@@ -167,7 +167,7 @@ def test_kombinierte_bedingungen() -> None:
 )
 def test_string_vergleiche(
     s1: int | float | str | bool,
-    s2: int | float | str | bool,
+    s2: int | float,
     expected: int | float | str | bool,
 ) -> None:
     """Test: String-Vergleiche sind case-sensitive."""

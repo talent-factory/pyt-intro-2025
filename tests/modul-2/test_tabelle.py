@@ -54,7 +54,7 @@ def test_tabelle_hat_ausgabe() -> None:
         {"name": "Banane", "menge": 5, "preis": 3.20},
     ],
 )
-def test_berechnung_total(produkt_daten: int | float | str | bool) -> None:
+def test_berechnung_total(produkt_daten: dict[str, int | float]) -> None:
     """Test: Total wird korrekt berechnet."""
     total = produkt_daten["menge"] * produkt_daten["preis"]
     expected_total = produkt_daten["menge"] * produkt_daten["preis"]

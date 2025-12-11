@@ -60,10 +60,10 @@ def test_grundrechenarten_ausgabe() -> None:
     ],
 )
 def test_rechenoperationen(
-    a: int | float | str | bool,
-    b: int | float | str | bool,
-    operation: int | float | str | bool,
-    expected: int | float | str | bool,
+    a: int | float,
+    b: int | float,
+    operation: str,
+    expected: int | float,
 ) -> None:
     """Test: Rechenoperationen funktionieren korrekt."""
     if operation == "add":

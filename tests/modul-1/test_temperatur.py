@@ -36,7 +36,7 @@ def test_modul_import() -> None:
     ],
 )
 def test_celsius_zu_fahrenheit(
-    celsius: int | float | str | bool, expected_fahrenheit: int | float | str | bool
+    celsius: int | float, expected_fahrenheit: int | float
 ) -> None:
     """Test: Celsius zu Fahrenheit Umrechnung."""
     fahrenheit = (celsius * 9 / 5) + 32
@@ -55,7 +55,7 @@ def test_celsius_zu_fahrenheit(
     ],
 )
 def test_fahrenheit_zu_celsius(
-    fahrenheit: int | float | str | bool, expected_celsius: int | float | str | bool
+    fahrenheit: int | float, expected_celsius: int | float
 ) -> None:
     """Test: Fahrenheit zu Celsius Umrechnung."""
     celsius = (fahrenheit - 32) * 5 / 9
@@ -72,9 +72,7 @@ def test_fahrenheit_zu_celsius(
         (-273.15, 0),
     ],
 )
-def test_celsius_zu_kelvin(
-    celsius: int | float | str | bool, expected_kelvin: int | float | str | bool
-) -> None:
+def test_celsius_zu_kelvin(celsius: int | float, expected_kelvin: int | float) -> None:
     """Test: Celsius zu Kelvin Umrechnung."""
     kelvin = celsius + 273.15
     assert abs(kelvin - expected_kelvin) < 0.01
@@ -90,9 +88,7 @@ def test_celsius_zu_kelvin(
         (300, 26.85),
     ],
 )
-def test_kelvin_zu_celsius(
-    kelvin: int | float | str | bool, expected_celsius: int | float | str | bool
-) -> None:
+def test_kelvin_zu_celsius(kelvin: int | float, expected_celsius: int | float) -> None:
     """Test: Kelvin zu Celsius Umrechnung."""
     celsius = kelvin - 273.15
     assert abs(celsius - expected_celsius) < 0.01

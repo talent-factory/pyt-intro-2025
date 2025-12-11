@@ -33,9 +33,9 @@ def test_modul_import() -> None:
     ],
 )
 def test_string_konkatenation(
-    s1: int | float | str | bool,
-    s2: int | float | str | bool,
-    expected: int | float | str | bool,
+    s1: int | float,
+    s2: int | float,
+    expected: int | float,
 ) -> None:
     """Test: String-Konkatenation funktioniert."""
     result = s1 + s2
@@ -52,9 +52,9 @@ def test_string_konkatenation(
     ],
 )
 def test_string_multiplikation(
-    char: int | float | str | bool,
-    n: int | float | str | bool,
-    expected: int | float | str | bool,
+    char: int | float,
+    n: int | float,
+    expected: int | float,
 ) -> None:
     """Test: String-Multiplikation funktioniert."""
     result = char * n
@@ -70,9 +70,7 @@ def test_string_multiplikation(
         ("", 0),
     ],
 )
-def test_string_laenge(
-    text: int | float | str | bool, expected_length: int | float | str | bool
-) -> None:
+def test_string_laenge(text: str, expected_length: int | float | str | bool) -> None:
     """Test: len() gibt korrekte Länge zurück."""
     assert len(text) == expected_length
 
@@ -88,9 +86,9 @@ def test_string_laenge(
     ],
 )
 def test_string_indexierung(
-    text: int | float | str | bool,
-    index: int | float | str | bool,
-    expected_char: int | float | str | bool,
+    text: str,
+    index: int,
+    expected_char: int | float,
 ) -> None:
     """Test: String-Indexierung funktioniert."""
     assert text[index] == expected_char
@@ -107,10 +105,10 @@ def test_string_indexierung(
     ],
 )
 def test_string_slicing(
-    text: int | float | str | bool,
+    text: str,
     start: int | float | str | bool,
     end: int | float | str | bool,
-    expected: int | float | str | bool,
+    expected: int | float,
 ) -> None:
     """Test: String-Slicing funktioniert."""
     if end is None:
@@ -130,7 +128,7 @@ def test_string_slicing(
     ],
 )
 def test_string_case_methoden(
-    text: int | float | str | bool,
+    text: str,
     expected_upper: int | float | str | bool,
     expected_lower: int | float | str | bool,
 ) -> None:
@@ -175,9 +173,9 @@ def test_string_split() -> None:
     ],
 )
 def test_string_startswith(
-    text: int | float | str | bool,
-    prefix: int | float | str | bool,
-    expected: int | float | str | bool,
+    text: str,
+    prefix: str,
+    expected: int | float,
 ) -> None:
     """Test: startswith() prüft Präfix."""
     assert text.startswith(prefix) == expected
@@ -193,9 +191,9 @@ def test_string_startswith(
     ],
 )
 def test_string_endswith(
-    text: int | float | str | bool,
-    suffix: int | float | str | bool,
-    expected: int | float | str | bool,
+    text: str,
+    suffix: str,
+    expected: int | float,
 ) -> None:
     """Test: endswith() prüft Suffix."""
     assert text.endswith(suffix) == expected

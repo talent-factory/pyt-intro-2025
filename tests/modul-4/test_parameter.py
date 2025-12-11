@@ -60,9 +60,9 @@ def test_gruesse_funktion() -> None:
     ],
 )
 def test_addiere_funktion(
-    a: int | float | str | bool,
-    b: int | float | str | bool,
-    erwartet: int | float | str | bool,
+    a: int | float,
+    b: int | float,
+    erwartet: int | float,
 ) -> None:
     """Test: addiere() berechnet Summe korrekt."""
     import parameter
@@ -82,9 +82,9 @@ def test_addiere_funktion(
     ],
 )
 def test_formatiere_preis_mit_waehrung(
-    betrag: int | float | str | bool,
-    waehrung: int | float | str | bool,
-    erwartet: int | float | str | bool,
+    betrag: int | float,
+    waehrung: str,
+    erwartet: str,
 ) -> None:
     """Test: formatiere_preis() formatiert mit Währung."""
     import parameter
@@ -114,10 +114,10 @@ def test_formatiere_preis_default_waehrung() -> None:
     ],
 )
 def test_berechne_rechteck(
-    laenge: int | float | str | bool,
-    breite: int | float | str | bool,
-    erwartete_flaeche: int | float | str | bool,
-    erwarteter_umfang: int | float | str | bool,
+    laenge: int | float,
+    breite: int | float,
+    erwartete_flaeche: int | float,
+    erwarteter_umfang: int | float,
 ) -> None:
     """Test: berechne_rechteck() berechnet Fläche und Umfang."""
     import parameter

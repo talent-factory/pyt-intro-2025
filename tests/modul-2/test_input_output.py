@@ -66,9 +66,7 @@ def test_input_direkte_konvertierung() -> None:
         (" | ", "A | B | C"),
     ],
 )
-def test_print_mit_sep_parameter(
-    sep: int | float | str | bool, expected: int | float | str | bool
-) -> None:
+def test_print_mit_sep_parameter(sep: str, expected: str) -> None:
     """Test: print() mit sep Parameter."""
     old_stdout = sys.stdout
     sys.stdout = captured = StringIO()

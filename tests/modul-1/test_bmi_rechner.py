@@ -35,9 +35,9 @@ def test_modul_import() -> None:
     ],
 )
 def test_bmi_berechnung(
-    gewicht: int | float | str | bool,
-    groesse: int | float | str | bool,
-    expected_bmi: int | float | str | bool,
+    gewicht: int | float,
+    groesse: int | float,
+    expected_bmi: int | float,
 ) -> None:
     """Test: BMI wird korrekt berechnet."""
     bmi = gewicht / (groesse**2)
@@ -55,7 +55,7 @@ def test_bmi_berechnung(
     ],
 )
 def test_bmi_kategorisierung(
-    bmi: int | float | str | bool, expected_kategorie: int | float | str | bool
+    bmi: int | float, expected_kategorie: int | float | str | bool
 ) -> None:
     """Test: BMI-Kategorisierung ist korrekt."""
     if bmi < 18.5:
@@ -80,9 +80,9 @@ def test_bmi_kategorisierung(
     ],
 )
 def test_idealgewicht_berechnung(
-    groesse: int | float | str | bool,
-    ideal_bmi: int | float | str | bool,
-    expected_gewicht: int | float | str | bool,
+    groesse: int | float,
+    ideal_bmi: int | float,
+    expected_gewicht: int | float,
 ) -> None:
     """Test: Idealgewicht wird korrekt berechnet."""
     idealgewicht = ideal_bmi * (groesse**2)
@@ -111,9 +111,7 @@ def test_bmi_grenzwerte() -> None:
         (55, 1.65),
     ],
 )
-def test_bmi_ist_positiv(
-    gewicht: int | float | str | bool, groesse: int | float | str | bool
-) -> None:
+def test_bmi_ist_positiv(gewicht: int | float, groesse: int | float) -> None:
     """Test: BMI ist immer positiv bei gültigen Eingaben."""
     bmi = gewicht / (groesse**2)
     assert bmi > 0

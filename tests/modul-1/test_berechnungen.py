@@ -77,10 +77,10 @@ def test_benzinverbrauch() -> None:
     ],
 )
 def test_zinsberechnung_formel(
-    kapital: int | float | str | bool,
-    zinssatz: int | float | str | bool,
-    jahre: int | float | str | bool,
-    erwartetes_endkapital: int | float | str | bool,
+    kapital: int | float,
+    zinssatz: int | float,
+    jahre: int | float,
+    erwartetes_endkapital: float,
 ) -> None:
     """Test: Zinsberechnung funktioniert korrekt."""
     endkapital = kapital * ((1 + zinssatz) ** jahre)
@@ -97,9 +97,9 @@ def test_zinsberechnung_formel(
     ],
 )
 def test_benzinverbrauch_berechnung(
-    strecke: int | float | str | bool,
-    verbrauch: int | float | str | bool,
-    erwartete_liter: int | float | str | bool,
+    strecke: int | float,
+    verbrauch: int | float,
+    erwartete_liter: float,
 ) -> None:
     """Test: Benzinverbrauch wird korrekt berechnet."""
     liter = strecke * verbrauch / 100
@@ -116,10 +116,10 @@ def test_benzinverbrauch_berechnung(
     ],
 )
 def test_zeitumrechnung(
-    sekunden: int | float | str | bool,
-    stunden: int | float | str | bool,
-    minuten: int | float | str | bool,
-    rest_sek: int | float | str | bool,
+    sekunden: int | float,
+    stunden: int | float,
+    minuten: int | float,
+    rest_sek: int | float,
 ) -> None:
     """Test: Zeitumrechnung funktioniert korrekt."""
     berechnet_stunden = sekunden // 3600

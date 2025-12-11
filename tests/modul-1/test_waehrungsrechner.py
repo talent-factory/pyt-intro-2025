@@ -35,9 +35,9 @@ def test_modul_import() -> None:
     ],
 )
 def test_eur_umrechnung(
-    eur: int | float | str | bool,
-    kurs: int | float | str | bool,
-    expected_zielwaehrung: int | float | str | bool,
+    eur: int | float,
+    kurs: int | float,
+    expected_zielwaehrung: int | float,
 ) -> None:
     """Test: EUR zu andere Währungen."""
     zielwaehrung = eur * kurs
@@ -54,9 +54,9 @@ def test_eur_umrechnung(
     ],
 )
 def test_rueckrechnung_zu_eur(
-    quellwaehrung: int | float | str | bool,
-    kurs: int | float | str | bool,
-    expected_eur: int | float | str | bool,
+    quellwaehrung: int | float,
+    kurs: int | float,
+    expected_eur: int | float,
 ) -> None:
     """Test: Rückrechnung zu EUR."""
     eur = quellwaehrung / kurs
@@ -86,10 +86,10 @@ def test_wechselgebuehr_berechnung() -> None:
     ],
 )
 def test_kursgewinn(
-    betrag: int | float | str | bool,
-    kurs_alt: int | float | str | bool,
-    kurs_neu: int | float | str | bool,
-    expected_gewinn: int | float | str | bool,
+    betrag: int | float,
+    kurs_alt: int | float,
+    kurs_neu: int | float,
+    expected_gewinn: int | float,
 ) -> None:
     """Test: Gewinn bei Kursänderung."""
     wert_alt = betrag * kurs_alt
