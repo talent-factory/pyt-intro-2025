@@ -80,7 +80,7 @@ while weiterspielen:
     # Auswertung
     print("=" * 40)
     if gewonnen:
-        print(f"🎉 Glückwunsch! Sie haben gewonnen!")
+        print("🎉 Glückwunsch! Sie haben gewonnen!")
         print(f"Die Zahl war {geheimzahl}")
         print(f"Versuche: {versuche}")
 
@@ -94,7 +94,7 @@ while weiterspielen:
         else:
             print("Bewertung: Geschafft! 😊")
     else:
-        print(f"😢 Leider verloren!")
+        print("😢 Leider verloren!")
         print(f"Die Zahl war {geheimzahl}")
         print(f"Versuche: {versuche}")
 
@@ -108,4 +108,3 @@ while weiterspielen:
     else:
         print("\nDanke fürs Spielen! 👋")
         weiterspielen = False
-

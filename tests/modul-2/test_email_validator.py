@@ -4,9 +4,10 @@ Testet E-Mail-Validierung
 """
 
 import sys
-import pytest
 from pathlib import Path
 from unittest.mock import patch
+
+import pytest
 
 modul_pfad = Path(__file__).parent.parent.parent / "modul-2-datentypen" / "05-beispiele"
 sys.path.insert(0, str(modul_pfad))
@@ -15,9 +16,8 @@ sys.path.insert(0, str(modul_pfad))
 @pytest.mark.modul2
 def test_modul_import():
     """Test: Modul kann importiert werden."""
-    with patch('builtins.input', return_value='q'):
+    with patch("builtins.input", return_value="q"):
         try:
-            import email_validator
             assert True
         except Exception as e:
             pytest.skip(f"Interaktives Modul: {e}")
@@ -26,29 +26,35 @@ def test_modul_import():
 @pytest.mark.modul2
 def test_validiere_email_funktion_existiert():
     """Test: validiere_email Funktion existiert."""
-    with patch('builtins.input', return_value='q'):
+    with patch("builtins.input", return_value="q"):
         import email_validator
-        assert hasattr(email_validator, 'validiere_email')
+
+        assert hasattr(email_validator, "validiere_email")
 
 
 @pytest.mark.modul2
-@pytest.mark.parametrize("email,sollte_gueltig_sein", [
-    ("test@example.com", True),
-    ("user@domain.de", True),
-    ("anna.mueller@firma.ch", True),
-    ("", False),  # Leer
-    ("@example.com", False),  # Kein Benutzername
-    ("test@", False),  # Keine Domain
-    ("testexample.com", False),  # Kein @
-    ("test@@example.com", False),  # Doppeltes @
-    ("test@example", False),  # Kein . in Domain
-    ("test@example.c", False),  # TLD zu kurz
-])
+@pytest.mark.parametrize(
+    "email,sollte_gueltig_sein",
+    [
+        ("test@example.com", True),
+        ("user@domain.de", True),
+        ("anna.mueller@firma.ch", True),
+        ("", False),  # Leer
+        ("@example.com", False),  # Kein Benutzername
+        ("test@", False),  # Keine Domain
+        ("testexample.com", False),  # Kein @
+        ("test@@example.com", False),  # Doppeltes @
+        ("test@example", False),  # Kein . in Domain
+        ("test@example.c", False),  # TLD zu kurz
+    ],
+)
 def test_email_validierung(email, sollte_gueltig_sein):
     """Test: E-Mail-Validierung mit verschiedenen Eingaben."""
-    with patch('builtins.input', return_value='q'):
-        import email_validator
+    with patch("builtins.input", return_value="q"):
         import importlib
+
+        import email_validator
+
         importlib.reload(email_validator)
 
         ist_gueltig, meldung = email_validator.validiere_email(email)
@@ -62,9 +68,11 @@ def test_email_validierung(email, sollte_gueltig_sein):
 @pytest.mark.modul2
 def test_email_leer():
     """Test: Leere E-Mail wird abgelehnt."""
-    with patch('builtins.input', return_value='q'):
-        import email_validator
+    with patch("builtins.input", return_value="q"):
         import importlib
+
+        import email_validator
+
         importlib.reload(email_validator)
 
         ist_gueltig, meldung = email_validator.validiere_email("")
@@ -76,9 +84,11 @@ def test_email_leer():
 @pytest.mark.modul2
 def test_email_ohne_at():
     """Test: E-Mail ohne @ wird abgelehnt."""
-    with patch('builtins.input', return_value='q'):
-        import email_validator
+    with patch("builtins.input", return_value="q"):
         import importlib
+
+        import email_validator
+
         importlib.reload(email_validator)
 
         ist_gueltig, meldung = email_validator.validiere_email("test.example.com")
@@ -90,9 +100,11 @@ def test_email_ohne_at():
 @pytest.mark.modul2
 def test_email_mehrere_at():
     """Test: E-Mail mit mehreren @ wird abgelehnt."""
-    with patch('builtins.input', return_value='q'):
-        import email_validator
+    with patch("builtins.input", return_value="q"):
         import importlib
+
+        import email_validator
+
         importlib.reload(email_validator)
 
         ist_gueltig, meldung = email_validator.validiere_email("test@@example.com")
@@ -103,9 +115,11 @@ def test_email_mehrere_at():
 @pytest.mark.modul2
 def test_email_ohne_punkt_in_domain():
     """Test: E-Mail ohne . in Domain wird abgelehnt."""
-    with patch('builtins.input', return_value='q'):
-        import email_validator
+    with patch("builtins.input", return_value="q"):
         import importlib
+
+        import email_validator
+
         importlib.reload(email_validator)
 
         ist_gueltig, meldung = email_validator.validiere_email("test@example")
@@ -117,9 +131,11 @@ def test_email_ohne_punkt_in_domain():
 @pytest.mark.modul2
 def test_email_whitespace_trimming():
     """Test: Leerzeichen werden entfernt."""
-    with patch('builtins.input', return_value='q'):
-        import email_validator
+    with patch("builtins.input", return_value="q"):
         import importlib
+
+        import email_validator
+
         importlib.reload(email_validator)
 
         # E-Mail mit Leerzeichen davor/danach sollte akzeptiert werden

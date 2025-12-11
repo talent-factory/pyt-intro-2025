@@ -28,8 +28,8 @@ b = 20
 print(f"a = {a}, b = {b}")
 print(f"a == b: {a == b}")  # Gleich
 print(f"a != b: {a != b}")  # Ungleich
-print(f"a < b:  {a < b}")   # Kleiner
-print(f"a > b:  {a > b}")   # Grösser
+print(f"a < b:  {a < b}")  # Kleiner
+print(f"a > b:  {a > b}")  # Grösser
 print(f"a <= b: {a <= b}")  # Kleiner oder gleich
 print(f"a >= b: {a >= b}")  # Grösser oder gleich
 print()
@@ -132,12 +132,11 @@ print()
 # Wahrheitswerte anderer Typen
 print("=== Wahrheitswerte anderer Typen ===\n")
 
-print(f"bool(1):      {bool(1)}")      # True
-print(f"bool(0):      {bool(0)}")      # False
-print(f"bool(-1):     {bool(-1)}")     # True
-print(f"bool(''):     {bool('')}")     # False (leerer String)
-print(f"bool('Hi'):   {bool('Hi')}")   # True
-print(f"bool([]):     {bool([])}")     # False (leere Liste)
-print(f"bool([1]):    {bool([1])}")    # True
-print(f"bool(None):   {bool(None)}")   # False
-
+print(f"bool(1):      {bool(1)}")  # True
+print(f"bool(0):      {bool(0)}")  # False
+print(f"bool(-1):     {bool(-1)}")  # True
+print(f"bool(''):     {bool('')}")  # False (leerer String)
+print(f"bool('Hi'):   {bool('Hi')}")  # True
+print(f"bool([]):     {bool([])}")  # False (leere Liste)
+print(f"bool([1]):    {bool([1])}")  # True
+print(f"bool(None):   {bool(None)}")  # False

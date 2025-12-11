@@ -57,7 +57,7 @@ print()
 print("=== Mit Index ===\n")
 
 for i in range(len(fruechte)):
-    print(f"{i+1}. {fruechte[i]}")
+    print(f"{i + 1}. {fruechte[i]}")
 
 print()
 
@@ -155,7 +155,7 @@ text = "Hallo Welt"
 anzahl_l = 0
 
 for zeichen in text:
-    if zeichen.lower() == 'l':
+    if zeichen.lower() == "l":
         anzahl_l += 1
 
 print(f"Text: {text}")
@@ -172,4 +172,3 @@ for element in original:
 
 print(f"Original: {original}")
 print(f"Umgekehrt: {umgekehrt}")
-

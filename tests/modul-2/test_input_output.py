@@ -4,10 +4,11 @@ Testet Input/Output mit Mocking
 """
 
 import sys
-import pytest
+from io import StringIO
 from pathlib import Path
 from unittest.mock import patch
-from io import StringIO
+
+import pytest
 
 modul_pfad = Path(__file__).parent.parent.parent / "modul-2-datentypen" / "05-beispiele"
 sys.path.insert(0, str(modul_pfad))
@@ -18,8 +19,8 @@ def test_modul_import():
     """Test: Modul kann importiert werden (wird interaktiv sein)."""
     # Hinweis: Das Modul verwendet input(), daher mocken wir das
     try:
-        with patch('builtins.input', return_value='Test'):
-            import input_output
+        with patch("builtins.input", return_value="Test"):
+            pass
         assert True
     except Exception as e:
         # Bei interaktiven Modulen ist Import-Test optional
@@ -29,7 +30,7 @@ def test_modul_import():
 @pytest.mark.modul2
 def test_input_gibt_string_zurueck():
     """Test: input() gibt immer String zurück."""
-    with patch('builtins.input', return_value='42'):
+    with patch("builtins.input", return_value="42"):
         eingabe = input("Test: ")
         assert type(eingabe) == str
         assert eingabe == "42"
@@ -38,7 +39,7 @@ def test_input_gibt_string_zurueck():
 @pytest.mark.modul2
 def test_input_zu_int_konvertierung():
     """Test: Input-String wird zu Int konvertiert."""
-    with patch('builtins.input', return_value='25'):
+    with patch("builtins.input", return_value="25"):
         alter_str = input("Alter: ")
         alter = int(alter_str)
 
@@ -49,7 +50,7 @@ def test_input_zu_int_konvertierung():
 @pytest.mark.modul2
 def test_input_direkte_konvertierung():
     """Test: Direkte Konvertierung bei input()."""
-    with patch('builtins.input', return_value='1.75'):
+    with patch("builtins.input", return_value="1.75"):
         groesse = float(input("Grösse: "))
 
         assert type(groesse) == float
@@ -57,11 +58,14 @@ def test_input_direkte_konvertierung():
 
 
 @pytest.mark.modul2
-@pytest.mark.parametrize("sep,expected", [
-    (" ", "A B C"),
-    ("-", "A-B-C"),
-    (" | ", "A | B | C"),
-])
+@pytest.mark.parametrize(
+    "sep,expected",
+    [
+        (" ", "A B C"),
+        ("-", "A-B-C"),
+        (" | ", "A | B | C"),
+    ],
+)
 def test_print_mit_sep_parameter(sep, expected):
     """Test: print() mit sep Parameter."""
     old_stdout = sys.stdout

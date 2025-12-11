@@ -45,7 +45,7 @@ print("=== Multiplikationstabelle ===\n")
 
 for i in range(1, 6):
     for j in range(1, 6):
-        print(f"{i*j:3}", end=" ")
+        print(f"{i * j:3}", end=" ")
     print()
 
 print()
@@ -100,11 +100,7 @@ print()
 # Verschachtelte Listen
 print("=== Verschachtelte Listen ===\n")
 
-matrix = [
-    [1, 2, 3],
-    [4, 5, 6],
-    [7, 8, 9]
-]
+matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 
 print("Matrix:")
 for zeile in matrix:
@@ -142,12 +138,12 @@ print("=== Primzahlen bis 30 ===\n")
 
 for zahl in range(2, 31):
     ist_primzahl = True
-    
-    for teiler in range(2, int(zahl ** 0.5) + 1):
+
+    for teiler in range(2, int(zahl**0.5) + 1):
         if zahl % teiler == 0:
             ist_primzahl = False
             break
-    
+
     if ist_primzahl:
         print(zahl, end=" ")
 
@@ -160,7 +156,7 @@ noten = [5.5, 4.2, 3.8, 6.0, 4.5]
 
 for i, note in enumerate(noten, start=1):
     print(f"Student {i}: Note {note}", end=" - ")
-    
+
     if note >= 5.5:
         print("Sehr gut")
     elif note >= 4.0:
@@ -183,4 +179,3 @@ for i in range(1, hoehe + 1):
     for k in range(2 * i - 1):
         print("*", end="")
     print()
-

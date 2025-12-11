@@ -4,14 +4,15 @@ Testet Textdatei-Operationen mit temporären Dateien
 """
 
 import sys
-import pytest
-from pathlib import Path
 from io import StringIO
-from unittest.mock import patch
-import os
+from pathlib import Path
+
+import pytest
 
 # Modul importieren
-modul_pfad = Path(__file__).parent.parent.parent / "modul-5-dateien-module" / "05-beispiele"
+modul_pfad = (
+    Path(__file__).parent.parent.parent / "modul-5-dateien-module" / "05-beispiele"
+)
 sys.path.insert(0, str(modul_pfad))
 
 
@@ -20,6 +21,7 @@ def test_modul_kann_importiert_werden():
     """Test: Modul kann ohne Fehler importiert werden."""
     try:
         import textdateien
+
         assert True
     except ImportError as e:
         pytest.fail(f"Import fehlgeschlagen: {e}")

@@ -1,0 +1,208 @@
+= VS Code Setup für Python
+:toc:
+:toc-title: Inhalt
+:icons: font
+
+== Was du brauchst
+
+* Visual Studio Code (https://code.visualstudio.com/)
+* Python 3.10 oder neuer
+* Ca. 15 Minuten Zeit
+
+== Schritt-für-Schritt-Anleitung
+
+=== 1. Projekt in VS Code öffnen
+
+. Öffne VS Code
+. Wähle `File` → `Open Folder...`
+. Navigiere zu deinem `pyt-intro` Ordner
+. Klicke auf `Öffnen`
+
+TIP: VS Code erkennt automatisch die `.vscode` Konfiguration!
+
+=== 2. Extensions installieren
+
+Beim ersten Öffnen erscheint unten rechts eine Meldung:
+
+[quote]
+____
+Dieses Projekt empfiehlt Extensions. Möchtest du sie installieren?
+____
+
+. Klicke auf `Alle installieren`
+. Warte, bis alle Extensions installiert sind (ca. 2-3 Minuten)
+. Starte VS Code neu (wichtig!)
+
+==== Falls die Meldung nicht erscheint:
+
+. Drücke `Cmd+Shift+P` (Mac) oder `Ctrl+Shift+P` (Windows/Linux)
+. Tippe: `Extensions: Show Recommended Extensions`
+. Klicke bei jeder Extension auf `Install`
+
+=== 3. Ruff installieren
+
+Öffne das Terminal in VS Code (`Ctrl+ö` oder `View` → `Terminal`):
+
+[source,bash]
+----
+# Aktiviere deine virtuelle Umgebung (falls vorhanden)
+source .venv/bin/activate  # Mac/Linux
+# oder
+.venv\Scripts\activate     # Windows
+
+# Installiere Ruff
+pip install ruff
+----
+
+=== 4. Python-Interpreter auswählen
+
+. Drücke `Cmd+Shift+P` (Mac) oder `Ctrl+Shift+P` (Windows/Linux)
+. Tippe: `Python: Select Interpreter`
+. Wähle die Python-Version aus deiner `.venv` (falls vorhanden)
+
+== Überprüfung: Funktioniert alles?
+
+=== Test 1: Code-Formatierung
+
+. Erstelle eine neue Datei `test.py`
+. Schreibe absichtlich schlecht formatierten Code:
++
+[source,python]
+----
+def teste_funktion(x,y,z):
+    ergebnis=x+y+z
+    return ergebnis
+
+
+mein_name="Daniel"
+print( mein_name )
+----
+
+. Speichere die Datei (`Cmd+S` oder `Ctrl+S`)
+. Der Code sollte sich automatisch formatieren! ✨
+
+.Nach dem Speichern:
+[source,python]
+----
+def teste_funktion(x, y, z):
+    ergebnis = x + y + z
+    return ergebnis
+
+
+mein_name = "Daniel"
+print(mein_name)
+----
+
+=== Test 2: PEP 8-Warnungen
+
+Schreibe eine Funktion mit schlechtem Stil:
+
+[source,python]
+----
+def MeineFunktion():  # ⚠️ Funktionsnamen sollten lowercase sein
+    unused_variable = 42  # ⚠️ Variable wird nicht benutzt
+    pass
+----
+
+Du solltest **gelbe Wellenlinien** sehen! 🎉
+
+Bewege die Maus über die Warnung → Du siehst eine Erklärung:
+
+----
+Function name should be lowercase (N802)
+----
+
+== Wichtige Tastenkombinationen
+
+[cols="2,3,3"]
+|===
+|Aktion |Mac |Windows/Linux
+
+|Code formatieren
+|`Shift+Option+F`
+|`Shift+Alt+F`
+
+|Quick Fix (Fehler beheben)
+|`Cmd+.`
+|`Ctrl+.`
+
+|Alle Commands
+|`Cmd+Shift+P`
+|`Ctrl+Shift+P`
+
+|Terminal öffnen
+|`Ctrl+ö`
+|`Ctrl+ö`
+
+|Datei speichern
+|`Cmd+S`
+|`Ctrl+S`
+|===
+
+== Was zeigen dir die farbigen Unterstreichungen?
+
+[cols="2,3,5"]
+|===
+|Farbe |Bedeutung |Beispiel
+
+|🔴 Rot
+|**Fehler** - Code funktioniert nicht
+|`print(x)` wenn `x` nicht existiert
+
+|🟡 Gelb
+|**Warnung** - Code funktioniert, aber gegen PEP 8
+|`def MeineFunktion():` statt `def meine_funktion():`
+
+|🔵 Blau
+|**Info** - Verbesserungsvorschlag
+|Ungenutzte Imports
+|===
+
+TIP: Mit `Cmd+.` (Mac) oder `Ctrl+.` (Windows) kannst du viele Probleme automatisch beheben!
+
+== Häufige Probleme
+
+=== "Ruff not found"
+
+**Lösung:**
+
+. Stelle sicher, dass Ruff installiert ist: `pip install ruff`
+. Prüfe, ob der richtige Python-Interpreter ausgewählt ist
+. Starte VS Code neu
+
+=== Extensions werden nicht empfohlen
+
+**Lösung:**
+
+. Öffne die Command Palette (`Cmd+Shift+P`)
+. Suche: `Extensions: Show Recommended Extensions`
+. Installiere die Extensions manuell
+
+=== Code wird nicht formatiert beim Speichern
+
+**Lösung:**
+
+Prüfe in den Einstellungen (`Cmd+,`):
+
+. Suche nach "Format On Save"
+. Stelle sicher, dass es aktiviert ist ✅
+. Suche nach "Default Formatter"
+. Stelle sicher, dass "Ruff" ausgewählt ist
+
+== Nützliche Extensions (optional)
+
+Für fortgeschrittenere Lernende:
+
+* **Error Lens**: Zeigt Fehler direkt neben dem Code an
+* **GitLens**: Bessere Git-Integration
+* **German Spell Checker**: Rechtschreibprüfung für Kommentare
+
+== Support
+
+Bei Problemen:
+
+. Prüfe die Fehlermeldung im Output-Panel (`View` → `Output`)
+. Wähle "Ruff" aus dem Dropdown
+. Kopiere die Fehlermeldung und frage deinen Dozenten
+
+TIP: Screenshots helfen bei der Fehlersuche! 📸

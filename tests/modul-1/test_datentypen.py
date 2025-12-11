@@ -4,9 +4,10 @@ Testet grundlegende Datentypen in Python
 """
 
 import sys
-import pytest
-from pathlib import Path
 from io import StringIO
+from pathlib import Path
+
+import pytest
 
 modul_pfad = Path(__file__).parent.parent.parent / "modul-1-einstieg" / "05-beispiele"
 sys.path.insert(0, str(modul_pfad))
@@ -17,6 +18,7 @@ def test_modul_import():
     """Test: Modul kann importiert werden."""
     try:
         import datentypen
+
         assert True
     except ImportError as e:
         pytest.fail(f"Import fehlgeschlagen: {e}")
@@ -30,7 +32,9 @@ def test_datentypen_ausgabe():
 
     try:
         import importlib
+
         import datentypen
+
         importlib.reload(datentypen)
 
         output = captured.getvalue()
@@ -53,7 +57,9 @@ def test_typkonvertierung():
 
     try:
         import importlib
+
         import datentypen
+
         importlib.reload(datentypen)
 
         output = captured.getvalue()

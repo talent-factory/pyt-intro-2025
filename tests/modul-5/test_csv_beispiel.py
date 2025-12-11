@@ -3,14 +3,17 @@ Tests für csv_beispiel.py
 Testet CSV-Operationen mit temporären Dateien
 """
 
-import sys
-import pytest
-from pathlib import Path
-from io import StringIO
 import csv
+import sys
+from io import StringIO
+from pathlib import Path
+
+import pytest
 
 # Modul importieren
-modul_pfad = Path(__file__).parent.parent.parent / "modul-5-dateien-module" / "05-beispiele"
+modul_pfad = (
+    Path(__file__).parent.parent.parent / "modul-5-dateien-module" / "05-beispiele"
+)
 sys.path.insert(0, str(modul_pfad))
 
 
@@ -19,6 +22,7 @@ def test_modul_kann_importiert_werden():
     """Test: Modul kann ohne Fehler importiert werden."""
     try:
         import csv_beispiel
+
         assert True
     except ImportError as e:
         pytest.fail(f"Import fehlgeschlagen: {e}")
@@ -58,7 +62,7 @@ def test_kontakte_erstellen_inhalt(tmp_path, monkeypatch):
         csv_beispiel.kontakte_erstellen()
 
         datei = tmp_path / "kontakte.csv"
-        with open(datei, "r") as f:
+        with open(datei) as f:
             reader = csv.DictReader(f)
             kontakte = list(reader)
 
@@ -85,7 +89,7 @@ def test_kontakte_erstellen_hat_header(tmp_path, monkeypatch):
         csv_beispiel.kontakte_erstellen()
 
         datei = tmp_path / "kontakte.csv"
-        with open(datei, "r") as f:
+        with open(datei) as f:
             reader = csv.DictReader(f)
             fieldnames = reader.fieldnames
 

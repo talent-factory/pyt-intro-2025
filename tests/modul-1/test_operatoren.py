@@ -4,9 +4,10 @@ Testet arithmetische Operatoren
 """
 
 import sys
-import pytest
-from pathlib import Path
 from io import StringIO
+from pathlib import Path
+
+import pytest
 
 modul_pfad = Path(__file__).parent.parent.parent / "modul-1-einstieg" / "05-beispiele"
 sys.path.insert(0, str(modul_pfad))
@@ -17,6 +18,7 @@ def test_modul_import():
     """Test: Modul kann importiert werden."""
     try:
         import operatoren
+
         assert True
     except ImportError as e:
         pytest.fail(f"Import fehlgeschlagen: {e}")
@@ -30,7 +32,9 @@ def test_grundrechenarten():
 
     try:
         import importlib
+
         import operatoren
+
         importlib.reload(operatoren)
 
         output = captured.getvalue()
@@ -53,7 +57,9 @@ def test_erweiterte_operationen():
 
     try:
         import importlib
+
         import operatoren
+
         importlib.reload(operatoren)
 
         output = captured.getvalue()
@@ -67,11 +73,14 @@ def test_erweiterte_operationen():
 
 
 @pytest.mark.modul1
-@pytest.mark.parametrize("a,b,expected_sum", [
-    (17, 5, 22),
-    (10, 20, 30),
-    (0, 0, 0),
-])
+@pytest.mark.parametrize(
+    "a,b,expected_sum",
+    [
+        (17, 5, 22),
+        (10, 20, 30),
+        (0, 0, 0),
+    ],
+)
 def test_addition_berechnung(a, b, expected_sum):
     """Test: Addition wird korrekt berechnet."""
     result = a + b
@@ -79,11 +88,14 @@ def test_addition_berechnung(a, b, expected_sum):
 
 
 @pytest.mark.modul1
-@pytest.mark.parametrize("a,b,expected_mod", [
-    (17, 5, 2),
-    (10, 3, 1),
-    (20, 4, 0),
-])
+@pytest.mark.parametrize(
+    "a,b,expected_mod",
+    [
+        (17, 5, 2),
+        (10, 3, 1),
+        (20, 4, 0),
+    ],
+)
 def test_modulo_berechnung(a, b, expected_mod):
     """Test: Modulo wird korrekt berechnet."""
     result = a % b

@@ -105,7 +105,7 @@ rabatt = 0
 
 if ist_mitglied:
     rabatt = 10  # 10% Mitglieder-Rabatt
-    
+
 if bestellwert >= 100:
     rabatt += 5  # Zusätzlich 5% ab 100 CHF
 
@@ -125,8 +125,8 @@ b = 20
 print(f"a = {a}, b = {b}")
 print(f"a == b: {a == b}")  # Gleich
 print(f"a != b: {a != b}")  # Ungleich
-print(f"a < b:  {a < b}")   # Kleiner
-print(f"a > b:  {a > b}")   # Grösser
+print(f"a < b:  {a < b}")  # Kleiner
+print(f"a > b:  {a > b}")  # Grösser
 print(f"a <= b: {a <= b}")  # Kleiner oder gleich
 print(f"a >= b: {a >= b}")  # Grösser oder gleich
 print()
@@ -157,4 +157,3 @@ if passwort.isalnum():
     print("Passwort enthält nur Buchstaben und Zahlen")
 else:
     print("Passwort enthält Sonderzeichen")
-

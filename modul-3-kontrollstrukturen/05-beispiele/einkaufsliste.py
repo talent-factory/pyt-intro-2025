@@ -84,7 +84,9 @@ while True:
                     artikel = einkaufsliste.pop(nummer - 1)
                     print(f"✓ '{artikel}' gelöscht")
                 else:
-                    print(f"❌ Ungültige Nummer! Bitte zwischen 1 und {len(einkaufsliste)}")
+                    print(
+                        f"❌ Ungültige Nummer! Bitte zwischen 1 und {len(einkaufsliste)}"
+                    )
 
             except ValueError:
                 print("❌ Bitte eine Zahl eingeben!")
@@ -94,7 +96,9 @@ while True:
         if len(einkaufsliste) == 0:
             print("\n❌ Liste ist bereits leer!")
         else:
-            bestaetigung = input(f"\n⚠️  Wirklich {len(einkaufsliste)} Artikel löschen? (j/n): ")
+            bestaetigung = input(
+                f"\n⚠️  Wirklich {len(einkaufsliste)} Artikel löschen? (j/n): "
+            )
 
             if bestaetigung.lower() in ["j", "ja", "y", "yes"]:
                 einkaufsliste.clear()
@@ -108,4 +112,3 @@ while True:
 
     else:
         print("\n❌ Ungültige Wahl! Bitte 1-5 wählen.")
-

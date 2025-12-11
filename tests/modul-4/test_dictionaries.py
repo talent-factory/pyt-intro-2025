@@ -4,12 +4,17 @@ Testet Dictionary-Operationen und Funktionen
 """
 
 import sys
-import pytest
-from pathlib import Path
 from io import StringIO
+from pathlib import Path
+
+import pytest
 
 # Modul importieren
-modul_pfad = Path(__file__).parent.parent.parent / "modul-4-funktionen-datenstrukturen" / "05-beispiele"
+modul_pfad = (
+    Path(__file__).parent.parent.parent
+    / "modul-4-funktionen-datenstrukturen"
+    / "05-beispiele"
+)
 sys.path.insert(0, str(modul_pfad))
 
 
@@ -18,6 +23,7 @@ def test_modul_kann_importiert_werden():
     """Test: Modul kann ohne Fehler importiert werden."""
     try:
         import dictionaries
+
         assert True
     except ImportError as e:
         pytest.fail(f"Import fehlgeschlagen: {e}")
@@ -50,9 +56,7 @@ def test_erstelle_kontakt():
     import dictionaries
 
     kontakt = dictionaries.erstelle_kontakt(
-        "Anna Muster",
-        "anna@example.com",
-        "079 123 45 67"
+        "Anna Muster", "anna@example.com", "079 123 45 67"
     )
 
     assert isinstance(kontakt, dict)

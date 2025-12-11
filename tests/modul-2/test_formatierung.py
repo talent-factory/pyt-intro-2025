@@ -4,8 +4,9 @@ Testet String-Formatierung
 """
 
 import sys
-import pytest
 from pathlib import Path
+
+import pytest
 
 modul_pfad = Path(__file__).parent.parent.parent / "modul-2-datentypen" / "05-beispiele"
 sys.path.insert(0, str(modul_pfad))
@@ -16,6 +17,7 @@ def test_modul_import():
     """Test: Modul kann importiert werden."""
     try:
         import formatierung
+
         assert True
     except ImportError as e:
         pytest.fail(f"Import fehlgeschlagen: {e}")
@@ -41,11 +43,14 @@ def test_f_string_mit_berechnungen():
 
 
 @pytest.mark.modul2
-@pytest.mark.parametrize("zahl,dezimalstellen,expected", [
-    (19.99, 2, "19.99"),
-    (19.99, 1, "20.0"),
-    (3.14159, 2, "3.14"),
-])
+@pytest.mark.parametrize(
+    "zahl,dezimalstellen,expected",
+    [
+        (19.99, 2, "19.99"),
+        (19.99, 1, "20.0"),
+        (3.14159, 2, "3.14"),
+    ],
+)
 def test_formatierung_dezimalstellen(zahl, dezimalstellen, expected):
     """Test: Formatierung mit Dezimalstellen."""
     result = f"{zahl:.{dezimalstellen}f}"
@@ -53,11 +58,14 @@ def test_formatierung_dezimalstellen(zahl, dezimalstellen, expected):
 
 
 @pytest.mark.modul2
-@pytest.mark.parametrize("prozent,expected", [
-    (0.75, "75%"),
-    (0.5, "50%"),
-    (1.0, "100%"),
-])
+@pytest.mark.parametrize(
+    "prozent,expected",
+    [
+        (0.75, "75%"),
+        (0.5, "50%"),
+        (1.0, "100%"),
+    ],
+)
 def test_prozent_formatierung(prozent, expected):
     """Test: Prozent-Formatierung."""
     result = f"{prozent:.0%}"
@@ -112,7 +120,7 @@ def test_format_methode():
     """Test: format()-Methode funktioniert."""
     name = "Anna"
     alter = 25
-    result = "Ich heisse {} und bin {} Jahre alt".format(name, alter)
+    result = f"Ich heisse {name} und bin {alter} Jahre alt"
     assert "Anna" in result
     assert "25" in result
 
@@ -122,7 +130,7 @@ def test_prozent_formatierung_alt():
     """Test: Alte %-Formatierung."""
     name = "Anna"
     alter = 25
-    result = "Ich heisse %s und bin %d Jahre alt" % (name, alter)
+    result = "Ich heisse %s und bin %d Jahre alt" % (name, alter)  # noqa: UP031
     assert "Anna" in result
     assert "25" in result
 

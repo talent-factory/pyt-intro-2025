@@ -3,14 +3,17 @@ Tests für json_beispiel.py
 Testet JSON-Operationen mit temporären Dateien
 """
 
-import sys
-import pytest
-from pathlib import Path
-from io import StringIO
 import json
+import sys
+from io import StringIO
+from pathlib import Path
+
+import pytest
 
 # Modul importieren
-modul_pfad = Path(__file__).parent.parent.parent / "modul-5-dateien-module" / "05-beispiele"
+modul_pfad = (
+    Path(__file__).parent.parent.parent / "modul-5-dateien-module" / "05-beispiele"
+)
 sys.path.insert(0, str(modul_pfad))
 
 
@@ -19,6 +22,7 @@ def test_modul_kann_importiert_werden():
     """Test: Modul kann ohne Fehler importiert werden."""
     try:
         import json_beispiel
+
         assert True
     except ImportError as e:
         pytest.fail(f"Import fehlgeschlagen: {e}")
@@ -58,7 +62,7 @@ def test_config_erstellen_struktur(tmp_path, monkeypatch):
         json_beispiel.config_erstellen()
 
         datei = tmp_path / "config.json"
-        with open(datei, "r") as f:
+        with open(datei) as f:
             config = json.load(f)
 
         assert "app" in config
@@ -83,7 +87,7 @@ def test_config_erstellen_werte(tmp_path, monkeypatch):
         json_beispiel.config_erstellen()
 
         datei = tmp_path / "config.json"
-        with open(datei, "r") as f:
+        with open(datei) as f:
             config = json.load(f)
 
         assert config["app"]["name"] == "Meine App"
@@ -179,7 +183,7 @@ def test_einstellung_aendern(tmp_path, monkeypatch):
         sys.stdout = old_stdout
 
     # Laden und prüfen
-    with open(tmp_path / "config.json", "r") as f:
+    with open(tmp_path / "config.json") as f:
         config = json.load(f)
 
     assert config["einstellungen"]["sprache"] == "en"
@@ -203,7 +207,7 @@ def test_einstellung_aendern_verschiedene_werte(tmp_path, monkeypatch):
     finally:
         sys.stdout = old_stdout
 
-    with open(tmp_path / "config.json", "r") as f:
+    with open(tmp_path / "config.json") as f:
         config = json.load(f)
 
     assert config["einstellungen"]["theme"] == "dunkel"

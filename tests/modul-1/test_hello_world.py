@@ -4,9 +4,10 @@ Testet grundlegende print-Ausgaben und String-Formatierung
 """
 
 import sys
-import pytest
-from pathlib import Path
 from io import StringIO
+from pathlib import Path
+
+import pytest
 
 # Modul importieren
 modul_pfad = Path(__file__).parent.parent.parent / "modul-1-einstieg" / "05-beispiele"
@@ -18,6 +19,7 @@ def test_modul_kann_importiert_werden():
     """Test: Modul kann ohne Fehler importiert werden."""
     try:
         import hello_world
+
         assert True
     except ImportError as e:
         pytest.fail(f"Import fehlgeschlagen: {e}")
@@ -32,7 +34,9 @@ def test_modul_hat_ausgaben():
     try:
         # Modul neu importieren um Ausgaben zu erfassen
         import importlib
+
         import hello_world
+
         importlib.reload(hello_world)
 
         output = captured.getvalue()
@@ -53,7 +57,9 @@ def test_ausgabe_enthaelt_erwartete_begriffe():
 
     try:
         import importlib
+
         import hello_world
+
         importlib.reload(hello_world)
 
         output = captured.getvalue()
@@ -74,11 +80,13 @@ def test_ausgabe_hat_mehrere_zeilen():
 
     try:
         import importlib
+
         import hello_world
+
         importlib.reload(hello_world)
 
         output = captured.getvalue()
-        zeilen = output.strip().split('\n')
+        zeilen = output.strip().split("\n")
 
         # Sollte mehrere Zeilen haben
         assert len(zeilen) >= 5

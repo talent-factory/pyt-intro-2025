@@ -4,9 +4,9 @@ Testet Altersberechnungen
 """
 
 import sys
-import pytest
 from pathlib import Path
-from io import StringIO
+
+import pytest
 
 modul_pfad = Path(__file__).parent.parent.parent / "modul-1-einstieg" / "05-beispiele"
 sys.path.insert(0, str(modul_pfad))
@@ -17,18 +17,22 @@ def test_modul_import():
     """Test: Modul kann importiert werden."""
     try:
         import altersrechner
+
         assert True
     except ImportError as e:
         pytest.fail(f"Import fehlgeschlagen: {e}")
 
 
 @pytest.mark.modul1
-@pytest.mark.parametrize("geburtsjahr,aktuelles_jahr,expected_alter", [
-    (2000, 2025, 25),
-    (1995, 2025, 30),
-    (2005, 2025, 20),
-    (1990, 2025, 35),
-])
+@pytest.mark.parametrize(
+    "geburtsjahr,aktuelles_jahr,expected_alter",
+    [
+        (2000, 2025, 25),
+        (1995, 2025, 30),
+        (2005, 2025, 20),
+        (1990, 2025, 35),
+    ],
+)
 def test_altersberechnung(geburtsjahr, aktuelles_jahr, expected_alter):
     """Test: Alter wird korrekt berechnet."""
     alter = aktuelles_jahr - geburtsjahr
@@ -36,11 +40,14 @@ def test_altersberechnung(geburtsjahr, aktuelles_jahr, expected_alter):
 
 
 @pytest.mark.modul1
-@pytest.mark.parametrize("alter,expected_monate", [
-    (25, 300),
-    (30, 360),
-    (20, 240),
-])
+@pytest.mark.parametrize(
+    "alter,expected_monate",
+    [
+        (25, 300),
+        (30, 360),
+        (20, 240),
+    ],
+)
 def test_alter_in_monaten(alter, expected_monate):
     """Test: Umrechnung in Monate."""
     monate = alter * 12
@@ -48,11 +55,14 @@ def test_alter_in_monaten(alter, expected_monate):
 
 
 @pytest.mark.modul1
-@pytest.mark.parametrize("alter,expected_tage", [
-    (25, 9125),
-    (30, 10950),
-    (20, 7300),
-])
+@pytest.mark.parametrize(
+    "alter,expected_tage",
+    [
+        (25, 9125),
+        (30, 10950),
+        (20, 7300),
+    ],
+)
 def test_alter_in_tagen(alter, expected_tage):
     """Test: Umrechnung in Tage (ungefähr)."""
     tage = alter * 365
@@ -60,12 +70,15 @@ def test_alter_in_tagen(alter, expected_tage):
 
 
 @pytest.mark.modul1
-@pytest.mark.parametrize("alter,expected_naechster_runder", [
-    (25, 30),
-    (33, 40),
-    (49, 50),
-    (20, 30),
-])
+@pytest.mark.parametrize(
+    "alter,expected_naechster_runder",
+    [
+        (25, 30),
+        (33, 40),
+        (49, 50),
+        (20, 30),
+    ],
+)
 def test_naechster_runder_geburtstag(alter, expected_naechster_runder):
     """Test: Berechnung des nächsten runden Geburtstags."""
     naechster_runder = ((alter // 10) + 1) * 10

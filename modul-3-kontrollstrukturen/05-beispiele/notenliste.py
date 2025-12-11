@@ -24,15 +24,15 @@ nicht_bestanden = 0
 for note in noten:
     # Summe für Durchschnitt
     summe += note
-    
+
     # Beste Note prüfen
     if note > beste_note:
         beste_note = note
-    
+
     # Schlechteste Note prüfen
     if note < schlechteste_note:
         schlechteste_note = note
-    
+
     # Bestanden/Nicht bestanden zählen
     if note >= 4.0:
         bestanden += 1
@@ -50,4 +50,3 @@ print(f"Beste Note: {beste_note}")
 print(f"Schlechteste Note: {schlechteste_note}")
 print(f"Bestanden: {bestanden}")
 print(f"Nicht bestanden: {nicht_bestanden}")
-

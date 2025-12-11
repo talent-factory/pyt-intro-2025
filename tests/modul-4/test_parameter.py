@@ -4,12 +4,17 @@ Testet Funktionen mit Parametern und Rückgabewerten
 """
 
 import sys
-import pytest
-from pathlib import Path
 from io import StringIO
+from pathlib import Path
+
+import pytest
 
 # Modul importieren
-modul_pfad = Path(__file__).parent.parent.parent / "modul-4-funktionen-datenstrukturen" / "05-beispiele"
+modul_pfad = (
+    Path(__file__).parent.parent.parent
+    / "modul-4-funktionen-datenstrukturen"
+    / "05-beispiele"
+)
 sys.path.insert(0, str(modul_pfad))
 
 
@@ -18,6 +23,7 @@ def test_modul_kann_importiert_werden():
     """Test: Modul kann ohne Fehler importiert werden."""
     try:
         import parameter
+
         assert True
     except ImportError as e:
         pytest.fail(f"Import fehlgeschlagen: {e}")
@@ -43,13 +49,16 @@ def test_gruesse_funktion():
 
 
 @pytest.mark.modul4
-@pytest.mark.parametrize("a,b,erwartet", [
-    (5, 3, 8),
-    (0, 0, 0),
-    (-5, 5, 0),
-    (10, 20, 30),
-    (100, 200, 300),
-])
+@pytest.mark.parametrize(
+    "a,b,erwartet",
+    [
+        (5, 3, 8),
+        (0, 0, 0),
+        (-5, 5, 0),
+        (10, 20, 30),
+        (100, 200, 300),
+    ],
+)
 def test_addiere_funktion(a, b, erwartet):
     """Test: addiere() berechnet Summe korrekt."""
     import parameter
@@ -59,12 +68,15 @@ def test_addiere_funktion(a, b, erwartet):
 
 
 @pytest.mark.modul4
-@pytest.mark.parametrize("betrag,waehrung,erwartet", [
-    (19.99, "CHF", "19.99 CHF"),
-    (29.50, "EUR", "29.50 EUR"),
-    (100, "USD", "100.00 USD"),
-    (0, "CHF", "0.00 CHF"),
-])
+@pytest.mark.parametrize(
+    "betrag,waehrung,erwartet",
+    [
+        (19.99, "CHF", "19.99 CHF"),
+        (29.50, "EUR", "29.50 EUR"),
+        (100, "USD", "100.00 USD"),
+        (0, "CHF", "0.00 CHF"),
+    ],
+)
 def test_formatiere_preis_mit_waehrung(betrag, waehrung, erwartet):
     """Test: formatiere_preis() formatiert mit Währung."""
     import parameter
@@ -84,12 +96,15 @@ def test_formatiere_preis_default_waehrung():
 
 
 @pytest.mark.modul4
-@pytest.mark.parametrize("laenge,breite,erwartete_flaeche,erwarteter_umfang", [
-    (5, 3, 15, 16),
-    (10, 10, 100, 40),
-    (1, 1, 1, 4),
-    (7, 4, 28, 22),
-])
+@pytest.mark.parametrize(
+    "laenge,breite,erwartete_flaeche,erwarteter_umfang",
+    [
+        (5, 3, 15, 16),
+        (10, 10, 100, 40),
+        (1, 1, 1, 4),
+        (7, 4, 28, 22),
+    ],
+)
 def test_berechne_rechteck(laenge, breite, erwartete_flaeche, erwarteter_umfang):
     """Test: berechne_rechteck() berechnet Fläche und Umfang."""
     import parameter

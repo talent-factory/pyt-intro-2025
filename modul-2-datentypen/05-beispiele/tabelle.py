@@ -25,9 +25,9 @@ for i, produkt in enumerate(produkte, start=1):
     menge = produkt["menge"]
     preis = produkt["preis"]
     total = menge * preis
-    
+
     print(f"{i:3d} {name:<20} {menge:8d} {preis:12.2f} {total:12.2f}")
-    
+
     gesamt_menge += menge
     gesamt_preis += total
 

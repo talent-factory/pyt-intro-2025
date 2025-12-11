@@ -9,36 +9,29 @@ Zeigt:
 
 import json
 
+
 def config_erstellen():
     """Erstellt Standard-Konfiguration."""
     config = {
-        "app": {
-            "name": "Meine App",
-            "version": "1.0.0"
-        },
-        "einstellungen": {
-            "sprache": "de",
-            "theme": "hell",
-            "benachrichtigungen": True
-        },
-        "benutzer": {
-            "name": "Max Muster",
-            "email": "max@example.com"
-        }
+        "app": {"name": "Meine App", "version": "1.0.0"},
+        "einstellungen": {"sprache": "de", "theme": "hell", "benachrichtigungen": True},
+        "benutzer": {"name": "Max Muster", "email": "max@example.com"},
     }
-    
+
     with open("config.json", "w") as f:
         json.dump(config, f, indent=2, ensure_ascii=False)
-    
+
     print("✓ Konfiguration erstellt")
+
 
 def config_laden():
     """Lädt Konfiguration."""
     try:
-        with open("config.json", "r") as f:
+        with open("config.json") as f:
             return json.load(f)
     except FileNotFoundError:
         return None
+
 
 def config_anzeigen():
     """Zeigt Konfiguration."""
@@ -49,6 +42,7 @@ def config_anzeigen():
         print("=" * 50)
         print(json.dumps(config, indent=2, ensure_ascii=False))
 
+
 def einstellung_aendern(kategorie, key, wert):
     """Ändert eine Einstellung."""
     config = config_laden()
@@ -58,13 +52,14 @@ def einstellung_aendern(kategorie, key, wert):
             json.dump(config, f, indent=2, ensure_ascii=False)
         print(f"✓ {kategorie}.{key} = {wert}")
 
+
 if __name__ == "__main__":
     print("=" * 50)
     print("JSON DEMO")
     print("=" * 50)
-    
+
     config_erstellen()
     config_anzeigen()
-    
+
     einstellung_aendern("einstellungen", "sprache", "en")
     config_anzeigen()

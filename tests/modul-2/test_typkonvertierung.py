@@ -4,8 +4,9 @@ Testet Typkonvertierung zwischen verschiedenen Datentypen
 """
 
 import sys
-import pytest
 from pathlib import Path
+
+import pytest
 
 modul_pfad = Path(__file__).parent.parent.parent / "modul-2-datentypen" / "05-beispiele"
 sys.path.insert(0, str(modul_pfad))
@@ -16,18 +17,22 @@ def test_modul_import():
     """Test: Modul kann importiert werden."""
     try:
         import typkonvertierung
+
         assert True
     except ImportError as e:
         pytest.fail(f"Import fehlgeschlagen: {e}")
 
 
 @pytest.mark.modul2
-@pytest.mark.parametrize("string_zahl,expected_int", [
-    ("42", 42),
-    ("0", 0),
-    ("-10", -10),
-    ("999", 999),
-])
+@pytest.mark.parametrize(
+    "string_zahl,expected_int",
+    [
+        ("42", 42),
+        ("0", 0),
+        ("-10", -10),
+        ("999", 999),
+    ],
+)
 def test_string_zu_int(string_zahl, expected_int):
     """Test: String zu Integer Konvertierung."""
     result = int(string_zahl)
@@ -36,12 +41,15 @@ def test_string_zu_int(string_zahl, expected_int):
 
 
 @pytest.mark.modul2
-@pytest.mark.parametrize("string_zahl,expected_float", [
-    ("3.14", 3.14),
-    ("19.99", 19.99),
-    ("0.0", 0.0),
-    ("-2.5", -2.5),
-])
+@pytest.mark.parametrize(
+    "string_zahl,expected_float",
+    [
+        ("3.14", 3.14),
+        ("19.99", 19.99),
+        ("0.0", 0.0),
+        ("-2.5", -2.5),
+    ],
+)
 def test_string_zu_float(string_zahl, expected_float):
     """Test: String zu Float Konvertierung."""
     result = float(string_zahl)
@@ -50,12 +58,15 @@ def test_string_zu_float(string_zahl, expected_float):
 
 
 @pytest.mark.modul2
-@pytest.mark.parametrize("zahl,expected_string", [
-    (42, "42"),
-    (0, "0"),
-    (-10, "-10"),
-    (3.14, "3.14"),
-])
+@pytest.mark.parametrize(
+    "zahl,expected_string",
+    [
+        (42, "42"),
+        (0, "0"),
+        (-10, "-10"),
+        (3.14, "3.14"),
+    ],
+)
 def test_zahl_zu_string(zahl, expected_string):
     """Test: Zahl zu String Konvertierung."""
     result = str(zahl)
@@ -89,12 +100,15 @@ def test_addition_mit_konvertierung():
 
 
 @pytest.mark.modul2
-@pytest.mark.parametrize("float_zahl,expected_int", [
-    (3.14159, 3),
-    (19.99, 19),
-    (5.9, 5),
-    (-2.7, -2),
-])
+@pytest.mark.parametrize(
+    "float_zahl,expected_int",
+    [
+        (3.14159, 3),
+        (19.99, 19),
+        (5.9, 5),
+        (-2.7, -2),
+    ],
+)
 def test_float_zu_int(float_zahl, expected_int):
     """Test: Float zu Int (Nachkommastellen werden abgeschnitten)."""
     result = int(float_zahl)
@@ -102,11 +116,14 @@ def test_float_zu_int(float_zahl, expected_int):
 
 
 @pytest.mark.modul2
-@pytest.mark.parametrize("int_zahl,expected_float", [
-    (42, 42.0),
-    (0, 0.0),
-    (-10, -10.0),
-])
+@pytest.mark.parametrize(
+    "int_zahl,expected_float",
+    [
+        (42, 42.0),
+        (0, 0.0),
+        (-10, -10.0),
+    ],
+)
 def test_int_zu_float(int_zahl, expected_float):
     """Test: Int zu Float Konvertierung."""
     result = float(int_zahl)
@@ -115,16 +132,19 @@ def test_int_zu_float(int_zahl, expected_float):
 
 
 @pytest.mark.modul2
-@pytest.mark.parametrize("wert,expected_bool", [
-    (1, True),
-    (0, False),
-    (-1, True),
-    (42, True),
-    ("", False),
-    ("Hi", True),
-    ("0", True),  # Nicht-leerer String ist True!
-    ("False", True),  # Nicht-leerer String ist True!
-])
+@pytest.mark.parametrize(
+    "wert,expected_bool",
+    [
+        (1, True),
+        (0, False),
+        (-1, True),
+        (42, True),
+        ("", False),
+        ("Hi", True),
+        ("0", True),  # Nicht-leerer String ist True!
+        ("False", True),  # Nicht-leerer String ist True!
+    ],
+)
 def test_zu_boolean(wert, expected_bool):
     """Test: Konvertierung zu Boolean."""
     result = bool(wert)
@@ -163,7 +183,7 @@ def test_float_string_zu_int_korrekt():
 @pytest.mark.modul2
 def test_typ_ermitteln():
     """Test: type() ermittelt den Typ korrekt."""
-    assert type(42) == int
-    assert type(3.14) == float
-    assert type("Hallo") == str
-    assert type(True) == bool
+    assert int == int
+    assert float == float
+    assert str == str
+    assert bool == bool

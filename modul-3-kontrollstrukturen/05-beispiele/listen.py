@@ -139,7 +139,7 @@ print()
 print("=== Mit Index durchlaufen ===\n")
 
 for i in range(len(namen)):
-    print(f"{i+1}. {namen[i]}")
+    print(f"{i + 1}. {namen[i]}")
 
 print()
 
@@ -162,4 +162,3 @@ print(f"Vor clear: {liste}")
 
 liste.clear()
 print(f"Nach clear: {liste}")
-

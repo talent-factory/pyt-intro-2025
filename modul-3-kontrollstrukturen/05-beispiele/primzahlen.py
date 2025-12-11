@@ -39,7 +39,7 @@ while True:
             else:
                 # Nur bis Wurzel prüfen, nur ungerade Teiler
                 ist_prim = True
-                for teiler in range(3, int(n ** 0.5) + 1, 2):
+                for teiler in range(3, int(n**0.5) + 1, 2):
                     if n % teiler == 0:
                         ist_prim = False
                         break
@@ -70,7 +70,7 @@ while True:
                     ist_prim = False
                 else:
                     ist_prim = True
-                    for teiler in range(3, int(zahl ** 0.5) + 1, 2):
+                    for teiler in range(3, int(zahl**0.5) + 1, 2):
                         if zahl % teiler == 0:
                             ist_prim = False
                             break
@@ -87,7 +87,7 @@ while True:
                     zeile.append(str(primzahlen[j]))
                 print(", ".join(zeile))
 
-            print(f"\nStatistik:")
+            print("\nStatistik:")
             print(f"- Anzahl: {len(primzahlen)}")
             if len(primzahlen) > 0:
                 print(f"- Kleinste: {primzahlen[0]}")
@@ -141,4 +141,3 @@ while True:
 
     else:
         print("\n❌ Ungültige Wahl! Bitte 1-4 wählen.")
-

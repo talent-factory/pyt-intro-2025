@@ -138,4 +138,3 @@ print(f"{zahl1} + {zahl2} = {summe}")
 print(f"{zahl1} - {zahl2} = {differenz}")
 print(f"{zahl1} * {zahl2} = {produkt}")
 print(f"{zahl1} / {zahl2} = {quotient:.2f}")
-

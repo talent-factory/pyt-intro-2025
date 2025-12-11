@@ -6,7 +6,7 @@ dist/
 wheels/
 *.egg-info
 
-# Intellij files
+# Personal settings
 .idea/
 
 # Virtual environments

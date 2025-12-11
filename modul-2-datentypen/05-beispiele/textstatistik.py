@@ -1,12 +1,13 @@
 """Erweiterte Textanalyse mit Statistiken"""
 
+
 def analysiere_text(text: str) -> dict:
     """
     Analysiert einen Text und gibt Statistiken zurück.
-    
+
     Args:
         text: Der zu analysierende Text
-        
+
     Returns:
         Dictionary mit Statistiken
     """
@@ -15,18 +16,18 @@ def analysiere_text(text: str) -> dict:
     anzahl_zeichen_ohne_leer = len(text.replace(" ", ""))
     anzahl_woerter = len(text.split())
     anzahl_saetze = text.count(".") + text.count("!") + text.count("?")
-    
+
     # Zeichen-Typen
     anzahl_buchstaben = sum(c.isalpha() for c in text)
     anzahl_zahlen = sum(c.isdigit() for c in text)
     anzahl_leerzeichen = text.count(" ")
     anzahl_gross = sum(c.isupper() for c in text)
     anzahl_klein = sum(c.islower() for c in text)
-    
+
     # Berechnungen
     durchschnitt_woerter = anzahl_woerter / anzahl_saetze if anzahl_saetze > 0 else 0
     durchschnitt_zeichen = anzahl_zeichen / anzahl_woerter if anzahl_woerter > 0 else 0
-    
+
     return {
         "zeichen": anzahl_zeichen,
         "zeichen_ohne_leer": anzahl_zeichen_ohne_leer,

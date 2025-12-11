@@ -15,7 +15,7 @@ Konzepte:
 print("=== String-Erstellung ===\n")
 
 name = "Anna"
-stadt = 'Zürich'
+stadt = "Zürich"
 text = """Dies ist ein
 mehrzeiliger
 Text"""
@@ -122,4 +122,3 @@ print(f"Nach .upper() (ohne Zuweisung): {name}")
 
 name = name.upper()  # Korrekt: Neuen Wert zuweisen
 print(f"Nach .upper() (mit Zuweisung): {name}")
-

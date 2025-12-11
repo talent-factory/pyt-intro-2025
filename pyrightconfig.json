@@ -1,0 +1,73 @@
+{
+  "include": [
+    "modul-1-einstieg/05-beispiele",
+    "modul-2-datentypen/05-beispiele",
+    "modul-3-kontrollstrukturen/05-beispiele",
+    "modul-4-funktionen-datenstrukturen/05-beispiele",
+    "modul-5-dateien-module/05-beispiele",
+    "tests"
+  ],
+  "exclude": [
+    "**/__pycache__",
+    ".venv",
+    ".pytest_cache",
+    "**/*.pyc"
+  ],
+  "venvPath": ".",
+  "venv": ".venv",
+  "pythonVersion": "3.13",
+  "pythonPlatform": "Darwin",
+  "typeCheckingMode": "basic",
+  "reportMissingImports": true,
+  "reportMissingTypeStubs": false,
+  "executionEnvironments": [
+    {
+      "root": "modul-1-einstieg/05-beispiele",
+      "pythonVersion": "3.13",
+      "extraPaths": [
+        "."
+      ]
+    },
+    {
+      "root": "modul-2-datentypen/05-beispiele",
+      "pythonVersion": "3.13",
+      "extraPaths": [
+        "."
+      ]
+    },
+    {
+      "root": "modul-3-kontrollstrukturen/05-beispiele",
+      "pythonVersion": "3.13",
+      "extraPaths": [
+        "."
+      ]
+    },
+    {
+      "root": "modul-4-funktionen-datenstrukturen/05-beispiele",
+      "pythonVersion": "3.13",
+      "extraPaths": [
+        "."
+      ]
+    },
+    {
+      "root": "modul-5-dateien-module/05-beispiele",
+      "pythonVersion": "3.13",
+      "extraPaths": [
+        "."
+      ]
+    },
+    {
+      "root": "tests",
+      "pythonVersion": "3.13",
+      "extraPaths": [
+        ".",
+        "modul-1-einstieg/05-beispiele",
+        "modul-2-datentypen/05-beispiele",
+        "modul-3-kontrollstrukturen/05-beispiele",
+        "modul-4-funktionen-datenstrukturen/05-beispiele",
+        "modul-5-dateien-module/05-beispiele"
+      ]
+    }
+  ]
+}
+

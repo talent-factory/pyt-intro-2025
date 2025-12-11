@@ -1,0 +1,244 @@
+= VS Code Extensions für Python
+:toc:
+:toc-title: Inhalt
+:icons: font
+
+== Essentiell (automatisch installiert)
+
+=== Python Extension Pack
+**ID:** `ms-python.python`
+
+**Was macht sie?**
+
+* Syntax-Highlighting (farbige Darstellung von Code)
+* IntelliSense (Code-Vervollständigung)
+* Debugging (Fehlersuche)
+* Code Navigation (zu Funktionen springen)
+
+**Du siehst sie an:**
+
+* Farbig dargestellter Python-Code
+* Vorschläge beim Tippen
+* Grüner Play-Button oben rechts zum Ausführen
+
+=== Pylance
+**ID:** `ms-python.vscode-pylance`
+
+**Was macht sie?**
+
+* Schnelle Code-Analyse
+* Type Checking (prüft Datentypen)
+* Auto-Imports (fügt fehlende Imports hinzu)
+
+**Du siehst sie an:**
+
+* Rote Wellenlinien bei Fehlern
+* Gelbe Wellenlinien bei Warnungen
+* Quick-Info beim Hovern über Code
+
+=== Ruff
+**ID:** `charliermarsh.ruff`
+
+**Was macht sie?**
+
+* Prüft PEP 8-Konformität
+* Formatiert Code automatisch
+* Sortiert Imports
+
+**Du siehst sie an:**
+
+* Code wird beim Speichern formatiert
+* Gelbe Unterstreichungen bei Stil-Problemen
+* "Quick Fix" Vorschläge (`Cmd+.`)
+
+=== Jupyter
+**ID:** `ms-toolsai.jupyter`
+
+**Was macht sie?**
+
+* Öffnet `.ipynb` Dateien
+* Führt Code-Zellen aus
+* Zeigt Ergebnisse inline an
+
+**Du siehst sie an:**
+
+* Jupyter Notebooks öffnen sich in VS Code
+* "Run Cell" Buttons über jeder Zelle
+
+== Sehr hilfreich (empfohlen)
+
+=== Error Lens
+**ID:** `usernamehw.errorlens`
+
+**Was macht sie?**
+
+Zeigt Fehler und Warnungen **direkt im Code** an, nicht nur am Rand.
+
+**Vorher:**
+[source,python]
+----
+def test():
+    x = 42  # ⚠️ (nur Wellenlinie, Meldung beim Hovern)
+----
+
+**Nachher:**
+[source,python]
+
+----
+def test():
+    x = 42  # ⚠️ Local variable 'x' is assigned but never used (F841)
+----
+
+TIP: Super für Anfänger! Du siehst sofort, was falsch ist.
+
+=== German Spell Checker
+**ID:** `streetsidesoftware.code-spell-checker-german`
+
+**Was macht sie?**
+
+* Prüft Rechtschreibung in Kommentaren
+* Unterstützt Deutsch und Englisch
+* Markiert Tippfehler
+
+**Beispiel:**
+[source,python]
+----
+# Berechne die Durschnittsnote  # ❌ "Durschnittsnote" wird markiert
+# Berechne die Durchschnittsnote  # ✅ Korrigiert
+----
+
+=== GitLens
+**ID:** `eamodio.gitlens`
+
+**Was macht sie?**
+
+* Zeigt Git-History direkt im Code
+* Wer hat was wann geändert?
+* Einfacheres Arbeiten mit Git
+
+**Für Anfänger:**
+
+* Momentan nicht essentiell
+* Wird später wichtig bei Teamarbeit
+
+=== Rainbow CSV
+**ID:** `mechatroner.rainbow-csv`
+
+**Was macht sie?**
+
+Färbt Spalten in CSV-Dateien unterschiedlich ein.
+
+**Vorher:**
+```
+name,age,city
+Daniel,35,Bern
+Anna,28,Zürich
+```
+
+**Nachher:**
+```
+name     age  city    (jede Spalte in anderer Farbe)
+Daniel   35   Bern
+Anna     28   Zürich
+```
+
+== Installation
+
+=== Automatisch (empfohlen)
+
+Wenn du das Projekt öffnest, fragt VS Code automatisch:
+
+[quote]
+____
+Dieses Projekt empfiehlt Extensions. Möchtest du sie installieren?
+____
+
+→ Klicke auf **"Alle installieren"**
+
+=== Manuell
+
+. Klicke auf das Extensions-Symbol (linke Seitenleiste) oder drücke `Cmd+Shift+X`
+. Suche nach dem Namen der Extension
+. Klicke auf "Install"
+. Starte VS Code neu
+
+== Konfiguration
+
+Alle Extensions sind bereits vorkonfiguriert in `.vscode/settings.json`.
+
+Du musst **nichts** manuell einstellen! 🎉
+
+== Extensions deaktivieren
+
+Falls eine Extension stört:
+
+. `Cmd+Shift+X` → Extensions öffnen
+. Suche die Extension
+. Klicke auf das Zahnrad ⚙️
+. Wähle "Disable (Workspace)" → Nur für dieses Projekt deaktiviert
+
+CAUTION: Deaktiviere **nicht** die Python oder Ruff Extension! Ohne sie funktioniert die Code-Qualitätsprüfung nicht.
+
+== Empfohlene Extension-Einstellungen
+
+Falls du Extensions anpassen möchtest:
+
+=== Error Lens
+```json
+{
+  "errorLens.enabled": true,
+  "errorLens.fontSize": "0.9em",
+  "errorLens.enabledDiagnosticLevels": ["error", "warning"]
+}
+```
+
+=== Spell Checker
+```json
+{
+  "cSpell.language": "de,en",
+  "cSpell.enableFiletypes": ["python"],
+  "cSpell.words": [
+    // Eigene Wörter hinzufügen
+  ]
+}
+```
+
+== Weitere nützliche Extensions (für später)
+
+=== Für Webentwicklung
+* **Live Server**: Lokaler Entwicklungsserver
+* **HTML CSS Support**: Besseres HTML/CSS
+
+=== Für Datenanalyse
+* **Data Wrangler**: Daten visualisieren
+* **Excel Viewer**: CSV/Excel-Dateien anzeigen
+
+=== Für Fortgeschrittene
+* **Python Docstring Generator**: Auto-Docstrings
+* **autoDocstring**: Noch mehr Docstring-Features
+* **Python Test Explorer**: Tests ausführen
+
+== Häufige Fragen
+
+=== Warum so viele Extensions?
+
+Jede Extension hat eine spezifische Aufgabe. Zusammen machen sie VS Code zu einer vollwertigen Python-IDE!
+
+=== Verlangsamen Extensions VS Code?
+
+Die empfohlenen Extensions sind alle performant. Ruff ist sogar **schneller** als PyCharm's Inspector!
+
+=== Kann ich eigene Extensions hinzufügen?
+
+Ja! Die Liste in `extensions.json` sind nur *Empfehlungen*. Du kannst beliebige Extensions installieren.
+
+=== Welche Extensions brauche ich **wirklich**?
+
+Minimum für den Kurs:
+
+* Python (`ms-python.python`)
+* Pylance (`ms-python.vscode-pylance`)
+* Ruff (`charliermarsh.ruff`)
+* Jupyter (`ms-toolsai.jupyter`)
+
+Alles andere ist optional aber empfohlen.
