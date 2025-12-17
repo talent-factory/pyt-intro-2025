@@ -6,17 +6,21 @@ Gegeben: `noten.csv` mit Spalten: Name, Note1, Note2, Note3
 
 Berechnen Sie für jeden Studenten den Durchschnitt.
 
-**Lösung:**
+<details>
+<summary><b>Lösung anzeigen</b></summary>
+
 ```python
 import csv
 
 with open("noten.csv", "r") as f:
     reader = csv.DictReader(f)
     for zeile in reader:
-        noten = [float(zeile["Note1"]), 
-                 float(zeile["Note2"]), 
+        noten = [float(zeile["Note1"]),
+                 float(zeile["Note2"]),
                  float(zeile["Note3"])]
         avg = sum(noten) / len(noten)
         print(f"{zeile['Name']}: {avg:.2f}")
 ```
+
+</details>
 

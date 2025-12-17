@@ -18,7 +18,11 @@ def kontakte_erstellen() -> None:
             "email": "anna@example.com",
             "telefon": "079 123 45 67",
         },
-        {"name": "Max Meier", "email": "max@example.com", "telefon": "078 987 65 43"},
+        {
+            "name": "Max Meier",
+            "email": "max.meier@example.com",
+            "telefon": "078 987 65 43",
+        },
         {
             "name": "Lisa Schmidt",
             "email": "lisa@example.com",

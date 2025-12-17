@@ -7,7 +7,9 @@ Erstellen Sie eine einfache Notizen-App:
 1. Funktion `neue_notiz()` - Fragt nach Text und speichert in `notizen.txt`
 2. Funktion `zeige_notizen()` - Zeigt alle Notizen
 
-**Lösung:**
+<details>
+<summary><b>Lösung anzeigen</b></summary>
+
 ```python
 def neue_notiz():
     notiz = input("Notiz: ")
@@ -24,4 +26,6 @@ def zeige_notizen():
     except FileNotFoundError:
         print("Keine Notizen vorhanden")
 ```
+
+</details>
 

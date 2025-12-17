@@ -6,7 +6,9 @@ Erstellen Sie eine Datenstruktur für 3 Studenten mit Namen, Alter und Noten.
 
 Berechnen Sie dann für jeden den Notendurchschnitt.
 
-**Lösung:**
+<details>
+<summary><b>Lösung anzeigen</b></summary>
+
 ```python
 studenten = [
     {"name": "Anna", "alter": 20, "noten": [5.5, 6.0, 5.0]},
@@ -18,4 +20,6 @@ for student in studenten:
     durchschnitt = sum(student["noten"]) / len(student["noten"])
     print(f"{student['name']}: {durchschnitt:.2f}")
 ```
+
+</details>
 

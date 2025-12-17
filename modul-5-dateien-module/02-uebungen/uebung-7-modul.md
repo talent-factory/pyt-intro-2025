@@ -7,7 +7,9 @@ Erstellen Sie ein Modul `string_utils.py` mit:
 - `woerter_zaehlen(text)` - Zählt Wörter
 - `umkehren(text)` - Kehrt Text um
 
-**Lösung:**
+<details>
+<summary><b>Lösung anzeigen</b></summary>
+
 ```python
 # string_utils.py
 def ist_palindrom(text):
@@ -25,4 +27,6 @@ if __name__ == "__main__":
     print(woerter_zaehlen("Hallo Welt"))  # 2
     print(umkehren("Python"))  # nohtyP
 ```
+
+</details>
 

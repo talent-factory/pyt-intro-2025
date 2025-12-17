@@ -20,7 +20,9 @@ zeige_box("Hallo")
 **********
 ```
 
-**Lösung:**
+<details>
+<summary><b>Lösung anzeigen</b></summary>
+
 ```python
 def zeige_willkommen():
     print("Willkommen!")
@@ -34,4 +36,6 @@ def zeige_box(text):
     print(f"* {text} *")
     print("*" * breite)
 ```
+
+</details>
 

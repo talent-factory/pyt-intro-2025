@@ -11,7 +11,9 @@ Schreiben Sie Code für:
 3. Füge 7 und 8 hinzu
 4. Gib die Länge aus
 
-**Lösung:**
+<details>
+<summary><b>Lösung anzeigen</b></summary>
+
 ```python
 zahlen = [3, 1, 4, 1, 5, 9, 2, 6]
 
@@ -21,4 +23,6 @@ while 1 in zahlen:
 zahlen.extend([7, 8])
 print(f"Länge: {len(zahlen)}")
 ```
+
+</details>
 

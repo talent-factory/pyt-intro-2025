@@ -8,7 +8,9 @@ Verwenden Sie Standard-Module:
 2. `random` - Generieren Sie 5 Zufallszahlen zwischen 1-100
 3. `os` - Listen Sie alle .txt Dateien im aktuellen Verzeichnis
 
-**Lösung:**
+<details>
+<summary><b>Lösung anzeigen</b></summary>
+
 ```python
 import datetime
 import random
@@ -26,4 +28,6 @@ print(f"Zufallszahlen: {zahlen}")
 txt_dateien = [f for f in os.listdir('.') if f.endswith('.txt')]
 print(f"TXT-Dateien: {txt_dateien}")
 ```
+
+</details>
 
