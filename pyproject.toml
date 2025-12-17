@@ -1,6 +1,6 @@
 [project]
 name = "pyt-intro-2025"
-version = "1.0.0"
+version = "1.1.0"
 description = "Python Programmierung Basis - Einführungskurs für Anfänger"
 readme = "README.md"
 requires-python = ">=3.11"
