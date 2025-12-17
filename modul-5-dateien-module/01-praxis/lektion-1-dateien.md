@@ -5,7 +5,7 @@
 
 ## 🎯 Lernziele
 
-- Textdateien öffnen und schließen
+- Textdateien öffnen und schliessen
 - Dateien lesen mit verschiedenen Methoden
 - In Dateien schreiben
 - Context Manager (`with`) verwenden
@@ -150,4 +150,3 @@ kopiere_datei("tagebuch.txt", "tagebuch_backup.txt")
 
 - [Lektion 2: CSV-Dateien](./lektion-2-csv.md)
 - [Beispiele](../05-beispiele/textdateien.py)
-

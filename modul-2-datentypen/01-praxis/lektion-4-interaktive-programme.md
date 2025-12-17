@@ -1,14 +1,15 @@
-# Lektion 4: Interaktive Programme erstellen
+# Lektion 4: Interaktive Programme & Vertiefung
 
-**Dauer:** 50 Minuten  
-**Format:** 10 Min Theorie + 20 Min Live-Coding + 20 Min Übung
+**Dauer:** 50 Minuten
+**Format:** 10 Min Theorie + 25 Min Live-Coding + 15 Min Übung
 
 ## 🎯 Lernziele
 
 - Alle Konzepte kombinieren
 - Benutzerfreundliche Programme erstellen
 - Eingaben validieren
-- Best Practices anwenden
+- Erweiterte String-Methoden anwenden
+- Fehlerbehandlung verstehen
 
 ---
 
@@ -17,6 +18,7 @@
 ### 1.1 Best Practices für interaktive Programme
 
 **1. Klare Anweisungen:**
+
 ```python
 # Schlecht:
 name = input()
@@ -26,6 +28,7 @@ name = input("Bitte geben Sie Ihren Namen ein: ")
 ```
 
 **2. Formatierte Ausgaben:**
+
 ```python
 # Schlecht:
 print(name, alter, stadt)
@@ -35,22 +38,32 @@ print(f"Name: {name}, Alter: {alter}, Stadt: {stadt}")
 ```
 
 **3. Visuelle Trennung:**
+
 ```python
 print("=" * 40)
 print("Titel")
 print("=" * 40)
 ```
 
-**4. Eingabe-Validierung:**
+### 1.2 Eingabe-Validierung & Fehlerbehandlung
+
 ```python
+# Mit String-Methoden
 alter_str = input("Alter: ")
 if alter_str.isdigit():
     alter = int(alter_str)
 else:
     print("Ungültige Eingabe!")
+
+# Mit try-except
+try:
+    alter = int(input("Alter: "))
+except ValueError:
+    print("Ungültige Eingabe!")
+    alter = 0
 ```
 
-### 1.2 Programm-Struktur
+### 1.3 Programm-Struktur
 
 ```python
 # 1. Titel/Begrüssung
@@ -69,9 +82,9 @@ print(f"\nErgebnis: {ergebnis}")
 
 ---
 
-## 💻 Teil 2: Live-Coding (20 Min)
+## 💻 Teil 2: Live-Coding (25 Min)
 
-### Beispiel 1: BMI-Rechner
+### Beispiel 1: BMI-Rechner (10 Min)
 
 ```python
 """
@@ -112,134 +125,90 @@ print(f"Bewertung: {bewertung}")
 print("=" * 40)
 ```
 
-### Beispiel 2: Währungsrechner
+### Beispiel 2: Passwort-Validator (10 Min)
 
 ```python
-"""
-Währungsrechner
-Rechnet CHF in EUR um
-"""
+"""Passwort-Validator mit mehreren Kriterien"""
 
-print("=" * 40)
-print("    Währungsrechner CHF → EUR")
-print("=" * 40)
-print()
+print("=== PASSWORT-VALIDATOR ===\n")
 
-# Wechselkurs (Beispiel)
-KURS_EUR = 0.95
+passwort = input("Passwort: ")
+fehler = []
 
-# Eingabe
-betrag_chf = float(input("Betrag in CHF: "))
+# Mindestlänge
+if len(passwort) < 8:
+    fehler.append("Mindestens 8 Zeichen")
 
-# Berechnung
-betrag_eur = betrag_chf * KURS_EUR
+# Grossbuchstabe
+hat_gross = False
+for zeichen in passwort:
+    if zeichen.isupper():
+        hat_gross = True
+        break
+if not hat_gross:
+    fehler.append("Mindestens 1 Grossbuchstabe")
 
-# Ausgabe
-print()
-print(f"{betrag_chf:.2f} CHF = {betrag_eur:.2f} EUR")
-print(f"(Kurs: 1 CHF = {KURS_EUR} EUR)")
-```
-
-### Beispiel 3: Quiz-Programm
-
-```python
-"""
-Einfaches Quiz
-Stellt Fragen und zählt Punkte
-"""
-
-print("=" * 40)
-print("         Python Quiz")
-print("=" * 40)
-print()
-
-punkte = 0
-
-# Frage 1
-print("Frage 1: Was ist 5 + 3?")
-antwort1 = input("Ihre Antwort: ")
-if antwort1 == "8":
-    print("✓ Richtig!")
-    punkte += 1
-else:
-    print("✗ Falsch! Richtig wäre: 8")
-print()
-
-# Frage 2
-print("Frage 2: Wie viele Buchstaben hat 'Python'?")
-antwort2 = input("Ihre Antwort: ")
-if antwort2 == "6":
-    print("✓ Richtig!")
-    punkte += 1
-else:
-    print("✗ Falsch! Richtig wäre: 6")
-print()
-
-# Frage 3
-print("Frage 3: Ist Python eine Programmiersprache? (ja/nein)")
-antwort3 = input("Ihre Antwort: ").lower()
-if antwort3 == "ja":
-    print("✓ Richtig!")
-    punkte += 1
-else:
-    print("✗ Falsch! Richtig wäre: ja")
-print()
+# Zahl
+hat_zahl = False
+for zeichen in passwort:
+    if zeichen.isdigit():
+        hat_zahl = True
+        break
+if not hat_zahl:
+    fehler.append("Mindestens 1 Zahl")
 
 # Ergebnis
-print("=" * 40)
-print(f"Ergebnis: {punkte} von 3 Punkten")
-if punkte == 3:
-    print("Perfekt! 🌟")
-elif punkte >= 2:
-    print("Gut gemacht! 👍")
+if len(fehler) == 0:
+    print("✓ Passwort ist gültig!")
 else:
-    print("Weiter üben! 📚")
+    print("\n✗ Passwort ungültig:")
+    for fehler_text in fehler:
+        print(f"  - {fehler_text}")
+```
+
+### Beispiel 3: Text-Statistik (5 Min)
+
+```python
+"""Erweiterte Textanalyse"""
+
+text = input("Text eingeben:\n")
+
+# Statistiken
+anzahl_zeichen = len(text)
+anzahl_woerter = len(text.split())
+anzahl_buchstaben = 0
+anzahl_zahlen = 0
+
+for zeichen in text:
+    if zeichen.isalpha():
+        anzahl_buchstaben += 1
+    elif zeichen.isdigit():
+        anzahl_zahlen += 1
+
+# Ausgabe
+print("\n" + "=" * 40)
+print("TEXTANALYSE")
+print("=" * 40)
+print(f"Zeichen gesamt:        {anzahl_zeichen:6d}")
+print(f"Buchstaben:            {anzahl_buchstaben:6d}")
+print(f"Zahlen:                {anzahl_zahlen:6d}")
+print(f"Wörter:                {anzahl_woerter:6d}")
 print("=" * 40)
 ```
 
 ---
 
-## ✏️ Teil 3: Übung (20 Min)
+## ✏️ Teil 3: Übung (15 Min)
 
-### Übung 4: Interaktiver Rechner
+### Übung 4-8
 
-Siehe [02-uebungen/uebung-4-rechner.md](../02-uebungen/uebung-4-rechner.md)
+Wählen Sie eine der Übungen aus [02-uebungen](../02-uebungen/):
 
-**Aufgabe:**
-
-Erstellen Sie einen interaktiven Rechner, der:
-
-1. Nach zwei Zahlen fragt
-2. Alle Grundrechenarten durchführt
-3. Die Ergebnisse formatiert ausgibt
-4. Benutzerfreundlich gestaltet ist
-
-**Anforderungen:**
-
-- Titel mit Linien
-- Klare Eingabeaufforderungen
-- Formatierte Ausgabe (2 Dezimalstellen)
-- Visuelle Trennung
-
-**Beispiel-Ausgabe:**
-
-```
-========================================
-        Interaktiver Rechner
-========================================
-
-Erste Zahl: 10
-Zweite Zahl: 3
-
-========================================
-Ergebnisse:
-----------------------------------------
-10.00 + 3.00 = 13.00
-10.00 - 3.00 = 7.00
-10.00 * 3.00 = 30.00
-10.00 / 3.00 = 3.33
-========================================
-```
+- **Übung 4:** Interaktiver Rechner
+- **Übung 5:** String-Methoden
+- **Übung 6:** Formatierung
+- **Übung 7:** Input-Validierung
+- **Übung 8:** Textanalyse
 
 ---
 
@@ -249,18 +218,23 @@ Ergebnisse:
 - **Benutzerfreundlichkeit** ist wichtig
 - **Struktur:** Titel → Eingabe → Verarbeitung → Ausgabe
 - **Formatierung** mit F-Strings
+- **Validierung** mit String-Methoden und try-except
 - **Visuelle Elemente** (Linien, Leerzeilen)
 
 ## 🎯 Lernzielkontrolle
 
 - ✅ Alle Konzepte kombinieren?
 - ✅ Benutzerfreundliche Programme?
-- ✅ Eingaben verarbeiten?
+- ✅ Eingaben verarbeiten und validieren?
 - ✅ Formatierte Ausgaben?
+- ✅ Fehlerbehandlung verstehen?
 
-## 📚 Nächste Schritte
+## 🎓 Abschluss Modul 2
+
+Herzlichen Glückwunsch! Sie haben Modul 2 abgeschlossen.
+
+**Nächste Schritte:**
 
 - Hausaufgaben in [03-nachbearbeitung](../03-nachbearbeitung/)
 - Beispielcode in [05-beispiele](../05-beispiele/)
 - Materialien in [04-materialien](../04-materialien/)
-

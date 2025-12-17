@@ -1,16 +1,15 @@
-# Lektion 4: Verschachtelte Strukturen
+# Lektion 4: Verschachtelte Strukturen & Mini-Projekt
 
-**Dauer:** 50 Minuten  
-**Format:** 15 Min Theorie + 20 Min Live-Coding + 15 Min Übung
+**Dauer:** 50 Minuten
+**Format:** 10 Min Theorie + 20 Min Live-Coding + 20 Min Mini-Projekt
 
 ## 🎯 Lernziele
 
-- If in If verstehen
-- Schleife in Schleife nutzen
-- If in Schleife anwenden
+- Verschachtelte Strukturen verstehen (If in If, Schleife in Schleife)
 - Komplexe Muster erstellen
+- Alle Konzepte in einem Projekt kombinieren
 
-## 📖 Theorie (15 Min)
+## 📖 Theorie (10 Min)
 
 ### If in If (Verschachtelte Bedingungen)
 
@@ -44,50 +43,27 @@ zahlen = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 for zahl in zahlen:
     if zahl % 2 == 0:
         print(f"{zahl} ist gerade")
-    else:
-        print(f"{zahl} ist ungerade")
 ```
 
-### Schleife in If
+### Verschachtelungsarten
 
-```python
-ist_wochenende = True
-
-if ist_wochenende:
-    aktivitaeten = ["Ausschlafen", "Sport", "Freunde"]
-    for aktivitaet in aktivitaeten:
-        print(f"- {aktivitaet}")
-```
+| Typ | Beispiel | Verwendung |
+|-----|----------|------------|
+| If in If | `if x: if y:` | Mehrere Bedingungen |
+| Loop in Loop | `for i: for j:` | Muster, Matrizen |
+| If in Loop | `for x: if x:` | Filtern |
 
 ## 💻 Live-Coding (20 Min)
 
-### Beispiel 1: Muster zeichnen
+### Beispiel 1: Muster zeichnen (10 Min)
 
 ```python
 """Verschiedene Muster mit verschachtelten Schleifen"""
-
-# Rechteck
-print("=== Rechteck ===")
-for i in range(5):
-    for j in range(8):
-        print("*", end="")
-    print()
-
-print()
 
 # Dreieck
 print("=== Dreieck ===")
 for i in range(5):
     for j in range(i + 1):
-        print("*", end="")
-    print()
-
-print()
-
-# Umgekehrtes Dreieck
-print("=== Umgekehrtes Dreieck ===")
-for i in range(5, 0, -1):
-    for j in range(i):
         print("*", end="")
     print()
 
@@ -106,36 +82,7 @@ for i in range(1, hoehe + 1):
     print()
 ```
 
-### Beispiel 2: Primzahlen finden
-
-```python
-"""Primzahlen bis N finden"""
-n = int(input("Primzahlen bis: "))
-
-print(f"\nPrimzahlen bis {n}:")
-
-for zahl in range(2, n + 1):
-    ist_primzahl = True
-    
-    # Prüfen ob Teiler existiert
-    for teiler in range(2, int(zahl ** 0.5) + 1):
-        if zahl % teiler == 0:
-            ist_primzahl = False
-            break
-    
-    if ist_primzahl:
-        print(zahl, end=" ")
-
-print()
-```
-
-**Erklärung:**
-- Äussere Schleife: Alle Zahlen von 2 bis n
-- Innere Schleife: Prüft Teiler von 2 bis √zahl
-- Break: Stoppt bei erstem Teiler
-- Nur Primzahlen werden ausgegeben
-
-### Beispiel 3: Schachbrett
+### Beispiel 2: Schachbrett (5 Min)
 
 ```python
 """Schachbrett-Muster"""
@@ -145,7 +92,6 @@ print("=== Schachbrett ===\n")
 
 for zeile in range(groesse):
     for spalte in range(groesse):
-        # Wechselndes Muster
         if (zeile + spalte) % 2 == 0:
             print("□", end=" ")
         else:
@@ -153,60 +99,146 @@ for zeile in range(groesse):
     print()
 ```
 
-**Ausgabe:**
+### Beispiel 3: Primzahlen (5 Min)
+
+```python
+"""Primzahlen bis N finden"""
+n = 30
+
+print(f"Primzahlen bis {n}:")
+
+for zahl in range(2, n + 1):
+    ist_primzahl = True
+
+    for teiler in range(2, int(zahl ** 0.5) + 1):
+        if zahl % teiler == 0:
+            ist_primzahl = False
+            break
+
+    if ist_primzahl:
+        print(zahl, end=" ")
+print()
 ```
-□ ■ □ ■ □ ■ □ ■ 
-■ □ ■ □ ■ □ ■ □ 
-□ ■ □ ■ □ ■ □ ■ 
-...
+
+---
+
+## ✏️ Mini-Projekt (20 Min)
+
+Wählen Sie **eines** der folgenden Projekte:
+
+### Option 1: Kontakt-Manager (einfach)
+
+```python
+kontakte = []
+
+while True:
+    print("\n=== KONTAKT-MANAGER ===")
+    print("1. Kontakt hinzufügen")
+    print("2. Alle Kontakte anzeigen")
+    print("3. Beenden")
+
+    wahl = input("Wahl: ")
+
+    if wahl == "1":
+        name = input("Name: ")
+        telefon = input("Telefon: ")
+        kontakte.append({"name": name, "telefon": telefon})
+        print("✓ Gespeichert!")
+    elif wahl == "2":
+        for k in kontakte:
+            print(f"- {k['name']}: {k['telefon']}")
+    elif wahl == "3":
+        break
 ```
 
-## ✏️ Übungen (15 Min)
+### Option 2: Zahlenraten (einfach)
 
-### Übung 7: Multiplikationstabelle
-Siehe [Übung 7: Multiplikationstabelle](../02-uebungen/uebung-7-multiplikationstabelle.md)
+```python
+import random
 
-### Übung 8: Zahlen-Pyramide
-Siehe [Übung 8: Zahlen-Pyramide](../02-uebungen/uebung-8-zahlen-pyramide.md)
+zahl = random.randint(1, 100)
+versuche = 0
+
+print("=== ZAHLENRATEN ===")
+print("Ich denke an eine Zahl zwischen 1 und 100.")
+
+while True:
+    tipp = int(input("Dein Tipp: "))
+    versuche += 1
+
+    if tipp < zahl:
+        print("Höher!")
+    elif tipp > zahl:
+        print("Niedriger!")
+    else:
+        print(f"✓ Richtig! In {versuche} Versuchen!")
+        break
+```
+
+### Option 3: Hangman (mittel)
+
+```python
+import random
+
+woerter = ["PYTHON", "PROGRAMMIEREN", "COMPUTER"]
+wort = random.choice(woerter)
+geraten = []
+versuche = 6
+
+print("=== HANGMAN ===")
+
+while versuche > 0:
+    # Wort anzeigen
+    anzeige = ""
+    for b in wort:
+        if b in geraten:
+            anzeige += b + " "
+        else:
+            anzeige += "_ "
+    print(f"\nWort: {anzeige}")
+    print(f"Versuche: {versuche}")
+
+    # Gewonnen?
+    if "_" not in anzeige:
+        print("🎉 Gewonnen!")
+        break
+
+    buchstabe = input("Buchstabe: ").upper()
+    geraten.append(buchstabe)
+
+    if buchstabe in wort:
+        print("✓ Richtig!")
+    else:
+        print("✗ Falsch!")
+        versuche -= 1
+
+if versuche == 0:
+    print(f"Verloren! Das Wort war: {wort}")
+```
+
+---
 
 ## 📝 Zusammenfassung
-
-### Verschachtelungsarten
-
-| Typ | Beispiel | Verwendung |
-|-----|----------|------------|
-| If in If | `if x: if y:` | Mehrere Bedingungen |
-| Loop in Loop | `for i: for j:` | Muster, Matrizen |
-| If in Loop | `for x: if x:` | Filtern |
-| Loop in If | `if x: for y:` | Bedingte Iteration |
 
 ### Wichtige Punkte
 
 ✅ **DO:**
+
 - Einrückung beachten (4 Leerzeichen pro Ebene)
-- Aussagekräftige Variablennamen (i, j, k für Schleifen OK)
+- Aussagekräftige Variablennamen
 - Kommentare bei komplexer Logik
 
 ❌ **DON'T:**
+
 - Zu viele Verschachtelungsebenen (max 3-4)
 - Unklare Variablennamen
-- Fehlende Kommentare
-
-### Performance-Tipp
-
-Bei verschachtelten Schleifen:
-- n Iterationen in äusserer Schleife
-- m Iterationen in innerer Schleife
-- **Gesamt: n × m Iterationen**
-
-Beispiel: 100 × 100 = 10'000 Iterationen!
 
 ## 🎓 Abschluss Modul 3
 
-Herzlichen Glückwunsch! Sie haben alle 4 Lektionen abgeschlossen.
+Herzlichen Glückwunsch! Sie haben Modul 3 abgeschlossen.
 
 **Nächste Schritte:**
+
 1. [Nachbearbeitung](../03-nachbearbeitung/) - Hausaufgaben
 2. [Beispiele](../05-beispiele/) - Zum Nachschlagen
 3. Modul 4 vorbereiten
-

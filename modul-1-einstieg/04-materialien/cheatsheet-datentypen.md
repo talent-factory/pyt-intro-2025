@@ -63,7 +63,7 @@ print(f"{preis:.1f}")  # 20.0 (1 Dezimalstelle)
 ```python
 name = "Anna"
 stadt = 'Zürich'
-text = "Python macht Spaß!"
+text = "Python macht Spass!"
 ```
 
 **Operationen:**
@@ -171,4 +171,3 @@ int("5") + 5     # 10
 - `bool` für Ja/Nein-Entscheidungen
 - Immer passenden Typ verwenden
 - Bei Unsicherheit: `type()` nutzen
-

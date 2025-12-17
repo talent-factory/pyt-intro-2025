@@ -4,33 +4,37 @@ Testet Arbeiten mit Variablen
 """
 
 import sys
-import pytest
-from pathlib import Path
 from io import StringIO
+from pathlib import Path
+
+import pytest
 
 modul_pfad = Path(__file__).parent.parent.parent / "modul-1-einstieg" / "05-beispiele"
 sys.path.insert(0, str(modul_pfad))
 
 
 @pytest.mark.modul1
-def test_modul_import():
+def test_modul_import() -> None:
     """Test: Modul kann importiert werden."""
     try:
         import variablen
+
         assert True
     except ImportError as e:
         pytest.fail(f"Import fehlgeschlagen: {e}")
 
 
 @pytest.mark.modul1
-def test_variablen_ausgabe():
+def test_variablen_ausgabe() -> None:
     """Test: Variablen werden korrekt ausgegeben."""
     old_stdout = sys.stdout
     sys.stdout = captured = StringIO()
 
     try:
         import importlib
+
         import variablen
+
         importlib.reload(variablen)
 
         output = captured.getvalue()
@@ -45,14 +49,16 @@ def test_variablen_ausgabe():
 
 
 @pytest.mark.modul1
-def test_berechnungen():
+def test_berechnungen() -> None:
     """Test: Berechnungen werden durchgeführt."""
     old_stdout = sys.stdout
     sys.stdout = captured = StringIO()
 
     try:
         import importlib
+
         import variablen
+
         importlib.reload(variablen)
 
         output = captured.getvalue()
@@ -60,7 +66,7 @@ def test_berechnungen():
         # Prüfe mathematische Operationen
         assert "Summe" in output or "summe" in output
         assert "15" in output  # 10 + 5
-        assert "5" in output   # 10 - 5
+        assert "5" in output  # 10 - 5
         assert "50" in output  # 10 * 5
 
     finally:

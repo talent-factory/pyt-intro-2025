@@ -18,7 +18,9 @@ with open("aufgaben.json", "w") as f:
 
 Lesen Sie die Datei und zeigen Sie nur unerledigte Aufgaben.
 
-**Lösung:**
+<details>
+<summary><b>Lösung anzeigen</b></summary>
+
 ```python
 import json
 
@@ -30,4 +32,6 @@ for aufgabe in aufgaben:
     if not aufgabe["erledigt"]:
         print(f"- {aufgabe['titel']}")
 ```
+
+</details>
 

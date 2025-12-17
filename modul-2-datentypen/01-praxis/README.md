@@ -1,6 +1,6 @@
 # Praxis: Präsenzunterricht Modul 2
 
-**Dauer:** 5 Lektionen à 50 Minuten = 250 Minuten (4h 10min)
+**Dauer:** 4 Lektionen à 50 Minuten = 200 Minuten (3h 20min)
 
 ## 🎯 Lernziele
 
@@ -59,33 +59,19 @@ Nach den Praxis-Lektionen können Sie:
 
 ---
 
-### [Lektion 4: Interaktive Programme erstellen](./lektion-4-interaktive-programme.md) (50 Min)
+### [Lektion 4: Interaktive Programme & Vertiefung](./lektion-4-interaktive-programme.md) (50 Min)
 
 **Inhalt:**
 - Kombination aller Konzepte
-- Eingabe-Validierung
+- Eingabe-Validierung mit String-Methoden
 - Benutzerfreundliche Ausgaben
-- Praktische Anwendungen
+- Fehlerbehandlung (try-except)
+- Praktische Anwendungen (BMI-Rechner, Passwort-Validator)
 
 **Format:**
 - 10 Min: Theorie und Best Practices
-- 20 Min: Live-Coding eines kompletten Programms
-- 20 Min: Übung 4 (Interaktiver Rechner)
-
----
-
-### [Lektion 5: Vertiefung & Praxis](./lektion-5-vertiefung.md) (50 Min)
-
-**Inhalt:**
-- Erweiterte String-Methoden
-- Komplexe Formatierung
-- Input-Validierung
-- Fehlerbehandlung (try-except)
-
-**Format:**
-- 10 Min: Theorie
 - 25 Min: Live-Coding (3 Beispiele)
-- 15 Min: Übungen 5-8
+- 15 Min: Übungen 4-8
 
 ---
 

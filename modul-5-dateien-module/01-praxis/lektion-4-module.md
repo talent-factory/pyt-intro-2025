@@ -1,16 +1,16 @@
-# Lektion 4: Module & Imports
+# Lektion 4: Module & Abschluss-Projekt
 
-**Dauer:** 50 Minuten  
-**Format:** 15 Min Theorie + 20 Min Live-Coding + 15 Min Übung
+**Dauer:** 50 Minuten
+**Format:** 10 Min Theorie + 15 Min Live-Coding + 25 Min Projekt
 
 ## 🎯 Lernziele
 
 - Module importieren
 - Eigene Module erstellen
-- Import-Varianten kennen
 - Standard-Bibliothek nutzen
+- Alle Konzepte in einem Projekt kombinieren
 
-## 📖 Theorie (15 Min)
+## 📖 Theorie (10 Min)
 
 ### Was sind Module?
 
@@ -27,14 +27,10 @@ print(math.sqrt(16))
 # Spezifische Funktionen
 from math import pi, sqrt
 print(pi)
-print(sqrt(16))
 
 # Mit Alias
 import datetime as dt
 heute = dt.date.today()
-
-# Alles importieren (nicht empfohlen!)
-from math import *
 ```
 
 ### Eigenes Modul erstellen
@@ -44,12 +40,7 @@ Datei `rechner.py`:
 """Einfacher Rechner."""
 
 def addiere(a, b):
-    """Addiert zwei Zahlen."""
     return a + b
-
-def multipliziere(a, b):
-    """Multipliziert zwei Zahlen."""
-    return a * b
 
 PI = 3.14159
 ```
@@ -57,15 +48,12 @@ PI = 3.14159
 Verwendung:
 ```python
 import rechner
-
 print(rechner.addiere(5, 3))
-print(rechner.PI)
 ```
 
 ### `if __name__ == "__main__":`
 
 ```python
-# mein_modul.py
 def gruesse(name):
     return f"Hallo {name}!"
 
@@ -74,119 +62,160 @@ if __name__ == "__main__":
     print(gruesse("Welt"))
 ```
 
-## 💻 Live-Coding (20 Min)
+### Wichtige Standard-Module
+
+```python
+import datetime   # Datum/Zeit
+import random     # Zufallszahlen
+import os         # Betriebssystem
+import math       # Mathematik
+import json       # JSON-Dateien
+import csv        # CSV-Dateien
+```
+
+## 💻 Live-Coding (15 Min)
 
 ### Beispiel 1: Eigenes Modul
 
 Datei `texttools.py`:
+
 ```python
 """Werkzeuge für Textverarbeitung."""
 
 def woerter_zaehlen(text):
-    """Zählt Wörter in einem Text."""
     return len(text.split())
 
 def gross_schreiben(text):
-    """Wandelt Text in Großbuchstaben."""
     return text.upper()
 
-def umkehren(text):
-    """Kehrt Text um."""
-    return text[::-1]
-
 if __name__ == "__main__":
-    # Tests
-    test = "Hallo Welt"
-    print(f"Wörter: {woerter_zaehlen(test)}")
-    print(f"Groß: {gross_schreiben(test)}")
-    print(f"Umgekehrt: {umkehren(test)}")
+    print(woerter_zaehlen("Hallo Welt"))
 ```
 
-Verwendung in `main.py`:
-```python
-import texttools
-
-text = "Python macht Spass"
-print(f"Anzahl Wörter: {texttools.woerter_zaehlen(text)}")
-print(f"Groß: {texttools.gross_schreiben(text)}")
-```
-
-### Beispiel 2: Datei-Utilities
-
-Datei `datei_utils.py`:
-```python
-"""Utilities für Datei-Operationen."""
-
-def datei_existiert(dateiname):
-    """Prüft ob Datei existiert."""
-    import os
-    return os.path.exists(dateiname)
-
-def datei_groesse(dateiname):
-    """Gibt Dateigröße in Bytes zurück."""
-    import os
-    return os.path.getsize(dateiname)
-
-def zeilen_zaehlen(dateiname):
-    """Zählt Zeilen in Datei."""
-    with open(dateiname, "r") as f:
-        return len(f.readlines())
-```
-
-### Beispiel 3: Standard-Module nutzen
+### Beispiel 2: Standard-Module nutzen
 
 ```python
-# Datum und Zeit
 import datetime
+import random
 
 heute = datetime.date.today()
 print(f"Heute: {heute}")
 
-jetzt = datetime.datetime.now()
-print(f"Jetzt: {jetzt.strftime('%H:%M:%S')}")
-
-# Zufallszahlen
-import random
-
 zahl = random.randint(1, 100)
 print(f"Zufallszahl: {zahl}")
-
-auswahl = random.choice(["Rot", "Grün", "Blau"])
-print(f"Zufällige Farbe: {auswahl}")
-
-# Betriebssystem
-import os
-
-print(f"Aktuelles Verzeichnis: {os.getcwd()}")
-print(f"Dateien: {os.listdir('.')}")
-
-# Mathematik
-import math
-
-print(f"Pi: {math.pi}")
-print(f"Wurzel aus 16: {math.sqrt(16)}")
-print(f"5 hoch 3: {math.pow(5, 3)}")
 ```
 
-## ✏️ Übungen (15 Min)
+---
 
-- [Übung 7: Eigenes Modul](../02-uebungen/uebung-7-modul.md)
-- [Übung 8: Standard-Module](../02-uebungen/uebung-8-stdlib.md)
+## 📋 Abschluss-Projekt (25 Min)
+
+Wählen Sie **eines** der folgenden Projekte:
+
+### Projekt 1: Aufgabenverwaltung (Todo-App)
+
+```python
+import json
+
+def aufgaben_laden():
+    try:
+        with open("aufgaben.json", "r") as f:
+            return json.load(f)
+    except FileNotFoundError:
+        return []
+
+def aufgaben_speichern(aufgaben):
+    with open("aufgaben.json", "w") as f:
+        json.dump(aufgaben, f, indent=2)
+
+def hauptmenu():
+    aufgaben = aufgaben_laden()
+
+    while True:
+        print("\n=== TODO-APP ===")
+        print("1. Aufgabe hinzufügen")
+        print("2. Alle anzeigen")
+        print("3. Beenden")
+
+        wahl = input("Wahl: ")
+
+        if wahl == "1":
+            titel = input("Titel: ")
+            aufgaben.append({"titel": titel, "erledigt": False})
+            aufgaben_speichern(aufgaben)
+        elif wahl == "2":
+            for i, a in enumerate(aufgaben, 1):
+                status = "✓" if a["erledigt"] else " "
+                print(f"{i}. [{status}] {a['titel']}")
+        elif wahl == "3":
+            break
+
+if __name__ == "__main__":
+    hauptmenu()
+```
+
+### Projekt 2: Kontaktverwaltung
+
+```python
+import csv
+
+def kontakte_laden():
+    try:
+        with open("kontakte.csv", "r") as f:
+            return list(csv.DictReader(f))
+    except FileNotFoundError:
+        return []
+
+def kontakte_speichern(kontakte):
+    with open("kontakte.csv", "w", newline="") as f:
+        writer = csv.DictWriter(f, ["name", "email", "telefon"])
+        writer.writeheader()
+        writer.writerows(kontakte)
+
+# Hauptprogramm ähnlich wie Todo-App
+```
+
+### Projekt 3: Notizen-System
+
+```python
+import json
+from datetime import datetime
+
+def neue_notiz(titel, inhalt):
+    notizen = notizen_laden()
+    notizen.append({
+        "titel": titel,
+        "inhalt": inhalt,
+        "datum": datetime.now().isoformat()
+    })
+    notizen_speichern(notizen)
+```
+
+## ✅ Erfolgskriterien
+
+- [ ] Programm läuft ohne Fehler
+- [ ] Daten werden in Datei gespeichert
+- [ ] Mindestens 3 Funktionen implementiert
+- [ ] Code ist kommentiert
 
 ## 📚 Zusammenfassung
 
 - Module mit `import` einbinden
 - Eigene Module = .py Dateien
 - `if __name__ == "__main__":` für Tests
-- Wichtige Standard-Module:
-  - `datetime` - Datum/Zeit
-  - `random` - Zufallszahlen
-  - `os` - Betriebssystem
-  - `math` - Mathematik
-  - `json` - JSON
-  - `csv` - CSV
+- Wichtige Standard-Module: datetime, random, os, math, json, csv
 
-## 🔗 Weiter
+## 🎉 Herzlichen Glückwunsch!
 
-- [Lektion 5: Abschluss-Projekt](./lektion-5-projekt.md)
+Sie haben den Python-Einführungskurs abgeschlossen!
 
+**Sie können jetzt:**
+
+- ✅ Python-Programme schreiben
+- ✅ Mit Datentypen arbeiten
+- ✅ Kontrollstrukturen nutzen
+- ✅ Funktionen definieren
+- ✅ Datenstrukturen verwenden
+- ✅ Dateien verarbeiten
+- ✅ Module erstellen
+
+**Weiter:** [Hausaufgaben](../03-nachbearbeitung/)

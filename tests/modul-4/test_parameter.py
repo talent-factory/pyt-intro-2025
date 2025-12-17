@@ -4,27 +4,33 @@ Testet Funktionen mit Parametern und Rückgabewerten
 """
 
 import sys
-import pytest
-from pathlib import Path
 from io import StringIO
+from pathlib import Path
+
+import pytest
 
 # Modul importieren
-modul_pfad = Path(__file__).parent.parent.parent / "modul-4-funktionen-datenstrukturen" / "05-beispiele"
+modul_pfad = (
+    Path(__file__).parent.parent.parent
+    / "modul-4-funktionen-datenstrukturen"
+    / "05-beispiele"
+)
 sys.path.insert(0, str(modul_pfad))
 
 
 @pytest.mark.modul4
-def test_modul_kann_importiert_werden():
+def test_modul_kann_importiert_werden() -> None:
     """Test: Modul kann ohne Fehler importiert werden."""
     try:
         import parameter
+
         assert True
     except ImportError as e:
         pytest.fail(f"Import fehlgeschlagen: {e}")
 
 
 @pytest.mark.modul4
-def test_gruesse_funktion():
+def test_gruesse_funktion() -> None:
     """Test: gruesse() gibt Begrüßung mit Namen aus."""
     import parameter
 
@@ -43,14 +49,21 @@ def test_gruesse_funktion():
 
 
 @pytest.mark.modul4
-@pytest.mark.parametrize("a,b,erwartet", [
-    (5, 3, 8),
-    (0, 0, 0),
-    (-5, 5, 0),
-    (10, 20, 30),
-    (100, 200, 300),
-])
-def test_addiere_funktion(a, b, erwartet):
+@pytest.mark.parametrize(
+    "a,b,erwartet",
+    [
+        (5, 3, 8),
+        (0, 0, 0),
+        (-5, 5, 0),
+        (10, 20, 30),
+        (100, 200, 300),
+    ],
+)
+def test_addiere_funktion(
+    a: int | float,
+    b: int | float,
+    erwartet: int | float,
+) -> None:
     """Test: addiere() berechnet Summe korrekt."""
     import parameter
 
@@ -59,13 +72,20 @@ def test_addiere_funktion(a, b, erwartet):
 
 
 @pytest.mark.modul4
-@pytest.mark.parametrize("betrag,waehrung,erwartet", [
-    (19.99, "CHF", "19.99 CHF"),
-    (29.50, "EUR", "29.50 EUR"),
-    (100, "USD", "100.00 USD"),
-    (0, "CHF", "0.00 CHF"),
-])
-def test_formatiere_preis_mit_waehrung(betrag, waehrung, erwartet):
+@pytest.mark.parametrize(
+    "betrag,waehrung,erwartet",
+    [
+        (19.99, "CHF", "19.99 CHF"),
+        (29.50, "EUR", "29.50 EUR"),
+        (100, "USD", "100.00 USD"),
+        (0, "CHF", "0.00 CHF"),
+    ],
+)
+def test_formatiere_preis_mit_waehrung(
+    betrag: int | float,
+    waehrung: str,
+    erwartet: str,
+) -> None:
     """Test: formatiere_preis() formatiert mit Währung."""
     import parameter
 
@@ -74,7 +94,7 @@ def test_formatiere_preis_mit_waehrung(betrag, waehrung, erwartet):
 
 
 @pytest.mark.modul4
-def test_formatiere_preis_default_waehrung():
+def test_formatiere_preis_default_waehrung() -> None:
     """Test: formatiere_preis() nutzt CHF als Standard."""
     import parameter
 
@@ -84,13 +104,21 @@ def test_formatiere_preis_default_waehrung():
 
 
 @pytest.mark.modul4
-@pytest.mark.parametrize("laenge,breite,erwartete_flaeche,erwarteter_umfang", [
-    (5, 3, 15, 16),
-    (10, 10, 100, 40),
-    (1, 1, 1, 4),
-    (7, 4, 28, 22),
-])
-def test_berechne_rechteck(laenge, breite, erwartete_flaeche, erwarteter_umfang):
+@pytest.mark.parametrize(
+    "laenge,breite,erwartete_flaeche,erwarteter_umfang",
+    [
+        (5, 3, 15, 16),
+        (10, 10, 100, 40),
+        (1, 1, 1, 4),
+        (7, 4, 28, 22),
+    ],
+)
+def test_berechne_rechteck(
+    laenge: int | float,
+    breite: int | float,
+    erwartete_flaeche: int | float,
+    erwarteter_umfang: int | float,
+) -> None:
     """Test: berechne_rechteck() berechnet Fläche und Umfang."""
     import parameter
 
@@ -100,7 +128,7 @@ def test_berechne_rechteck(laenge, breite, erwartete_flaeche, erwarteter_umfang)
 
 
 @pytest.mark.modul4
-def test_berechne_rechteck_gibt_tupel_zurueck():
+def test_berechne_rechteck_gibt_tupel_zurueck() -> None:
     """Test: berechne_rechteck() gibt Tupel zurück."""
     import parameter
 
@@ -110,7 +138,7 @@ def test_berechne_rechteck_gibt_tupel_zurueck():
 
 
 @pytest.mark.modul4
-def test_addiere_mit_floats():
+def test_addiere_mit_floats() -> None:
     """Test: addiere() funktioniert auch mit Floats."""
     import parameter
 

@@ -4,78 +4,112 @@ Testet String-Operationen
 """
 
 import sys
-import pytest
 from pathlib import Path
+
+import pytest
 
 modul_pfad = Path(__file__).parent.parent.parent / "modul-2-datentypen" / "05-beispiele"
 sys.path.insert(0, str(modul_pfad))
 
 
 @pytest.mark.modul2
-def test_modul_import():
+def test_modul_import() -> None:
     """Test: Modul kann importiert werden."""
     try:
         import strings
+
         assert True
     except ImportError as e:
         pytest.fail(f"Import fehlgeschlagen: {e}")
 
 
 @pytest.mark.modul2
-@pytest.mark.parametrize("s1,s2,expected", [
-    ("Hello", " World", "Hello World"),
-    ("Python", "!", "Python!"),
-    ("Max", " Muster", "Max Muster"),
-])
-def test_string_konkatenation(s1, s2, expected):
+@pytest.mark.parametrize(
+    "s1,s2,expected",
+    [
+        ("Hello", " World", "Hello World"),
+        ("Python", "!", "Python!"),
+        ("Max", " Muster", "Max Muster"),
+    ],
+)
+def test_string_konkatenation(
+    s1: int | float,
+    s2: int | float,
+    expected: int | float,
+) -> None:
     """Test: String-Konkatenation funktioniert."""
     result = s1 + s2
     assert result == expected
 
 
 @pytest.mark.modul2
-@pytest.mark.parametrize("char,n,expected", [
-    ("*", 5, "*****"),
-    ("=", 10, "=========="),
-    ("-", 3, "---"),
-])
-def test_string_multiplikation(char, n, expected):
+@pytest.mark.parametrize(
+    "char,n,expected",
+    [
+        ("*", 5, "*****"),
+        ("=", 10, "=========="),
+        ("-", 3, "---"),
+    ],
+)
+def test_string_multiplikation(
+    char: int | float,
+    n: int | float,
+    expected: int | float,
+) -> None:
     """Test: String-Multiplikation funktioniert."""
     result = char * n
     assert result == expected
 
 
 @pytest.mark.modul2
-@pytest.mark.parametrize("text,expected_length", [
-    ("Python", 6),
-    ("Hello World", 11),
-    ("", 0),
-])
-def test_string_laenge(text, expected_length):
+@pytest.mark.parametrize(
+    "text,expected_length",
+    [
+        ("Python", 6),
+        ("Hello World", 11),
+        ("", 0),
+    ],
+)
+def test_string_laenge(text: str, expected_length: int | float | str | bool) -> None:
     """Test: len() gibt korrekte Länge zurück."""
     assert len(text) == expected_length
 
 
 @pytest.mark.modul2
-@pytest.mark.parametrize("text,index,expected_char", [
-    ("Python", 0, "P"),
-    ("Python", 1, "y"),
-    ("Python", -1, "n"),
-    ("Python", -2, "o"),
-])
-def test_string_indexierung(text, index, expected_char):
+@pytest.mark.parametrize(
+    "text,index,expected_char",
+    [
+        ("Python", 0, "P"),
+        ("Python", 1, "y"),
+        ("Python", -1, "n"),
+        ("Python", -2, "o"),
+    ],
+)
+def test_string_indexierung(
+    text: str,
+    index: int,
+    expected_char: int | float,
+) -> None:
     """Test: String-Indexierung funktioniert."""
     assert text[index] == expected_char
 
 
 @pytest.mark.modul2
-@pytest.mark.parametrize("text,start,end,expected", [
-    ("Python", 0, 2, "Py"),
-    ("Python", 2, 4, "th"),
-    ("Python Programmierung", 0, 6, "Python"),
-    ("Python Programmierung", 7, None, "Programmierung"),
-])
-def test_string_slicing(text, start, end, expected):
+@pytest.mark.parametrize(
+    "text,start,end,expected",
+    [
+        ("Python", 0, 2, "Py"),
+        ("Python", 2, 4, "th"),
+        ("Python Programmierung", 0, 6, "Python"),
+        ("Python Programmierung", 7, None, "Programmierung"),
+    ],
+)
+def test_string_slicing(
+    text: str,
+    start: int | float | str | bool,
+    end: int | float | str | bool,
+    expected: int | float,
+) -> None:
     """Test: String-Slicing funktioniert."""
     if end is None:
         result = text[start:]
@@ -85,19 +119,26 @@ def test_string_slicing(text, start, end, expected):
 
 
 @pytest.mark.modul2
-@pytest.mark.parametrize("text,expected_upper,expected_lower", [
-    ("Hello", "HELLO", "hello"),
-    ("Python", "PYTHON", "python"),
-    ("MiXeD", "MIXED", "mixed"),
-])
-def test_string_case_methoden(text, expected_upper, expected_lower):
+@pytest.mark.parametrize(
+    "text,expected_upper,expected_lower",
+    [
+        ("Hello", "HELLO", "hello"),
+        ("Python", "PYTHON", "python"),
+        ("MiXeD", "MIXED", "mixed"),
+    ],
+)
+def test_string_case_methoden(
+    text: str,
+    expected_upper: int | float | str | bool,
+    expected_lower: int | float | str | bool,
+) -> None:
     """Test: upper() und lower() funktionieren."""
     assert text.upper() == expected_upper
     assert text.lower() == expected_lower
 
 
 @pytest.mark.modul2
-def test_string_strip():
+def test_string_strip() -> None:
     """Test: strip() entfernt Leerzeichen."""
     text = "  Hello  "
     assert text.strip() == "Hello"
@@ -106,7 +147,7 @@ def test_string_strip():
 
 
 @pytest.mark.modul2
-def test_string_replace():
+def test_string_replace() -> None:
     """Test: replace() ersetzt Teilstrings."""
     text = "Hello World"
     result = text.replace("World", "Python")
@@ -114,7 +155,7 @@ def test_string_replace():
 
 
 @pytest.mark.modul2
-def test_string_split():
+def test_string_split() -> None:
     """Test: split() teilt Strings auf."""
     text = "Python ist toll"
     words = text.split()
@@ -123,29 +164,43 @@ def test_string_split():
 
 
 @pytest.mark.modul2
-@pytest.mark.parametrize("text,prefix,expected", [
-    ("Python", "Py", True),
-    ("Python", "py", False),
-    ("Hello", "He", True),
-])
-def test_string_startswith(text, prefix, expected):
+@pytest.mark.parametrize(
+    "text,prefix,expected",
+    [
+        ("Python", "Py", True),
+        ("Python", "py", False),
+        ("Hello", "He", True),
+    ],
+)
+def test_string_startswith(
+    text: str,
+    prefix: str,
+    expected: int | float,
+) -> None:
     """Test: startswith() prüft Präfix."""
     assert text.startswith(prefix) == expected
 
 
 @pytest.mark.modul2
-@pytest.mark.parametrize("text,suffix,expected", [
-    ("Python", "on", True),
-    ("Python", "On", False),
-    ("test.py", ".py", True),
-])
-def test_string_endswith(text, suffix, expected):
+@pytest.mark.parametrize(
+    "text,suffix,expected",
+    [
+        ("Python", "on", True),
+        ("Python", "On", False),
+        ("test.py", ".py", True),
+    ],
+)
+def test_string_endswith(
+    text: str,
+    suffix: str,
+    expected: int | float,
+) -> None:
     """Test: endswith() prüft Suffix."""
     assert text.endswith(suffix) == expected
 
 
 @pytest.mark.modul2
-def test_string_join():
+def test_string_join() -> None:
     """Test: join() verbindet Strings."""
     words = ["Python", "ist", "toll"]
     result = " ".join(words)
@@ -156,7 +211,7 @@ def test_string_join():
 
 
 @pytest.mark.modul2
-def test_string_unveraenderlich():
+def test_string_unveraenderlich() -> None:
     """Test: Strings sind unveränderlich."""
     name = "anna"
     name.upper()  # Ändert nicht den Original-String

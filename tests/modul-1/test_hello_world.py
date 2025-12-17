@@ -4,9 +4,10 @@ Testet grundlegende print-Ausgaben und String-Formatierung
 """
 
 import sys
-import pytest
-from pathlib import Path
 from io import StringIO
+from pathlib import Path
+
+import pytest
 
 # Modul importieren
 modul_pfad = Path(__file__).parent.parent.parent / "modul-1-einstieg" / "05-beispiele"
@@ -14,17 +15,18 @@ sys.path.insert(0, str(modul_pfad))
 
 
 @pytest.mark.modul1
-def test_modul_kann_importiert_werden():
+def test_modul_kann_importiert_werden() -> None:
     """Test: Modul kann ohne Fehler importiert werden."""
     try:
         import hello_world
+
         assert True
     except ImportError as e:
         pytest.fail(f"Import fehlgeschlagen: {e}")
 
 
 @pytest.mark.modul1
-def test_modul_hat_ausgaben():
+def test_modul_hat_ausgaben() -> None:
     """Test: Modul erzeugt Ausgaben beim Import."""
     old_stdout = sys.stdout
     sys.stdout = captured = StringIO()
@@ -32,7 +34,9 @@ def test_modul_hat_ausgaben():
     try:
         # Modul neu importieren um Ausgaben zu erfassen
         import importlib
+
         import hello_world
+
         importlib.reload(hello_world)
 
         output = captured.getvalue()
@@ -46,14 +50,16 @@ def test_modul_hat_ausgaben():
 
 
 @pytest.mark.modul1
-def test_ausgabe_enthaelt_erwartete_begriffe():
+def test_ausgabe_enthaelt_erwartete_begriffe() -> None:
     """Test: Ausgabe enthält erwartete Begriffe."""
     old_stdout = sys.stdout
     sys.stdout = captured = StringIO()
 
     try:
         import importlib
+
         import hello_world
+
         importlib.reload(hello_world)
 
         output = captured.getvalue()
@@ -67,18 +73,20 @@ def test_ausgabe_enthaelt_erwartete_begriffe():
 
 
 @pytest.mark.modul1
-def test_ausgabe_hat_mehrere_zeilen():
+def test_ausgabe_hat_mehrere_zeilen() -> None:
     """Test: Ausgabe besteht aus mehreren Zeilen."""
     old_stdout = sys.stdout
     sys.stdout = captured = StringIO()
 
     try:
         import importlib
+
         import hello_world
+
         importlib.reload(hello_world)
 
         output = captured.getvalue()
-        zeilen = output.strip().split('\n')
+        zeilen = output.strip().split("\n")
 
         # Sollte mehrere Zeilen haben
         assert len(zeilen) >= 5

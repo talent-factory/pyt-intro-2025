@@ -37,7 +37,7 @@ modul-X-thema/
 │   ├── leseauftrag.md
 │   ├── erste-experimente.md
 │   └── quiz.md
-├── 01-praxis/           # 4-5 Lektionen à 50 Min
+├── 01-praxis/           # 4 Lektionen à 50 Min
 │   ├── README.md
 │   └── lektion-X-titel.md
 ├── 02-uebungen/         # 4-8 Übungen
@@ -55,24 +55,19 @@ modul-X-thema/
 └── README.md            # Modul-Übersicht
 ```
 
-## Entwicklungsstand (Stand: 2025-11-19)
+## Entwicklungsstand (Stand: 2025-11-27)
 
 ### ✅ Vollständig produktionsreif
 
 | Modul | Status | Python-Dateien | Lektionen | Übungen |
 |-------|--------|----------------|-----------|---------|
 | **Modul 1** | ✅ | 10 vollständig | 4 | 4 |
-| **Modul 2** | ✅ | 9 vollständig | 5 | 8 |
-| **Modul 3** | ✅ | 10 vollständig | 5 | 8 |
+| **Modul 2** | ✅ | 9 vollständig | 4 | 8 |
+| **Modul 3** | ✅ | 10 vollständig | 4 | 8 |
+| **Modul 4** | ✅ | 10 vollständig | 4 | 8 |
+| **Modul 5** | ✅ | 10 vollständig | 4 | 8 |
 
-**Gesamt:** 29 vollständige Python-Programme
-
-### ⚠️ In Entwicklung
-
-| Modul | Status | Fehlend |
-|-------|--------|---------|
-| **Modul 4** | ⚠️ | Alle Lektionen, Übungen, Beispiele sind Placeholder |
-| **Modul 5** | ⚠️ | Alle Lektionen, Übungen, Vorbereitung sind Placeholder |
+**Gesamt:** 49 vollständige Python-Programme, alle Module mit 4 Lektionen
 
 ## Naming Conventions
 
@@ -174,7 +169,7 @@ Jedes README sollte enthalten:
 2. README.md in jedem Ordner erstellen
 3. Modul-README nach Standard-Template schreiben
 4. Leseauftrag, Experimente, Quiz vorbereiten
-5. 4-5 Lektionen ausarbeiten
+5. 4 Lektionen ausarbeiten
 6. 4-8 Übungen mit Lösungen erstellen
 7. 3 Nachbearbeitungsaufgaben entwickeln
 8. Materialien (Handouts, Cheatsheets) erstellen
@@ -200,24 +195,15 @@ Jedes README sollte enthalten:
 
 ## Nächste Schritte (Priorität)
 
-1. **Modul 4 ausarbeiten:**
-   - Lektionen 1-5 schreiben
-   - Übungen 1-8 erstellen
-   - 10 Python-Beispiele programmieren
-
-2. **Modul 5 ausarbeiten:**
-   - Vorbereitung befüllen (Leseauftrag, Experimente, Quiz)
-   - Lektionen 1-5 schreiben
-   - Übungen 1-8 erstellen
-   - 10 Python-Beispiele programmieren
-
-3. **Testing hinzufügen:**
-   - Tests für alle 29 Python-Programme
-   - pytest-Framework einrichten
+1. **Testing erweitern:**
+   - Tests für alle 49 Python-Programme
+   - pytest-Framework bereits eingerichtet
    - CI/CD Pipeline (GitHub Actions)
 
-4. **Modul 1 erweitern:**
-   - Optional: 5. Lektion für Konsistenz (aktuell nur 4)
+2. **Qualitätssicherung:**
+   - Alle Links in Dokumenten prüfen
+   - Übungen auf Vollständigkeit prüfen
+   - Beispielprogramme testen
 
 ## Wichtige Hinweise
 

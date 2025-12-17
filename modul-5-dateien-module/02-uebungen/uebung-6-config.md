@@ -4,7 +4,9 @@
 
 Erstellen Sie Funktionen zum Laden und Speichern von Einstellungen:
 
-**Lösung:**
+<details>
+<summary><b>Lösung anzeigen</b></summary>
+
 ```python
 import json
 
@@ -24,4 +26,6 @@ config = config_laden()
 config["sprache"] = "en"
 config_speichern(config)
 ```
+
+</details>
 

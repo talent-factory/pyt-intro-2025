@@ -104,16 +104,16 @@ Hello from Codespaces!
 2. Nennen Sie sie `test.py`
 3. Schreiben Sie:
 
-```python
-print("Mein erstes Python-Programm!")
-```
+   ```python
+   print("Mein erstes Python-Programm!")
+   ```
 
 4. Speichern Sie mit `Ctrl+S` (Windows/Linux) oder `Cmd+S` (macOS)
 5. Führen Sie aus:
 
-```bash
-python test.py
-```
+   ```bash
+   python test.py
+   ```
 
 ---
 
@@ -156,7 +156,7 @@ Bereits installiert:
 1. Klicken Sie auf Ihren Namen (unten links)
 2. Wählen Sie "Stop Current Codespace"
 
-**Oder:** Schließen Sie einfach den Browser-Tab. Der Codespace stoppt nach 30 Min. Inaktivität automatisch.
+**Oder:** Schliessen Sie einfach den Browser-Tab. Der Codespace stoppt nach 30 Min. Inaktivität automatisch.
 
 ### Codespace wieder starten
 
@@ -190,7 +190,7 @@ Wenn Sie ihn nicht mehr brauchen:
 ### Shortcuts
 
 - `Ctrl+Shift+P` / `Cmd+Shift+P`: Command Palette
-- `Ctrl+` ` / `Cmd+` `: Terminal öffnen/schließen
+- `Ctrl+` ` / `Cmd+` `: Terminal öffnen/schliessen
 - `Ctrl+B` / `Cmd+B`: Explorer ein/ausblenden
 
 ### Dateien hochladen
@@ -264,6 +264,5 @@ Codespaces ist perfekt für:
 
 ---
 
-**Viel Erfolg mit Codespaces!**  
+**Viel Erfolg mit Codespaces!**
 Bei Fragen: Notieren Sie sie für den Präsenztag.
-

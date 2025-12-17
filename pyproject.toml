@@ -9,7 +9,11 @@ authors = [
     { name = "Daniel Senften", email = "daniel.senften@talent-factory.ch" }
 ]
 
-dependencies = []
+dependencies = [
+    "numpy>=2.3.5",
+    "pydantic>=2.12.5",
+    "ruff>=0.14.8",
+]
 
 [project.urls]
 Homepage = "https://github.com/talent-factory/pyt-intro-2025"
@@ -20,8 +24,63 @@ dev-dependencies = [
     "jupyter>=1.0.0",
     "ipython>=8.20.0",
     "black>=24.0.0",
+    "pytest>=8.0.0",
+    "pytest-asyncio>=0.23.0",
+    "pytest-anyio>=0.0.0",
 ]
 
-[build-system]
-requires = ["hatchling"]
-build-backend = "hatchling.build"
+[tool.ruff]
+# Python-Version festlegen
+target-version = "py310"
+
+# Zeilenlänge (PEP 8 Standard)
+line-length = 88
+
+# Welche Dateien sollen geprüft werden?
+include = ["*.py", "*.pyi", "*.ipynb"]
+exclude = [
+    ".git",
+    ".venv",
+    "__pycache__",
+    "build",
+    "dist",
+]
+
+[tool.ruff.lint]
+# Welche Regeln sollen aktiviert werden?
+# Für Anfänger: Nur die wichtigsten PEP 8 Regeln
+select = [
+    "E",   # pycodestyle Fehler
+    "W",   # pycodestyle Warnungen
+    "F",   # Pyflakes (logische Fehler)
+    "I",   # isort (Import-Sortierung)
+    "N",   # pep8-naming (Namenskonventionen)
+    "UP",  # pyupgrade (moderne Python-Syntax)
+]
+
+# Welche Regeln sollen ignoriert werden?
+# Für Anfänger zu streng:
+ignore = [
+    "E501",  # Zeile zu lang (wird automatisch formatiert)
+    "E741",  # Ambiguous variable name (l, O, I) - bei Anfängern ok
+]
+
+[tool.ruff.lint.per-file-ignores]
+# In Übungsdateien: Erlaube ungenutzte Imports/Variablen
+"**/uebungen/*.py" = ["F401", "F841"]
+"**/exercises/*.py" = ["F401", "F841"]
+
+# In Test-Dateien: Erlaube ungenutzte Imports (für Import-Tests)
+# und type()-Vergleiche (für didaktische Zwecke)
+"tests/**/*.py" = ["F401", "E721"]
+
+# In Formatierungs-Beispielen: Erlaube alte Formatierungs-Methoden
+# (für didaktische Zwecke - zeigt verschiedene Methoden)
+"**/formatierung.py" = ["UP031", "UP032"]
+
+[tool.ruff.format]
+# Verwende doppelte Anführungszeichen (Python-Standard)
+quote-style = "double"
+
+# Einrückung mit Leerzeichen
+indent-style = "space"

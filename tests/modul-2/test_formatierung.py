@@ -4,25 +4,27 @@ Testet String-Formatierung
 """
 
 import sys
-import pytest
 from pathlib import Path
+
+import pytest
 
 modul_pfad = Path(__file__).parent.parent.parent / "modul-2-datentypen" / "05-beispiele"
 sys.path.insert(0, str(modul_pfad))
 
 
 @pytest.mark.modul2
-def test_modul_import():
+def test_modul_import() -> None:
     """Test: Modul kann importiert werden."""
     try:
         import formatierung
+
         assert True
     except ImportError as e:
         pytest.fail(f"Import fehlgeschlagen: {e}")
 
 
 @pytest.mark.modul2
-def test_f_string_basic():
+def test_f_string_basic() -> None:
     """Test: Einfache F-Strings funktionieren."""
     name = "Anna"
     alter = 25
@@ -32,7 +34,7 @@ def test_f_string_basic():
 
 
 @pytest.mark.modul2
-def test_f_string_mit_berechnungen():
+def test_f_string_mit_berechnungen() -> None:
     """Test: F-Strings mit Berechnungen."""
     a = 10
     b = 20
@@ -41,31 +43,43 @@ def test_f_string_mit_berechnungen():
 
 
 @pytest.mark.modul2
-@pytest.mark.parametrize("zahl,dezimalstellen,expected", [
-    (19.99, 2, "19.99"),
-    (19.99, 1, "20.0"),
-    (3.14159, 2, "3.14"),
-])
-def test_formatierung_dezimalstellen(zahl, dezimalstellen, expected):
+@pytest.mark.parametrize(
+    "zahl,dezimalstellen,expected",
+    [
+        (19.99, 2, "19.99"),
+        (19.99, 1, "20.0"),
+        (3.14159, 2, "3.14"),
+    ],
+)
+def test_formatierung_dezimalstellen(
+    zahl: int | float,
+    dezimalstellen: int,
+    expected: int | float | str | bool,
+) -> None:
     """Test: Formatierung mit Dezimalstellen."""
     result = f"{zahl:.{dezimalstellen}f}"
     assert result == expected
 
 
 @pytest.mark.modul2
-@pytest.mark.parametrize("prozent,expected", [
-    (0.75, "75%"),
-    (0.5, "50%"),
-    (1.0, "100%"),
-])
-def test_prozent_formatierung(prozent, expected):
+@pytest.mark.parametrize(
+    "prozent,expected",
+    [
+        (0.75, "75%"),
+        (0.5, "50%"),
+        (1.0, "100%"),
+    ],
+)
+def test_prozent_formatierung(
+    prozent: int | float, expected: int | float | str | bool
+) -> None:
     """Test: Prozent-Formatierung."""
     result = f"{prozent:.0%}"
     assert result == expected
 
 
 @pytest.mark.modul2
-def test_formatierung_ausrichtung():
+def test_formatierung_ausrichtung() -> None:
     """Test: Text-Ausrichtung funktioniert."""
     text = "Test"
 
@@ -85,7 +99,7 @@ def test_formatierung_ausrichtung():
 
 
 @pytest.mark.modul2
-def test_formatierung_tausender_trennzeichen():
+def test_formatierung_tausender_trennzeichen() -> None:
     """Test: Tausender-Trennzeichen."""
     zahl = 1234567.89
     result = f"{zahl:,.2f}"
@@ -94,7 +108,7 @@ def test_formatierung_tausender_trennzeichen():
 
 
 @pytest.mark.modul2
-def test_mehrzeilige_f_strings():
+def test_mehrzeilige_f_strings() -> None:
     """Test: Mehrzeilige F-Strings."""
     name = "Anna"
     alter = 25
@@ -108,27 +122,27 @@ Alter: {alter}
 
 
 @pytest.mark.modul2
-def test_format_methode():
+def test_format_methode() -> None:
     """Test: format()-Methode funktioniert."""
     name = "Anna"
     alter = 25
-    result = "Ich heisse {} und bin {} Jahre alt".format(name, alter)
+    result = f"Ich heisse {name} und bin {alter} Jahre alt"
     assert "Anna" in result
     assert "25" in result
 
 
 @pytest.mark.modul2
-def test_prozent_formatierung_alt():
+def test_prozent_formatierung_alt() -> None:
     """Test: Alte %-Formatierung."""
     name = "Anna"
     alter = 25
-    result = "Ich heisse %s und bin %d Jahre alt" % (name, alter)
+    result = "Ich heisse %s und bin %d Jahre alt" % (name, alter)  # noqa: UP031
     assert "Anna" in result
     assert "25" in result
 
 
 @pytest.mark.modul2
-def test_tabellen_formatierung():
+def test_tabellen_formatierung() -> None:
     """Test: Tabellen mit Formatierung."""
     # Kopfzeile
     header = f"{'Name':<15} {'Alter':>5} {'Preis':>10}"

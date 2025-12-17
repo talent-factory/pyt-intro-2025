@@ -1,0 +1,27 @@
+{
+  "recommendations": [
+    // Essentiell für Python
+    "ms-python.python",
+    "ms-python.vscode-pylance",
+    "charliermarsh.ruff",
+
+    // Für Jupyter Notebooks
+    "ms-toolsai.jupyter",
+    "ms-toolsai.jupyter-keymap",
+
+    // Hilfreich für Anfänger
+    "streetsidesoftware.code-spell-checker",
+    "streetsidesoftware.code-spell-checker-german",
+    "usernamehw.errorlens",
+    "mechatroner.rainbow-csv",
+
+    // Git-Integration
+    "eamodio.gitlens"
+  ],
+  "unwantedRecommendations": [
+    // Verhindere Konflikte mit anderen Formattern
+    "ms-python.black-formatter",
+    "ms-python.flake8",
+    "ms-python.pylint"
+  ]
+}

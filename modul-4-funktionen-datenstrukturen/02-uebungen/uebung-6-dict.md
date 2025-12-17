@@ -14,7 +14,9 @@ Dann:
 3. Geben Sie alle Keys aus
 4. Geben Sie alle Values aus
 
-**Lösung:**
+<details>
+<summary><b>Lösung anzeigen</b></summary>
+
 ```python
 buch = {
     "titel": "Python Basics",
@@ -29,4 +31,6 @@ buch["jahr"] = 2024
 print("Keys:", buch.keys())
 print("Values:", buch.values())
 ```
+
+</details>
 

@@ -1,6 +1,6 @@
 # Modul 4: Funktionen & Datenstrukturen
 
-**Dauer:** 1 Tag (5 Lektionen à 50 Minuten)  
+**Dauer:** 1 Tag (4 Lektionen à 50 Minuten)
 **Voraussetzung:** Module 1-3
 
 ## 🎯 Lernziele
@@ -19,7 +19,7 @@ Nach diesem Modul können Sie:
 
 ### [00-vorbereitung/](./00-vorbereitung/)
 
-**Zeitaufwand:** 2-3 Stunden  
+**Zeitaufwand:** 2-3 Stunden
 Bereiten Sie sich auf den Präsenztag vor.
 
 - 📄 [Leseauftrag: Funktionen & Datenstrukturen](./00-vorbereitung/leseauftrag.md)
@@ -28,13 +28,12 @@ Bereiten Sie sich auf den Präsenztag vor.
 
 ### [01-praxis/](./01-praxis/)
 
-**Präsenzunterricht:** 5 Lektionen à 50 Minuten
+**Präsenzunterricht:** 4 Lektionen à 50 Minuten
 
-- 📖 [Lektion 1: Funktionen definieren](./01-praxis/) (50 Min)
-- 📖 [Lektion 2: Parameter & Rückgabewerte](./01-praxis/) (50 Min)
-- 📖 [Lektion 3: Listen vertiefen](./01-praxis/) (50 Min)
-- 📖 [Lektion 4: Dictionaries](./01-praxis/) (50 Min)
-- 📖 [Lektion 5: Tupel & Sets](./01-praxis/) (50 Min)
+- 📖 [Lektion 1: Funktionen definieren](./01-praxis/lektion-1-funktionen.md) (50 Min)
+- 📖 [Lektion 2: Parameter & Rückgabewerte](./01-praxis/lektion-2-parameter.md) (50 Min)
+- 📖 [Lektion 3: Listen vertiefen](./01-praxis/lektion-3-listen.md) (50 Min)
+- 📖 [Lektion 4: Dictionaries, Tupel & Sets](./01-praxis/lektion-4-dictionaries.md) (50 Min)
 
 ### [02-uebungen/](./02-uebungen/)
 
@@ -68,51 +67,81 @@ Bereiten Sie sich auf den Präsenztag vor.
 
 ## ⏱️ Zeitplan
 
-| Phase | Dauer | Beschreibung |
-|-------|-------|--------------|
-| Vorbereitung | 2-3 Std | Leseauftrag, Experimente, Quiz |
-| Präsenz | 250 Min | 5 Lektionen à 50 Min |
-| Nachbearbeitung | 4-6 Std | 3 Hausaufgaben + Reflexion |
-| **Gesamt** | **10-13 Std** | Komplettes Modul |
+| Phase | Aktivität | Dauer |
+|-------|-----------|-------|
+| **Vor Tag 4** | Leseauftrag + Experimente | 2-3 Std |
+| **Tag 4** | 4 Lektionen Präsenzunterricht | 4 × 50 Min |
+| **Tag 4** | Pausen | 40 Min |
+| **Nach Tag 4** | 3 Aufgaben + Reflexion | 4-6 Std |
+| **Gesamt** | | **10-13 Std** |
 
-## 🎓 Themen im Detail
+## 📖 Themen im Detail
 
-### Funktionen
+### Funktionen-Grundlagen
 - Funktionen definieren mit `def`
+- Funktionsaufrufe und Rückgabewerte
 - Parameter (positionell, benannt, default)
-- Rückgabewerte mit `return`
 - Docstrings und Dokumentation
 - Scope und Namensräume
+- Lambda-Funktionen (Einführung)
 
-### Datenstrukturen
-- **Listen:** Veränderbare Sequenzen
-- **Dictionaries:** Schlüssel-Wert-Paare
-- **Tupel:** Unveränderbare Sequenzen
-- **Sets:** Eindeutige Elemente
-- Verschachtelte Strukturen
+### Listen vertiefen
+- Listen-Methoden (append, extend, insert, remove, pop)
+- List Comprehensions
+- Slicing und Indexierung
+- Listen sortieren und filtern
+- Verschachtelte Listen
+- Listen als Funktionsparameter
 
-## 💡 Tipps
+### Dictionaries
+- Dictionary-Erstellung und -Zugriff
+- Keys, Values, Items
+- Dictionary-Methoden
+- Verschachtelte Dictionaries
+- Dictionary Comprehensions
+- Praktische Anwendungen
 
-- Funktionen machen Code wiederverwendbar
-- Wählen Sie die richtige Datenstruktur für Ihr Problem
-- Dokumentieren Sie Ihre Funktionen mit Docstrings
-- Testen Sie Funktionen mit verschiedenen Eingaben
+### Tupel & Sets
+- Tupel: Unveränderbare Sequenzen
+- Wann Tupel statt Listen?
+- Sets: Eindeutige Elemente
+- Set-Operationen (Union, Intersection, Difference)
+- Konvertierung zwischen Datentypen
 
-## ✅ Checkliste
+### Praktische Anwendungen
+- Kontaktverwaltung mit Dictionaries
+- Datenverarbeitung mit Listen
+- Menü-Systeme mit Funktionen
+- Statistik-Berechnungen
 
-Vor dem Präsenztag:
-- [ ] Leseauftrag gelesen
-- [ ] Erste Experimente durchgeführt
-- [ ] Quiz bestanden (7/10)
-- [ ] Python-Umgebung funktioniert
+## ✅ Erfolgskriterien
 
-Nach dem Präsenztag:
-- [ ] Alle 8 Übungen gelöst
-- [ ] 3 Hausaufgaben abgeschlossen
-- [ ] Reflexion ausgefüllt
-- [ ] Bereit für Modul 5
+Nach erfolgreichem Abschluss des Moduls:
+
+- [ ] Alle Vorbereitungsaufgaben erledigt
+- [ ] Alle 4 Lektionen besucht
+- [ ] Mindestens 6 von 8 Übungen gelöst
+- [ ] Alle 3 Nachbearbeitungsaufgaben eingereicht
+- [ ] Reflexion geschrieben
+- [ ] Bereit für Modul 5 (Dateien & Module)
+
+## 💡 Tipps für den Erfolg
+
+- **Funktionen sind mächtig:** Sie machen Code wiederverwendbar und übersichtlich
+- **Wählen Sie die richtige Datenstruktur:** Listen für Sequenzen, Dictionaries für Zuordnungen
+- **Dokumentieren Sie:** Nutzen Sie Docstrings in allen Funktionen
+- **Testen Sie:** Probieren Sie Funktionen mit verschiedenen Eingaben
+- **Klein anfangen:** Erst einfache, dann komplexe Funktionen
+- **Refactoring:** Verbessern Sie bestehenden Code mit Funktionen
+
+## 🔗 Weiterführende Links
+
+- [Python Dokumentation: Funktionen](https://docs.python.org/3/tutorial/controlflow.html#defining-functions)
+- [Python Dokumentation: Datenstrukturen](https://docs.python.org/3/tutorial/datastructures.html)
+- [Real Python: Dictionaries](https://realpython.com/python-dicts/)
+- [Real Python: Functions](https://realpython.com/defining-your-own-python-function/)
 
 ---
 
-**Viel Erfolg! 🚀**
+**Viel Erfolg beim Lernen von Funktionen und Datenstrukturen! 🚀**
 

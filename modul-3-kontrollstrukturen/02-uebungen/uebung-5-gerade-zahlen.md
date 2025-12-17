@@ -12,7 +12,7 @@ Erstellen Sie `gerade_zahlen.py`:
 - Filtere alle geraden Zahlen
 - Gebe sie aus
 
-## �� Beispiel
+## 💡 Beispiel
 
 ```
 Alle Zahlen: [1, 2, 3, 4, 5, ..., 20]

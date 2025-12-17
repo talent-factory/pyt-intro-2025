@@ -4,44 +4,56 @@ Testet Textanalyse-Funktionen
 """
 
 import sys
-import pytest
 from pathlib import Path
 from unittest.mock import patch
+
+import pytest
 
 modul_pfad = Path(__file__).parent.parent.parent / "modul-2-datentypen" / "05-beispiele"
 sys.path.insert(0, str(modul_pfad))
 
 
 @pytest.mark.modul2
-def test_modul_import():
+def test_modul_import() -> None:
     """Test: Modul kann importiert werden."""
-    with patch('builtins.input', return_value='Test'):
+    with patch("builtins.input", return_value="Test"):
         try:
             import textstatistik
+
             assert True
         except Exception as e:
             pytest.skip(f"Interaktives Modul: {e}")
 
 
 @pytest.mark.modul2
-def test_analysiere_text_funktion_existiert():
+def test_analysiere_text_funktion_existiert() -> None:
     """Test: analysiere_text Funktion existiert."""
-    with patch('builtins.input', return_value='Test'):
+    with patch("builtins.input", return_value="Test"):
         import textstatistik
-        assert hasattr(textstatistik, 'analysiere_text')
+
+        assert hasattr(textstatistik, "analysiere_text")
 
 
 @pytest.mark.modul2
-@pytest.mark.parametrize("text,expected_zeichen,expected_woerter", [
-    ("Hallo Welt", 10, 2),
-    ("Python ist toll", 15, 3),
-    ("Test", 4, 1),
-])
-def test_text_grundstatistiken(text, expected_zeichen, expected_woerter):
+@pytest.mark.parametrize(
+    "text,expected_zeichen,expected_woerter",
+    [
+        ("Hallo Welt", 10, 2),
+        ("Python ist toll", 15, 3),
+        ("Test", 4, 1),
+    ],
+)
+def test_text_grundstatistiken(
+    text: str,
+    expected_zeichen: int | float | str | bool,
+    expected_woerter: int | float | str | bool,
+) -> None:
     """Test: Grundlegende Textstatistiken."""
-    with patch('builtins.input', return_value='Test'):
-        import textstatistik
+    with patch("builtins.input", return_value="Test"):
         import importlib
+
+        import textstatistik
+
         importlib.reload(textstatistik)
 
         stats = textstatistik.analysiere_text(text)
@@ -51,11 +63,13 @@ def test_text_grundstatistiken(text, expected_zeichen, expected_woerter):
 
 
 @pytest.mark.modul2
-def test_zeichen_ohne_leerzeichen():
+def test_zeichen_ohne_leerzeichen() -> None:
     """Test: Zeichen ohne Leerzeichen zählen."""
-    with patch('builtins.input', return_value='Test'):
-        import textstatistik
+    with patch("builtins.input", return_value="Test"):
         import importlib
+
+        import textstatistik
+
         importlib.reload(textstatistik)
 
         text = "Hallo Welt"
@@ -65,11 +79,13 @@ def test_zeichen_ohne_leerzeichen():
 
 
 @pytest.mark.modul2
-def test_saetze_zaehlen():
+def test_saetze_zaehlen() -> None:
     """Test: Sätze zählen."""
-    with patch('builtins.input', return_value='Test'):
-        import textstatistik
+    with patch("builtins.input", return_value="Test"):
         import importlib
+
+        import textstatistik
+
         importlib.reload(textstatistik)
 
         text = "Hallo! Wie geht es? Gut."
@@ -79,11 +95,13 @@ def test_saetze_zaehlen():
 
 
 @pytest.mark.modul2
-def test_gross_und_kleinbuchstaben():
+def test_gross_und_kleinbuchstaben() -> None:
     """Test: Gross- und Kleinbuchstaben zählen."""
-    with patch('builtins.input', return_value='Test'):
-        import textstatistik
+    with patch("builtins.input", return_value="Test"):
         import importlib
+
+        import textstatistik
+
         importlib.reload(textstatistik)
 
         text = "Hello World"
@@ -94,11 +112,13 @@ def test_gross_und_kleinbuchstaben():
 
 
 @pytest.mark.modul2
-def test_zahlen_im_text():
+def test_zahlen_im_text() -> None:
     """Test: Zahlen im Text zählen."""
-    with patch('builtins.input', return_value='Test'):
-        import textstatistik
+    with patch("builtins.input", return_value="Test"):
         import importlib
+
+        import textstatistik
+
         importlib.reload(textstatistik)
 
         text = "Test123"
@@ -108,11 +128,13 @@ def test_zahlen_im_text():
 
 
 @pytest.mark.modul2
-def test_durchschnittliche_wortlaenge():
+def test_durchschnittliche_wortlaenge() -> None:
     """Test: Durchschnittliche Wortlänge."""
-    with patch('builtins.input', return_value='Test'):
-        import textstatistik
+    with patch("builtins.input", return_value="Test"):
         import importlib
+
+        import textstatistik
+
         importlib.reload(textstatistik)
 
         text = "Hallo Welt"  # 10 Zeichen, 2 Wörter
@@ -123,11 +145,13 @@ def test_durchschnittliche_wortlaenge():
 
 
 @pytest.mark.modul2
-def test_leerer_text():
+def test_leerer_text() -> None:
     """Test: Leerer Text wird korrekt behandelt."""
-    with patch('builtins.input', return_value='Test'):
-        import textstatistik
+    with patch("builtins.input", return_value="Test"):
         import importlib
+
+        import textstatistik
+
         importlib.reload(textstatistik)
 
         text = ""

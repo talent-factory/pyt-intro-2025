@@ -4,27 +4,33 @@ Testet List Comprehensions und Listen-Funktionen
 """
 
 import sys
-import pytest
-from pathlib import Path
 from io import StringIO
+from pathlib import Path
+
+import pytest
 
 # Modul importieren
-modul_pfad = Path(__file__).parent.parent.parent / "modul-4-funktionen-datenstrukturen" / "05-beispiele"
+modul_pfad = (
+    Path(__file__).parent.parent.parent
+    / "modul-4-funktionen-datenstrukturen"
+    / "05-beispiele"
+)
 sys.path.insert(0, str(modul_pfad))
 
 
 @pytest.mark.modul4
-def test_modul_kann_importiert_werden():
+def test_modul_kann_importiert_werden() -> None:
     """Test: Modul kann ohne Fehler importiert werden."""
     try:
         import listen_operationen
+
         assert True
     except ImportError as e:
         pytest.fail(f"Import fehlgeschlagen: {e}")
 
 
 @pytest.mark.modul4
-def test_zeige_liste_funktion():
+def test_zeige_liste_funktion() -> None:
     """Test: zeige_liste() zeigt Liste formatiert an."""
     import listen_operationen
 
@@ -44,14 +50,17 @@ def test_zeige_liste_funktion():
 
 
 @pytest.mark.modul4
-@pytest.mark.parametrize("eingabe,erwartet", [
-    ([1, 2, 3, 4, 5, 6], [2, 4, 6]),
-    ([10, 11, 12, 13], [10, 12]),
-    ([1, 3, 5, 7, 9], []),
-    ([2, 4, 6, 8], [2, 4, 6, 8]),
-    ([], []),
-])
-def test_nur_gerade(eingabe, erwartet):
+@pytest.mark.parametrize(
+    "eingabe,erwartet",
+    [
+        ([1, 2, 3, 4, 5, 6], [2, 4, 6]),
+        ([10, 11, 12, 13], [10, 12]),
+        ([1, 3, 5, 7, 9], []),
+        ([2, 4, 6, 8], [2, 4, 6, 8]),
+        ([], []),
+    ],
+)
+def test_nur_gerade(eingabe: list[int], erwartet: list[int]) -> None:
     """Test: nur_gerade() filtert gerade Zahlen korrekt."""
     import listen_operationen
 
@@ -60,14 +69,17 @@ def test_nur_gerade(eingabe, erwartet):
 
 
 @pytest.mark.modul4
-@pytest.mark.parametrize("eingabe,erwartet", [
-    ([1, 2, 3], [2, 4, 6]),
-    ([5, 10, 15], [10, 20, 30]),
-    ([0], [0]),
-    ([], []),
-    ([-1, -2, -3], [-2, -4, -6]),
-])
-def test_verdopple(eingabe, erwartet):
+@pytest.mark.parametrize(
+    "eingabe,erwartet",
+    [
+        ([1, 2, 3], [2, 4, 6]),
+        ([5, 10, 15], [10, 20, 30]),
+        ([0], [0]),
+        ([], []),
+        ([-1, -2, -3], [-2, -4, -6]),
+    ],
+)
+def test_verdopple(eingabe: list[int], erwartet: list[int]) -> None:
     """Test: verdopple() verdoppelt alle Werte."""
     import listen_operationen
 
@@ -76,7 +88,7 @@ def test_verdopple(eingabe, erwartet):
 
 
 @pytest.mark.modul4
-def test_statistik_einfache_liste():
+def test_statistik_einfache_liste() -> None:
     """Test: statistik() berechnet Statistiken korrekt."""
     import listen_operationen
 
@@ -90,13 +102,18 @@ def test_statistik_einfache_liste():
 
 
 @pytest.mark.modul4
-@pytest.mark.parametrize("zahlen,min_val,max_val,summe,durchschnitt", [
-    ([10, 20, 30], 10, 30, 60, 20.0),
-    ([5], 5, 5, 5, 5.0),
-    ([1, 1, 1, 1], 1, 1, 4, 1.0),
-    ([-5, 0, 5], -5, 5, 0, 0.0),
-])
-def test_statistik_verschiedene_listen(zahlen, min_val, max_val, summe, durchschnitt):
+@pytest.mark.parametrize(
+    "zahlen,min_val,max_val,summe,durchschnitt",
+    [
+        ([10, 20, 30], 10, 30, 60, 20.0),
+        ([5], 5, 5, 5, 5.0),
+        ([1, 1, 1, 1], 1, 1, 4, 1.0),
+        ([-5, 0, 5], -5, 5, 0, 0.0),
+    ],
+)
+def test_statistik_verschiedene_listen(
+    zahlen: list[int], min_val: int, max_val: int, summe: int, durchschnitt: float
+) -> None:
     """Test: statistik() funktioniert mit verschiedenen Listen."""
     import listen_operationen
 
@@ -109,7 +126,7 @@ def test_statistik_verschiedene_listen(zahlen, min_val, max_val, summe, durchsch
 
 
 @pytest.mark.modul4
-def test_statistik_gibt_dict_zurueck():
+def test_statistik_gibt_dict_zurueck() -> None:
     """Test: statistik() gibt Dictionary zurück."""
     import listen_operationen
 
@@ -123,7 +140,7 @@ def test_statistik_gibt_dict_zurueck():
 
 
 @pytest.mark.modul4
-def test_nur_gerade_aendert_original_nicht():
+def test_nur_gerade_aendert_original_nicht() -> None:
     """Test: nur_gerade() ändert Original-Liste nicht."""
     import listen_operationen
 

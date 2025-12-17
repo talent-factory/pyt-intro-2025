@@ -10,11 +10,15 @@ Schreiben Sie eine Funktion `formatiere_name(vorname, nachname, titel="")`:
   - `formatiere_name("Anna", "Muster")` → "Anna Muster"
   - `formatiere_name("Max", "Meier", "Dr.")` → "Dr. Max Meier"
 
-**Lösung:**
+<details>
+<summary><b>Lösung anzeigen</b></summary>
+
 ```python
 def formatiere_name(vorname, nachname, titel=""):
     if titel:
         return f"{titel} {vorname} {nachname}"
     return f"{vorname} {nachname}"
 ```
+
+</details>
 

@@ -51,7 +51,7 @@ zaehler = 1
 while True:  # Endlosschleife
     print(zaehler)
     zaehler += 1
-    
+
     if zaehler > 5:
         break  # Schleife beenden
 
@@ -64,10 +64,10 @@ zaehler = 0
 
 while zaehler < 10:
     zaehler += 1
-    
+
     if zaehler % 2 == 0:  # Gerade Zahlen überspringen
         continue
-    
+
     print(zaehler)  # Nur ungerade Zahlen
 
 print()
@@ -112,7 +112,7 @@ geraten = 5
 
 while versuche < max_versuche:
     versuche += 1
-    
+
     if geraten == geheimzahl:
         print(f"Richtig! Nach {versuche} Versuchen")
         break
@@ -120,10 +120,10 @@ while versuche < max_versuche:
         print("Zu niedrig!")
     else:
         print("Zu hoch!")
-    
+
     # Für Demo nur ein Durchlauf
     geraten = 7  # Nächster Versuch
-    
+
 print()
 
 # Fibonacci-Zahlen
@@ -157,4 +157,3 @@ print("zaehler = 1")
 print("while zaehler <= 5:")
 print("    print(zaehler)")
 print("    zaehler += 1  # Wichtig!")
-

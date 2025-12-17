@@ -87,23 +87,23 @@ print(f"Nach float(): {float(zahl)}\n")  # 42.0
 print("=== Zu Boolean ===\n")
 
 print("Zahlen:")
-print(f"bool(1):   {bool(1)}")    # True
-print(f"bool(0):   {bool(0)}")    # False
-print(f"bool(-1):  {bool(-1)}")   # True
-print(f"bool(42):  {bool(42)}")   # True
+print(f"bool(1):   {bool(1)}")  # True
+print(f"bool(0):   {bool(0)}")  # False
+print(f"bool(-1):  {bool(-1)}")  # True
+print(f"bool(42):  {bool(42)}")  # True
 print()
 
 print("Strings:")
-print(f"bool(''):     {bool('')}")      # False (leer)
-print(f"bool('Hi'):   {bool('Hi')}")    # True
-print(f"bool('0'):    {bool('0')}")     # True (nicht leer!)
+print(f"bool(''):     {bool('')}")  # False (leer)
+print(f"bool('Hi'):   {bool('Hi')}")  # True
+print(f"bool('0'):    {bool('0')}")  # True (nicht leer!)
 print(f"bool('False'): {bool('False')}")  # True (nicht leer!)
 print()
 
 print("Andere Typen:")
-print(f"bool([]):     {bool([])}")      # False (leere Liste)
-print(f"bool([1]):    {bool([1])}")     # True
-print(f"bool(None):   {bool(None)}")    # False
+print(f"bool([]):     {bool([])}")  # False (leere Liste)
+print(f"bool([1]):    {bool([1])}")  # True
+print(f"bool(None):   {bool(None)}")  # False
 print()
 
 # Fehlerhafte Konvertierungen
@@ -144,4 +144,3 @@ naechstes_jahr = alter + 1
 
 print(f"Alter: {alter}")
 print(f"Nächstes Jahr: {naechstes_jahr}")
-

@@ -6,6 +6,12 @@ dist/
 wheels/
 *.egg-info
 
+# Personal settings
+.idea/
+
+# Temporäre Dateien
+tmp/
+
 # Virtual environments
 .venv
 

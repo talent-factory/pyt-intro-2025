@@ -1,20 +1,20 @@
-# Lektion 4: Dictionaries
+# Lektion 4: Dictionaries, Tupel & Sets
 
-**Dauer:** 50 Minuten  
+**Dauer:** 50 Minuten
 **Format:** 15 Min Theorie + 20 Min Live-Coding + 15 Min Übung
 
 ## 🎯 Lernziele
 
 - Dictionaries erstellen und verwenden
-- Auf Werte zugreifen
-- Dictionaries manipulieren
-- Über Dictionaries iterieren
+- Tupel und Sets verstehen
+- Unterschiede zwischen Datenstrukturen kennen
+- Richtige Datenstruktur wählen
 
 ## 📖 Theorie (15 Min)
 
-### Was sind Dictionaries?
+### Dictionaries
 
-Dictionaries speichern **Schlüssel-Wert-Paare**:
+**Schlüssel-Wert-Paare:**
 
 ```python
 person = {
@@ -22,116 +22,134 @@ person = {
     "alter": 25,
     "stadt": "Zürich"
 }
-```
 
-### Zugriff auf Werte
-
-```python
-# Mit Schlüssel
+# Zugriff
 print(person["name"])  # Anna
-
-# Mit get() (sicherer)
-print(person.get("alter"))  # 25
 print(person.get("beruf", "Unbekannt"))  # Unbekannt
-```
 
-### Werte ändern und hinzufügen
-
-```python
-# Ändern
+# Ändern/Hinzufügen
 person["alter"] = 26
-
-# Hinzufügen
 person["beruf"] = "Entwicklerin"
 
-# Löschen
-del person["stadt"]
+# Iteration
+for key, value in person.items():
+    print(f"{key}: {value}")
 ```
 
-### Dictionary-Methoden
+### Tupel
+
+**Unveränderbare** Sequenzen:
 
 ```python
-# Alle Schlüssel
-keys = person.keys()
+koordinaten = (10, 20)
+person = ("Anna", 25, "Zürich")
 
-# Alle Werte
-values = person.values()
+# Zugriff wie bei Listen
+print(koordinaten[0])  # 10
 
-# Alle Paare
-items = person.items()
+# NICHT möglich:
+# koordinaten[0] = 15  # Fehler!
+
+# Mehrere Rückgabewerte
+def statistik(zahlen):
+    return min(zahlen), max(zahlen), sum(zahlen)/len(zahlen)
+
+min_wert, max_wert, avg = statistik([1, 2, 3, 4, 5])
 ```
+
+### Sets
+
+**Eindeutige** Elemente, **ungeordnet**:
+
+```python
+zahlen = {1, 2, 3, 3, 4}  # {1, 2, 3, 4}
+
+# Mengenoperationen
+a = {1, 2, 3, 4}
+b = {3, 4, 5, 6}
+
+print(a | b)  # Vereinigung: {1, 2, 3, 4, 5, 6}
+print(a & b)  # Schnittmenge: {3, 4}
+print(a - b)  # Differenz: {1, 2}
+```
+
+### Vergleich
+
+| Typ | Veränderbar | Geordnet | Duplikate | Syntax |
+|-----|-------------|----------|-----------|--------|
+| Liste | ✅ | ✅ | ✅ | `[1, 2, 3]` |
+| Tupel | ❌ | ✅ | ✅ | `(1, 2, 3)` |
+| Set | ✅ | ❌ | ❌ | `{1, 2, 3}` |
+| Dict | ✅ | ✅ | Keys: ❌ | `{"a": 1}` |
 
 ## 💻 Live-Coding (20 Min)
 
-### Beispiel 1: Kontaktverwaltung
-
-```python
-kontakt = {
-    "name": "Max Muster",
-    "email": "max@example.com",
-    "telefon": "079 123 45 67"
-}
-
-print("=" * 40)
-print("KONTAKT")
-print("=" * 40)
-for key, value in kontakt.items():
-    print(f"{key.capitalize()}: {value}")
-```
-
-### Beispiel 2: Wörterbuch
-
-```python
-woerterbuch = {
-    "hello": "hallo",
-    "world": "welt",
-    "python": "python"
-}
-
-def uebersetze(wort):
-    """Übersetzt ein englisches Wort ins Deutsche."""
-    return woerterbuch.get(wort.lower(), "Nicht gefunden")
-
-print(uebersetze("hello"))  # hallo
-print(uebersetze("test"))   # Nicht gefunden
-```
-
-### Beispiel 3: Verschachtelte Dictionaries
+### Beispiel 1: Kontakte mit Dictionary
 
 ```python
 studenten = {
-    "anna": {
-        "alter": 20,
-        "noten": [5.5, 6.0, 5.0]
-    },
-    "max": {
-        "alter": 22,
-        "noten": [4.5, 5.0, 5.5]
-    }
+    "anna": {"alter": 20, "noten": [5.5, 6.0, 5.0]},
+    "max": {"alter": 22, "noten": [4.5, 5.0, 5.5]}
 }
 
-# Zugriff
-print(studenten["anna"]["alter"])  # 20
-print(studenten["max"]["noten"])   # [4.5, 5.0, 5.5]
-
-# Durchschnitt berechnen
 for name, daten in studenten.items():
     durchschnitt = sum(daten["noten"]) / len(daten["noten"])
     print(f"{name}: {durchschnitt:.2f}")
 ```
 
+### Beispiel 2: Tupel für Koordinaten
+
+```python
+def berechne_distanz(punkt1, punkt2):
+    """Berechnet Distanz zwischen zwei Punkten."""
+    x1, y1 = punkt1
+    x2, y2 = punkt2
+    return ((x2-x1)**2 + (y2-y1)**2) ** 0.5
+
+p1 = (0, 0)
+p2 = (3, 4)
+print(f"Distanz: {berechne_distanz(p1, p2)}")  # 5.0
+```
+
+### Beispiel 3: Sets für Duplikate
+
+```python
+def eindeutige_woerter(text):
+    """Findet alle eindeutigen Wörter."""
+    return set(text.lower().split())
+
+text = "Python ist toll Python macht Spass"
+eindeutig = eindeutige_woerter(text)
+print(f"Eindeutige Wörter: {eindeutig}")
+
+# Teilnehmer in zwei Kursen
+kurs_a = {"Anna", "Max", "Lisa"}
+kurs_b = {"Lisa", "Tom", "Sara"}
+
+print(f"In beiden: {kurs_a & kurs_b}")  # {'Lisa'}
+print(f"Alle: {kurs_a | kurs_b}")
+```
+
 ## ✏️ Übungen (15 Min)
 
 - [Übung 6: Dictionary-Operationen](../02-uebungen/uebung-6-dict.md)
+- [Übung 7: Verschachtelte Daten](../02-uebungen/uebung-7-verschachtelt.md)
+- [Übung 8: Datenverarbeitung](../02-uebungen/uebung-8-verarbeitung.md)
 
 ## 📚 Zusammenfassung
 
-- Dictionaries: `{"key": "value"}`
-- Zugriff: `dict["key"]` oder `dict.get("key")`
-- Methoden: keys(), values(), items()
-- Iteration: `for key, value in dict.items():`
+- **Dictionaries:** `{"key": "value"}` - Schlüssel-Wert-Paare
+- **Tupel:** `(1, 2, 3)` - Unveränderbar, geordnet
+- **Sets:** `{1, 2, 3}` - Eindeutig, ungeordnet
+- Wählen Sie die passende Datenstruktur für Ihren Anwendungsfall
 
-## 🔗 Weiter
+## 🎉 Modul abgeschlossen!
 
-- [Lektion 5: Tupel & Sets](./lektion-5-tupel-sets.md)
+Sie haben gelernt:
 
+- ✅ Funktionen definieren
+- ✅ Parameter und Return
+- ✅ Listen, Dictionaries, Tupel, Sets
+- ✅ Code modular strukturieren
+
+**Weiter:** [Hausaufgaben](../03-nachbearbeitung/)

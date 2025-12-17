@@ -304,7 +304,7 @@ Erstellen Sie Variablen für:
 SyntaxError: '(' was never closed
 ```
 
-**Lösung:** Klammer schließen: `print("Hallo")`
+**Lösung:** Klammer schliessen: `print("Hallo")`
 
 **NameError:**
 
@@ -371,5 +371,4 @@ Am Präsenztag werden wir:
 
 ---
 
-**Gut gemacht! Sie haben Ihre ersten Schritte mit Python gemeistert! 🎉**
-
+## Gut gemacht! Sie haben Ihre ersten Schritte mit Python gemeistert! 🎉

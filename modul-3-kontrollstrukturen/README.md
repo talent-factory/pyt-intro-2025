@@ -1,6 +1,6 @@
 # Modul 3: Kontrollstrukturen
 
-**Dauer:** 1 Tag (5 Lektionen à 50 Minuten)
+**Dauer:** 1 Tag (4 Lektionen à 50 Minuten)
 **Voraussetzung:** Modul 1 & 2 abgeschlossen
 
 ## 🎯 Lernziele
@@ -62,14 +62,13 @@ Nach diesem Modul können Sie:
 - Quiz zur Selbstkontrolle (10 Fragen)
 - Python-Umgebung testen
 
-### [01-praxis](./01-praxis/) - Präsenzunterricht (5 × 50 Min)
+### [01-praxis](./01-praxis/) - Präsenzunterricht (4 × 50 Min)
 
 **Am Kurstag:**
 - **Lektion 1:** If/elif/else - Bedingte Anweisungen (50 Min)
 - **Lektion 2:** While-Schleifen - Wiederholungen (50 Min)
 - **Lektion 3:** For-Schleifen & Listen - Iteration (50 Min)
-- **Lektion 4:** Verschachtelte Strukturen - Komplexe Algorithmen (50 Min)
-- **Lektion 5:** Projekt - Komplettes Programm entwickeln (50 Min)
+- **Lektion 4:** Verschachtelte Strukturen & Mini-Projekt (50 Min)
 
 ### [02-uebungen](./02-uebungen/) - Übungen während der Präsenz
 
@@ -101,7 +100,7 @@ Nach diesem Modul können Sie:
 
 ### [05-beispiele](./05-beispiele/) - Beispielprogramme
 
-**10 vollständige Python-Programme:**
+**13 vollständige Python-Programme:**
 - bedingungen.py - If/elif/else Beispiele
 - while_schleifen.py - While-Loop Patterns
 - for_schleifen.py - For-Loop Varianten
@@ -112,14 +111,17 @@ Nach diesem Modul können Sie:
 - primzahlen.py - Mathematische Algorithmen
 - muster.py - Muster und Pyramiden
 - menu.py - Menü-gesteuertes Programm
+- notensystem.py - Punkte in Noten umwandeln
+- gerade_zahlen.py - Gerade Zahlen filtern
+- notenliste.py - Notenstatistik berechnen
 
 ## ⏱️ Zeitplan
 
 | Phase | Aktivität | Dauer |
 |-------|-----------|-------|
 | **Vor Tag 3** | Leseauftrag + Experimente | 2-3 Std |
-| **Tag 3** | 5 Lektionen Präsenzunterricht | 5 × 50 Min |
-| **Tag 3** | Pausen | 50 Min |
+| **Tag 3** | 4 Lektionen Präsenzunterricht | 4 × 50 Min |
+| **Tag 3** | Pausen | 40 Min |
 | **Nach Tag 3** | 3 Aufgaben + Reflexion | 4-6 Std |
 | **Gesamt** | | **10-13 Std** |
 
@@ -128,7 +130,7 @@ Nach diesem Modul können Sie:
 Nach erfolgreichem Abschluss des Moduls:
 
 - [ ] Alle Vorbereitungsaufgaben erledigt
-- [ ] Alle 5 Lektionen besucht
+- [ ] Alle 4 Lektionen besucht
 - [ ] Mindestens 6 von 8 Übungen gelöst
 - [ ] Alle 3 Nachbearbeitungsaufgaben eingereicht
 - [ ] Reflexion geschrieben

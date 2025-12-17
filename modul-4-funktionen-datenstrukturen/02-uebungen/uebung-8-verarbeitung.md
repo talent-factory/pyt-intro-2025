@@ -7,7 +7,9 @@ Schreiben Sie eine Funktion `analysiere_text(text)` die ein Dictionary zurückgi
 - anzahl_zeichen
 - laengstes_wort
 
-**Lösung:**
+<details>
+<summary><b>Lösung anzeigen</b></summary>
+
 ```python
 def analysiere_text(text):
     woerter = text.split()
@@ -22,4 +24,6 @@ text = "Python ist eine tolle Programmiersprache"
 ergebnis = analysiere_text(text)
 print(ergebnis)
 ```
+
+</details>
 

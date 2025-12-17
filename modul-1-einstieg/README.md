@@ -1,6 +1,6 @@
 # Modul 1: Einstieg in die Programmierung
 
-**Dauer:** 1 Tag (4 Lektionen à 50 Minuten)  
+**Dauer:** 1 Tag (4 Lektionen à 50 Minuten)
 **Voraussetzung:** Keine
 
 ## 🎯 Lernziele
@@ -20,7 +20,7 @@ Nach diesem Modul können Sie:
 
 ### [00-vorbereitung/](./00-vorbereitung/)
 
-**Zeitaufwand:** 2-3 Stunden  
+**Zeitaufwand:** 2-3 Stunden
 Bereiten Sie sich auf den Präsenztag vor.
 
 - 📄 [Installationsanleitung](./00-vorbereitung/installationsanleitung.md)
@@ -72,17 +72,13 @@ Bereiten Sie sich auf den Präsenztag vor.
 
 ## ⏱️ Zeitplan
 
-| Zeit | Aktivität | Dauer |
-|------|-----------|-------|
-| 08:00 - 08:50 | Lektion 1: Was ist Programmieren? | 50 Min. |
-| 08:50 - 09:00 | Pause | 10 Min. |
-| 09:00 - 09:50 | Lektion 2: Python Shell | 50 Min. |
-| 09:50 - 10:00 | Pause | 10 Min. |
-| 10:00 - 10:50 | Lektion 3: VS Code | 50 Min. |
-| 10:50 - 11:00 | Pause | 10 Min. |
-| 11:00 - 11:50 | Lektion 4: Variablen & Zahlen | 50 Min. |
-
-**Gesamtdauer:** 3 Std. 20 Min. Unterricht + 30 Min. Pausen
+| Phase | Aktivität | Dauer |
+|-------|-----------|-------|
+| **Vor Tag 1** | Setup + Leseauftrag + Erste Schritte | 2-3 Std |
+| **Tag 1** | 4 Lektionen Präsenzunterricht | 4 × 50 Min |
+| **Tag 1** | Pausen | 30 Min |
+| **Nach Tag 1** | 3 Aufgaben + Reflexion | 4-6 Std |
+| **Gesamt** | | **10-13 Std** |
 
 ## ✅ Erfolgskriterien
 
@@ -132,6 +128,6 @@ In diesem Modul lernen Sie:
 
 ---
 
-**Nächstes Modul:** Modul 2: Grundlegende Datentypen und Operatoren  
+**Nächstes Modul:** [Modul 2: Grundlegende Datentypen und Operatoren](../modul-2-datentypen/README.md)
 **Zurück zur:** [Kursübersicht](../README.md)
 

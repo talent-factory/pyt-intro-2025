@@ -15,8 +15,8 @@ Wichtige Tastenkombinationen für effizientes Arbeiten.
 | Datei öffnen | `Ctrl+O` | `Cmd+O` |
 | Speichern | `Ctrl+S` | `Cmd+S` |
 | Speichern unter | `Ctrl+Shift+S` | `Cmd+Shift+S` |
-| Datei schließen | `Ctrl+W` | `Cmd+W` |
-| Alle schließen | `Ctrl+K W` | `Cmd+K W` |
+| Datei schliessen | `Ctrl+W` | `Cmd+W` |
+| Alle schliessen | `Ctrl+K W` | `Cmd+K W` |
 | Zwischen Dateien wechseln | `Ctrl+Tab` | `Cmd+Tab` |
 
 ## ✏️ Bearbeiten
@@ -51,8 +51,8 @@ Wichtige Tastenkombinationen für effizientes Arbeiten.
 
 | Aktion | Windows/Linux | macOS |
 |--------|---------------|-------|
-| Terminal öffnen/schließen | `Ctrl+` ` | `Cmd+` ` |
-| Neues Terminal | `Ctrl+Shift+` ` | `Cmd+Shift+` ` |
+| Terminal öffnen/schliessen | Ctrl+` | Cmd+` |
+| Neues Terminal | Ctrl+Shift+` | Cmd+Shift+` |
 
 ## ▶️ Code ausführen
 
@@ -85,10 +85,12 @@ Wichtige Tastenkombinationen für effizientes Arbeiten.
 ### Multi-Cursor
 
 Mehrere Cursor gleichzeitig:
+
 - `Alt+Click` (Windows/Linux)
 - `Option+Click` (macOS)
 
 Nützlich für:
+
 ```python
 # Alle Zeilen gleichzeitig bearbeiten
 name = "Anna"
@@ -99,6 +101,7 @@ stadt = "Zürich"
 ### Command Palette
 
 `Ctrl+Shift+P` / `Cmd+Shift+P` öffnet alle Befehle:
+
 - "Python: Select Interpreter"
 - "Format Document"
 - "Toggle Terminal"
@@ -112,4 +115,3 @@ Gewöhnen Sie sich an `Ctrl+S` / `Cmd+S` nach jeder Änderung!
 - [VS Code Keyboard Shortcuts PDF](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf) (Windows)
 - [VS Code Keyboard Shortcuts PDF](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf) (macOS)
 - [VS Code Keyboard Shortcuts PDF](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-linux.pdf) (Linux)
-

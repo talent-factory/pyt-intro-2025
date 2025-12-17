@@ -20,7 +20,9 @@ with open("produkte.csv", "w", newline="") as f:
 
 Lesen Sie dann die Datei und berechnen Sie den Gesamtwert.
 
-**Lösung:**
+<details>
+<summary><b>Lösung anzeigen</b></summary>
+
 ```python
 import csv
 
@@ -35,4 +37,6 @@ with open("produkte.csv", "r") as f:
 
 print(f"Gesamtwert: {gesamt:.2f} CHF")
 ```
+
+</details>
 

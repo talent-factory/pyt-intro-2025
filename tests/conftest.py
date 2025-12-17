@@ -4,10 +4,11 @@ Für alle Test-Module
 """
 
 import sys
-from pathlib import Path
-from typing import Generator
-import pytest
+from collections.abc import Callable, Generator
 from io import StringIO
+from pathlib import Path
+
+import pytest
 
 # Projekt-Root zum Python-Path hinzufügen
 projekt_root = Path(__file__).parent.parent
@@ -34,7 +35,7 @@ def captured_output() -> Generator[StringIO, None, None]:
 
 
 @pytest.fixture
-def mock_input(monkeypatch):
+def mock_input(monkeypatch: pytest.MonkeyPatch) -> Callable[[list[str]], None]:
     """
     Fixture zum Mocken von input()-Aufrufen.
 
@@ -43,7 +44,8 @@ def mock_input(monkeypatch):
             mock_input(["Wert1", "Wert2"])
             # Code der input() aufruft
     """
-    def _mock_input(values: list[str]):
+
+    def _mock_input(values: list[str]) -> None:
         """
         Setzt eine Liste von Werten für aufeinanderfolgende input()-Aufrufe.
 
@@ -51,13 +53,13 @@ def mock_input(monkeypatch):
             values: Liste der Eingabewerte
         """
         input_iterator = iter(values)
-        monkeypatch.setattr('builtins.input', lambda _: next(input_iterator))
+        monkeypatch.setattr("builtins.input", lambda _: next(input_iterator))
 
     return _mock_input
 
 
 @pytest.fixture
-def temp_file(tmp_path):
+def temp_file(tmp_path: Path) -> Callable[[str, str], Path]:
     """
     Fixture für temporäre Dateien.
 
@@ -67,6 +69,7 @@ def temp_file(tmp_path):
     Returns:
         Funktion zum Erstellen temporärer Dateien
     """
+
     def _create_temp_file(content: str, filename: str = "test.txt") -> Path:
         """
         Erstellt eine temporäre Datei.
@@ -79,7 +82,7 @@ def temp_file(tmp_path):
             Path zur temporären Datei
         """
         file_path = tmp_path / filename
-        file_path.write_text(content, encoding='utf-8')
+        file_path.write_text(content, encoding="utf-8")
         return file_path
 
     return _create_temp_file
