@@ -1,91 +1,121 @@
 {
-  // ============================================
-  // PYTHON GRUNDEINSTELLUNGEN
-  // ============================================
-  "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python",
-  "python.pythonPath": "${workspaceFolder}/.venv/bin/python",
+    // ============================================
+    // LaTeX / ConTeXt GRUNDEINSTELLUNGEN
+    // ============================================
 
-  // Virtuelle Umgebung automatisch aktivieren
-  "python.terminal.activateEnvironment": true,
-  "python.terminal.activateEnvInCurrentTerminal": true,
+    "latex-workshop.latex.tools": [
+        {
+            "name": "context",
+            "command": "context",
+            "args": [
+                "--synctex=1",
+                "%DOC%"
+            ]
+        }
+    ],
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "ConTeXt",
+            "tools": [
+                "context"
+            ]
+        }
+    ],
 
-  // .env Datei laden
-  "python.envFile": "${workspaceFolder}/.env",
+    // ============================================
+    // PYTHON GRUNDEINSTELLUNGEN
+    // ============================================
 
-  // ============================================
-  // PYTHON TESTING (PYTEST)
-  // ============================================
-  "python.testing.pytestEnabled": true,
-  "python.testing.unittestEnabled": false,
-  "python.testing.pytestArgs": [
-    "tests",
-    "-v"
-  ],
-  "python.testing.autoTestDiscoverOnSaveEnabled": true,
+    "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python",
+    "python.terminal.activateEnvironment": true,
+    "python.terminal.activateEnvInCurrentTerminal": true,
+    "python.envFile": "${workspaceFolder}/.env",
 
-  // ============================================
-  // RUFF: CODE-QUALITÄT & FORMATIERUNG
-  // ============================================
-  "[python]": {
-    "editor.defaultFormatter": "charliermarsh.ruff",
-    "editor.formatOnSave": true,
-    "editor.formatOnPaste": false,
-    "editor.codeActionsOnSave": {
-      "source.fixAll": "explicit",
-      "source.organizeImports": "explicit"
-    }
-  },
 
-  "ruff.enable": true,
-  "ruff.lint.enable": true,
-  "ruff.path": ["${workspaceFolder}/.venv/bin/ruff"],
+    // ============================================
+    // PYTHON TESTING (PYTEST)
+    // ============================================
 
-  // ============================================
-  // EDITOR-EINSTELLUNGEN
-  // ============================================
-  "editor.rulers": [88],  // PEP 8 Zeilenlänge sichtbar machen
-  "editor.tabSize": 4,
-  "editor.insertSpaces": true,
-  "editor.trimAutoWhitespace": true,
-  "files.trimTrailingWhitespace": true,
-  "files.insertFinalNewline": true,
+    "python.testing.pytestEnabled": true,
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestArgs": [
+        "tests",
+        "-v"
+    ],
 
-  // ============================================
-  // HILFREICHE FUNKTIONEN FÜR ANFÄNGER
-  // ============================================
-  "editor.bracketPairColorization.enabled": true,
-  "editor.guides.bracketPairs": true,
-  "editor.inlineSuggest.enabled": true,
-  "editor.suggestSelection": "first",
-  "editor.minimap.enabled": true,
+    // ============================================
+    // RUFF: CODE-QUALITÄT & FORMATIERUNG
+    // ============================================
+
+    "[python]": {
+        "editor.defaultFormatter": "charliermarsh.ruff",
+        "editor.formatOnSave": true,
+        "editor.formatOnPaste": false,
+        "editor.codeActionsOnSave": {
+            "source.fixAll": "explicit",
+            "source.organizeImports": "explicit"
+        }
+    },
+
+    // ============================================
+    // EDITOR-EINSTELLUNGEN
+    // ============================================
+
+    "ruff.enable": true,
+    "ruff.lint.enable": true,
+    "ruff.path": [
+        "${workspaceFolder}/.venv/bin/ruff"
+    ],
+    "editor.rulers": [
+        88
+    ],
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true,
+    "editor.trimAutoWhitespace": true,
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
+
+    // ============================================
+    // HILFREICHE FUNKTIONEN FÜR ANFÄNGER
+    // ============================================
+
+    "editor.bracketPairColorization.enabled": true,
+    "editor.guides.bracketPairs": true,
+    "editor.inlineSuggest.enabled": true,
+    "editor.suggestSelection": "first",
+    "editor.minimap.enabled": true,
 
   // Zeige Whitespace-Zeichen (hilft beim Einrücken)
-  "editor.renderWhitespace": "boundary",
+    "editor.renderWhitespace": "boundary",
 
-  // Fehler und Warnungen deutlich sichtbar
-  "problems.decorations.enabled": true,
+    // Fehler und Warnungen deutlich sichtbar
+    "problems.decorations.enabled": true,
 
-  // ============================================
-  // PYTHON-SPEZIFISCHE HILFEN
-  // ============================================
-  // typeCheckingMode und extraPaths werden in pyrightconfig.json konfiguriert
-  "python.analysis.diagnosticMode": "workspace",
-  "python.analysis.autoImportCompletions": true,
+    // ============================================
+    // PYTHON-SPEZIFISCHE HILFEN
+    // ============================================
+    // typeCheckingMode und extraPaths werden in pyrightconfig.json konfiguriert
 
-  // ============================================
-  // JUPYTER NOTEBOOKS
-  // ============================================
-  "jupyter.askForKernelRestart": false,
-  "notebook.formatOnSave.enabled": true,
-  "notebook.codeActionsOnSave": {
-    "source.fixAll": "explicit",
-    "source.organizeImports": "explicit"
-  },
+    "python.analysis.diagnosticMode": "workspace",
+    "python.analysis.autoImportCompletions": true,
 
-  // ============================================
-  // TERMINAL
-  // ============================================
-  "terminal.integrated.defaultProfile.osx": "zsh",
-  "terminal.integrated.defaultProfile.linux": "bash",
-  "terminal.integrated.defaultProfile.windows": "PowerShell"
+    // ============================================
+    // JUPYTER NOTEBOOKS
+    // ============================================
+
+    "jupyter.askForKernelRestart": false,
+    "notebook.formatOnSave.enabled": true,
+    "notebook.codeActionsOnSave": {
+        "source.fixAll": "explicit",
+        "source.organizeImports": "explicit"
+    },
+
+    // ============================================
+    // TERMINAL
+    // ============================================
+
+    "terminal.integrated.defaultProfile.osx": "zsh",
+    "terminal.integrated.defaultProfile.linux": "bash",
+    "terminal.integrated.defaultProfile.windows": "PowerShell",
+
 }

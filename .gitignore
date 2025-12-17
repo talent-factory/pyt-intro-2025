@@ -9,6 +9,9 @@ wheels/
 # Personal settings
 .idea/
 
+# Temporäre Dateien
+tmp/
+
 # Virtual environments
 .venv
 

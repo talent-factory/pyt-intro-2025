@@ -1,6 +1,7 @@
 # Modul 2: Grundlegende Datentypen und Operatoren
 
-**Mit Daten arbeiten**
+**Dauer:** 1 Tag (4 Lektionen à 50 Minuten)
+**Voraussetzung:** Modul 1 abgeschlossen
 
 ## 🎯 Lernziele
 
@@ -79,12 +80,13 @@ Vollständige Beispielprogramme:
 
 ## ⏱️ Zeitplan
 
-| Phase | Dauer | Aktivität |
-|-------|-------|-----------|
-| **Vorbereitung** | 2-3 Std | Leseauftrag, Videos, erste Experimente |
-| **Präsenz Tag 2** | 4 Std | 4 Lektionen + Übungen |
-| **Nachbearbeitung** | 4-6 Std | Hausaufgaben + Reflexion |
-| **Gesamt** | ~10-13 Std | Komplettes Modul 2 |
+| Phase | Aktivität | Dauer |
+|-------|-----------|-------|
+| **Vor Tag 2** | Leseauftrag + Experimente | 2-3 Std |
+| **Tag 2** | 4 Lektionen Präsenzunterricht | 4 × 50 Min |
+| **Tag 2** | Pausen | 40 Min |
+| **Nach Tag 2** | 3 Aufgaben + Reflexion | 4-6 Std |
+| **Gesamt** | | **10-13 Std** |
 
 ## 🔗 Verbindung zu anderen Modulen
 

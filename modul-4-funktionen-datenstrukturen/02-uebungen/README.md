@@ -25,3 +25,21 @@
 6. [Übung 6: Dictionary-Operationen](./uebung-6-dict.md)
 7. [Übung 7: Verschachtelte Daten](./uebung-7-verschachtelt.md)
 8. [Übung 8: Datenverarbeitung](./uebung-8-verarbeitung.md)
+
+## 💡 Tipps
+
+- Arbeiten Sie in Ihrem eigenen Tempo
+- Fragen Sie bei Problemen
+- Vergleichen Sie Ihre Lösung mit anderen
+- Experimentieren Sie mit Variationen
+- Nutzen Sie Docstrings zur Dokumentation
+
+## ✅ Lösungen
+
+Musterlösungen finden Sie in [05-beispiele](../05-beispiele/)
+
+## 🆘 Hilfe
+
+- Beispiele in [05-beispiele](../05-beispiele/)
+- Materialien in [04-materialien](../04-materialien/)
+- Fragen Sie Dozierende
