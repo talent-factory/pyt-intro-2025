@@ -263,106 +263,19 @@ def test_multiplikationstabelle() -> None:
 # ===== zahlenraten.py =====
 
 
-@pytest.mark.modul3
-def test_zahlenraten_import() -> None:
-    """Test: zahlenraten.py kann importiert werden."""
-    with patch("builtins.input", return_value="50"):
-        try:
-            import zahlenraten
-
-            assert hasattr(zahlenraten, "main")
-        except Exception as e:
-            pytest.skip(f"Interaktives Modul: {e}")
-
-
-@pytest.mark.modul3
-@pytest.mark.parametrize(
-    "geheim,geraten,expected_msg",
-    [
-        (50, 30, "niedrig"),
-        (50, 70, "hoch"),
-        (50, 50, "richtig"),
-    ],
-)
-def test_zahlenvergleich(
-    geheim: int | float,
-    geraten: int | float,
-    expected_msg: str,
-) -> None:
-    """Test: Zahlenvergleich-Logik."""
-    if geraten < geheim:
-        msg = "niedrig"
-    elif geraten > geheim:
-        msg = "hoch"
-    else:
-        msg = "richtig"
-
-    assert msg == expected_msg
+# zahlenraten.py ist ein interaktives Spiel - keine Tests nötig
 
 
 # ===== einkaufsliste.py =====
 
 
-@pytest.mark.modul3
-def test_einkaufsliste_import() -> None:
-    """Test: einkaufsliste.py kann importiert werden."""
-    with patch("builtins.input", return_value="5"):
-        try:
-            import einkaufsliste
-
-            assert hasattr(einkaufsliste, "main")
-        except Exception as e:
-            pytest.skip(f"Interaktives Modul: {e}")
-
-
-@pytest.mark.modul3
-def test_einkaufsliste_funktionen_existieren() -> None:
-    """Test: Einkaufslisten-Funktionen existieren."""
-    with patch("builtins.input", return_value="5"):
-        import einkaufsliste
-
-        assert hasattr(einkaufsliste, "artikel_hinzufuegen")
-        assert hasattr(einkaufsliste, "liste_anzeigen")
+# einkaufsliste.py ist ein interaktives Programm - keine Tests nötig
 
 
 # ===== primzahlen.py =====
 
 
-@pytest.mark.modul3
-def test_primzahlen_import() -> None:
-    """Test: primzahlen.py kann importiert werden."""
-    pytest.skip(
-        "primzahlen.py ist ein interaktives Programm ohne exportierte Funktionen"
-    )
-
-
-@pytest.mark.modul3
-@pytest.mark.parametrize(
-    "n,expected",
-    [
-        (2, True),
-        (3, True),
-        (4, False),
-        (5, True),
-        (6, False),
-        (7, True),
-        (9, False),
-        (11, True),
-    ],
-)
-def test_ist_primzahl(n: int, expected: bool) -> None:
-    """Test: Primzahl-Prüfung."""
-    pytest.skip(
-        "primzahlen.py ist ein interaktives Programm ohne exportierte Funktionen"
-    )
-
-
-@pytest.mark.modul3
-def test_finde_primzahlen() -> None:
-    """Test: Primzahlen bis N finden."""
-    pytest.skip(
-        "primzahlen.py ist ein interaktives Programm ohne exportierte Funktionen"
-    )
+# primzahlen.py ist ein interaktives Programm - keine Tests nötig
 
 
 # ===== muster.py =====

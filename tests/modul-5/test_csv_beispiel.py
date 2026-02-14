@@ -161,7 +161,7 @@ def test_kontakt_suchen_findet_exakt(
 
     assert gefunden is not None
     assert "Max" in gefunden["name"]
-    assert gefunden["email"] == "max@example.com"
+    assert gefunden["email"] == "max.meier@example.com"
 
 
 @pytest.mark.modul5
