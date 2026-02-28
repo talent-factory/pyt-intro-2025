@@ -10,6 +10,8 @@ Konzepte:
 - Fehlerbehandlung
 """
 
+import re
+
 # Einkaufsliste initialisieren
 einkaufsliste = []
 
@@ -31,14 +33,19 @@ while True:
     wahl = input("\nWahl: ").strip()
 
     if wahl == "1":
-        # Artikel hinzufügen
-        artikel = input("\nArtikel: ").strip()
+        # Artikel hinzufügen – beliebig viele, getrennt durch
+        # Leerzeichen, Komma oder Semikolon
+        eingabe = input("\nArtikel (mehrere möglich): ").strip()
 
-        if artikel == "":
+        if eingabe == "":
             print("❌ Artikel darf nicht leer sein!")
         else:
-            einkaufsliste.append(artikel)
-            print(f"✓ '{artikel}' hinzugefügt")
+            # Aufteilen an Leerzeichen, Komma oder Semikolon
+            teile = [a.strip() for a in re.split(r"[ ,;]+", eingabe) if a.strip()]
+
+            for artikel in teile:
+                einkaufsliste.append(artikel)
+                print(f"✓ '{artikel}' hinzugefügt")
 
     elif wahl == "2":
         # Liste anzeigen
