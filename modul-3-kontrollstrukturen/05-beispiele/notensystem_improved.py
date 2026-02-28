@@ -19,7 +19,7 @@ notenskala = [
     (80, 5, "Sehr gut!"),
     (70, 4, "Gut!"),
     (60, 3, "Genügend"),
-    (0,  2, "Ungenügend"),
+    (0, 2, "Ungenügend"),
 ]
 
 if __name__ == "__main__":
