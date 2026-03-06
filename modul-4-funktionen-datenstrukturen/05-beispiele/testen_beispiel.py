@@ -40,14 +40,14 @@ def berechne_durchschnitt(zahlen: list[float]) -> float:
     return sum(zahlen) / len(zahlen)
 
 
-def erstelle_kontakt(name: str, email: str, telefon: str) -> dict[str, str]:
+def erstelle_kontakt(name: str, email: str, telefon: str = "") -> dict[str, str]:
     """
     Erstellt einen Kontakt als Dictionary.
 
     Args:
         name: Name der Person
         email: E-Mail-Adresse
-        telefon: Telefonnummer
+        telefon: Telefonnummer (optional, Standard: "")
 
     Returns:
         Dictionary mit name, email, telefon

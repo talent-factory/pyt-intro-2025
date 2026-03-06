@@ -96,3 +96,12 @@ def test_kontakt_werte_korrekt() -> None:
     assert kontakt["name"] == "Max"
     assert kontakt["email"] == "max@example.com"
     assert kontakt["telefon"] == "078 987 65 43"
+
+
+@pytest.mark.modul4
+def test_kontakt_ohne_telefon() -> None:
+    """Kontakt ohne Telefon hat leeren String."""
+    kontakt = erstelle_kontakt("Max", "max@example.com")
+    assert kontakt["name"] == "Max"
+    assert kontakt["email"] == "max@example.com"
+    assert kontakt["telefon"] == ""
