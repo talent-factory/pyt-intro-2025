@@ -39,7 +39,7 @@ def test_bedingungen_import() -> None:
         (18, True),
     ],
 )
-def test_volljaehrigkeit(alter: int, expected: int | float | str | bool) -> None:
+def test_volljaehrigkeit(alter: int, expected: bool) -> None:
     """Test: Volljährigkeits-Prüfung."""
     ist_volljaehrig = alter >= 18
     assert ist_volljaehrig == expected

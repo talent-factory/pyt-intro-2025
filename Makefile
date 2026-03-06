@@ -38,7 +38,5 @@ format-unsafe: ## Code formatieren inkl. unsafe Fixes
 # --- Aufraeumen ---
 
 clean: ## Temporaere Dateien loeschen
-	find . -type d -name __pycache__ -exec rm -rf {} + 2>/dev/null || true
-	find . -type d -name .pytest_cache -exec rm -rf {} + 2>/dev/null || true
-	find . -type d -name .ruff_cache -exec rm -rf {} + 2>/dev/null || true
+	find . -type d \( -name __pycache__ -o -name .pytest_cache -o -name .ruff_cache \) -exec rm -rf {} + || true
 	rm -rf htmlcov .coverage

@@ -21,7 +21,9 @@ tmp/
 # Local References not to be committed
 refs/
 
-# Claude settings (local configuration)
+# Planungsdokumente (generiert, nicht versioniert)
 docs/plans/
+
+# Claude settings (local configuration)
 .claude/settings.local.json
 .verba/
