@@ -37,7 +37,10 @@ def berechne_durchschnitt(zahlen: list[float]) -> float:
     """
     if len(zahlen) == 0:
         return 0.0
-    return sum(zahlen) / len(zahlen)
+    summe = 0
+    for zahl in zahlen:
+        summe += zahl
+    return summe / len(zahlen)
 
 
 def erstelle_kontakt(name: str, email: str, telefon: str = "") -> dict[str, str]:

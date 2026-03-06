@@ -19,7 +19,7 @@ Stellen Sie sich vor: Sie schreiben eine Funktion `berechne_durchschnitt()`. Sie
 
 ## 📖 Theorie (10 Min)
 
-### 1. Warum testen? (5 Min)
+### 1. Warum testen? (3 Min)
 
 **Analogie:** Stellen Sie sich einen Taschenrechner vor. Sie geben eine Rechnung ein und prüfen, ob das Ergebnis stimmt. Genau das machen automatische Tests — nur viel schneller.
 
@@ -33,7 +33,7 @@ Stellen Sie sich vor: Sie schreiben eine Funktion `berechne_durchschnitt()`. Sie
 - Prüfen zuverlässig, ob alles noch funktioniert
 - Finden Fehler sofort nach einer Änderung
 
-### 2. Testbare Funktionen (5 Min)
+### 2. Testbare Funktionen (3 Min)
 
 Nicht jede Funktion lässt sich einfach testen:
 
@@ -51,7 +51,7 @@ def ist_gerade(zahl):
 
 **Deshalb haben wir in Lektion 1-2 immer `return` genutzt!**
 
-### 3. pytest Basics (5 Min)
+### 3. pytest Basics (4 Min)
 
 **Drei einfache Regeln:**
 
