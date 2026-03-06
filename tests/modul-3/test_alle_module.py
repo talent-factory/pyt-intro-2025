@@ -39,7 +39,7 @@ def test_bedingungen_import() -> None:
         (18, True),
     ],
 )
-def test_volljaehrigkeit(alter: int, expected: int | float | str | bool) -> None:
+def test_volljaehrigkeit(alter: int, expected: bool) -> None:
     """Test: Volljährigkeits-Prüfung."""
     ist_volljaehrig = alter >= 18
     assert ist_volljaehrig == expected
@@ -49,11 +49,21 @@ def test_volljaehrigkeit(alter: int, expected: int | float | str | bool) -> None
 @pytest.mark.parametrize(
     "punkte,expected_note",
     [
+        (100, 6),
         (95, 6),
+        (90, 6),
+        (89, 5),
         (85, 5),
+        (80, 5),
+        (79, 4),
         (75, 4),
+        (70, 4),
+        (69, 3),
         (65, 3),
+        (60, 3),
+        (59, 2),
         (55, 2),
+        (0, 2),
     ],
 )
 def test_notenberechnung(punkte: int, expected_note: int) -> None:
@@ -263,19 +273,19 @@ def test_multiplikationstabelle() -> None:
 # ===== zahlenraten.py =====
 
 
-# zahlenraten.py ist ein interaktives Spiel - keine Tests nötig
+# zahlenraten.py ist ein interaktives Programm - keine automatisierten Tests
 
 
 # ===== einkaufsliste.py =====
 
 
-# einkaufsliste.py ist ein interaktives Programm - keine Tests nötig
+# einkaufsliste.py ist ein interaktives Programm - keine automatisierten Tests
 
 
 # ===== primzahlen.py =====
 
 
-# primzahlen.py ist ein interaktives Programm - keine Tests nötig
+# primzahlen.py ist ein interaktives Programm - keine automatisierten Tests
 
 
 # ===== muster.py =====

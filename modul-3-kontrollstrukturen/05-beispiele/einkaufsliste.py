@@ -31,14 +31,19 @@ while True:
     wahl = input("\nWahl: ").strip()
 
     if wahl == "1":
-        # Artikel hinzufügen
-        artikel = input("\nArtikel: ").strip()
+        # Artikel hinzufügen – beliebig viele, getrennt durch Komma oder Semikolon
+        eingabe = input("\nArtikel (mehrere mit Komma trennen): ").strip()
 
-        if artikel == "":
+        if eingabe == "":
             print("❌ Artikel darf nicht leer sein!")
         else:
-            einkaufsliste.append(artikel)
-            print(f"✓ '{artikel}' hinzugefügt")
+            # Trennzeichen vereinheitlichen und aufteilen
+            eingabe_bereinigt = eingabe.replace(";", ",")
+            teile = [a.strip() for a in eingabe_bereinigt.split(",") if a.strip()]
+
+            for artikel in teile:
+                einkaufsliste.append(artikel)
+                print(f"✓ '{artikel}' hinzugefügt")
 
     elif wahl == "2":
         # Liste anzeigen

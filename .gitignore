@@ -1,3 +1,6 @@
+# macOS
+.DS_Store
+
 # Python-generated files
 __pycache__/
 *.py[oc]
@@ -18,5 +21,9 @@ tmp/
 # Local References not to be committed
 refs/
 
+# Planungsdokumente (generiert, nicht versioniert)
+docs/plans/
+
 # Claude settings (local configuration)
 .claude/settings.local.json
+.verba/

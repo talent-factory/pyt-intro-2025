@@ -36,7 +36,7 @@ Schauen Sie sich folgende Videos an (optional, aber empfohlen):
   - Bedingte Anweisungen
   - If/elif/else Syntax
 
-- **[Python While Loops](https://www.youtube.com/watch?v=6TEUXHNHnMY)** (10 Min)
+- **[Python While Loops](https://www.youtube.com/watch?v=ECduJk00mUU)** (10 Min)
   - While-Schleifen verstehen
   - Break und continue
 
