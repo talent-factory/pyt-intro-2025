@@ -12,6 +12,7 @@
 8. `einkaufsliste_advanced.py` - Erweiterte Einkaufsliste
 9. `woerterbuch.py` - Deutsch-Englisch Wörterbuch
 10. `datenanalyse.py` - Datenanalyse mit Funktionen
+11. `testen_beispiel.py` - Testbare Funktionen (Lernbeispiel für Testing)
 
 ## 🎯 Verwendung
 

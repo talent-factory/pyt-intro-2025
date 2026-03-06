@@ -8,8 +8,8 @@
 |---|-------|-------|---------|
 | 1 | [Funktionen definieren](./lektion-1-funktionen.md) | 50 Min | 2 |
 | 2 | [Parameter & Rückgabewerte](./lektion-2-parameter.md) | 50 Min | 2 |
-| 3 | [Listen vertiefen](./lektion-3-listen.md) | 50 Min | 2 |
-| 4 | [Dictionaries, Tupel & Sets](./lektion-4-dictionaries.md) | 50 Min | 2 |
+| 3 | [Listen, Dictionaries & Co.](./lektion-3-listen.md) | 50 Min | 2 |
+| 4 | [Funktionen testen mit pytest](./lektion-4-testing.md) | 50 Min | 2 |
 
 ## ⏱️ Zeitplan
 
@@ -25,16 +25,16 @@
 - 15-35: Live-Coding (3 Beispiele)
 - 35-50: Übungen 3-4
 
-### Lektion 3: Listen vertiefen (50 Min)
+### Lektion 3: Listen, Dictionaries & Co. (50 Min)
 
-- 00-15: Theorie (Listen-Methoden, Comprehensions)
+- 00-15: Theorie (Listen-Methoden, Dictionaries, Vergleich)
 - 15-35: Live-Coding (3 Beispiele)
 - 35-50: Übungen 5-6
 
-### Lektion 4: Dictionaries, Tupel & Sets (50 Min)
+### Lektion 4: Funktionen testen mit pytest (50 Min)
 
-- 00-15: Theorie (Datenstrukturen im Vergleich)
-- 15-35: Live-Coding (3 Beispiele)
+- 00-15: Theorie (Warum testen?, pytest Basics)
+- 15-35: Live-Coding (3 Funktionen testen)
 - 35-50: Übungen 7-8
 
 ## 🎯 Lernziele
@@ -46,6 +46,7 @@ Nach den 4 Lektionen können Sie:
 - ✅ Listen für komplexe Aufgaben einsetzen
 - ✅ Dictionaries für strukturierte Daten verwenden
 - ✅ Tupel und Sets verstehen
+- ✅ Einfache Tests mit pytest schreiben
 - ✅ Code modular strukturieren
 
 ## 📝 Übungen
@@ -59,6 +60,7 @@ Alle Übungen finden Sie in [02-uebungen](../02-uebungen/)
 - **Datenstrukturen vergleichen:** Wann nutzt man was?
 - **Praktische Beispiele:** Realistische Anwendungsfälle zeigen
 - **Fehler zeigen:** Häufige Fehler bei Funktionen demonstrieren
+- **Tests live zeigen:** Grüne und rote Ausgabe demonstrieren
 
 ## 🔗 Materialien
 

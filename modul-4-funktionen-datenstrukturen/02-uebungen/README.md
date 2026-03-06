@@ -12,8 +12,8 @@
 | 4 | Funktionen & Listen | 15 Min | ⭐⭐ Mittel |
 | 5 | Listen-Methoden | 15 Min | ⭐⭐ Mittel |
 | 6 | Dictionary-Operationen | 15 Min | ⭐⭐ Mittel |
-| 7 | Verschachtelte Daten | 15 Min | ⭐⭐⭐ Schwer |
-| 8 | Datenverarbeitung | 15 Min | ⭐⭐⭐ Schwer |
+| 7 | Erste Tests schreiben | 15 Min | ⭐⭐ Mittel |
+| 8 | Tests für Kontakte | 15 Min | ⭐⭐⭐ Schwer |
 
 ## 📝 Übungen
 
@@ -23,8 +23,8 @@
 4. [Übung 4: Funktionen & Listen](./uebung-4-listen.md)
 5. [Übung 5: Listen-Methoden](./uebung-5-methoden.md)
 6. [Übung 6: Dictionary-Operationen](./uebung-6-dict.md)
-7. [Übung 7: Verschachtelte Daten](./uebung-7-verschachtelt.md)
-8. [Übung 8: Datenverarbeitung](./uebung-8-verarbeitung.md)
+7. [Übung 7: Erste Tests schreiben](./uebung-7-testing.md)
+8. [Übung 8: Tests für Kontakte](./uebung-8-testing.md)
 
 ## 💡 Tipps
 
