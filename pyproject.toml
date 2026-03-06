@@ -72,7 +72,7 @@ ignore = [
 
 # In Test-Dateien: Erlaube ungenutzte Imports (für Import-Tests)
 # und type()-Vergleiche (für didaktische Zwecke)
-"tests/**/*.py" = ["F401", "E721"]
+"tests/**/*.py" = ["F401", "E721", "E402"]
 
 # In Formatierungs-Beispielen: Erlaube alte Formatierungs-Methoden
 # (für didaktische Zwecke - zeigt verschiedene Methoden)
