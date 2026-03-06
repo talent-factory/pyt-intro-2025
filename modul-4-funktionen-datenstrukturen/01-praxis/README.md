@@ -45,7 +45,6 @@ Nach den 4 Lektionen können Sie:
 - ✅ Parameter und Rückgabewerte nutzen
 - ✅ Listen für komplexe Aufgaben einsetzen
 - ✅ Dictionaries für strukturierte Daten verwenden
-- ✅ Tupel und Sets verstehen
 - ✅ Einfache Tests mit pytest schreiben
 - ✅ Code modular strukturieren
 

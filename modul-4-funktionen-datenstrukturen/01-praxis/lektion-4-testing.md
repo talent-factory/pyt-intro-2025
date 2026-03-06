@@ -245,7 +245,7 @@ Sie haben gelernt:
 
 - ✅ Funktionen definieren
 - ✅ Parameter und Return
-- ✅ Listen, Dictionaries, Tupel, Sets
+- ✅ Listen, Dictionaries & Co.
 - ✅ Funktionen testen mit pytest
 - ✅ Code modular strukturieren
 

@@ -11,10 +11,8 @@ Nach diesem Modul können Sie:
 2. ✅ Parameter und Rückgabewerte nutzen
 3. ✅ Listen für komplexe Datenverarbeitung einsetzen
 4. ✅ Dictionaries für strukturierte Daten verwenden
-5. ✅ Tupel und Sets verstehen und anwenden
-6. ✅ Code modular und wiederverwendbar strukturieren
-7. ✅ Komplexe Datenstrukturen kombinieren
-8. ✅ Einfache Tests mit pytest schreiben
+5. ✅ Code modular und wiederverwendbar strukturieren
+6. ✅ Einfache Tests mit pytest schreiben
 
 ## 📚 Modulstruktur
 
@@ -87,28 +85,10 @@ Bereiten Sie sich auf den Präsenztag vor.
 - Scope und Namensräume
 - Lambda-Funktionen (Einführung)
 
-### Listen vertiefen
-- Listen-Methoden (append, extend, insert, remove, pop)
-- List Comprehensions
-- Slicing und Indexierung
-- Listen sortieren und filtern
-- Verschachtelte Listen
-- Listen als Funktionsparameter
-
-### Dictionaries
-- Dictionary-Erstellung und -Zugriff
-- Keys, Values, Items
-- Dictionary-Methoden
-- Verschachtelte Dictionaries
-- Dictionary Comprehensions
-- Praktische Anwendungen
-
-### Tupel & Sets
-- Tupel: Unveränderbare Sequenzen
-- Wann Tupel statt Listen?
-- Sets: Eindeutige Elemente
-- Set-Operationen (Union, Intersection, Difference)
-- Konvertierung zwischen Datentypen
+### Listen, Dictionaries & Co.
+- Listen-Methoden (append, remove, pop, sort)
+- Dictionaries: Erstellen, Zugriff, Iteration
+- Vergleichstabelle (Liste vs. Tupel vs. Set vs. Dict)
 
 ### Testing mit pytest
 - Warum testen?

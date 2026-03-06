@@ -9,7 +9,7 @@ Sie bereiten sich auf den vierten Kurstag vor, indem Sie:
 
 1. Grundlagen von Funktionen verstehen
 2. Parameter und Rückgabewerte kennenlernen
-3. Datenstrukturen (Listen, Dictionaries, Tupel, Sets) verstehen
+3. Datenstrukturen (Listen, Dictionaries) verstehen
 4. Erste Experimente mit Funktionen durchführen
 5. Ihr Wissen mit einem Quiz überprüfen
 
@@ -27,7 +27,7 @@ Lesen Sie die folgenden Dokumente:
 - Rückgabewerte mit `return`
 - Listen vertiefen
 - Dictionaries (Schlüssel-Wert-Paare)
-- Tupel und Sets
+- Tupel und Sets (kurze Einführung)
 
 ### 2. Video-Tutorials (30-45 Min)
 
@@ -42,7 +42,7 @@ Schauen Sie sich folgende Videos an (optional, aber empfohlen):
   - Schlüssel-Wert-Paare
 
 - **[Python Data Structures](https://www.youtube.com/watch?v=R-HLU9Fl5ug)** (15 Min)
-  - Listen, Tupel, Sets
+  - Listen, Tupel, Sets im Überblick
   - Wann welche Struktur?
 
 ### 3. Erste Experimente (45-60 Min)
@@ -110,7 +110,7 @@ Nach der Vorbereitung sollten Sie:
 - ✅ Einfache Funktionen definieren können
 - ✅ Parameter und Rückgabewerte verstehen
 - ✅ Dictionaries erstellen und nutzen können
-- ✅ Unterschiede zwischen Listen, Tupeln und Sets kennen
+- ✅ Unterschiede zwischen Listen, Tupeln und Sets im Überblick kennen
 - ✅ Bereit für den Präsenztag sein
 
 Viel Erfolg bei der Vorbereitung! 🚀
