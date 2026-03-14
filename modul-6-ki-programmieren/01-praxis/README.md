@@ -11,7 +11,7 @@
 | 1 | [KI als Programmierpartner](./lektion-1-ki-als-partner.md) | 50 Min | 2 |
 | 2 | [Claude Code: Erste Schritte](./lektion-2-claude-code-einstieg.md) | 50 Min | 2 |
 | 3 | [Effektiv mit Claude Code arbeiten](./lektion-3-effektiv-arbeiten.md) | 50 Min | 2 |
-| 4 | [Showcase: Was noch möglich ist](./lektion-4-showcase.md) | 50 Min | 2 |
+| 4 | [Showcase: Was noch möglich ist](./lektion-4-showcase.md) | 50 Min | 2 + Diskussion |
 
 ## ⏱️ Zeitplan
 
@@ -37,7 +37,7 @@
 
 - 00-10: Theorie (Plugins, Skills, Ausblick)
 - 10-40: Live-Demo (Fortgeschrittene Anwendungsfälle)
-- 40-50: Diskussion und Fragen
+- 40-50: Übungen 7-8 + Diskussion
 
 ## 🎯 Lernziele
 

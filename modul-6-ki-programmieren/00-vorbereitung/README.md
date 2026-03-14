@@ -52,6 +52,7 @@ Vor dem Präsenztag sollten Sie:
 - [ ] Erste Experimente durchgeführt
 - [ ] Quiz mit mindestens 7/10 Punkten bestanden
 - [ ] GitHub-Account vorhanden und funktionsfähig
+- [ ] Claude Code Account vorbereitet (Anthropic-Account oder GitHub-Login — Details vom Dozenten)
 - [ ] Module 1-5 Konzepte wiederholt
 - [ ] Fragen notiert für den Präsenztag
 

@@ -7,13 +7,13 @@
 | # | Titel | Lektion | Schwierigkeit | Konzepte |
 |---|-------|---------|---------------|----------|
 | 1 | [Prompt-Werkstatt](./uebung-1-prompt-werkstatt.md) | 1 | ⭐ Einfach | Prompting |
-| 2 | [Code erklären lassen](./uebung-2-code-erklaeren.md) | 2 | ⭐ Einfach | Code-Erklärung |
-| 3 | [Bug-Jagd mit KI](./uebung-3-bug-jagd.md) | 3 | ⭐⭐ Mittel | Debugging |
-| 4 | [KI-gestützt programmieren](./uebung-4-ki-programmieren.md) | 3 | ⭐⭐ Mittel | Code-Generierung |
+| 2 | [Code erklären lassen](./uebung-2-code-erklaeren.md) | 1 | ⭐ Einfach | Code-Erklärung |
+| 3 | [Bug-Jagd mit KI](./uebung-3-bug-jagd.md) | 2 | ⭐⭐ Mittel | Debugging |
+| 4 | [KI-gestützt programmieren](./uebung-4-ki-gestuetzt-programmieren.md) | 2 | ⭐⭐ Mittel | Code-Generierung |
 | 5 | [Lösungsvergleich](./uebung-5-loesungsvergleich.md) | 3 | ⭐⭐ Mittel | Bewertung |
-| 6 | [CLAUDE.md schreiben](./uebung-6-claude-md.md) | 2 | ⭐⭐⭐ Schwer | Projektkontext |
-| 7 | [Refactoring mit KI](./uebung-7-refactoring.md) | 3 | ⭐⭐⭐ Schwer | Refactoring |
-| 8 | [KI-Grenzen testen](./uebung-8-ki-grenzen.md) | 4 | ⭐⭐⭐ Schwer | Grenzen |
+| 6 | [CLAUDE.md schreiben](./uebung-6-claude-md-schreiben.md) | 3 | ⭐⭐⭐ Schwer | Projektkontext |
+| 7 | [Refactoring mit KI](./uebung-7-refactoring-mit-ki.md) | 4 | ⭐⭐⭐ Schwer | Refactoring |
+| 8 | [KI-Grenzen testen](./uebung-8-ki-grenzen-testen.md) | 4 | ⭐⭐⭐ Schwer | Grenzen |
 
 ## ⏱️ Zeitplan
 
