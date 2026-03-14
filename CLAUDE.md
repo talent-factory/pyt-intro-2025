@@ -16,8 +16,8 @@ pyt-intro-2025/
 ├── modul-1-einstieg/                   ✅ Vollständig
 ├── modul-2-datentypen/                 ✅ Vollständig
 ├── modul-3-kontrollstrukturen/         ✅ Vollständig
-├── modul-4-funktionen-datenstrukturen/ ⚠️ In Entwicklung
-├── modul-5-dateien-module/             ⚠️ In Entwicklung
+├── modul-4-funktionen-datenstrukturen/ ✅ Vollständig
+├── modul-5-dateien-module/             ✅ Vollständig
 ├── modul-6-ki-programmieren/           ⚠️ Zusatzmodul, in Entwicklung
 ├── refs/                               (Referenzmaterialien)
 ├── .devcontainer/                      (GitHub Codespaces Config)
@@ -56,7 +56,7 @@ modul-X-thema/
 └── README.md            # Modul-Übersicht
 ```
 
-## Entwicklungsstand (Stand: 2025-11-27)
+## Entwicklungsstand (Stand: 2026-03-14)
 
 ### ✅ Vollständig produktionsreif
 
@@ -64,12 +64,12 @@ modul-X-thema/
 |-------|--------|----------------|-----------|---------|
 | **Modul 1** | ✅ | 10 vollständig | 4 | 4 |
 | **Modul 2** | ✅ | 9 vollständig | 4 | 8 |
-| **Modul 3** | ✅ | 10 vollständig | 4 | 8 |
-| **Modul 4** | ✅ | 10 vollständig | 4 | 8 |
-| **Modul 5** | ✅ | 10 vollständig | 4 | 8 |
-| **Modul 6** *(Zusatz)* | ⚠️ | 10 in Entwicklung | 4 | 8 |
+| **Modul 3** | ✅ | 14 vollständig | 4 | 8 |
+| **Modul 4** | ✅ | 15 vollständig | 4 | 8 |
+| **Modul 5** | ✅ | 11 vollständig | 4 | 8 |
+| **Modul 6** *(Zusatz)* | ✅ | 10 vollständig | 4 | 8 |
 
-**Gesamt:** 59 Python-Programme (49 vollständig, 10 in Entwicklung), alle Module mit 4 Lektionen
+**Gesamt:** 69 Python-Programme, alle Module mit 4 Lektionen
 
 ## Naming Conventions
 
@@ -198,7 +198,7 @@ Jedes README sollte enthalten:
 ## Nächste Schritte (Priorität)
 
 1. **Testing erweitern:**
-   - Tests für alle 49 Python-Programme
+   - Tests für alle 69 Python-Programme
    - pytest-Framework bereits eingerichtet
    - CI/CD Pipeline (GitHub Actions)
 
@@ -224,4 +224,4 @@ Jedes README sollte enthalten:
 
 ---
 
-**Letzte Aktualisierung:** 2025-11-19
+**Letzte Aktualisierung:** 2026-03-14
