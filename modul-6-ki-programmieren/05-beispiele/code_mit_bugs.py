@@ -54,16 +54,11 @@ def ist_bestanden(punkte):
         bool: True wenn bestanden
     """
     # HIER IST EIN BUG - kannst du ihn finden?
-    # < statt <= bedeutet: 60 Punkte gelten als nicht bestanden!
-    if punkte < 60:  # BUG: sollte <= 59 oder < 60... nein, Logik ist falsch
+    if punkte < 60:
         return False
-    # Eigentlich ist die Logik hier korrekt, aber schauen wir nochmal:
-    # Wir wollen: bestanden AB 60 Punkte
-    # punkte < 60 → nicht bestanden → das ist korrekt
-    # ABER: Wir verwenden > statt >= beim Check:
     if punkte > 60:  # BUG: sollte >= 60 sein (60 ist auch bestanden!)
         return True
-    return False
+    return False  # Bei genau 60 Punkten: gibt False zurück, obwohl bestanden!
 
 
 # ============================================================

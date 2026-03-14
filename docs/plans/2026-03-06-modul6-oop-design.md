@@ -2,8 +2,8 @@
 
 **Datum:** 2026-03-06
 **Status:** Genehmigt
-**Hinweis:** Dieses Modul war ursprünglich als Modul 7 geplant und wurde am 2026-03-14
-auf Modul 7 verschoben, da Modul 7 nun "KI-gestütztes Programmieren" behandelt.
+**Hinweis:** Dieses Modul war ursprünglich als Modul 6 geplant und wurde am 2026-03-14
+auf Modul 7 verschoben, da Modul 6 nun "KI-gestütztes Programmieren" behandelt.
 Siehe: `docs/plans/2026-03-14-modul6-ki-programmieren-design.md`
 **Autor:** Daniel Senften / Claude
 

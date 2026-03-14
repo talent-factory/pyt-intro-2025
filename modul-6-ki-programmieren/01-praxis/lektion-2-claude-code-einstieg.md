@@ -50,7 +50,7 @@ Dieses Projekt ist ein Python-Einführungskurs...
 - Antworten passen zum **Stil** und zur **Struktur** des Projekts
 
 **Beispiel:** Die CLAUDE.md dieses Kursprojekts enthält:
-- Projektstruktur (5 Module + Modul 6)
+- Projektstruktur (7 Module)
 - Naming Conventions (deutsche Namen, snake_case)
 - Code-Stil Richtlinien (didaktischer Code)
 - Git Workflow (Emoji Conventional Commits)
@@ -98,7 +98,7 @@ claude
 Erkläre mir dieses Projekt in 3 Sätzen.
 ```
 
-**Erwartete Antwort:** Claude Code beschreibt den Python-Einführungskurs, die 6 Module, die Zielgruppe (Anfänger) — alles basierend auf der CLAUDE.md und der Projektstruktur.
+**Erwartete Antwort:** Claude Code beschreibt den Python-Einführungskurs, die 7 Module, die Zielgruppe (Anfänger) — alles basierend auf der CLAUDE.md und der Projektstruktur.
 
 ### Schritt 3: CLAUDE.md erkunden (5 Min)
 

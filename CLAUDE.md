@@ -71,7 +71,7 @@ modul-X-thema/
 | **Modul 6** | ⚠️ | 10 in Entwicklung | 4 | 8 |
 | **Modul 7** | 📋 | - geplant | 4 | 8 |
 
-**Gesamt:** 49 vollständige Python-Programme, alle Module mit 4 Lektionen
+**Gesamt:** 59 Python-Programme (49 vollständig, 10 in Entwicklung), alle Module mit 4 Lektionen
 
 ## Naming Conventions
 
