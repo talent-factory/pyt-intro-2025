@@ -168,7 +168,7 @@ def zeige_vergleich():
     │ Aspekt         │ Ohne CLAUDE.md   │ Mit CLAUDE.md        │
     ├────────────────┼──────────────────┼──────────────────────┤
     │ Sprache        │ Englisch         │ Deutsch              │
-    │ Funktionsname  │ calculate_avg    │ berechne_durchschnitt│
+    │ Funktionsname  │ calculate_average│ berechne_durchschnitt│
     │ Parameter      │ numbers          │ zahlen               │
     │ Docstring      │ 1 Zeile, EN     │ Mehrzeilig, DE       │
     │ Kommentare     │ Kaum/Keine       │ Ausführlich          │

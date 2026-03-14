@@ -99,8 +99,8 @@ def berechne_bmi_ki_version(gewicht_kg, groesse_cm):
 # WAS SCHIEF GING:
 # Die KI kannte die WHO-Kategorien nicht genau und hat
 # ähnliche, aber falsche Grenzwerte generiert.
-# Jemand der 175cm gross und 77kg schwer ist:
-#   BMI = 25.1 → KI sagt "Übergewicht", WHO sagt "Normalgewicht... knapp"
+# Jemand der 175cm gross und 74kg schwer ist:
+#   BMI = 24.2 → KI sagt "Übergewicht" (Grenze 24.0), WHO sagt "Normalgewicht" (Grenze 25.0)
 #
 # WAS WIR LERNEN:
 # Bei Fachwissen (Medizin, Recht, Finanzen) IMMER die

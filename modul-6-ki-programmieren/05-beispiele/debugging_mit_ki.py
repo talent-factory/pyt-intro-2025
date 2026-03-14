@@ -16,11 +16,11 @@ Konzepte:
 # BUG 1: Falsches Ergebnis bei der Durchschnittsberechnung
 # ============================================================
 
-# BUG 1: Die Funktion gibt bei [10, 20, 30] den Wert 30 zurück
-#         statt 20. Der Durchschnitt ist falsch.
+# BUG 1: Die Funktion gibt bei [10, 20, 30] den Wert 10.0 zurück
+#         statt 20.0. Der Durchschnitt ist falsch.
 #
 # KI-PROMPT: "Meine Funktion berechne_schnitt() gibt bei
-#   [10, 20, 30] den Wert 30 statt 20 zurück. Hier ist
+#   [10, 20, 30] den Wert 10.0 statt 20.0 zurück. Hier ist
 #   der Code: [Code eingefügt]. Findest du den Fehler?"
 #
 # KI-ANTWORT: "Der Bug ist in der Schleife: Du verwendest
@@ -68,13 +68,12 @@ def berechne_schnitt_fix(zahlen):
 #   'Ungenügend' zurück, egal ob ich 6.0 oder 1.0 eingebe.
 #   Was stimmt nicht?"
 #
-# KI-ANTWORT: "Du hast die Reihenfolge der if-elif-Bedingungen
-#   falsch herum. Du prüfst zuerst 'note < 4.0' - das trifft
-#   auf die meisten Noten nicht zu, aber durch die elif-Kette
-#   wird die Variable 'bewertung' nie gesetzt, wenn die erste
-#   Bedingung nicht zutrifft. Eigentlich ist das Problem: du
-#   prüfst aufsteigend statt absteigend, dadurch matcht >= 1.0
-#   immer zuerst."
+# KI-ANTWORT: "Die Bedingung 'note >= 1.0' steht an erster
+#   Stelle und trifft auf fast jede gültige Note zu. Dadurch
+#   wird immer 'Ungenügend' zugewiesen, bevor die spezifischeren
+#   Bedingungen (>= 4.0, >= 5.0, >= 5.5) überhaupt geprüft
+#   werden. Die Reihenfolge muss umgekehrt werden: höchste
+#   Note zuerst prüfen."
 #
 # FIX: Reihenfolge der Bedingungen umkehren (höchste zuerst prüfen)
 
