@@ -7,7 +7,7 @@
 **Name:** Python Programmierung Basis - Einführungskurs 2025
 **Repository:** pyt-intro-2025
 **Zielgruppe:** Absolute Anfänger ohne Programmierkenntnisse
-**Umfang:** 7 Module, je 1 Präsenztag, ~70-85 Stunden gesamt
+**Umfang:** 5 Module + 1 Zusatzmodul, je 1 Präsenztag, ~60-73 Stunden gesamt
 
 ## Projektstruktur
 
@@ -18,8 +18,7 @@ pyt-intro-2025/
 ├── modul-3-kontrollstrukturen/         ✅ Vollständig
 ├── modul-4-funktionen-datenstrukturen/ ⚠️ In Entwicklung
 ├── modul-5-dateien-module/             ⚠️ In Entwicklung
-├── modul-6-ki-programmieren/              ⚠️ In Entwicklung
-├── modul-7-oop/                           📋 Geplant
+├── modul-6-ki-programmieren/           ⚠️ Zusatzmodul, in Entwicklung
 ├── refs/                               (Referenzmaterialien)
 ├── .devcontainer/                      (GitHub Codespaces Config)
 ├── README.md                           (Haupt-Dokumentation)
@@ -68,8 +67,7 @@ modul-X-thema/
 | **Modul 3** | ✅ | 10 vollständig | 4 | 8 |
 | **Modul 4** | ✅ | 10 vollständig | 4 | 8 |
 | **Modul 5** | ✅ | 10 vollständig | 4 | 8 |
-| **Modul 6** | ⚠️ | 10 in Entwicklung | 4 | 8 |
-| **Modul 7** | 📋 | - geplant | 4 | 8 |
+| **Modul 6** *(Zusatz)* | ⚠️ | 10 in Entwicklung | 4 | 8 |
 
 **Gesamt:** 59 Python-Programme (49 vollständig, 10 in Entwicklung), alle Module mit 4 Lektionen
 

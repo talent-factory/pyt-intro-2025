@@ -17,7 +17,7 @@ Nach Abschluss des Kurses können Sie:
 
 ## 📚 Kursstruktur
 
-Der Kurs umfasst **7 Module** mit je **4 Lektionen à 50 Minuten**:
+Der Kurs umfasst **5 Module + 1 Zusatzmodul** mit je **4 Lektionen à 50 Minuten**:
 
 ### [Modul 1: Einstieg in die Programmierung](./modul-1-einstieg/)
 
@@ -64,7 +64,7 @@ Der Kurs umfasst **7 Module** mit je **4 Lektionen à 50 Minuten**:
 - Module und Modularisierung
 - Mini-Projekt-Workshop
 
-### [Modul 6: KI-gestütztes Programmieren](./modul-6-ki-programmieren/)
+### [Modul 6: KI-gestütztes Programmieren](./modul-6-ki-programmieren/) *(Zusatzmodul)*
 
 **KI als Programmierpartner**
 
@@ -72,15 +72,6 @@ Der Kurs umfasst **7 Module** mit je **4 Lektionen à 50 Minuten**:
 - Claude Code: Installation und erste Schritte
 - Effektives Prompting und iteratives Arbeiten
 - Showcase: Plugins, Skills und Agenten
-
-### [Modul 7: Objektorientierte Programmierung](./modul-7-oop/)
-
-**Klassen und Objekte**
-
-- Klassen und Objekte verstehen
-- Methoden und \_\_str\_\_ implementieren
-- Klassen mit pytest testen
-- Mini-Projekt: Kontaktverwaltung
 
 ## 🎓 Zielgruppe
 
@@ -209,7 +200,7 @@ git merge develop
 - **Vorbereitung:** 2-3 Stunden pro Modul
 - **Präsenz:** 4 Stunden pro Tag (inkl. Pausen)
 - **Nachbearbeitung:** 4-6 Stunden pro Modul
-- **Gesamt:** ca. 70-85 Stunden über 7 Wochen
+- **Gesamt:** ca. 60-73 Stunden über 6 Wochen
 
 ## 📞 Support & Kontakt
 

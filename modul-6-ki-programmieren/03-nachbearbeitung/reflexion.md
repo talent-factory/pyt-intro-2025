@@ -89,7 +89,7 @@ Reflektieren Sie Ihren Lernfortschritt und identifizieren Sie Stärken und Schw�
 
 ### 6. Nächste Schritte
 
-**Was möchten Sie in Modul 7 lernen?**
+**Was möchten Sie als Nächstes lernen?**
 
 -
 -
