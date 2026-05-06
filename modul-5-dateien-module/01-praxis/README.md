@@ -1,40 +1,81 @@
-# Praxis-Lektionen Modul 5
+# Praxis: Modul 5
 
-**Format:** 4 Lektionen à 50 Minuten
+**Dauer:** 4 Lektionen à 50 Minuten
+
+## 📋 Übersicht
+
+Jede Lektion folgt dem gleichen Aufbau:
+
+- **Theorie** (15 Min.) - Konzepte verstehen
+- **Live-Coding** (20 Min.) - Dozent zeigt Best Practices
+- **Übung** (15 Min.) - Studierende üben selbst
 
 ## 📚 Lektionen
 
-1. **[Lektion 1: Dateien lesen & schreiben](./lektion-1-dateien.md)** (50 Min)
-   - Textdateien öffnen und schliessen
-   - Lesen mit verschiedenen Methoden
-   - In Dateien schreiben
-   - Context Manager (`with`)
+### [Lektion 1: Dateien lesen & schreiben](./lektion-1-dateien.md)
 
-2. **[Lektion 2: CSV-Dateien](./lektion-2-csv.md)** (50 Min)
-   - CSV-Format verstehen
-   - CSV lesen und schreiben
-   - DictReader und DictWriter
-   - Datenverarbeitung
+**Thema:** Persistente Datenspeicherung
 
-3. **[Lektion 3: JSON-Dateien](./lektion-3-json.md)** (50 Min)
-   - JSON-Format verstehen
-   - JSON lesen und schreiben
-   - Python ↔ JSON Konvertierung
-   - Verschachtelte Daten
+- Textdateien öffnen und schliessen
+- Lesen mit verschiedenen Methoden
+- In Dateien schreiben
+- Context Manager (`with`)
 
-4. **[Lektion 4: Module & Abschluss-Projekt](./lektion-4-module.md)** (50 Min)
-   - Module importieren
-   - Eigene Module erstellen
-   - Standard-Bibliothek nutzen
-   - Abschluss-Projekt (Todo-App, Kontakte oder Notizen)
+**Übungen:** [Notizen-App](../02-uebungen/uebung-1-notizen.md), [Textstatistik](../02-uebungen/uebung-2-statistik.md)
+
+---
+
+### [Lektion 2: CSV-Dateien](./lektion-2-csv.md)
+
+**Thema:** Tabellarische Daten verarbeiten
+
+- CSV-Format verstehen
+- CSV lesen und schreiben
+- `DictReader` und `DictWriter`
+- Datenverarbeitung
+
+**Übungen:** [Produktliste CSV](../02-uebungen/uebung-3-produkte.md), [Notenauswertung CSV](../02-uebungen/uebung-4-noten.md)
+
+---
+
+### [Lektion 3: JSON-Dateien](./lektion-3-json.md)
+
+**Thema:** Strukturierte Daten austauschen
+
+- JSON-Format verstehen
+- JSON lesen und schreiben
+- Python ↔ JSON Konvertierung
+- Verschachtelte Daten
+
+**Übungen:** [Aufgabenliste JSON](../02-uebungen/uebung-5-aufgaben.md), [Konfiguration JSON](../02-uebungen/uebung-6-config.md)
+
+---
+
+### [Lektion 4: Module & Abschluss-Projekt](./lektion-4-module.md)
+
+**Thema:** Code wiederverwenden und Projekt umsetzen
+
+- Module importieren
+- Eigene Module erstellen
+- Standard-Bibliothek nutzen
+- Abschluss-Projekt (Todo-App, Kontakte oder Notizen)
+
+**Übungen:** [Eigenes Modul](../02-uebungen/uebung-7-modul.md), [Standard-Module](../02-uebungen/uebung-8-stdlib.md)
+
+---
 
 ## ⏱️ Zeitplan
 
-| Zeit | Aktivität |
-|------|-----------|
-| 09:00 - 09:50 | Lektion 1: Dateien |
-| 10:00 - 10:50 | Lektion 2: CSV |
-| 11:00 - 11:50 | Lektion 3: JSON |
-| 13:00 - 13:50 | Lektion 4: Module & Projekt |
+| Block | Thema | Dauer |
+|-------|-------|-------|
+| Lektion 1 | Dateien | 50 Min. |
+| Pause | – | 10 Min. |
+| Lektion 2 | CSV | 50 Min. |
+| Pause | – | 10 Min. |
+| Lektion 3 | JSON | 50 Min. |
+| Pause | – | 10 Min. |
+| Lektion 4 | Module & Projekt | 50 Min. |
 
-**Gesamt:** 200 Minuten (3h 20min)
+**Gesamt:** 200 Minuten Unterricht (3 Std. 20 Min.) + 30 Min. Pausen
+
+> Die konkreten Uhrzeiten richten sich nach dem jeweiligen Kursplan (Tages- oder Abendkurs).

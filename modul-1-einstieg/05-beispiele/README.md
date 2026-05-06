@@ -1,6 +1,6 @@
 # Beispiele: Modul 1
 
-Python-Code-Beispiele für Dozenten und zum Selbststudium.
+Vollständige Beispielprogramme für Modul 1.
 
 ## 📁 Übersicht
 

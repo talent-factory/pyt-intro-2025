@@ -1,6 +1,6 @@
-# Übungen Modul 4
+# Übungen: Modul 4
 
-**Während der Präsenzzeit**
+**Gesamt:** 8 Übungen (je 15 Minuten)
 
 ## 🎯 Übersicht
 

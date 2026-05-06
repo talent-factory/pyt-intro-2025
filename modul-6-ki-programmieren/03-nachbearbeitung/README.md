@@ -1,6 +1,7 @@
-# Nachbearbeitung Modul 6
+# Nachbearbeitung: Modul 6
 
 **Zeitaufwand:** 4-6 Stunden
+**Deadline:** Kursabschluss
 
 ## 🎯 Ziel
 

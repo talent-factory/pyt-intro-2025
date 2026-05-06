@@ -1,6 +1,7 @@
-# Nachbearbeitung Modul 3
+# Nachbearbeitung: Modul 3
 
 **Zeitaufwand:** 4-6 Stunden
+**Deadline:** Vor Modul 4
 
 ## 🎯 Ziel
 

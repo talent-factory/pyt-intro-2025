@@ -1,7 +1,7 @@
 # Modul 4: Funktionen & Datenstrukturen
 
 **Dauer:** 1 Tag (4 Lektionen à 50 Minuten)
-**Voraussetzung:** Module 1-3
+**Voraussetzung:** Module 1-3 abgeschlossen
 
 ## 🎯 Lernziele
 

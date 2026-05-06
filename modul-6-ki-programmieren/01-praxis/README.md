@@ -1,4 +1,4 @@
-# Präsenzunterricht Modul 6
+# Praxis: Modul 6
 
 **Dauer:** 4 Lektionen à 50 Minuten
 
@@ -14,6 +14,22 @@
 | 4 | [Showcase: Was noch möglich ist](./lektion-4-showcase.md) | 50 Min | 2 + Diskussion |
 
 ## ⏱️ Zeitplan
+
+| Block | Thema | Dauer |
+|-------|-------|-------|
+| Lektion 1 | KI als Programmierpartner | 50 Min. |
+| Pause | – | 10 Min. |
+| Lektion 2 | Claude Code: Erste Schritte | 50 Min. |
+| Pause | – | 10 Min. |
+| Lektion 3 | Effektiv mit Claude Code arbeiten | 50 Min. |
+| Pause | – | 10 Min. |
+| Lektion 4 | Showcase: Was noch möglich ist | 50 Min. |
+
+**Gesamtdauer:** 3 Std. 20 Min. Unterricht + 30 Min. Pausen
+
+> Die konkreten Uhrzeiten richten sich nach dem jeweiligen Kursplan (Tages- oder Abendkurs).
+
+## 📋 Lektionsstruktur
 
 ### Lektion 1: KI als Programmierpartner (50 Min)
 

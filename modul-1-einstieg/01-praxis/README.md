@@ -1,13 +1,13 @@
 # Praxis: Modul 1
 
-**4 Lektionen à 50 Minuten**
+**Dauer:** 4 Lektionen à 50 Minuten
 
 ## 📋 Übersicht
 
 Jede Lektion folgt dem gleichen Aufbau:
 
 - **Theorie** (15 Min.) - Konzepte verstehen
-- **Live-Demo** (20 Min.) - Dozent zeigt Best Practices
+- **Live-Coding** (20 Min.) - Dozent zeigt Best Practices
 - **Übung** (15 Min.) - Studierende üben selbst
 
 ## 📚 Lektionen
@@ -66,17 +66,19 @@ Jede Lektion folgt dem gleichen Aufbau:
 
 ## ⏱️ Zeitplan
 
-| Zeit | Lektion | Thema |
-|------|---------|-------|
-| 08:00 - 08:50 | Lektion 1 | Was ist Programmieren? |
-| 08:50 - 09:00 | Pause | 10 Min. |
-| 09:00 - 09:50 | Lektion 2 | Python Shell |
-| 09:50 - 10:00 | Pause | 10 Min. |
-| 10:00 - 10:50 | Lektion 3 | VS Code |
-| 10:50 - 11:00 | Pause | 10 Min. |
-| 11:00 - 11:50 | Lektion 4 | Variablen & Zahlen |
+| Block | Thema | Dauer |
+|-------|-------|-------|
+| Lektion 1 | Was ist Programmieren? | 50 Min. |
+| Pause | – | 10 Min. |
+| Lektion 2 | Python Shell | 50 Min. |
+| Pause | – | 10 Min. |
+| Lektion 3 | VS Code | 50 Min. |
+| Pause | – | 10 Min. |
+| Lektion 4 | Variablen & Zahlen | 50 Min. |
 
 **Gesamtdauer:** 3 Std. 20 Min. Unterricht + 30 Min. Pausen
+
+> Die konkreten Uhrzeiten richten sich nach dem jeweiligen Kursplan (Tages- oder Abendkurs).
 
 ---
 

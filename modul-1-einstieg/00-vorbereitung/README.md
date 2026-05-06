@@ -1,7 +1,7 @@
 # Vorbereitung: Modul 1
 
-**Zeitaufwand:** 2-3 Stunden  
-**Deadline:** Vor dem ersten Präsenztag
+**Zeitaufwand:** 2-3 Stunden
+**Deadline:** Vor dem Präsenztag
 
 ## 🎯 Ziele der Vorbereitung
 

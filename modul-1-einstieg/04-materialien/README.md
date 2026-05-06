@@ -1,6 +1,6 @@
 # Materialien: Modul 1
 
-Zusätzliche Lernmaterialien und Referenzen.
+Zusatzmaterialien und Referenzen für Modul 1.
 
 ## 📚 Übersicht
 

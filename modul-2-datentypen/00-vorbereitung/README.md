@@ -1,6 +1,7 @@
-# Vorbereitung Modul 2
+# Vorbereitung: Modul 2
 
 **Zeitaufwand:** 2-3 Stunden
+**Deadline:** Vor dem Präsenztag
 
 ## 🎯 Ziel der Vorbereitung
 

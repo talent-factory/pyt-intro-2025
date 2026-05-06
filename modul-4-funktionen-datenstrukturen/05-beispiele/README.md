@@ -1,4 +1,6 @@
-# Beispielprogramme Modul 4
+# Beispiele: Modul 4
+
+Vollständige Beispielprogramme für Modul 4.
 
 ## 💻 Programme
 

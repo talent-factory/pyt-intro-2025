@@ -1,4 +1,4 @@
-# Beispiele Modul 2
+# Beispiele: Modul 2
 
 Vollständige Beispielprogramme für Modul 2.
 

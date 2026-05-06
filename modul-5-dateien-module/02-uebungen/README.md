@@ -1,6 +1,6 @@
-# Übungen Modul 5
+# Übungen: Modul 5
 
-**Format:** 8 Übungen à 15 Minuten
+**Gesamt:** 8 Übungen (je 15 Minuten)
 
 ## 📝 Übungsliste
 

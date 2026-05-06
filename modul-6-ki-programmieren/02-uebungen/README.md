@@ -1,4 +1,4 @@
-# Übungen Modul 6
+# Übungen: Modul 6
 
 **Gesamt:** 8 Übungen (je 15 Minuten)
 

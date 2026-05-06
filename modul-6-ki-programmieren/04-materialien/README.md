@@ -1,4 +1,4 @@
-# Materialien Modul 6
+# Materialien: Modul 6
 
 Zusatzmaterialien und Referenzen für Modul 6.
 

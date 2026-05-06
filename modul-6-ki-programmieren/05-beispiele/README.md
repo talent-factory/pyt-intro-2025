@@ -1,4 +1,4 @@
-# Beispiele Modul 6
+# Beispiele: Modul 6
 
 Vollständige Beispielprogramme für Modul 6.
 

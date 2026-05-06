@@ -1,4 +1,4 @@
-# Vorbereitung Modul 5
+# Vorbereitung: Modul 5
 
 **Zeitaufwand:** 2-3 Stunden
 **Deadline:** Vor dem Präsenztag

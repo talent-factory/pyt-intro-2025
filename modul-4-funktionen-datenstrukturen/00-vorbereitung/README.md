@@ -1,4 +1,4 @@
-# Vorbereitung Modul 4
+# Vorbereitung: Modul 4
 
 **Zeitaufwand:** 2-3 Stunden
 **Deadline:** Vor dem Präsenztag

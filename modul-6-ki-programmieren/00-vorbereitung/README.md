@@ -1,4 +1,4 @@
-# Vorbereitung Modul 6
+# Vorbereitung: Modul 6
 
 **Zeitaufwand:** 2-3 Stunden
 **Deadline:** Vor dem Präsenztag

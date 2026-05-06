@@ -1,4 +1,4 @@
-# Materialien Modul 3
+# Materialien: Modul 3
 
 Zusatzmaterialien und Referenzen für Modul 3.
 

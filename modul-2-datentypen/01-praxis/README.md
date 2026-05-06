@@ -1,6 +1,6 @@
-# Praxis: Präsenzunterricht Modul 2
+# Praxis: Modul 2
 
-**Dauer:** 4 Lektionen à 50 Minuten = 200 Minuten (3h 20min)
+**Dauer:** 4 Lektionen à 50 Minuten
 
 ## 🎯 Lernziele
 
@@ -12,68 +12,85 @@ Nach den Praxis-Lektionen können Sie:
 - Interaktive Programme mit `input()` erstellen
 - Erweiterte String-Methoden und Validierung anwenden
 
-## 📚 Lektionsübersicht
+## 📋 Übersicht
 
-### [Lektion 1: Strings - Texte verarbeiten](./lektion-1-strings.md) (50 Min)
+Jede Lektion folgt dem gleichen Aufbau:
 
-**Inhalt:**
+- **Theorie** (15 Min.) - Konzepte verstehen
+- **Live-Coding** (20 Min.) - Dozent zeigt Best Practices
+- **Übung** (15 Min.) - Studierende üben selbst
+
+## 📚 Lektionen
+
+### [Lektion 1: Strings – Texte verarbeiten](./lektion-1-strings.md)
+
+**Thema:** Texte erstellen, formatieren und manipulieren
+
 - String-Erstellung und Konkatenation
 - String-Indexierung und Slicing
-- String-Methoden (`.upper()`, `.lower()`, `.strip()`, etc.)
+- String-Methoden (`.upper()`, `.lower()`, `.strip()`)
 - F-Strings für moderne Formatierung
 
-**Format:**
-- 15 Min: Theorie und Demonstration
-- 20 Min: Live-Coding mit Beispielen
-- 15 Min: Übung 1 (Textformatierung)
+**Übung:** [Textformatierung](../02-uebungen/uebung-1-textformatierung.md)
 
 ---
 
-### [Lektion 2: Boolsche Werte und Vergleiche](./lektion-2-booleans.md) (50 Min)
+### [Lektion 2: Boolsche Werte und Vergleiche](./lektion-2-booleans.md)
 
-**Inhalt:**
+**Thema:** Wahrheitswerte und logische Operationen
+
 - `True` und `False`
 - Vergleichsoperatoren (`==`, `!=`, `<`, `>`, `<=`, `>=`)
 - Logische Operatoren (`and`, `or`, `not`)
 - Wahrheitswerte anderer Typen
 
-**Format:**
-- 15 Min: Theorie und Demonstration
-- 20 Min: Live-Coding mit Beispielen
-- 15 Min: Übung 2 (Vergleiche)
+**Übung:** [Vergleiche und Bedingungen](../02-uebungen/uebung-2-vergleiche.md)
 
 ---
 
-### [Lektion 3: Typkonvertierung und Input/Output](./lektion-3-typkonvertierung.md) (50 Min)
+### [Lektion 3: Typkonvertierung und Input/Output](./lektion-3-typkonvertierung.md)
 
-**Inhalt:**
+**Thema:** Datentypen umwandeln und mit Benutzern interagieren
+
 - Datentypen ermitteln mit `type()`
 - Konvertierung: `int()`, `float()`, `str()`, `bool()`
 - `input()` für Benutzereingaben
 - Fehlerbehandlung bei Konvertierung
 
-**Format:**
-- 15 Min: Theorie und Demonstration
-- 20 Min: Live-Coding mit Beispielen
-- 15 Min: Übung 3 (Benutzereingaben)
+**Übung:** [Benutzereingaben verarbeiten](../02-uebungen/uebung-3-input.md)
 
 ---
 
-### [Lektion 4: Interaktive Programme & Vertiefung](./lektion-4-interaktive-programme.md) (50 Min)
+### [Lektion 4: Interaktive Programme & Vertiefung](./lektion-4-interaktive-programme.md)
 
-**Inhalt:**
-- Kombination aller Konzepte
+**Thema:** Konzepte kombinieren und vertiefen
+
+- Kombination aller bisherigen Konzepte
 - Eingabe-Validierung mit String-Methoden
 - Benutzerfreundliche Ausgaben
-- Fehlerbehandlung (try-except)
-- Praktische Anwendungen (BMI-Rechner, Passwort-Validator)
+- Fehlerbehandlung (`try`/`except`)
 
-**Format:**
-- 10 Min: Theorie und Best Practices
-- 25 Min: Live-Coding (3 Beispiele)
-- 15 Min: Übungen 4-8
+**Übung:** [Interaktiver Rechner](../02-uebungen/uebung-4-rechner.md)
+
+> **Vertiefungsübungen** (Übungen 5–8) für schnelle Studierende: [String-Methoden](../02-uebungen/uebung-5-string-methoden.md), [Formatierung](../02-uebungen/uebung-6-formatierung.md), [Input-Validierung](../02-uebungen/uebung-7-validierung.md), [Textanalyse](../02-uebungen/uebung-8-textanalyse.md)
 
 ---
+
+## ⏱️ Zeitplan
+
+| Block | Thema | Dauer |
+|-------|-------|-------|
+| Lektion 1 | Strings – Texte verarbeiten | 50 Min. |
+| Pause | – | 10 Min. |
+| Lektion 2 | Boolsche Werte & Vergleiche | 50 Min. |
+| Pause | – | 10 Min. |
+| Lektion 3 | Typkonvertierung & Input/Output | 50 Min. |
+| Pause | – | 10 Min. |
+| Lektion 4 | Interaktive Programme & Vertiefung | 50 Min. |
+
+**Gesamtdauer:** 3 Std. 20 Min. Unterricht + 30 Min. Pausen
+
+> Die konkreten Uhrzeiten richten sich nach dem jeweiligen Kursplan (Tages- oder Abendkurs).
 
 ## 🎓 Didaktisches Konzept
 
