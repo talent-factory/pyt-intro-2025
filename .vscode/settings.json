@@ -26,7 +26,9 @@
     // PYTHON GRUNDEINSTELLUNGEN
     // ============================================
 
-    "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python",
+    // Hinweis: python.defaultInterpreterPath wurde entfernt, damit die
+    // Konfiguration plattformübergreifend (Windows/macOS/Linux) funktioniert.
+    // Die Python-Extension erkennt .venv automatisch im Workspace-Root.
     "python.terminal.activateEnvironment": true,
     "python.terminal.activateEnvInCurrentTerminal": true,
     "python.envFile": "${workspaceFolder}/.env",
@@ -63,9 +65,9 @@
 
     "ruff.enable": true,
     "ruff.lint.enable": true,
-    "ruff.path": [
-        "${workspaceFolder}/.venv/bin/ruff"
-    ],
+    // Hinweis: ruff.path wurde entfernt, damit die Konfiguration
+    // plattformübergreifend (Windows/macOS/Linux) funktioniert.
+    // Die Ruff-Extension findet das Binary automatisch im aktiven Interpreter.
     "editor.rulers": [
         88
     ],
