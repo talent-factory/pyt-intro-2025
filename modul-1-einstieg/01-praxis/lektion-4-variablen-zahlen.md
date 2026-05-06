@@ -1,7 +1,7 @@
 # Lektion 4: Variablen und Zahlen
 
 **Dauer:** 50 Minuten  
-**Format:** Theorie (15 Min.) + Live-Demo (20 Min.) + Übung (15 Min.)
+**Format:** Theorie (15 Min.) + Live-Coding (20 Min.) + Übung (15 Min.)
 
 ## 🎯 Lernziele
 
@@ -96,7 +96,7 @@ pi = 3.14159
 
 ---
 
-## 💻 Live-Demo (20 Min.)
+## 💻 Live-Coding (20 Min.)
 
 ### Demo 1: Variablen-Best-Practices (5 Min.)
 

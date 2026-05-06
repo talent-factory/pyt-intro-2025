@@ -67,7 +67,10 @@
     "ruff.lint.enable": true,
     // Hinweis: ruff.path wurde entfernt, damit die Konfiguration
     // plattformübergreifend (Windows/macOS/Linux) funktioniert.
-    // Die Ruff-Extension findet das Binary automatisch im aktiven Interpreter.
+    // "fromEnvironment" weist die Extension an, das Ruff-Binary aus dem aktiven
+    // Python-Interpreter (.venv) zu verwenden statt der gebündelten Version,
+    // damit lokal und in der CI dieselbe Ruff-Version greift.
+    "ruff.importStrategy": "fromEnvironment",
     "editor.rulers": [
         88
     ],

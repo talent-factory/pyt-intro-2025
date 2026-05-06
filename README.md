@@ -110,7 +110,7 @@ Jedes Modul folgt einer konsistenten Struktur:
 ### 01-praxis (4 Lektionen à 50 Minuten)
 
 - **Theorie:** Konzepte verstehen (15 Min.)
-- **Live-Demo:** Best Practices zeigen (20 Min.)
+- **Live-Coding:** Best Practices zeigen (20 Min.)
 - **Übungen:** Praktische Anwendung (15 Min.)
 
 ### 02-uebungen

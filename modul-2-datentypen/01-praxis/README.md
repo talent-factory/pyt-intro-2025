@@ -2,6 +2,14 @@
 
 **Dauer:** 4 Lektionen à 50 Minuten
 
+## 📋 Übersicht
+
+Jede Lektion folgt dem gleichen Aufbau:
+
+- **Theorie** (15 Min.) - Konzepte verstehen
+- **Live-Coding** (20 Min.) - Dozent zeigt Best Practices
+- **Übung** (15 Min.) - Studierende üben selbst
+
 ## 🎯 Lernziele
 
 Nach den Praxis-Lektionen können Sie:
@@ -11,14 +19,6 @@ Nach den Praxis-Lektionen können Sie:
 - Typkonvertierung durchführen
 - Interaktive Programme mit `input()` erstellen
 - Erweiterte String-Methoden und Validierung anwenden
-
-## 📋 Übersicht
-
-Jede Lektion folgt dem gleichen Aufbau:
-
-- **Theorie** (15 Min.) - Konzepte verstehen
-- **Live-Coding** (20 Min.) - Dozent zeigt Best Practices
-- **Übung** (15 Min.) - Studierende üben selbst
 
 ## 📚 Lektionen
 
@@ -165,7 +165,7 @@ Nach den Praxis-Lektionen sollten Studierende:
 
 ### Zeitmanagement
 
-- **Pünktlich starten:** Jede Lektion beginnt zur vollen Stunde
+- **Pünktlich starten:** Jede Lektion beginnt zum geplanten Lektionsbeginn
 - **Pausen einplanen:** 10 Min nach 2 Lektionen
 - **Puffer einbauen:** Nicht zu viel Stoff in eine Lektion packen
 - **Flexibel bleiben:** Bei Bedarf Tempo anpassen

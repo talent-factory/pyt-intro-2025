@@ -76,6 +76,6 @@ Jede Lektion folgt dem gleichen Aufbau:
 | Pause | – | 10 Min. |
 | Lektion 4 | Module & Projekt | 50 Min. |
 
-**Gesamt:** 200 Minuten Unterricht (3 Std. 20 Min.) + 30 Min. Pausen
+**Gesamtdauer:** 3 Std. 20 Min. Unterricht + 30 Min. Pausen
 
 > Die konkreten Uhrzeiten richten sich nach dem jeweiligen Kursplan (Tages- oder Abendkurs).

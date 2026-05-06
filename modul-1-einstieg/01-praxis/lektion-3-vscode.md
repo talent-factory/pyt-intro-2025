@@ -1,7 +1,7 @@
 # Lektion 3: VS Code Entwicklungsumgebung
 
 **Dauer:** 50 Minuten  
-**Format:** Theorie (15 Min.) + Live-Demo (20 Min.) + Übung (15 Min.)
+**Format:** Theorie (15 Min.) + Live-Coding (20 Min.) + Übung (15 Min.)
 
 ## 🎯 Lernziele
 
@@ -67,7 +67,7 @@ Nach dieser Lektion können Sie:
 
 ---
 
-## 💻 Live-Demo (20 Min.)
+## 💻 Live-Coding (20 Min.)
 
 ### Demo 1: VS Code öffnen und einrichten (5 Min.)
 

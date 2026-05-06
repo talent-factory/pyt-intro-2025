@@ -21,7 +21,7 @@ Vollständige Beispielprogramme für Modul 1.
 
 ### Für Dozenten
 
-- Als Vorlage für Live-Demos
+- Als Vorlage für Live-Coding
 - Zum Zeigen von Best Practices
 - Als Musterlösungen
 
