@@ -1,7 +1,14 @@
 # Quiz: Funktionen & Datenstrukturen
 
-**Dauer:** 15 Minuten  
+**Dauer:** 15 Minuten
 **Bestanden:** 7/10 richtig
+
+## 📝 Anleitung
+
+- Beantworten Sie alle Fragen
+- Notieren Sie Ihre Antworten
+- Vergleichen Sie mit den Lösungen am Ende
+- Wiederholen Sie bei weniger als 7 Punkten den Leseauftrag
 
 ## Fragen
 
@@ -80,16 +87,16 @@
 <details>
 <summary>Klicken für Lösungen</summary>
 
-1. **B** - Ein wiederverwendbarer Code-Block
-2. **B** - `def name():`
-3. **B** - Gibt einen Wert zurück
-4. **C** - Liste
-5. **B** - `liste[0]`
-6. **B** - Eine Sammlung von Schlüssel-Wert-Paaren
-7. **B** - `liste.append(element)`
-8. **B** - Tupel sind unveränderbar
-9. **B** - `dict = {}`
-10. **C** - Es enthält nur eindeutige Elemente
+1. **B** - Eine Funktion ist ein wiederverwendbarer Code-Block.
+2. **B** - In Python definiert man Funktionen mit `def name():`.
+3. **B** - `return` gibt einen Wert aus der Funktion zurück.
+4. **C** - Listen sind veränderbar (mutable), Tupel und Strings nicht.
+5. **B** - Indizierung beginnt in Python bei 0, also `liste[0]`.
+6. **B** - Ein Dictionary speichert Schlüssel-Wert-Paare (`{"key": value}`).
+7. **B** - `liste.append(element)` fügt am Ende ein Element hinzu.
+8. **B** - Tupel sind unveränderbar, Listen veränderbar.
+9. **B** - `{}` erstellt ein leeres Dictionary, `[]` wäre eine leere Liste.
+10. **C** - Ein Set enthält nur eindeutige Elemente, Duplikate werden entfernt.
 
 </details>
 
@@ -101,4 +108,3 @@
 - **0-3/10:** Bitte Leseauftrag gründlich lesen.
 
 **Weiter zu:** [Präsenzunterricht](../01-praxis/)
-

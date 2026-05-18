@@ -31,7 +31,11 @@ Nach der Vorbereitung:
 - [ ] [Erste Schritte mit Python](./erste-schritte.md) durcharbeiten (60 Min.)
 - [ ] Einfache Berechnungen in der Python Shell ausprobieren
 
-### 4. Optional: Video-Material
+### 4. Quiz zur Selbstkontrolle
+
+- [ ] [Quiz](./quiz.md) absolvieren (15 Min., min. 7/10 Punkte)
+
+### 5. Optional: Video-Material
 
 - [ ] [Python in 100 Sekunden](https://www.youtube.com/watch?v=x7X9w_GIm1s) (Englisch)
 - [ ] [Python Tutorial für Anfänger](https://www.youtube.com/watch?v=_uQrJ0TkZlc) (Deutsch, erste 30 Min.)
@@ -50,6 +54,9 @@ Nach der Vorbereitung:
 4. **[Erste Schritte mit Python](./erste-schritte.md)**  
    Praktische Einführung in die Python Shell
 
+5. **[Quiz](./quiz.md)**  
+   Selbsttest mit 10 Fragen zur Vorbereitung
+
 ## ⏱️ Zeitplan
 
 | Aktivität | Dauer |
@@ -57,6 +64,7 @@ Nach der Vorbereitung:
 | Setup (Option A oder B) | 30-60 Min. |
 | Leseauftrag | 30 Min. |
 | Erste Schritte | 60 Min. |
+| Quiz | 15 Min. |
 | Optional: Videos | 30 Min. |
 | **Gesamt** | **2-3 Stunden** |
 
