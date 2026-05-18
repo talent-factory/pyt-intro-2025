@@ -1,4 +1,4 @@
-# Vorbereitung Modul 3
+# Vorbereitung: Modul 3
 
 **Zeitaufwand:** 2-3 Stunden
 **Deadline:** Vor dem Präsenztag

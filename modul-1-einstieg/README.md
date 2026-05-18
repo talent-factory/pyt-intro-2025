@@ -67,7 +67,7 @@ Bereiten Sie sich auf den Präsenztag vor.
 
 **Code-Beispiele vom Dozenten**
 
-- 💻 Live-Demo Beispiele
+- 💻 Live-Coding Beispiele
 - 💻 Musterlösungen
 
 ## ⏱️ Zeitplan

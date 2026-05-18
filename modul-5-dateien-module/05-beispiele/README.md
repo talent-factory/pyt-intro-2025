@@ -1,6 +1,6 @@
-# Beispielprogramme Modul 5
+# Beispiele: Modul 5
 
-Vollständige Python-Programme zu Dateien und Modulen.
+Vollständige Beispielprogramme für Modul 5.
 
 ## 📁 Programme
 

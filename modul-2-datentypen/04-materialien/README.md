@@ -1,4 +1,4 @@
-# Materialien Modul 2
+# Materialien: Modul 2
 
 Zusatzmaterialien und Referenzen für Modul 2.
 

@@ -1,7 +1,7 @@
 # Modul 4: Funktionen & Datenstrukturen
 
 **Dauer:** 1 Tag (4 Lektionen à 50 Minuten)
-**Voraussetzung:** Module 1-3
+**Voraussetzung:** Module 1-3 abgeschlossen
 
 ## 🎯 Lernziele
 
@@ -11,9 +11,8 @@ Nach diesem Modul können Sie:
 2. ✅ Parameter und Rückgabewerte nutzen
 3. ✅ Listen für komplexe Datenverarbeitung einsetzen
 4. ✅ Dictionaries für strukturierte Daten verwenden
-5. ✅ Tupel und Sets verstehen und anwenden
-6. ✅ Code modular und wiederverwendbar strukturieren
-7. ✅ Komplexe Datenstrukturen kombinieren
+5. ✅ Code modular und wiederverwendbar strukturieren
+6. ✅ Einfache Tests mit pytest schreiben
 
 ## 📚 Modulstruktur
 
@@ -32,8 +31,8 @@ Bereiten Sie sich auf den Präsenztag vor.
 
 - 📖 [Lektion 1: Funktionen definieren](./01-praxis/lektion-1-funktionen.md) (50 Min)
 - 📖 [Lektion 2: Parameter & Rückgabewerte](./01-praxis/lektion-2-parameter.md) (50 Min)
-- 📖 [Lektion 3: Listen vertiefen](./01-praxis/lektion-3-listen.md) (50 Min)
-- 📖 [Lektion 4: Dictionaries, Tupel & Sets](./01-praxis/lektion-4-dictionaries.md) (50 Min)
+- 📖 [Lektion 3: Listen, Dictionaries & Co.](./01-praxis/lektion-3-listen.md) (50 Min)
+- 📖 [Lektion 4: Funktionen testen mit pytest](./01-praxis/lektion-4-testing.md) (50 Min)
 
 ### [02-uebungen/](./02-uebungen/)
 
@@ -57,6 +56,7 @@ Bereiten Sie sich auf den Präsenztag vor.
 - 📚 [Handout Funktionen](./04-materialien/)
 - 📚 [Cheatsheet Datenstrukturen](./04-materialien/)
 - 📚 [Cheatsheet Listen](./04-materialien/)
+- 📚 [Cheatsheet pytest](./04-materialien/)
 - 📚 [Häufige Fehler](./04-materialien/)
 
 ### [05-beispiele/](./05-beispiele/)
@@ -85,28 +85,16 @@ Bereiten Sie sich auf den Präsenztag vor.
 - Scope und Namensräume
 - Lambda-Funktionen (Einführung)
 
-### Listen vertiefen
-- Listen-Methoden (append, extend, insert, remove, pop)
-- List Comprehensions
-- Slicing und Indexierung
-- Listen sortieren und filtern
-- Verschachtelte Listen
-- Listen als Funktionsparameter
+### Listen, Dictionaries & Co.
+- Listen-Methoden (append, remove, pop, sort)
+- Dictionaries: Erstellen, Zugriff, Iteration
+- Vergleichstabelle (Liste vs. Tupel vs. Set vs. Dict)
 
-### Dictionaries
-- Dictionary-Erstellung und -Zugriff
-- Keys, Values, Items
-- Dictionary-Methoden
-- Verschachtelte Dictionaries
-- Dictionary Comprehensions
-- Praktische Anwendungen
-
-### Tupel & Sets
-- Tupel: Unveränderbare Sequenzen
-- Wann Tupel statt Listen?
-- Sets: Eindeutige Elemente
-- Set-Operationen (Union, Intersection, Difference)
-- Konvertierung zwischen Datentypen
+### Testing mit pytest
+- Warum testen?
+- Testbare Funktionen
+- pytest Grundlagen
+- Tests ausführen
 
 ### Praktische Anwendungen
 - Kontaktverwaltung mit Dictionaries
@@ -140,6 +128,7 @@ Nach erfolgreichem Abschluss des Moduls:
 - [Python Dokumentation: Datenstrukturen](https://docs.python.org/3/tutorial/datastructures.html)
 - [Real Python: Dictionaries](https://realpython.com/python-dicts/)
 - [Real Python: Functions](https://realpython.com/defining-your-own-python-function/)
+- [pytest Dokumentation](https://docs.pytest.org/)
 
 ---
 

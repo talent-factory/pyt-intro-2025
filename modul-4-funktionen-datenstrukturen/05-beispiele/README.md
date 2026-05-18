@@ -1,4 +1,6 @@
-# Beispielprogramme Modul 4
+# Beispiele: Modul 4
+
+Vollständige Beispielprogramme für Modul 4.
 
 ## 💻 Programme
 
@@ -12,6 +14,7 @@
 8. `einkaufsliste_advanced.py` - Erweiterte Einkaufsliste
 9. `woerterbuch.py` - Deutsch-Englisch Wörterbuch
 10. `datenanalyse.py` - Datenanalyse mit Funktionen
+11. `testen_beispiel.py` - Testbare Funktionen (Lernbeispiel für Testing)
 
 ## 🎯 Verwendung
 

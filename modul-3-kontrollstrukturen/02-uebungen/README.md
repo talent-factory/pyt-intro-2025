@@ -1,4 +1,4 @@
-# Übungen Modul 3
+# Übungen: Modul 3
 
 **Gesamt:** 8 Übungen (je 15 Minuten)
 

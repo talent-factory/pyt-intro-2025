@@ -1,7 +1,7 @@
-# Quiz Modul 2: Datentypen und Operatoren
+# Quiz: Datentypen und Operatoren
 
-**Zeitaufwand:** 15-20 Minuten  
-**Bestehensgrenze:** 7 von 10 Punkten
+**Dauer:** 15 Minuten
+**Bestanden:** 7/10 richtig
 
 ## 📝 Anleitung
 
@@ -10,23 +10,16 @@
 - Vergleichen Sie mit den Lösungen am Ende
 - Wiederholen Sie bei weniger als 7 Punkten den Leseauftrag
 
----
+## Fragen
 
-## Frage 1: String-Erstellung (1 Punkt)
+### 1. Welche Zuweisung erstellt **keinen** gültigen String?
 
-Welche der folgenden Zeilen erstellt einen gültigen String?
+- [ ] A) `name = "Anna"`
+- [ ] B) `name = 'Anna'`
+- [ ] C) `name = Anna`
+- [ ] D) `name = "Hallo Welt"`
 
-A) `name = Anna`  
-B) `name = "Anna"`  
-C) `name = 'Anna'`  
-D) Nur B ist korrekt  
-E) B und C sind korrekt
-
----
-
-## Frage 2: String-Konkatenation (1 Punkt)
-
-Was gibt folgender Code aus?
+### 2. Was gibt folgender Code aus?
 
 ```python
 vorname = "Max"
@@ -34,86 +27,58 @@ nachname = "Muster"
 print(vorname + nachname)
 ```
 
-A) `Max Muster`  
-B) `MaxMuster`  
-C) `Max+Muster`  
-D) Fehler
+- [ ] A) `Max Muster`
+- [ ] B) `MaxMuster`
+- [ ] C) `Max+Muster`
+- [ ] D) Fehler
 
----
+### 3. Was gibt `"Python"[0]` zurück?
 
-## Frage 3: String-Indexierung (1 Punkt)
+- [ ] A) `"Python"`
+- [ ] B) `"P"`
+- [ ] C) `"y"`
+- [ ] D) `0`
 
-Was gibt `"Python"[0]` zurück?
+### 4. Was gibt `"Hallo"[1:4]` zurück?
 
-A) `"Python"`  
-B) `"P"`  
-C) `"y"`  
-D) `0`
+- [ ] A) `"Hal"`
+- [ ] B) `"all"`
+- [ ] C) `"allo"`
+- [ ] D) `"llo"`
 
----
+### 5. Was gibt `"  Hallo  ".strip()` zurück?
 
-## Frage 4: String-Slicing (1 Punkt)
+- [ ] A) `"  Hallo  "` (unverändert)
+- [ ] B) `"Hallo  "`
+- [ ] C) `"  Hallo"`
+- [ ] D) `"Hallo"`
 
-Was gibt `"Hallo"[1:4]` zurück?
-
-A) `"Hal"`  
-B) `"all"`  
-C) `"allo"`  
-D) `"llo"`
-
----
-
-## Frage 5: String-Methoden (1 Punkt)
-
-Was gibt `"  Hallo  ".strip()` zurück?
-
-A) `"  Hallo  "` (unverändert)  
-B) `"Hallo  "`  
-C) `"  Hallo"`  
-D) `"Hallo"`
-
----
-
-## Frage 6: F-Strings (1 Punkt)
-
-Welcher Code gibt `"Ich bin 25 Jahre alt"` aus?
+### 6. Welcher Code nutzt einen **F-String**, um `Ich bin 25 Jahre alt` auszugeben?
 
 ```python
 alter = 25
 ```
 
-A) `print("Ich bin " + alter + " Jahre alt")`  
-B) `print(f"Ich bin {alter} Jahre alt")`  
-C) `print("Ich bin {alter} Jahre alt")`  
-D) `print("Ich bin", alter, "Jahre alt")`
+- [ ] A) `print("Ich bin " + alter + " Jahre alt")`
+- [ ] B) `print(f"Ich bin {alter} Jahre alt")`
+- [ ] C) `print("Ich bin {alter} Jahre alt")`
+- [ ] D) `print("Ich bin", alter, "Jahre alt")`
 
----
+### 7. Was gibt `5 == 5` zurück?
 
-## Frage 7: Vergleichsoperatoren (1 Punkt)
+- [ ] A) `5`
+- [ ] B) `True`
+- [ ] C) `False`
+- [ ] D) `"True"`
 
-Was gibt `5 == 5` zurück?
+### 8. Was gibt `True and False` zurück?
 
-A) `5`  
-B) `True`  
-C) `False`  
-D) `"True"`
+- [ ] A) `True`
+- [ ] B) `False`
+- [ ] C) `"True and False"`
+- [ ] D) Fehler
 
----
-
-## Frage 8: Logische Operatoren (1 Punkt)
-
-Was gibt `True and False` zurück?
-
-A) `True`  
-B) `False`  
-C) `"True and False"`  
-D) Fehler
-
----
-
-## Frage 9: Typkonvertierung (1 Punkt)
-
-Was gibt folgender Code aus?
+### 9. Was gibt folgender Code aus?
 
 ```python
 zahl = "42"
@@ -121,86 +86,41 @@ ergebnis = int(zahl) + 8
 print(ergebnis)
 ```
 
-A) `"428"`  
-B) `"50"`  
-C) `50`  
-D) Fehler
+- [ ] A) `"428"`
+- [ ] B) `"50"`
+- [ ] C) `50`
+- [ ] D) Fehler
 
----
+### 10. Was gibt `input()` zurück?
 
-## Frage 10: Input-Funktion (1 Punkt)
+- [ ] A) Immer eine Zahl
+- [ ] B) Immer einen String
+- [ ] C) Immer einen Boolean
+- [ ] D) Hängt von der Eingabe ab
 
-Was gibt `input()` zurück?
-
-A) Immer eine Zahl  
-B) Immer einen String  
-C) Immer einen Boolean  
-D) Hängt von der Eingabe ab
-
----
-
-## 🔍 Lösungen
+## Lösungen
 
 <details>
-<summary>Klicken Sie hier für die Lösungen (erst nach dem Lösen!)</summary>
+<summary>Klicken für Lösungen</summary>
 
-### Frage 1: E
-**Erklärung:** Sowohl einfache (`'...'`) als auch doppelte (`"..."`) Anführungszeichen sind gültig.
-
-### Frage 2: B
-**Erklärung:** `+` verkettet Strings ohne Leerzeichen. Für ein Leerzeichen: `vorname + " " + nachname`
-
-### Frage 3: B
-**Erklärung:** Index 0 ist das erste Zeichen, also `"P"`.
-
-### Frage 4: B
-**Erklärung:** `[1:4]` bedeutet von Index 1 (inklusive) bis 4 (exklusive): `"all"`.
-
-### Frage 5: D
-**Erklärung:** `.strip()` entfernt Leerzeichen am Anfang und Ende.
-
-### Frage 6: B
-**Erklärung:** F-Strings (`f"..."`) erlauben Variablen in `{}`. Option A funktioniert nicht (String + Zahl).
-
-### Frage 7: B
-**Erklärung:** `==` ist ein Vergleichsoperator und gibt `True` oder `False` zurück.
-
-### Frage 8: B
-**Erklärung:** `and` gibt nur `True` zurück, wenn beide Werte `True` sind.
-
-### Frage 9: C
-**Erklärung:** `int("42")` konvertiert zu `42`, dann `42 + 8 = 50`.
-
-### Frage 10: B
-**Erklärung:** `input()` gibt **immer** einen String zurück, auch wenn eine Zahl eingegeben wird.
+1. **C** - Ohne Anführungszeichen sucht Python eine Variable namens `Anna` — kein String, sondern `NameError`. A, B und D sind alle gültige Strings (einfache und doppelte Anführungszeichen sind gleichwertig).
+2. **B** - `+` verkettet Strings ohne Leerzeichen. Für ein Leerzeichen: `vorname + " " + nachname`.
+3. **B** - Index 0 ist das erste Zeichen, also `"P"`.
+4. **B** - `[1:4]` bedeutet von Index 1 (inklusive) bis 4 (exklusive): `"all"`.
+5. **D** - `.strip()` entfernt Leerzeichen am Anfang und Ende.
+6. **B** - F-Strings beginnen mit `f"..."` und erlauben Variablen in `{}`. Option D gibt zwar denselben Text aus, ist aber kein F-String (`print()` mit Komma-getrennten Argumenten). A scheitert (String + Zahl), C zeigt `{alter}` wörtlich.
+7. **B** - `==` ist ein Vergleichsoperator und gibt `True` oder `False` zurück.
+8. **B** - `and` gibt nur `True` zurück, wenn beide Werte `True` sind.
+9. **C** - `int("42")` konvertiert zu `42`, dann `42 + 8 = 50`.
+10. **B** - `input()` gibt **immer** einen String zurück, auch wenn eine Zahl eingegeben wird.
 
 </details>
 
----
+## ✅ Auswertung
 
-## 📊 Auswertung
+- **10/10:** Perfekt! Sie sind bestens vorbereitet! 🎉
+- **7-9/10:** Sehr gut! Sie können starten.
+- **4-6/10:** Bitte Leseauftrag nochmals durchgehen.
+- **0-3/10:** Bitte Leseauftrag gründlich lesen.
 
-Zählen Sie Ihre richtigen Antworten:
-
-- **10 Punkte:** Perfekt! Sie sind bestens vorbereitet 🌟
-- **8-9 Punkte:** Sehr gut! Kleine Lücken schliessen 👍
-- **7 Punkte:** Bestanden! Wiederholen Sie unsichere Themen ✅
-- **< 7 Punkte:** Wiederholen Sie den Leseauftrag und Experimente 📚
-
-## 💡 Nächste Schritte
-
-- **10 Punkte:** Sie sind bereit für den Präsenztag!
-- **7-9 Punkte:** Wiederholen Sie die Experimente
-- **< 7 Punkte:** Lesen Sie den Leseauftrag nochmals und machen Sie die Experimente
-
-## 🆘 Hilfe
-
-Falls Sie Schwierigkeiten haben:
-
-1. Wiederholen Sie den [Leseauftrag](./leseauftrag.md)
-2. Machen Sie die [Experimente](./erste-experimente.md) nochmals
-3. Schauen Sie sich die Beispiele in [05-beispiele](../05-beispiele/) an
-4. Fragen Sie im Kurs nach
-
-Viel Erfolg! 🚀
-
+**Weiter zu:** [Präsenzunterricht](../01-praxis/)

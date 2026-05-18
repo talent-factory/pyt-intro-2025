@@ -1,7 +1,7 @@
 # Lektion 2: Python Shell & erste Schritte
 
 **Dauer:** 50 Minuten  
-**Format:** Theorie (15 Min.) + Live-Demo (20 Min.) + Übung (15 Min.)
+**Format:** Theorie (15 Min.) + Live-Coding (20 Min.) + Übung (15 Min.)
 
 ## 🎯 Lernziele
 
@@ -94,7 +94,7 @@ ist_fertig = False
 
 ---
 
-## 💻 Live-Demo (20 Min.)
+## 💻 Live-Coding (20 Min.)
 
 ### Demo 1: Datentypen erkunden (7 Min.)
 

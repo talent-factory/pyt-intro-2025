@@ -24,6 +24,11 @@ Wo könnten Sie Funktionen und Datenstrukturen in Ihrem Alltag einsetzen?
 
 Was erwarten Sie von Modul 5 (Dateien & Module)?
 
+### 6. Testing und Funktionen
+
+Was hat Testing mit guten Funktionen zu tun? Warum sind Funktionen mit
+return einfacher zu testen als Funktionen mit print?
+
 ---
 
 **Bitte speichern Sie Ihre Antworten und bringen Sie sie zum nächsten Modul mit.**

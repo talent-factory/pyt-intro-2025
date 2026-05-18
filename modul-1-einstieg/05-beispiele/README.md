@@ -1,6 +1,6 @@
 # Beispiele: Modul 1
 
-Python-Code-Beispiele für Dozenten und zum Selbststudium.
+Vollständige Beispielprogramme für Modul 1.
 
 ## 📁 Übersicht
 
@@ -21,7 +21,7 @@ Python-Code-Beispiele für Dozenten und zum Selbststudium.
 
 ### Für Dozenten
 
-- Als Vorlage für Live-Demos
+- Als Vorlage für Live-Coding
 - Zum Zeigen von Best Practices
 - Als Musterlösungen
 

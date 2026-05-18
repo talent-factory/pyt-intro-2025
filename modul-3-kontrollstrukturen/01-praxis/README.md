@@ -1,41 +1,84 @@
-# Präsenzunterricht Modul 3
+# Praxis: Modul 3
 
 **Dauer:** 4 Lektionen à 50 Minuten
 
+## 📋 Übersicht
+
+Jede Lektion folgt dem gleichen Aufbau:
+
+- **Theorie** (15 Min.) - Konzepte verstehen
+- **Live-Coding** (20 Min.) - Dozent zeigt Best Practices
+- **Übung** (15 Min.) - Studierende üben selbst
+
 ## 📚 Lektionen
 
-| # | Thema | Dauer | Übungen |
-|---|-------|-------|---------|
-| 1 | [Bedingte Anweisungen](./lektion-1-bedingungen.md) | 50 Min | 2 |
-| 2 | [While-Schleifen](./lektion-2-while-schleifen.md) | 50 Min | 2 |
-| 3 | [For-Schleifen & Listen](./lektion-3-for-listen.md) | 50 Min | 2 |
-| 4 | [Verschachtelte Strukturen & Mini-Projekt](./lektion-4-verschachtelt.md) | 50 Min | 2 + Projekt |
+### [Lektion 1: Bedingte Anweisungen](./lektion-1-bedingungen.md)
+
+**Thema:** Entscheidungen im Programm treffen
+
+- `if`, `elif`, `else`
+- Vergleichsoperatoren in Bedingungen
+- Verschachtelte Bedingungen
+- Logische Operatoren in Bedingungen
+
+**Übungen:** [Notensystem](../02-uebungen/uebung-1-notensystem.md), [Rabatt](../02-uebungen/uebung-2-rabatt.md)
+
+---
+
+### [Lektion 2: While-Schleifen](./lektion-2-while-schleifen.md)
+
+**Thema:** Wiederholungen mit Bedingung
+
+- `while`-Schleife
+- `break` und `continue`
+- Endlosschleifen vermeiden
+- Praktische Beispiele
+
+**Übungen:** [Fakultät](../02-uebungen/uebung-3-fakultaet.md), [Zahlenraten](../02-uebungen/uebung-4-zahlenraten.md)
+
+---
+
+### [Lektion 3: For-Schleifen & Listen](./lektion-3-for-listen.md)
+
+**Thema:** Iteration über Sammlungen
+
+- `for`-Schleife mit `range()`
+- Listen erstellen und durchlaufen
+- Listen-Operationen
+- Praktische Anwendungen
+
+**Übungen:** [Gerade Zahlen](../02-uebungen/uebung-5-gerade-zahlen.md), [Notenliste](../02-uebungen/uebung-6-notenliste.md)
+
+---
+
+### [Lektion 4: Verschachtelte Strukturen & Mini-Projekt](./lektion-4-verschachtelt.md)
+
+**Thema:** Komplexe Logik strukturieren
+
+- Schleifen in Schleifen
+- Bedingungen in Schleifen
+- Mini-Projekt (Kontakt-Manager, Zahlenraten oder Hangman)
+- Code-Strukturierung
+
+**Übungen:** [Multiplikationstabelle](../02-uebungen/uebung-7-multiplikationstabelle.md), [Zahlen-Pyramide](../02-uebungen/uebung-8-zahlen-pyramide.md)
+
+---
 
 ## ⏱️ Zeitplan
 
-### Lektion 1: Bedingte Anweisungen (50 Min)
+| Block | Thema | Dauer |
+|-------|-------|-------|
+| Lektion 1 | Bedingte Anweisungen | 50 Min. |
+| Pause | – | 10 Min. |
+| Lektion 2 | While-Schleifen | 50 Min. |
+| Pause | – | 10 Min. |
+| Lektion 3 | For-Schleifen & Listen | 50 Min. |
+| Pause | – | 10 Min. |
+| Lektion 4 | Verschachtelte Strukturen & Mini-Projekt | 50 Min. |
 
-- 00-15: Theorie (if, elif, else)
-- 15-35: Live-Coding (3 Beispiele)
-- 35-50: Übungen 1-2
+**Gesamtdauer:** 3 Std. 20 Min. Unterricht + 30 Min. Pausen
 
-### Lektion 2: While-Schleifen (50 Min)
-
-- 00-15: Theorie (while, break, continue)
-- 15-35: Live-Coding (3 Beispiele)
-- 35-50: Übungen 3-4
-
-### Lektion 3: For-Schleifen & Listen (50 Min)
-
-- 00-15: Theorie (for, range, Listen)
-- 15-35: Live-Coding (3 Beispiele)
-- 35-50: Übungen 5-6
-
-### Lektion 4: Verschachtelte Strukturen & Mini-Projekt (50 Min)
-
-- 00-10: Theorie (Verschachtelung)
-- 10-30: Live-Coding (3 Beispiele)
-- 30-50: Mini-Projekt (Kontakt-Manager, Zahlenraten oder Hangman)
+> Die konkreten Uhrzeiten richten sich nach dem jeweiligen Kursplan (Tages- oder Abendkurs).
 
 ## 🎯 Lernziele
 

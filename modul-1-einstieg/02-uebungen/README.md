@@ -1,6 +1,6 @@
 # Übungen: Modul 1
 
-Praktische Übungen während der Präsenzzeit.
+**Gesamt:** 4 Übungen (je 15 Minuten)
 
 ## 📋 Übersicht
 

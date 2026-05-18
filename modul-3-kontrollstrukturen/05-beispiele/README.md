@@ -1,4 +1,4 @@
-# Beispiele Modul 3
+# Beispiele: Modul 3
 
 Vollständige Beispielprogramme für Modul 3.
 

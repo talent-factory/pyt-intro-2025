@@ -1,41 +1,84 @@
-# Präsenzunterricht Modul 4
+# Praxis: Modul 4
 
 **Dauer:** 4 Lektionen à 50 Minuten
 
+## 📋 Übersicht
+
+Jede Lektion folgt dem gleichen Aufbau:
+
+- **Theorie** (15 Min.) - Konzepte verstehen
+- **Live-Coding** (20 Min.) - Dozent zeigt Best Practices
+- **Übung** (15 Min.) - Studierende üben selbst
+
 ## 📚 Lektionen
 
-| # | Thema | Dauer | Übungen |
-|---|-------|-------|---------|
-| 1 | [Funktionen definieren](./lektion-1-funktionen.md) | 50 Min | 2 |
-| 2 | [Parameter & Rückgabewerte](./lektion-2-parameter.md) | 50 Min | 2 |
-| 3 | [Listen vertiefen](./lektion-3-listen.md) | 50 Min | 2 |
-| 4 | [Dictionaries, Tupel & Sets](./lektion-4-dictionaries.md) | 50 Min | 2 |
+### [Lektion 1: Funktionen definieren](./lektion-1-funktionen.md)
+
+**Thema:** Code modular strukturieren
+
+- `def` und Funktionsaufrufe
+- Scope und Variablen
+- Docstrings
+- Best Practices
+
+**Übungen:** [Einfache Funktionen](../02-uebungen/uebung-1-funktionen.md), [Funktionen mit Return](../02-uebungen/uebung-2-return.md)
+
+---
+
+### [Lektion 2: Parameter & Rückgabewerte](./lektion-2-parameter.md)
+
+**Thema:** Daten zwischen Funktionen austauschen
+
+- Parameter-Arten (positional, keyword, default)
+- `return`-Anweisung
+- Mehrere Rückgabewerte
+- Funktionen kombinieren
+
+**Übungen:** [Parameter-Varianten](../02-uebungen/uebung-3-parameter.md), [Funktionen & Listen](../02-uebungen/uebung-4-listen.md)
+
+---
+
+### [Lektion 3: Listen, Dictionaries & Co.](./lektion-3-listen.md)
+
+**Thema:** Strukturierte Daten verwalten
+
+- Listen-Methoden vertiefen
+- Dictionaries erstellen und nutzen
+- Datenstrukturen vergleichen
+- Praktische Anwendungen
+
+**Übungen:** [Listen-Methoden](../02-uebungen/uebung-5-methoden.md), [Dictionary-Operationen](../02-uebungen/uebung-6-dict.md)
+
+---
+
+### [Lektion 4: Funktionen testen mit pytest](./lektion-4-testing.md)
+
+**Thema:** Code-Qualität sichern
+
+- Warum testen?
+- pytest Basics
+- Tests schreiben und ausführen
+- Test-Driven Development
+
+**Übungen:** [Erste Tests schreiben](../02-uebungen/uebung-7-testing.md), [Tests für Kontakte](../02-uebungen/uebung-8-testing.md)
+
+---
 
 ## ⏱️ Zeitplan
 
-### Lektion 1: Funktionen definieren (50 Min)
+| Block | Thema | Dauer |
+|-------|-------|-------|
+| Lektion 1 | Funktionen definieren | 50 Min. |
+| Pause | – | 10 Min. |
+| Lektion 2 | Parameter & Rückgabewerte | 50 Min. |
+| Pause | – | 10 Min. |
+| Lektion 3 | Listen, Dictionaries & Co. | 50 Min. |
+| Pause | – | 10 Min. |
+| Lektion 4 | Funktionen testen mit pytest | 50 Min. |
 
-- 00-15: Theorie (def, Funktionsaufrufe, Scope)
-- 15-35: Live-Coding (3 Beispiele)
-- 35-50: Übungen 1-2
+**Gesamtdauer:** 3 Std. 20 Min. Unterricht + 30 Min. Pausen
 
-### Lektion 2: Parameter & Rückgabewerte (50 Min)
-
-- 00-15: Theorie (Parameter-Arten, return)
-- 15-35: Live-Coding (3 Beispiele)
-- 35-50: Übungen 3-4
-
-### Lektion 3: Listen vertiefen (50 Min)
-
-- 00-15: Theorie (Listen-Methoden, Comprehensions)
-- 15-35: Live-Coding (3 Beispiele)
-- 35-50: Übungen 5-6
-
-### Lektion 4: Dictionaries, Tupel & Sets (50 Min)
-
-- 00-15: Theorie (Datenstrukturen im Vergleich)
-- 15-35: Live-Coding (3 Beispiele)
-- 35-50: Übungen 7-8
+> Die konkreten Uhrzeiten richten sich nach dem jeweiligen Kursplan (Tages- oder Abendkurs).
 
 ## 🎯 Lernziele
 
@@ -45,7 +88,7 @@ Nach den 4 Lektionen können Sie:
 - ✅ Parameter und Rückgabewerte nutzen
 - ✅ Listen für komplexe Aufgaben einsetzen
 - ✅ Dictionaries für strukturierte Daten verwenden
-- ✅ Tupel und Sets verstehen
+- ✅ Einfache Tests mit pytest schreiben
 - ✅ Code modular strukturieren
 
 ## 📝 Übungen
@@ -59,6 +102,7 @@ Alle Übungen finden Sie in [02-uebungen](../02-uebungen/)
 - **Datenstrukturen vergleichen:** Wann nutzt man was?
 - **Praktische Beispiele:** Realistische Anwendungsfälle zeigen
 - **Fehler zeigen:** Häufige Fehler bei Funktionen demonstrieren
+- **Tests live zeigen:** Grüne und rote Ausgabe demonstrieren
 
 ## 🔗 Materialien
 
