@@ -31,8 +31,7 @@ def summiere_bis(n):
     """
     summe = 0
     # HIER IST EIN BUG - kannst du ihn finden?
-    # range(1, n) geht nur bis n-1, nicht bis n!
-    for i in range(1, n):  # BUG: sollte range(1, n + 1) sein
+    for i in range(1, n):
         summe += i
     return summe
 
@@ -56,9 +55,9 @@ def ist_bestanden(punkte):
     # HIER IST EIN BUG - kannst du ihn finden?
     if punkte < 60:
         return False
-    if punkte > 60:  # BUG: sollte >= 60 sein (60 ist auch bestanden!)
+    if punkte > 60:
         return True
-    return False  # Bei genau 60 Punkten: gibt False zurück, obwohl bestanden!
+    return False
 
 
 # ============================================================
@@ -85,9 +84,7 @@ def finde_maximum(zahlen):
             maximum = zahl
 
     # HIER IST EIN BUG - kannst du ihn finden?
-    # Die Funktion berechnet das Maximum, gibt es aber nicht zurück!
     print(f"Das Maximum ist: {maximum}")
-    # BUG: return maximum fehlt hier!
 
 
 # ============================================================
@@ -109,10 +106,9 @@ def zaehle_runter(start):
     aktuell = start
 
     # HIER IST EIN BUG - kannst du ihn finden?
-    # aktuell wird hochgezählt statt runtergezählt → Endlosschleife!
     while aktuell > 0:
         zahlen.append(aktuell)
-        aktuell += 1  # BUG: sollte aktuell -= 1 sein
+        aktuell += 1
 
         # Sicherheitsabbruch für die Demo (sonst echte Endlosschleife!)
         if len(zahlen) > 100:

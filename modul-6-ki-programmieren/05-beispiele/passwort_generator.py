@@ -5,10 +5,15 @@ Ein vollständiger Passwort-Generator, entwickelt mit KI-Unterstützung.
 Dokumentiert den Entwicklungsprozess mit KI.
 
 Konzepte:
-- Zufallsgenerierung mit random
+- Kryptografisch sichere Zufallsgenerierung mit dem secrets-Modul
 - String-Manipulation mit string-Modul
 - Funktionsparameter mit Standardwerten
 - Passwort-Sicherheitsbewertung
+
+Hinweis zu secrets vs. random:
+- `secrets` ist für sicherheitsrelevante Aufgaben (Passwörter, Tokens)
+- `random` eignet sich für Spiele oder Simulationen, NICHT für Passwörter
+- Jeder Aufruf liefert andere Passwörter (nicht reproduzierbar)
 
 Entwicklungsprozess mit KI:
 1. Prompt: "Erstelle einen Passwort-Generator in Python"
@@ -17,8 +22,11 @@ Entwicklungsprozess mit KI:
 4. Finalisierung: "Formatiere die Ausgabe schön"
 """
 
-import random
+import secrets
 import string
+
+# secrets.SystemRandom() bietet eine kryptografisch sichere shuffle-Methode
+_secure_random = secrets.SystemRandom()
 
 # ============================================================
 # Passwort erstellen
@@ -48,23 +56,23 @@ def erstelle_passwort(
     """
     # Zeichenpool aufbauen - immer mit Kleinbuchstaben starten
     zeichenpool = string.ascii_lowercase
-    pflicht_zeichen = [random.choice(string.ascii_lowercase)]
+    pflicht_zeichen = [secrets.choice(string.ascii_lowercase)]
 
     # Optional Grossbuchstaben hinzufügen
     if mit_grossbuchstaben:
         zeichenpool += string.ascii_uppercase
-        pflicht_zeichen.append(random.choice(string.ascii_uppercase))
+        pflicht_zeichen.append(secrets.choice(string.ascii_uppercase))
 
     # Optional Ziffern hinzufügen
     if mit_ziffern:
         zeichenpool += string.digits
-        pflicht_zeichen.append(random.choice(string.digits))
+        pflicht_zeichen.append(secrets.choice(string.digits))
 
     # Optional Sonderzeichen hinzufügen
     if mit_sonderzeichen:
         sonderzeichen = "!@#$%&*+-=?"
         zeichenpool += sonderzeichen
-        pflicht_zeichen.append(random.choice(sonderzeichen))
+        pflicht_zeichen.append(secrets.choice(sonderzeichen))
 
     # Restliche Zeichen zufällig aus dem Pool wählen
     restlaenge = laenge - len(pflicht_zeichen)
@@ -72,11 +80,11 @@ def erstelle_passwort(
         restlaenge = 0
 
     alle_zeichen = pflicht_zeichen + [
-        random.choice(zeichenpool) for _ in range(restlaenge)
+        secrets.choice(zeichenpool) for _ in range(restlaenge)
     ]
 
     # Zeichen mischen, damit Pflichtzeichen nicht immer vorne stehen
-    random.shuffle(alle_zeichen)
+    _secure_random.shuffle(alle_zeichen)
 
     # Liste zu String zusammenfügen
     passwort = "".join(alle_zeichen)
@@ -95,12 +103,18 @@ def bewerte_passwort_staerke(passwort):
     """
     Bewertet die Stärke eines Passworts.
 
-    Kriterien:
-    - Länge (min. 8, besser 12+)
-    - Grossbuchstaben vorhanden
-    - Kleinbuchstaben vorhanden
-    - Ziffern vorhanden
-    - Sonderzeichen vorhanden
+    Kriterien und Punktevergabe:
+    - Länge >= 12 Zeichen: 2 Punkte
+    - Länge 8-11 Zeichen:  1 Punkt
+    - Länge < 8 Zeichen:   0 Punkte (Passwort gilt als zu kurz)
+    - Grossbuchstaben vorhanden:  +1 Punkt
+    - Kleinbuchstaben vorhanden:  +1 Punkt
+    - Ziffern vorhanden:          +1 Punkt
+    - Sonderzeichen vorhanden:    +1 Punkt
+
+    Hinweis: Auch bei "zu kurz" können bis zu 4 Punkte für die
+    Zeichenvielfalt vergeben werden — die Sterne-Bewertung allein
+    ersetzt also nicht die Längenprüfung.
 
     Args:
         passwort: Das zu bewertende Passwort
@@ -202,10 +216,10 @@ def generiere_passwort_vorschlaege(anzahl=5):
 
     for _ in range(anzahl):
         # Zufällige Konfiguration
-        laenge = random.choice([8, 10, 12, 14, 16])
-        mit_gross = random.choice([True, True, True, False])
-        mit_ziffern = random.choice([True, True, True, False])
-        mit_sonder = random.choice([True, False, False, False])
+        laenge = secrets.choice([8, 10, 12, 14, 16])
+        mit_gross = secrets.choice([True, True, True, False])
+        mit_ziffern = secrets.choice([True, True, True, False])
+        mit_sonder = secrets.choice([True, False, False, False])
 
         # Passwort generieren und bewerten
         passwort = erstelle_passwort(laenge, mit_gross, mit_ziffern, mit_sonder)

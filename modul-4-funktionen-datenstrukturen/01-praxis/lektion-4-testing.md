@@ -63,8 +63,8 @@ def ist_gerade(zahl):
 # test_beispiel.py
 
 def test_ist_gerade():
-    assert ist_gerade(4) == True
-    assert ist_gerade(3) == False
+    assert ist_gerade(4) is True
+    assert ist_gerade(3) is False
 ```
 
 **Tests ausführen:**
@@ -97,13 +97,13 @@ def ist_gerade(zahl):
 from testen_beispiel import ist_gerade
 
 def test_gerade_zahl():
-    assert ist_gerade(4) == True
+    assert ist_gerade(4) is True
 
 def test_ungerade_zahl():
-    assert ist_gerade(3) == False
+    assert ist_gerade(3) is False
 
 def test_null_ist_gerade():
-    assert ist_gerade(0) == True
+    assert ist_gerade(0) is True
 ```
 
 **pytest ausführen:**

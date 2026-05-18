@@ -87,7 +87,7 @@
 <details>
 <summary>Klicken für Lösungen</summary>
 
-1. **B** - `"w"` (write) überschreibt die Datei. `"a"` würde anhängen.
+1. **B** - `"w"` (write) überschreibt die Datei komplett. `"a"` (append) hängt am Ende an, `"r"` (read) öffnet nur zum Lesen, `"r+"` öffnet zum Lesen+Schreiben ohne die Datei zu leeren (schreibt ab Position 0 ohne den Rest zu löschen).
 2. **B** - `with open(...)` schliesst die Datei automatisch nach Gebrauch.
 3. **B** - CSV = Comma-Separated Values (komma-getrennte Werte).
 4. **C** - JSON eignet sich besonders gut für verschachtelte, strukturierte Daten.

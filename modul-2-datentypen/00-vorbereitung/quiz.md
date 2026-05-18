@@ -12,12 +12,12 @@
 
 ## Fragen
 
-### 1. Welche der folgenden Zeilen erstellt einen gültigen String?
+### 1. Welche Zuweisung erstellt **keinen** gültigen String?
 
-- [ ] A) `name = Anna`
-- [ ] B) `name = "Anna"`
-- [ ] C) `name = 'Anna'`
-- [ ] D) B und C sind korrekt
+- [ ] A) `name = "Anna"`
+- [ ] B) `name = 'Anna'`
+- [ ] C) `name = Anna`
+- [ ] D) `name = "Hallo Welt"`
 
 ### 2. Was gibt folgender Code aus?
 
@@ -53,7 +53,7 @@ print(vorname + nachname)
 - [ ] C) `"  Hallo"`
 - [ ] D) `"Hallo"`
 
-### 6. Welcher Code gibt `Ich bin 25 Jahre alt` aus?
+### 6. Welcher Code nutzt einen **F-String**, um `Ich bin 25 Jahre alt` auszugeben?
 
 ```python
 alter = 25
@@ -103,12 +103,12 @@ print(ergebnis)
 <details>
 <summary>Klicken für Lösungen</summary>
 
-1. **D** - Sowohl einfache (`'...'`) als auch doppelte (`"..."`) Anführungszeichen sind gültig.
+1. **C** - Ohne Anführungszeichen sucht Python eine Variable namens `Anna` — kein String, sondern `NameError`. A, B und D sind alle gültige Strings (einfache und doppelte Anführungszeichen sind gleichwertig).
 2. **B** - `+` verkettet Strings ohne Leerzeichen. Für ein Leerzeichen: `vorname + " " + nachname`.
 3. **B** - Index 0 ist das erste Zeichen, also `"P"`.
 4. **B** - `[1:4]` bedeutet von Index 1 (inklusive) bis 4 (exklusive): `"all"`.
 5. **D** - `.strip()` entfernt Leerzeichen am Anfang und Ende.
-6. **B** - F-Strings (`f"..."`) erlauben Variablen in `{}`. Option A funktioniert nicht (String + Zahl).
+6. **B** - F-Strings beginnen mit `f"..."` und erlauben Variablen in `{}`. Option D gibt zwar denselben Text aus, ist aber kein F-String (`print()` mit Komma-getrennten Argumenten). A scheitert (String + Zahl), C zeigt `{alter}` wörtlich.
 7. **B** - `==` ist ein Vergleichsoperator und gibt `True` oder `False` zurück.
 8. **B** - `and` gibt nur `True` zurück, wenn beide Werte `True` sind.
 9. **C** - `int("42")` konvertiert zu `42`, dann `42 + 8 = 50`.

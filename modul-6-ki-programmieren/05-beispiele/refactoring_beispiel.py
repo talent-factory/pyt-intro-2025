@@ -194,6 +194,11 @@ def erstelle_notenverteilung(noten_liste):
     REFACTORING-GRUND: Verteilung ist unabhängig von
     anderen Berechnungen und kann einzeln getestet werden.
 
+    REFACTORING-BONUS: Die Kategorienamen enthalten jetzt
+    explizit den Wertebereich (z. B. "Sehr gut (5.5-6.0)").
+    Lernende sehen direkt im Output, welche Grenzen gelten —
+    keine Rückfrage an die Doku nötig.
+
     Args:
         noten_liste: Liste von Noten
 

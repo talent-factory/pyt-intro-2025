@@ -12,7 +12,7 @@ Hier einige Denkanstösse:
 
 - Hat das Ergebnis die richtigen Schlüssel (`name`, `email`, `telefon`)?
 - Stimmen die Werte im Dictionary?
-- Was passiert bei einem leeren Namen?
+- Funktioniert der **Standardwert** für `telefon`, wenn man ihn weglässt?
 
 Erstellen Sie eine Datei `test_kontakte.py` und führen Sie die Tests aus:
 
@@ -60,10 +60,12 @@ def test_kontakt_komplett():
     assert ergebnis == erwartet
 
 
-def test_kontakt_leerer_name():
-    """Testet was bei einem leeren Namen passiert."""
-    kontakt = erstelle_kontakt("", "test@example.com", "079 000 00 00")
-    assert kontakt["name"] == ""
+def test_kontakt_ohne_telefon():
+    """Testet den Standardwert für telefon (leerer String)."""
+    kontakt = erstelle_kontakt("Lisa", "lisa@example.com")
+    assert kontakt["name"] == "Lisa"
+    assert kontakt["email"] == "lisa@example.com"
+    assert kontakt["telefon"] == ""
 ```
 
 </details>

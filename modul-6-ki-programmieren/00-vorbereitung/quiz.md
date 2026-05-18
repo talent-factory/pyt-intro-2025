@@ -91,7 +91,7 @@
 2. **B** - GitHub Copilot ist eine IDE-Integration (Plugin für VS Code etc.).
 3. **C** - Halluzination bedeutet, dass die KI falsche Informationen erfindet.
 4. **D** - KI-generierter Code sollte immer geprüft werden.
-5. **C** - CLI-Tools können direkt auf Projektdateien zugreifen und sie bearbeiten.
+5. **C** - CLI-Tools können direkt auf Projektdateien zugreifen und sie bearbeiten. Hinweis: Auch CLI-Tools benötigen weiterhin eine Internetverbindung zum KI-Server — der Vorteil liegt im Projektkontext, nicht in der Offline-Nutzung.
 6. **C** - CLAUDE.md gibt dem KI-Tool Kontext über das Projekt.
 7. **B** - KI-Code kann Fehler enthalten und muss immer geprüft werden.
 8. **C** - Iteratives Prompting bedeutet schrittweises Verfeinern des Prompts.

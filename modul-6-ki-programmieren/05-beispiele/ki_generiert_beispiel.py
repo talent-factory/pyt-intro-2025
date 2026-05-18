@@ -33,7 +33,11 @@ def erstelle_einkaufsliste(name):
 
 
 # KI-GENERIERT: Diese Funktion wurde von Claude Code erstellt
-# BEWERTUNG: ✅ Gut - Duplikat-Prüfung und Mengenangabe vorhanden
+# BEWERTUNG: ⚠️ Verbesserungswürdig
+#   ✅ Duplikat-Prüfung und Mengenangabe sind sinnvoll
+#   ❌ Mischt print() und return — eine Funktion sollte EINEN Weg
+#      der Kommunikation wählen (hier: nur Rückgabewert). Aufrufer
+#      sollten anhand des bool selbst entscheiden, was angezeigt wird.
 
 
 def artikel_hinzufuegen(einkaufsliste, artikel_name, menge=1, einheit="Stück"):

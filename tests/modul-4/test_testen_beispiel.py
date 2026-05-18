@@ -3,6 +3,13 @@ Tests fuer testen_beispiel.py
 
 Diese Testdatei zeigt, wie man Funktionen mit pytest testet.
 Sie dient als Lernbeispiel fuer Lektion 4 von Modul 4.
+
+Hinweis fuer Lernende:
+- Der `sys.path.insert(...)`-Block unten ist nötig, weil die Modul-Beispiele
+  kein installiertes Python-Paket sind. Wir teilen Python mit, wo es die
+  Datei `testen_beispiel.py` findet.
+- Der Marker `@pytest.mark.modul4` wird in `pyproject.toml` registriert
+  und erlaubt selektives Ausführen mit `uv run pytest -m modul4`.
 """
 
 import sys
@@ -10,7 +17,8 @@ from pathlib import Path
 
 import pytest
 
-# Modul-Pfad hinzufuegen
+# Modul-Pfad hinzufuegen, damit `from testen_beispiel import ...` funktioniert.
+# (Workaround, weil die Lehrmaterialien nicht als installierbares Paket vorliegen.)
 modul_pfad = (
     Path(__file__).parent.parent.parent
     / "modul-4-funktionen-datenstrukturen"

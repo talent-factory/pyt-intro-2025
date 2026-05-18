@@ -24,8 +24,10 @@ Konzepte:
 #   der Code: [Code eingefügt]. Findest du den Fehler?"
 #
 # KI-ANTWORT: "Der Bug ist in der Schleife: Du verwendest
-#   summe = zahl statt summe += zahl. Dadurch wird die Summe
-#   immer mit der letzten Zahl überschrieben, nicht addiert."
+#   summe = zahl statt summe += zahl. In jeder Iteration wird
+#   summe mit dem aktuellen Listenwert überschrieben — die
+#   vorherigen Werte gehen verloren. Am Ende bleibt nur der
+#   zuletzt iterierte Wert übrig (hier: 30 / 3 = 10.0)."
 #
 # FIX: summe = zahl → summe += zahl
 
@@ -132,7 +134,7 @@ def bewerte_note_fix(note):
 #   mit IndexError wenn die Liste leer ist oder nur ein
 #   Element hat. Wie kann ich das beheben?"
 #
-# KI-ANTWORT: "Du greifst auf sortierte[−2] zu, ohne vorher
+# KI-ANTWORT: "Du greifst auf sortierte[-2] zu, ohne vorher
 #   zu prüfen, ob die Liste mindestens 2 Elemente hat.
 #   Füge eine Eingabevalidierung am Anfang hinzu."
 #

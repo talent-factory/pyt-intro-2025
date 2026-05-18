@@ -35,17 +35,17 @@ from testen_beispiel import ist_gerade, berechne_durchschnitt
 
 def test_ist_gerade_mit_gerader_zahl():
     """Testet ob 4 als gerade erkannt wird."""
-    assert ist_gerade(4) == True
+    assert ist_gerade(4) is True
 
 
 def test_ist_gerade_mit_ungerader_zahl():
     """Testet ob 7 als ungerade erkannt wird."""
-    assert ist_gerade(7) == False
+    assert ist_gerade(7) is False
 
 
 def test_ist_gerade_mit_null():
     """Testet ob 0 als gerade erkannt wird."""
-    assert ist_gerade(0) == True
+    assert ist_gerade(0) is True
 
 
 def test_durchschnitt_mit_noten():

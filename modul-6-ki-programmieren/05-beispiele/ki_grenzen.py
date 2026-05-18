@@ -268,8 +268,10 @@ if __name__ == "__main__":
     print(f"Gewünscht (gerade filtern): {filtere_gerade_zahlen(zahlen)}")
 
     # Beispiel 2: Halluzinierte Grenzwerte
+    # Werte bewusst gewählt: BMI 24.2 liegt im "Zwielicht" zwischen
+    # KI-Halluzination (Grenze 24.0) und WHO-Realität (Grenze 25.0).
     print("\n--- Beispiel 2: Falsche Grenzwerte ---")
-    gewicht = 77
+    gewicht = 74
     groesse = 175
     bmi_ki, kat_ki = berechne_bmi_ki_version(gewicht, groesse)
     bmi_ok, kat_ok = berechne_bmi_korrekt(gewicht, groesse)
