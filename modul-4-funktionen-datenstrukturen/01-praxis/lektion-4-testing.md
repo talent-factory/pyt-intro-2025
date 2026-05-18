@@ -106,6 +106,8 @@ def test_null_ist_gerade():
     assert ist_gerade(0) is True
 ```
 
+> **Hinweis zum `from ... import ...`-Befehl:** Wir holen die Funktion `ist_gerade` aus der Datei `testen_beispiel.py` in unsere Test-Datei. Wie Imports im Detail funktionieren — eigene Module, Pfade, Standardbibliothek — lernen Sie in **Modul 5**. Für heute reicht: „die Test-Datei greift auf eine Funktion in einer anderen Datei zu".
+
 **pytest ausführen:**
 
 ```bash

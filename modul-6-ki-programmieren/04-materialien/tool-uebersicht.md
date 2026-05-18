@@ -1,5 +1,7 @@
 # Tool-Übersicht: KI-Werkzeuge für Programmierer
 
+> **Stand:** Mai 2026 — Die KI-Tool-Landschaft verändert sich rasant. Preise, Funktionen und Verfügbarkeit können sich ändern. Prüfen Sie vor Kursbeginn die aktuellen Informationen auf den jeweiligen Webseiten.
+
 ## Vergleichstabelle
 
 | Tool | Kategorie | Kosten | Stärken | Schwächen | URL |

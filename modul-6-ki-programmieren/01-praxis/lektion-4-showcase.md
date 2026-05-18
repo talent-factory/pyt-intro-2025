@@ -123,6 +123,8 @@ Diskutieren Sie in der Gruppe:
 
 ### Alternativen und Marktübersicht
 
+> **Stand:** Mai 2026 — Marktübersicht zum Kurszeitpunkt. Eine vollständige, gepflegte Liste finden Sie in `04-materialien/tool-uebersicht.md`.
+
 | Tool | Typ | Stärke | Link |
 |------|-----|--------|------|
 | **Claude Code** | CLI | Projektkontext, Plugins | [claude.ai/download](https://claude.ai/download) |

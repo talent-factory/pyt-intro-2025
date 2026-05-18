@@ -21,7 +21,44 @@ KI-gestütztes Programmieren bedeutet, dass Sie eine künstliche Intelligenz als
 
 > **Wichtig:** Die KI ist ein Werkzeug, kein Ersatz für Ihr Verständnis. Sie müssen den Code, den die KI liefert, **verstehen und prüfen** können.
 
+### Wann KI sich irrt: Zwei Arten von Fehlern
+
+Wenn KI Code generiert, gibt es **zwei unterschiedliche Fehlerarten** — Anfänger erkennen meist nur die erste:
+
+**Typ 1: Faktische Halluzination** (offensichtlich)
+
+Die KI erfindet etwas, das es nicht gibt:
+
+- Erfundene Funktionsnamen (`liste.sortiere_alphabetisch()` existiert nicht)
+- Erfundene Bibliotheken (`import super_math` gibt es nicht)
+- Falsche Grenzwerte (siehe BMI-Beispiel in `ki_grenzen.py`)
+
+→ **Erkennbar:** Code stürzt mit `NameError`, `ImportError` oder produziert offensichtlich falsche Ergebnisse.
+
+**Typ 2: Semantische Halluzination** (gefährlich)
+
+Der Code sieht korrekt aus und läuft fehlerfrei, tut aber **nicht das**, was Sie wollen:
+
+- Sortiert aufsteigend statt absteigend
+- Berücksichtigt nicht alle Eingabeformate (siehe Telefon-Beispiel in `ki_grenzen.py`)
+- Off-by-one Fehler in Schleifen
+- Falsche Vergleichsoperatoren (`>` statt `>=`)
+
+→ **NICHT erkennbar** durch blosses Lesen — Sie müssen den Code **mit Beispieldaten testen**.
+
+### Wie Sie KI-Code verifizieren
+
+Drei Schritte für jeden KI-Vorschlag:
+
+1. **Lesen + Verstehen:** Können Sie jede Zeile in eigenen Worten erklären? Falls nein — nicht übernehmen.
+2. **Mit Beispielen testen:** Probieren Sie typische Werte, Grenzfälle (0, leere Liste), unerwartete Eingaben.
+3. **Gegen die Spezifikation prüfen:** Macht der Code wirklich das, was die Aufgabe verlangt — oder nur etwas Ähnliches?
+
+> **Faustregel:** Vertrauen Sie KI-Code erst nach dem Test, nicht nach dem Lesen.
+
 ### Drei Kategorien von KI-Programmierwerkzeugen
+
+> **Stand:** Mai 2026 — Die Tool-Landschaft ändert sich rasch; Funktionen und Anbieter können sich verschieben.
 
 | Kategorie | Beispiele | Wie es funktioniert |
 |-----------|-----------|---------------------|

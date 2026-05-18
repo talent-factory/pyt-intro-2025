@@ -3,6 +3,20 @@
 **Dauer:** 1 Tag (4 Lektionen à 50 Minuten)
 **Voraussetzung:** Module 1-5 abgeschlossen, GitHub-Account
 
+## 🔗 Bezug zu früheren Modulen
+
+Modul 6 baut bewusst auf den Konzepten aus Module 1-5 auf. KI-gestütztes Programmieren ist **keine Abkürzung**, die Grundlagen ersetzt — Sie brauchen sie, um KI-Output zu beurteilen:
+
+| Aus Modul... | ... brauchen Sie hier für ... |
+|--------------|-------------------------------|
+| **Modul 1** (Einstieg) | KI-generierten Code in der Shell ausprobieren |
+| **Modul 2** (Datentypen) | Erkennen, ob die KI mit String, Liste oder Dictionary das Richtige tut |
+| **Modul 3** (Kontrollstrukturen) | Schleifen und Bedingungen in KI-Code lesen, Off-by-one-Fehler erkennen |
+| **Modul 4** (Funktionen + Testing) | KI-generierte Funktionen mit pytest auf Korrektheit prüfen |
+| **Modul 5** (Dateien + Module) | Verstehen, was Claude Code mit Ihren Projektdateien tut |
+
+> **Kerngedanke:** Die KI generiert Code. **Sie** entscheiden, ob er stimmt. Ohne Module 1-5 fehlt Ihnen das Werkzeug für diese Entscheidung.
+
 ## 🎯 Lernziele
 
 Nach diesem Modul können Sie:
