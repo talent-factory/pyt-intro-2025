@@ -129,7 +129,10 @@ print()
 # Fibonacci-Zahlen
 print("=== Fibonacci-Zahlen ===\n")
 
-a, b = 0, 1
+# In der Fibonacci-Folge ist jede Zahl die Summe der beiden vorherigen.
+# Start: 0, 1 - dann 0+1=1, 1+1=2, 1+2=3, 2+3=5, ...
+a = 0
+b = 1
 zaehler = 0
 max_zahlen = 10
 
@@ -137,7 +140,13 @@ print("Erste 10 Fibonacci-Zahlen:")
 
 while zaehler < max_zahlen:
     print(a, end=" ")
-    a, b = b, a + b
+
+    # Nächste Zahl berechnen - mit Hilfsvariable, damit a beim
+    # Überschreiben nicht verlorengeht.
+    naechste = a + b
+    a = b
+    b = naechste
+
     zaehler += 1
 
 print("\n")
