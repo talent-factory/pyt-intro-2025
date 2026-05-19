@@ -1,198 +1,94 @@
 """
-Menü-System
-Demonstriert ein vollständiges Menü-System mit verschiedenen Funktionen.
+Ganzzahl-Taschenrechner mit Menü
+Demonstriert ein Menü-System für einen einfachen Taschenrechner.
 
 Konzepte:
-- While-Schleife für Menü
-- If-elif-else für Auswahl
-- Funktionen für Modularität
-- Input-Validierung
+- while-Schleife für das Menü
+- if/elif/else für die Auswahl
+- String-Methoden für die Eingabevalidierung
+- continue zum erneuten Anzeigen des Menüs
+- break zum Beenden des Programms
+
+Hinweis: Dieser Taschenrechner verarbeitet bewusst nur ganze Zahlen
+(positiv oder negativ). Eine erweiterte Variante mit Dezimalzahlen
+und mehreren Werkzeugen folgt in Modul 4 mit Funktionen.
 """
 
+print("=" * 50)
+print("           TASCHENRECHNER (Ganzzahlen)")
+print("=" * 50)
 
-def taschenrechner() -> None:
-    """Einfacher Taschenrechner."""
-    print("\n=== TASCHENRECHNER ===")
+# Hauptschleife - läuft, bis der Benutzer "5" zum Beenden wählt
+while True:
+    # ============================================================
+    # Menü anzeigen
+    # ============================================================
+    print("\nWas möchten Sie tun?")
+    print("1. Addieren")
+    print("2. Subtrahieren")
+    print("3. Multiplizieren")
+    print("4. Dividieren")
+    print("5. Beenden")
 
-    try:
-        zahl1 = float(input("Erste Zahl: "))
-        operator = input("Operator (+, -, *, /): ")
-        zahl2 = float(input("Zweite Zahl: "))
+    wahl = input("\nIhre Wahl: ").strip()
 
-        if operator == "+":
-            ergebnis = zahl1 + zahl2
-        elif operator == "-":
-            ergebnis = zahl1 - zahl2
-        elif operator == "*":
-            ergebnis = zahl1 * zahl2
-        elif operator == "/":
-            if zahl2 == 0:
-                print("❌ Division durch 0 nicht möglich!")
-                return
-            ergebnis = zahl1 / zahl2
-        else:
-            print("❌ Ungültiger Operator!")
-            return
+    # Beenden
+    if wahl == "5":
+        print("\n👋 Auf Wiedersehen!")
+        break
 
-        print(f"\n{zahl1} {operator} {zahl2} = {ergebnis}")
+    # Gültige Wahl prüfen
+    if wahl not in ["1", "2", "3", "4"]:
+        print("\n❌ Ungültige Wahl! Bitte 1-5 eingeben.")
+        continue
 
-    except ValueError:
-        print("❌ Ungültige Eingabe!")
+    # ============================================================
+    # Zahlen einlesen und validieren
+    # ============================================================
+    eingabe_a = input("\nErste Zahl: ").strip()
+    eingabe_b = input("Zweite Zahl: ").strip()
 
+    # Validierung: ganze Zahlen, optional mit einem Minuszeichen am Anfang.
+    # Wir extrahieren den Ziffernteil und prüfen, ob er aus Ziffern besteht.
+    if eingabe_a.startswith("-"):
+        ziffern_a = eingabe_a[1:]
+    else:
+        ziffern_a = eingabe_a
 
-def temperatur_umrechner() -> None:
-    """Rechnet zwischen Celsius und Fahrenheit um."""
-    print("\n=== TEMPERATUR-UMRECHNER ===")
-    print("1. Celsius → Fahrenheit")
-    print("2. Fahrenheit → Celsius")
+    if eingabe_b.startswith("-"):
+        ziffern_b = eingabe_b[1:]
+    else:
+        ziffern_b = eingabe_b
 
-    wahl = input("\nWahl: ")
+    a_gueltig = ziffern_a != "" and ziffern_a.isdigit()
+    b_gueltig = ziffern_b != "" and ziffern_b.isdigit()
 
-    try:
-        if wahl == "1":
-            celsius = float(input("Celsius: "))
-            fahrenheit = celsius * 9 / 5 + 32
-            print(f"{celsius}°C = {fahrenheit:.1f}°F")
+    if not a_gueltig or not b_gueltig:
+        print("❌ Bitte ganze Zahlen eingeben (z.B. 5, -3, 42)!")
+        continue
 
-        elif wahl == "2":
-            fahrenheit = float(input("Fahrenheit: "))
-            celsius = (fahrenheit - 32) * 5 / 9
-            print(f"{fahrenheit}°F = {celsius:.1f}°C")
+    zahl1 = int(eingabe_a)
+    zahl2 = int(eingabe_b)
 
-        else:
-            print("❌ Ungültige Wahl!")
+    # ============================================================
+    # Berechnung je nach Wahl
+    # ============================================================
+    if wahl == "1":
+        ergebnis = zahl1 + zahl2
+        operator = "+"
+    elif wahl == "2":
+        ergebnis = zahl1 - zahl2
+        operator = "-"
+    elif wahl == "3":
+        ergebnis = zahl1 * zahl2
+        operator = "*"
+    else:  # wahl == "4"
+        # Division durch 0 abfangen
+        if zahl2 == 0:
+            print("❌ Division durch 0 ist nicht möglich!")
+            continue
+        ergebnis = zahl1 / zahl2
+        operator = "/"
 
-    except ValueError:
-        print("❌ Ungültige Eingabe!")
-
-
-def bmi_rechner() -> None:
-    """Berechnet den Body-Mass-Index."""
-    print("\n=== BMI-RECHNER ===")
-
-    try:
-        gewicht = float(input("Gewicht (kg): "))
-        groesse = float(input("Grösse (m): "))
-
-        if gewicht <= 0 or groesse <= 0:
-            print("❌ Werte müssen positiv sein!")
-            return
-
-        bmi = gewicht / (groesse**2)
-
-        print(f"\nBMI: {bmi:.1f}")
-
-        if bmi < 18.5:
-            kategorie = "Untergewicht"
-        elif bmi < 25:
-            kategorie = "Normalgewicht"
-        elif bmi < 30:
-            kategorie = "Übergewicht"
-        else:
-            kategorie = "Adipositas"
-
-        print(f"Kategorie: {kategorie}")
-
-    except ValueError:
-        print("❌ Ungültige Eingabe!")
-
-
-def wuerfel_simulator() -> None:
-    """Simuliert Würfelwürfe."""
-    import random
-
-    print("\n=== WÜRFEL-SIMULATOR ===")
-
-    try:
-        anzahl = int(input("Wie viele Würfel? "))
-
-        if anzahl <= 0:
-            print("❌ Anzahl muss positiv sein!")
-            return
-
-        print("\nErgebnisse:")
-        summe = 0
-
-        for i in range(anzahl):
-            wurf = random.randint(1, 6)
-            print(f"Würfel {i + 1}: {wurf}")
-            summe += wurf
-
-        print(f"\nSumme: {summe}")
-        print(f"Durchschnitt: {summe / anzahl:.2f}")
-
-    except ValueError:
-        print("❌ Ungültige Eingabe!")
-
-
-def passwort_generator() -> None:
-    """Generiert ein zufälliges Passwort."""
-    import random
-    import string
-
-    print("\n=== PASSWORT-GENERATOR ===")
-
-    try:
-        laenge = int(input("Passwort-Länge: "))
-
-        if laenge < 4:
-            print("❌ Passwort muss mindestens 4 Zeichen lang sein!")
-            return
-
-        # Zeichensätze
-        buchstaben = string.ascii_letters
-        zahlen = string.digits
-        sonderzeichen = "!@#$%^&*"
-
-        alle_zeichen = buchstaben + zahlen + sonderzeichen
-
-        # Passwort generieren
-        passwort = "".join(random.choice(alle_zeichen) for _ in range(laenge))
-
-        print(f"\nGeneriertes Passwort: {passwort}")
-
-    except ValueError:
-        print("❌ Ungültige Eingabe!")
-
-
-def main() -> None:
-    """Hauptprogramm mit Menü."""
-    print("\n" + "=" * 50)
-    print("           WERKZEUG-SAMMLUNG")
-    print("=" * 50)
-
-    while True:
-        print("\n1. Taschenrechner")
-        print("2. Temperatur-Umrechner")
-        print("3. BMI-Rechner")
-        print("4. Würfel-Simulator")
-        print("5. Passwort-Generator")
-        print("6. Beenden")
-
-        wahl = input("\nWahl: ").strip()
-
-        if wahl == "1":
-            taschenrechner()
-
-        elif wahl == "2":
-            temperatur_umrechner()
-
-        elif wahl == "3":
-            bmi_rechner()
-
-        elif wahl == "4":
-            wuerfel_simulator()
-
-        elif wahl == "5":
-            passwort_generator()
-
-        elif wahl == "6":
-            print("\n👋 Auf Wiedersehen!")
-            break
-
-        else:
-            print("\n❌ Ungültige Wahl! Bitte 1-6 wählen.")
-
-
-if __name__ == "__main__":
-    main()
+    # Ergebnis ausgeben
+    print(f"\n✓ Ergebnis: {zahl1} {operator} {zahl2} = {ergebnis}")

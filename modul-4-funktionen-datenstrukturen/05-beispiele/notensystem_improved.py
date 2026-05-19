@@ -1,14 +1,16 @@
 """
-Notensystem - Punkte in Noten umwandeln (alternative Version)
-Alternative Musterlösung für Übung 1, Modul 3
+Notensystem mit Datenstruktur - Alternative zum if/elif-Ansatz
 
 Konvertiert Punkte (0-100) in Noten (2-6, Schweizer Skala).
 
-Alternative Ansätze gegenüber der Basisversion (notensystem.py):
-- Notenskala als Datenstruktur (wartbar und erweiterbar)
-- Notenberechnung über Schleife statt if/elif-Kette
-- Eingabevalidierung inline statt in separater Funktion
-- Schutz durch if __name__ == '__main__': Guard
+Demonstriert Konzepte aus Modul 4:
+- Listen von Tupeln als Datenstruktur (wartbar und erweiterbar)
+- Tupel-Unpacking in einer for-Schleife
+- sorted() mit einer key-Funktion (lambda)
+- if __name__ == "__main__":-Guard für ausführbare Module
+
+Die einfache if/elif-Variante des Notensystems finden Sie in
+modul-3-kontrollstrukturen/05-beispiele/notensystem.py.
 """
 
 # Notenskala: Liste von Tupeln (Mindestpunktzahl, Note, Bewertung)

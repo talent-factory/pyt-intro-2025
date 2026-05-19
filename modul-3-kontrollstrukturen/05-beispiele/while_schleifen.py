@@ -75,15 +75,22 @@ print()
 # Benutzereingabe validieren
 print("=== Eingabe validieren ===\n")
 
-# Simulation (normalerweise mit input())
-eingabe = "5"  # Simuliert: input("Zahl zwischen 1 und 10: ")
+# Simulation: Liste mit Eingaben, die nacheinander "geliefert" werden.
+# In einem echten Programm käme jede Eingabe von input("...").
+test_eingaben = ["15", "0", "7"]
+position = 0
 
-zahl = int(eingabe)
+zahl = -1  # Startwert, der die Schleifenbedingung erfüllt
 
 while zahl < 1 or zahl > 10:
-    print("Ungültige Eingabe!")
-    # zahl = int(input("Zahl zwischen 1 und 10: "))
-    break  # Für Demo
+    eingabe = test_eingaben[position]
+    print(f"Eingabe: {eingabe}")
+    zahl = int(eingabe)
+
+    if zahl < 1 or zahl > 10:
+        print("Ungültige Eingabe! Bitte Zahl zwischen 1 und 10.\n")
+
+    position += 1
 
 print(f"Gültige Zahl: {zahl}\n")
 
@@ -129,7 +136,10 @@ print()
 # Fibonacci-Zahlen
 print("=== Fibonacci-Zahlen ===\n")
 
-a, b = 0, 1
+# In der Fibonacci-Folge ist jede Zahl die Summe der beiden vorherigen.
+# Start: 0, 1 - dann 0+1=1, 1+1=2, 1+2=3, 2+3=5, ...
+a = 0
+b = 1
 zaehler = 0
 max_zahlen = 10
 
@@ -137,7 +147,13 @@ print("Erste 10 Fibonacci-Zahlen:")
 
 while zaehler < max_zahlen:
     print(a, end=" ")
-    a, b = b, a + b
+
+    # Nächste Zahl berechnen - mit Hilfsvariable, damit a beim
+    # Überschreiben nicht verlorengeht.
+    naechste = a + b
+    a = b
+    b = naechste
+
     zaehler += 1
 
 print("\n")

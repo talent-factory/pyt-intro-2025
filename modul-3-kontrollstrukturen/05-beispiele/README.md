@@ -15,11 +15,10 @@ Vollständige Beispielprogramme für Modul 3.
 | `einkaufsliste.py` | Einkaufslisten-Manager | Listen, Menü, Schleifen |
 | `primzahlen.py` | Primzahlen-Finder | For, if, Mathematik |
 | `muster.py` | Muster zeichnen | Verschachtelte Schleifen |
-| `menu.py` | Menü-System | While, if-elif-else |
+| `menu.py` | Taschenrechner mit Menü | While, if-elif-else, Validierung |
 | `notensystem.py` | Punkte in Noten umwandeln | While, if-elif-else, Validierung |
 | `gerade_zahlen.py` | Gerade Zahlen filtern | For, if, Listen, Modulo |
 | `notenliste.py` | Notenstatistik berechnen | For, if, Listen, Statistik |
-| `notensystem_improved.py` | Notensystem mit Datenstruktur | Listen, Tupel, For-Schleife |
 
 ## 🚀 Verwendung
 

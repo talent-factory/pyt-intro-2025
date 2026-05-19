@@ -24,116 +24,123 @@ while True:
 
     if wahl == "1":
         # Primzahl-Test
-        try:
-            n = int(input("\nZahl: "))
+        eingabe = input("\nZahl: ").strip()
 
-            # Prüfen ob n eine Primzahl ist
+        if not eingabe.isdigit():
+            print("❌ Bitte eine positive ganze Zahl eingeben!")
+            continue
+
+        n = int(eingabe)
+
+        # Prüfen ob n eine Primzahl ist
+        ist_prim = False
+
+        if n < 2:
+            ist_prim = False
+        elif n == 2:
+            ist_prim = True
+        elif n % 2 == 0:
+            ist_prim = False
+        else:
+            # Nur bis Wurzel prüfen, nur ungerade Teiler
+            ist_prim = True
+            for teiler in range(3, int(n**0.5) + 1, 2):
+                if n % teiler == 0:
+                    ist_prim = False
+                    break
+
+        if ist_prim:
+            print(f"✓ {n} ist eine Primzahl")
+        else:
+            print(f"✗ {n} ist keine Primzahl")
+
+    elif wahl == "2":
+        # Primzahlen bis N
+        eingabe = input("\nBis zu welcher Zahl? ").strip()
+
+        if not eingabe.isdigit():
+            print("❌ Bitte eine positive ganze Zahl eingeben!")
+            continue
+
+        n = int(eingabe)
+        primzahlen = []
+
+        # Alle Zahlen von 2 bis n durchgehen
+        for zahl in range(2, n + 1):
+            # Prüfen ob zahl eine Primzahl ist
             ist_prim = False
 
-            if n < 2:
-                ist_prim = False
-            elif n == 2:
+            if zahl == 2:
                 ist_prim = True
-            elif n % 2 == 0:
+            elif zahl % 2 == 0:
                 ist_prim = False
             else:
-                # Nur bis Wurzel prüfen, nur ungerade Teiler
                 ist_prim = True
-                for teiler in range(3, int(n**0.5) + 1, 2):
-                    if n % teiler == 0:
+                for teiler in range(3, int(zahl**0.5) + 1, 2):
+                    if zahl % teiler == 0:
                         ist_prim = False
                         break
 
             if ist_prim:
-                print(f"✓ {n} ist eine Primzahl")
-            else:
-                print(f"✗ {n} ist keine Primzahl")
+                primzahlen.append(zahl)
 
-        except ValueError:
-            print("❌ Bitte eine Zahl eingeben!")
+        print(f"\nPrimzahlen bis {n}:")
 
-    elif wahl == "2":
-        # Primzahlen bis N
-        try:
-            n = int(input("\nBis zu welcher Zahl? "))
+        # Ausgabe in Zeilen zu je 10 Zahlen
+        for i in range(0, len(primzahlen), 10):
+            zeile = ""
+            for j in range(i, min(i + 10, len(primzahlen))):
+                if j > i:
+                    zeile += ", "
+                zeile += str(primzahlen[j])
+            print(zeile)
 
-            primzahlen = []
-
-            # Alle Zahlen von 2 bis n durchgehen
-            for zahl in range(2, n + 1):
-                # Prüfen ob zahl eine Primzahl ist
-                ist_prim = False
-
-                if zahl == 2:
-                    ist_prim = True
-                elif zahl % 2 == 0:
-                    ist_prim = False
-                else:
-                    ist_prim = True
-                    for teiler in range(3, int(zahl**0.5) + 1, 2):
-                        if zahl % teiler == 0:
-                            ist_prim = False
-                            break
-
-                if ist_prim:
-                    primzahlen.append(zahl)
-
-            print(f"\nPrimzahlen bis {n}:")
-
-            # Ausgabe in Zeilen zu je 10 Zahlen
-            for i in range(0, len(primzahlen), 10):
-                zeile = []
-                for j in range(i, min(i + 10, len(primzahlen))):
-                    zeile.append(str(primzahlen[j]))
-                print(", ".join(zeile))
-
-            print("\nStatistik:")
-            print(f"- Anzahl: {len(primzahlen)}")
-            if len(primzahlen) > 0:
-                print(f"- Kleinste: {primzahlen[0]}")
-                print(f"- Grösste: {primzahlen[-1]}")
-
-        except ValueError:
-            print("❌ Bitte eine Zahl eingeben!")
+        print("\nStatistik:")
+        print(f"- Anzahl: {len(primzahlen)}")
+        if len(primzahlen) > 0:
+            print(f"- Kleinste: {primzahlen[0]}")
+            print(f"- Grösste: {primzahlen[-1]}")
 
     elif wahl == "3":
         # Primfaktorzerlegung
-        try:
-            n = int(input("\nZahl: "))
+        eingabe = input("\nZahl: ").strip()
 
-            if n < 2:
-                print("❌ Zahl muss mindestens 2 sein!")
-                continue
+        if not eingabe.isdigit():
+            print("❌ Bitte eine positive ganze Zahl eingeben!")
+            continue
 
-            # Primfaktoren finden
-            faktoren = []
-            teiler = 2
-            original_n = n
+        n = int(eingabe)
 
-            while n > 1:
-                while n % teiler == 0:
-                    faktoren.append(teiler)
-                    n //= teiler
-                teiler += 1
+        if n < 2:
+            print("❌ Zahl muss mindestens 2 sein!")
+            continue
 
-                # Optimierung: Wenn teiler > √n, dann ist n prim
-                if teiler * teiler > n and n > 1:
-                    faktoren.append(n)
-                    break
+        # Primfaktoren finden
+        faktoren = []
+        teiler = 2
+        original_n = n
 
-            print(f"\nPrimfaktorzerlegung von {original_n}:")
+        while n > 1:
+            while n % teiler == 0:
+                faktoren.append(teiler)
+                n //= teiler
+            teiler += 1
 
-            # Faktoren als String zusammenbauen
-            faktoren_str = ""
-            for i in range(len(faktoren)):
-                if i > 0:
-                    faktoren_str += " × "
-                faktoren_str += str(faktoren[i])
+            # Optimierung: Wenn teiler > √n, dann ist n prim
+            if teiler * teiler > n and n > 1:
+                faktoren.append(n)
+                break
 
-            print(f"{original_n} = {faktoren_str}")
+        print(f"\nPrimfaktorzerlegung von {original_n}:")
 
-        except ValueError:
-            print("❌ Bitte eine Zahl eingeben!")
+        # Faktoren als String zusammenbauen
+        faktoren_str = ""
+        for i in range(len(faktoren)):
+            if i > 0:
+                faktoren_str += " × "
+            faktoren_str += str(faktoren[i])
+
+        print(f"{original_n} = {faktoren_str}")
 
     elif wahl == "4":
         print("\n👋 Auf Wiedersehen!")
