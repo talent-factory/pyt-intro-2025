@@ -10,8 +10,11 @@ Erstellen Sie `notenliste.py`:
 
 - Liste mit Noten: [5.5, 4.2, 3.8, 6.0, 4.5, 5.0, 3.5]
 - Berechne: Durchschnitt, Beste Note, Schlechteste Note
-- Zähle: Bestanden (≥4.0), Nicht bestanden (<4.- Zähle: Bestanden (≥4.0), Nicht.5, 4.2, 3.8, 6.0, 4.5, 5.0, 3.5]
+- Zähle: Bestanden (≥4.0), Nicht bestanden (<4.0)
 
+## 💡 Beispiel
+
+```
 Durchschnitt: 4.64
 Beste Note: 6.0
 Schlechteste Note: 3.5
