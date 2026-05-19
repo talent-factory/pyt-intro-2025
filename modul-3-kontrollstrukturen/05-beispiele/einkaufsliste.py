@@ -17,15 +17,15 @@ print("\n👋 Willkommen beim Einkaufslisten-Manager!")
 # Hauptschleife
 while True:
     # Menü anzeigen
-    print("\n" + "=" * 40)
+    print("\n" + "=" * 50)
     print("      EINKAUFSLISTEN-MANAGER")
-    print("=" * 40)
+    print("=" * 50)
     print("1. Artikel hinzufügen")
     print("2. Liste anzeigen")
     print("3. Artikel löschen")
     print("4. Liste leeren")
     print("5. Beenden")
-    print("=" * 40)
+    print("=" * 50)
 
     wahl = input("\nWahl: ").strip()
 
@@ -52,9 +52,9 @@ while True:
         if len(einkaufsliste) == 0:
             print("\n📝 Liste ist leer")
         else:
-            print("\n" + "=" * 40)
+            print("\n" + "=" * 50)
             print("      IHRE EINKAUFSLISTE")
-            print("=" * 40)
+            print("=" * 50)
 
             # Nummerierte Ausgabe
             nummer = 1
@@ -62,7 +62,7 @@ while True:
                 print(f"{nummer}. {artikel}")
                 nummer += 1
 
-            print("=" * 40)
+            print("=" * 50)
             print(f"Gesamt: {len(einkaufsliste)} Artikel")
 
     elif wahl == "3":
@@ -71,16 +71,16 @@ while True:
             print("\n❌ Liste ist leer!")
         else:
             # Erst Liste anzeigen
-            print("\n" + "=" * 40)
+            print("\n" + "=" * 50)
             print("      IHRE EINKAUFSLISTE")
-            print("=" * 40)
+            print("=" * 50)
 
             nummer = 1
             for artikel in einkaufsliste:
                 print(f"{nummer}. {artikel}")
                 nummer += 1
 
-            print("=" * 40)
+            print("=" * 50)
             print(f"Gesamt: {len(einkaufsliste)} Artikel")
 
             # Artikel zum Löschen auswählen

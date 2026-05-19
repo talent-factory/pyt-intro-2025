@@ -10,34 +10,44 @@ Konvertiert Punkte (0-100) in Schweizer Noten (2-6):
 - 0-59:   Note 2
 
 Konzepte:
-- if-elif-else für Notenberechnung
-- while-Schleife mit continue für Eingabevalidierung
-- String-Methoden (isdigit) für Validierung
+- if/elif/else für die Notenberechnung
+- while-Schleife mit continue für die Eingabevalidierung
+- String-Methoden (.isdigit()) für die Validierung
+
+Siehe modul-4-funktionen-datenstrukturen/05-beispiele/notensystem_improved.py
+für eine wartbarere Variante mit Datenstruktur (kommt in Modul 4).
 """
 
-print("=== Erweitertes Notensystem ===\n")
+print("=" * 50)
+print("           ERWEITERTES NOTENSYSTEM")
+print("=" * 50)
 
-# Eingabe mit Validierung: solange wiederholen, bis eine gültige Zahl
-# zwischen 0 und 100 eingegeben wurde.
+# ============================================================
+# Eingabe mit Validierung
+# ============================================================
+# Schleife wiederholt die Eingabeaufforderung so lange, bis eine
+# gültige Zahl zwischen 0 und 100 eingegeben wurde.
 while True:
-    eingabe = input("Punkte (0-100): ")
+    eingabe = input("\nPunkte (0-100): ").strip()
 
     # Prüfen, ob die Eingabe nur aus Ziffern besteht
     if not eingabe.isdigit():
-        print("Fehler: Bitte geben Sie eine gültige Zahl ein!\n")
+        print("Fehler: Bitte geben Sie eine positive ganze Zahl ein!")
         continue
 
     punkte = int(eingabe)
 
     # Prüfen, ob die Zahl im gültigen Bereich liegt
-    if punkte < 0 or punkte > 100:
-        print("Fehler: Wert muss zwischen 0 und 100 liegen!\n")
+    if punkte > 100:
+        print("Fehler: Wert muss zwischen 0 und 100 liegen!")
         continue
 
     # Eingabe ist gültig - Schleife verlassen
     break
 
-# Notenberechnung mit if-elif-else
+# ============================================================
+# Notenberechnung
+# ============================================================
 if punkte >= 90:
     note = 6
     feedback = "Hervorragend! 🌟"
@@ -54,6 +64,12 @@ else:
     note = 2
     feedback = "Ungenügend"
 
+# ============================================================
 # Ausgabe
-print(f"\nNote: {note}")
+# ============================================================
+print()
+print("=" * 50)
+print(f"Punkte:    {punkte}")
+print(f"Note:      {note}")
 print(f"Bewertung: {feedback}")
+print("=" * 50)
