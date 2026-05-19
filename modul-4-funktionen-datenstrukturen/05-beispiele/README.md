@@ -15,6 +15,7 @@ Vollständige Beispielprogramme für Modul 4.
 9. `woerterbuch.py` - Deutsch-Englisch Wörterbuch
 10. `datenanalyse.py` - Datenanalyse mit Funktionen
 11. `testen_beispiel.py` - Testbare Funktionen (Lernbeispiel für Testing)
+12. `notensystem_improved.py` - Notensystem mit Datenstruktur (Listen von Tupeln, lambda)
 
 ## 🎯 Verwendung
 

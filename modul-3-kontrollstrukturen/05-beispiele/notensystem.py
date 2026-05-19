@@ -8,45 +8,46 @@ Konvertiert Punkte (0-100) in Schweizer Noten (2-6):
 - 70-79:  Note 4
 - 60-69:  Note 3
 - 0-59:   Note 2
+
+Konzepte:
+- if/elif/else für die Notenberechnung
+- while-Schleife mit continue für die Eingabevalidierung
+- String-Methoden (.isdigit()) für die Validierung
+
+Siehe modul-4-funktionen-datenstrukturen/05-beispiele/notensystem_improved.py
+für eine wartbarere Variante mit Datenstruktur (kommt in Modul 4).
 """
 
+print("=" * 50)
+print("           ERWEITERTES NOTENSYSTEM")
+print("=" * 50)
 
-def eingabe_zahl(prompt: str, minimum: int = 0, maximum: int = 100) -> int:
-    """
-    Fragt nach einer Zahl und validiert die Eingabe.
-
-    Args:
-        prompt: Text der Eingabeaufforderung
-        minimum: Kleinster erlaubter Wert (Standard: 0)
-        maximum: Grösster erlaubter Wert (Standard: 100)
-
-    Returns:
-        int: Validierte Zahl im erlaubten Bereich
-    """
-    while True:
-        eingabe = input(prompt)
-
-        # Prüfen ob gültige Zahl eingegeben wurde
-        if not eingabe.isdigit():
-            print("Fehler: Bitte geben Sie eine gültige Zahl ein!\n")
-            continue
-
-        zahl = int(eingabe)
-
-        # Prüfen ob Zahl im gültigen Bereich liegt
-        if zahl < minimum or zahl > maximum:
-            print(f"Fehler: Wert muss zwischen {minimum} und {maximum} liegen!\n")
-            continue
-
-        return zahl
-
-
-print("=== Erweitertes Notensystem ===\n")
-
+# ============================================================
 # Eingabe mit Validierung
-punkte = eingabe_zahl("Punkte (0-100): ")
+# ============================================================
+# Schleife wiederholt die Eingabeaufforderung so lange, bis eine
+# gültige Zahl zwischen 0 und 100 eingegeben wurde.
+while True:
+    eingabe = input("\nPunkte (0-100): ").strip()
 
+    # Prüfen, ob die Eingabe nur aus Ziffern besteht
+    if not eingabe.isdigit():
+        print("Fehler: Bitte geben Sie eine positive ganze Zahl ein!")
+        continue
+
+    punkte = int(eingabe)
+
+    # Prüfen, ob die Zahl im gültigen Bereich liegt
+    if punkte > 100:
+        print("Fehler: Wert muss zwischen 0 und 100 liegen!")
+        continue
+
+    # Eingabe ist gültig - Schleife verlassen
+    break
+
+# ============================================================
 # Notenberechnung
+# ============================================================
 if punkte >= 90:
     note = 6
     feedback = "Hervorragend! 🌟"
@@ -63,6 +64,12 @@ else:
     note = 2
     feedback = "Ungenügend"
 
+# ============================================================
 # Ausgabe
-print(f"\nNote: {note}")
+# ============================================================
+print()
+print("=" * 50)
+print(f"Punkte:    {punkte}")
+print(f"Note:      {note}")
 print(f"Bewertung: {feedback}")
+print("=" * 50)

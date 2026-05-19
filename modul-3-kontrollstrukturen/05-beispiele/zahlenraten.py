@@ -3,18 +3,18 @@ Zahlenrate-Spiel
 Ein interaktives Spiel zum Raten von Zahlen.
 
 Konzepte:
-- While-Schleifen
-- If-elif-else
-- Input/Output
-- Zufallszahlen
-- Break
+- while-Schleifen (auch verschachtelt)
+- if/elif/else
+- Eingabevalidierung mit .isdigit()
+- Zufallszahlen mit random.randint
+- break und continue
 """
 
 import random
 
-print("=" * 40)
+print("=" * 50)
 print("      Zahlenrate-Spiel")
-print("=" * 40)
+print("=" * 50)
 print()
 
 # Spieleinstellungen
@@ -39,16 +39,17 @@ while weiterspielen:
     while versuche < max_versuche:
         versuche += 1
 
-        # Eingabe
-        try:
-            eingabe = input(f"Versuch {versuche}/{max_versuche}: ")
-            geraten = int(eingabe)
-        except ValueError:
-            print("Bitte geben Sie eine gültige Zahl ein!\n")
+        # Eingabe einlesen und validieren
+        eingabe = input(f"Versuch {versuche}/{max_versuche}: ").strip()
+
+        if not eingabe.isdigit():
+            print("Bitte geben Sie eine positive ganze Zahl ein!\n")
             versuche -= 1  # Versuch nicht zählen
             continue
 
-        # Prüfen
+        geraten = int(eingabe)
+
+        # Prüfen, ob die Zahl im erlaubten Bereich liegt
         if geraten < min_zahl or geraten > max_zahl:
             print(f"Zahl muss zwischen {min_zahl} und {max_zahl} liegen!\n")
             versuche -= 1  # Versuch nicht zählen
@@ -78,7 +79,7 @@ while weiterspielen:
         print()
 
     # Auswertung
-    print("=" * 40)
+    print("=" * 50)
     if gewonnen:
         print("🎉 Glückwunsch! Sie haben gewonnen!")
         print(f"Die Zahl war {geheimzahl}")
@@ -98,7 +99,7 @@ while weiterspielen:
         print(f"Die Zahl war {geheimzahl}")
         print(f"Versuche: {versuche}")
 
-    print("=" * 40)
+    print("=" * 50)
 
     # Nochmal spielen?
     nochmal = input("\nNochmal spielen? (j/n): ").lower()
