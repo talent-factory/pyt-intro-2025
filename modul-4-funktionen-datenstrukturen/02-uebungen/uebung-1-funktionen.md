@@ -15,9 +15,9 @@ zeige_box("Hallo")
 
 **Ausgabe:**
 ```
-**********
-* Hallo  *
-**********
+*********
+* Hallo *
+*********
 ```
 
 <details>
