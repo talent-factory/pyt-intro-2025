@@ -10,7 +10,7 @@ authors = [
 ]
 
 dependencies = [
-    "numpy>=2.3.5",
+    "numpy>=2.4.6",
     "pydantic>=2.12.5",
     "ruff>=0.14.8",
     "streamlit>=1.58.0",
