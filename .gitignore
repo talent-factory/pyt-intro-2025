@@ -27,3 +27,8 @@ docs/plans/
 # Claude settings (local configuration)
 .claude/settings.local.json
 .verba/
+
+# Notizen (generiert, nicht versioniert)
+notizen.txt
+aufgaben.json
+config.json
