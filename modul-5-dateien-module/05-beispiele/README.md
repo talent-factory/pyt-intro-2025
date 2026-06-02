@@ -30,6 +30,8 @@ Vollständige Beispielprogramme für Modul 5.
 8. **[backup_tool.py](./backup_tool.py)** - Backup-Tool für Dateien
 9. **[log_analyzer.py](./log_analyzer.py)** - Log-Datei Analyzer
 10. **[daten_konverter.py](./daten_konverter.py)** - CSV ↔ JSON Konverter
+11. **[notizen_app.py](./notizen_app.py)** - Interaktive Notizen-App (Lösung zu Übung 1)
+12. **[notizen_app_streamlit.py](./notizen_app_streamlit.py)** - Notizen-App mit Streamlit-Oberfläche (öffnen/speichern via Finder/Explorer)
 
 ## 🚀 Verwendung
 
@@ -39,6 +41,12 @@ Alle Programme können direkt ausgeführt werden:
 python textdateien.py
 python csv_beispiel.py
 python json_beispiel.py
+```
+
+Die Streamlit-App wird so gestartet:
+
+```bash
+streamlit run notizen_app_streamlit.py
 ```
 
 ## 💡 Lernziele
