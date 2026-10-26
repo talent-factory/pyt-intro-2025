@@ -38,32 +38,39 @@ Bereiten Sie sich auf den Präsenztag vor.
 
 **Übungen während der Präsenz**
 
-- 💪 [Übung 1-8](./02-uebungen/) (je 15 Min)
+- 💪 [Übung 1: Einfache Funktionen](./02-uebungen/uebung-1-funktionen.md)
+- 💪 [Übung 2: Funktionen mit Return](./02-uebungen/uebung-2-return.md)
+- 💪 [Übung 3: Parameter-Varianten](./02-uebungen/uebung-3-parameter.md)
+- 💪 [Übung 4: Funktionen & Listen](./02-uebungen/uebung-4-listen.md)
+- 💪 [Übung 5: Listen-Methoden](./02-uebungen/uebung-5-methoden.md)
+- 💪 [Übung 6: Dictionary-Operationen](./02-uebungen/uebung-6-dict.md)
+- 💪 [Übung 7: Erste Tests schreiben](./02-uebungen/uebung-7-testing.md)
+- 💪 [Übung 8: Tests für Kontakte](./02-uebungen/uebung-8-testing.md)
 
 ### [03-nachbearbeitung/](./03-nachbearbeitung/)
 
 **Hausaufgaben vor Modul 5**
 
-- 📝 [Aufgabe 1: Kontaktverwaltung](./03-nachbearbeitung/) (2 Std)
-- 📝 [Aufgabe 2: Notenverwaltung](./03-nachbearbeitung/) (2 Std)
-- 📝 [Aufgabe 3: Wörterbuch](./03-nachbearbeitung/) (2 Std)
+- 📝 [Aufgabe 1: Kontaktverwaltung](./03-nachbearbeitung/aufgabe-1-kontakte.md) (2 Std)
+- 📝 [Aufgabe 2: Notenverwaltung](./03-nachbearbeitung/aufgabe-2-noten.md) (2 Std)
+- 📝 [Aufgabe 3: Deutsch-Englisch Wörterbuch](./03-nachbearbeitung/aufgabe-3-woerterbuch.md) (2 Std)
 - 📝 [Reflexion](./03-nachbearbeitung/reflexion.md)
 
 ### [04-materialien/](./04-materialien/)
 
 **Referenzmaterialien**
 
-- 📚 [Handout Funktionen](./04-materialien/)
-- 📚 [Cheatsheet Datenstrukturen](./04-materialien/)
-- 📚 [Cheatsheet Listen](./04-materialien/)
-- 📚 [Cheatsheet pytest](./04-materialien/)
-- 📚 [Häufige Fehler](./04-materialien/)
+- 📚 [Handout Funktionen](./04-materialien/handout-funktionen.md)
+- 📚 [Cheatsheet Datenstrukturen](./04-materialien/cheatsheet-datenstrukturen.md)
+- 📚 [Cheatsheet Listen](./04-materialien/cheatsheet-listen.md)
+- 📚 [Cheatsheet pytest](./04-materialien/cheatsheet-pytest.md)
+- 📚 [Häufige Fehler](./04-materialien/haeufige-fehler.md)
 
 ### [05-beispiele/](./05-beispiele/)
 
 **Vollständige Beispielprogramme**
 
-- 💻 10+ Python-Programme zum Lernen und Experimentieren
+- 💻 16 Python-Programme zum Lernen und Experimentieren (Übersicht in der [05-beispiele/README](./05-beispiele/README.md))
 
 ## ⏱️ Zeitplan
 

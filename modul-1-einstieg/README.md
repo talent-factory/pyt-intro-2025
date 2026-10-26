@@ -67,8 +67,8 @@ Bereiten Sie sich auf den Präsenztag vor.
 
 **Code-Beispiele vom Dozenten**
 
-- 💻 Live-Coding Beispiele
-- 💻 Musterlösungen
+- 💻 10 Beispielprogramme, z. B. `hello_world.py`, `variablen.py`, `taschenrechner.py`
+- 💻 Übersicht mit Zuordnung zu Lektionen und Übungen in der [05-beispiele/README](./05-beispiele/README.md)
 
 ## ⏱️ Zeitplan
 

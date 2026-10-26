@@ -25,13 +25,14 @@ Vollständige Beispielprogramme für Modul 5.
 
 4. **[aufgabenliste.py](./aufgabenliste.py)** - Aufgabenverwaltung mit JSON
 5. **[notenverwaltung.py](./notenverwaltung.py)** - Notenverwaltung mit CSV
-6. **[datei_utils.py](./datei_utils.py)** - Datei-Utilities Modul
-7. **[text_tools.py](./text_tools.py)** - Text-Verarbeitungs-Modul
-8. **[backup_tool.py](./backup_tool.py)** - Backup-Tool für Dateien
-9. **[log_analyzer.py](./log_analyzer.py)** - Log-Datei Analyzer
-10. **[daten_konverter.py](./daten_konverter.py)** - CSV ↔ JSON Konverter
-11. **[notizen_app.py](./notizen_app.py)** - Interaktive Notizen-App (Lösung zu Übung 1)
-12. **[notizen_app_streamlit.py](./notizen_app_streamlit.py)** - Notizen-App mit Streamlit-Oberfläche (öffnen/speichern via Finder/Explorer)
+6. **[config.py](./config.py)** - Konfigurationsverwaltung mit JSON
+7. **[datei_utils.py](./datei_utils.py)** - Datei-Utilities Modul
+8. **[text_tools.py](./text_tools.py)** - Text-Verarbeitungs-Modul
+9. **[backup_tool.py](./backup_tool.py)** - Backup-Tool für Dateien
+10. **[log_analyzer.py](./log_analyzer.py)** - Log-Datei Analyzer
+11. **[daten_konverter.py](./daten_konverter.py)** - CSV ↔ JSON Konverter
+12. **[notizen_app.py](./notizen_app.py)** - Interaktive Notizen-App (Lösung zu Übung 1)
+13. **[notizen_app_streamlit.py](./notizen_app_streamlit.py)** - Notizen-App mit Streamlit-Oberfläche (öffnen/speichern via Finder/Explorer)
 
 ## 🚀 Verwendung
 
@@ -50,7 +51,6 @@ streamlit run notizen_app_streamlit.py
 ```
 
 ## 💡 Lernziele
-
 - Dateien lesen und schreiben
 - CSV-Dateien verarbeiten
 - JSON-Daten speichern

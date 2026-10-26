@@ -5,75 +5,56 @@
 
 ## 🎯 Ziel
 
-Vertiefen Sie die Konzepte aus Modul 5 und schliessen Sie den Kurs mit einem vollständigen Mini-Projekt ab.
+Vertiefen Sie die Konzepte aus Modul 5 mit drei kleinen Programmen, die Sie selbst schreiben, und schliessen Sie den Kurs mit einer Reflexion ab.
 
 ## 📝 Aufgaben
 
 | Aufgabe | Thema | Dauer | Schwierigkeit |
 |---------|-------|-------|---------------|
-| 1 | Kontaktverwaltung | 2-3 Std | ⭐⭐ Mittel |
-| 2 | Todo-Listen-Manager | 2-3 Std | ⭐⭐⭐ Schwer |
-| 3 | Mini-Projekt nach Wahl | 2-3 Std | ⭐⭐⭐ Schwer |
-| 4 | Abschluss-Reflexion | 30 Min | ⭐ Einfach |
+| 1 | Tagebuch-App | 2 Std | ⭐⭐ Mittel |
+| 2 | CSV-Datenanalyse | 2 Std | ⭐⭐ Mittel |
+| 3 | Konfigurationsverwaltung | 2 Std | ⭐⭐⭐ Schwer |
+| 4 | Abschluss-Reflexion | 15 Min | ⭐ Einfach |
 
 ## 📚 Aufgabenübersicht
 
-### [Aufgabe 1: Kontaktverwaltung](./aufgabe-1-kontakte.md) (2-3 Std)
+### [Aufgabe 1: Tagebuch-App](./aufgabe-1-tagebuch.md) (2 Std)
 
-Erstellen Sie eine vollständige Kontaktverwaltung mit Datei-Persistenz:
-- Kontakte hinzufügen, bearbeiten, löschen
-- Kontakte in CSV-Datei speichern
-- Kontakte aus CSV-Datei laden
-- Suchfunktion implementieren
-- Menü-System mit Fehlerbehandlung
+Erstellen Sie eine Tagebuch-Anwendung, die Einträge in einer Textdatei speichert:
+- Neue Einträge mit Datum und Uhrzeit hinzufügen
+- Alle Einträge anzeigen
+- Einträge nach einem Suchbegriff durchsuchen
+- Einträge nach JSON exportieren
 
-**Technologien:** CSV, Dictionaries, Funktionen, Fehlerbehandlung
+**Technologien:** Textdateien, Funktionen, `datetime`, JSON
 
-### [Aufgabe 2: Todo-Listen-Manager](./aufgabe-2-todo.md) (2-3 Std)
+### [Aufgabe 2: CSV-Datenanalyse](./aufgabe-2-csv-analyse.md) (2 Std)
 
-Erstellen Sie einen Todo-Listen-Manager mit JSON-Persistenz:
-- Aufgaben hinzufügen, bearbeiten, löschen
-- Aufgaben als erledigt markieren
-- Aufgaben in JSON-Datei speichern
-- Aufgaben nach Status filtern
-- Prioritäten und Fälligkeitsdaten
+Analysieren Sie eine CSV-Datei mit Verkaufsdaten:
+- CSV-Datei einlesen
+- Gesamtumsatz berechnen
+- Die Top-N-Produkte anzeigen
+- Umsatz pro Monat berechnen
+- Einen Textbericht exportieren
 
-**Technologien:** JSON, Listen, Dictionaries, datetime-Modul
+**Technologien:** CSV, Listen, Dictionaries, Funktionen
 
-### [Aufgabe 3: Mini-Projekt nach Wahl](./aufgabe-3-projekt.md) (2-3 Std)
+### [Aufgabe 3: Konfigurationsverwaltung](./aufgabe-3-config.md) (2 Std)
 
-Wählen Sie eines der folgenden Projekte:
+Erstellen Sie ein System, das Programmeinstellungen in einer JSON-Datei verwaltet:
+- Einstellungen laden und speichern
+- Einzelne Einstellungen ändern
+- Alle Einstellungen anzeigen
+- Auf Standardwerte zurücksetzen
 
-**Option A: Noten-Analyzer**
-- Noten aus CSV einlesen
-- Statistiken berechnen (Durchschnitt, Median, etc.)
-- Ergebnisse in JSON exportieren
-- Visualisierung als Text-Diagramm
+**Technologien:** JSON, Dictionaries, Funktionen
 
-**Option B: Konfigurationsverwaltung**
-- Anwendungseinstellungen in JSON speichern
-- Einstellungen laden und ändern
-- Validierung der Einstellungen
-- Export/Import-Funktionalität
-
-**Option C: Log-Datei-Analyzer**
-- Log-Dateien einlesen und parsen
-- Fehler und Warnungen zählen
-- Statistiken erstellen
-- Bericht als CSV exportieren
-
-**Option D: Eigene Idee**
-- Muss Datei-I/O verwenden (CSV oder JSON)
-- Muss Fehlerbehandlung implementieren
-- Muss mindestens 3 Funktionen haben
-
-### [Aufgabe 4: Abschluss-Reflexion](./reflexion.md) (30 Min)
+### [Aufgabe 4: Abschluss-Reflexion](./reflexion.md) (15 Min)
 
 Reflektieren Sie über den **gesamten Kurs** (Module 1-5):
 - Was haben Sie gelernt?
 - Was war am schwierigsten?
-- Was hat Ihnen am meisten Spass gemacht?
-- Wie werden Sie Python in Zukunft nutzen?
+- Welche Dateiformate werden Sie am häufigsten verwenden?
 - Welche Themen möchten Sie vertiefen?
 
 ## ✅ Abgabe
@@ -84,23 +65,9 @@ Reflektieren Sie über den **gesamten Kurs** (Module 1-5):
 
 ### Format
 
-- **Code:** Python-Dateien (`.py`)
-- **Daten:** CSV/JSON-Beispieldateien
+- **Code:** Python-Dateien (`.py`), je Aufgabe eine Datei
+- **Daten:** CSV/JSON-Beispieldateien, die Ihr Programm verwendet
 - **Reflexion:** Markdown (`.md`) oder PDF
-- **Ordner:** `modul-5-nachbearbeitung/`
-
-### Struktur
-
-```
-modul-5-nachbearbeitung/
-├── aufgabe-1-kontakte.py
-├── kontakte.csv
-├── aufgabe-2-todo.py
-├── todos.json
-├── aufgabe-3-projekt.py
-├── projekt-daten.csv/json
-└── reflexion.md
-```
 
 ### Einreichen
 
@@ -110,8 +77,8 @@ modul-5-nachbearbeitung/
 
 ## 💡 Tipps
 
-- **Beginnen Sie früh:** Nehmen Sie sich Zeit für die Projekte
-- **Testen Sie ausführlich:** Probieren Sie verschiedene Szenarien
+- **Beginnen Sie früh:** Nehmen Sie sich Zeit für die Aufgaben
+- **Testen Sie ausführlich:** Probieren Sie verschiedene Eingaben aus
 - **Fehlerbehandlung:** Denken Sie an try/except für Datei-Operationen
 - **Context Manager:** Nutzen Sie immer `with open()` für Dateien
 - **Kommentieren Sie:** Erklären Sie Ihren Code

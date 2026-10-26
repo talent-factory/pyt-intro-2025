@@ -210,8 +210,9 @@ Nach den Praxis-Lektionen sollten Studierende:
 
 ## 📚 Zusatzmaterialien
 
-- [Handout String-Methoden](../04-materialien/handout-string-methoden.md)
-- [Cheatsheet Operatoren](../04-materialien/cheatsheet-operatoren.md)
+- [Handout Datentypen](../04-materialien/handout-datentypen.md)
+- [Cheatsheet Strings](../04-materialien/cheatsheet-strings.md)
+- [Cheatsheet String-Formatierung](../04-materialien/cheatsheet-formatierung.md)
 - [Häufige Fehler](../04-materialien/haeufige-fehler.md)
 - [Beispielcode](../05-beispiele/)
 

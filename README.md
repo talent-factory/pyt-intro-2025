@@ -121,7 +121,7 @@ Jedes Modul folgt einer konsistenten Struktur:
 
 ### 03-nachbearbeitung (4-6 Stunden nach dem Präsenztag)
 
-- 3-4 vertiefende Aufgaben
+- 3 vertiefende Aufgaben
 - Persönliche Reflexion
 - Abgabe vor dem nächsten Modul
 

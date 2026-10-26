@@ -18,7 +18,7 @@ pyt-intro-2025/
 ├── modul-3-kontrollstrukturen/         ✅ Vollständig
 ├── modul-4-funktionen-datenstrukturen/ ✅ Vollständig
 ├── modul-5-dateien-module/             ✅ Vollständig
-├── modul-6-ki-programmieren/           ⚠️ Zusatzmodul, in Entwicklung
+├── modul-6-ki-programmieren/           ✅ Vollständig (Zusatzmodul)
 ├── refs/                               (Referenzmaterialien)
 ├── .devcontainer/                      (GitHub Codespaces Config)
 ├── README.md                           (Haupt-Dokumentation)
@@ -56,7 +56,7 @@ modul-X-thema/
 └── README.md            # Modul-Übersicht
 ```
 
-## Entwicklungsstand (Stand: 2026-03-14)
+## Entwicklungsstand (Stand: 2026-10-26)
 
 ### ✅ Vollständig produktionsreif
 
@@ -64,12 +64,12 @@ modul-X-thema/
 |-------|--------|----------------|-----------|---------|
 | **Modul 1** | ✅ | 10 vollständig | 4 | 4 |
 | **Modul 2** | ✅ | 9 vollständig | 4 | 8 |
-| **Modul 3** | ✅ | 14 vollständig | 4 | 8 |
-| **Modul 4** | ✅ | 15 vollständig | 4 | 8 |
-| **Modul 5** | ✅ | 11 vollständig | 4 | 8 |
+| **Modul 3** | ✅ | 13 vollständig | 4 | 8 |
+| **Modul 4** | ✅ | 16 vollständig | 4 | 8 |
+| **Modul 5** | ✅ | 13 vollständig | 4 | 8 |
 | **Modul 6** *(Zusatz)* | ✅ | 10 vollständig | 4 | 8 |
 
-**Gesamt:** 69 Python-Programme, alle Module mit 4 Lektionen
+**Gesamt:** 71 Python-Programme, alle Module mit 4 Lektionen
 
 ## Naming Conventions
 
@@ -78,7 +78,7 @@ modul-X-thema/
 - Lektionen: `lektion-X-titel.md` (X = 1, 2, 3, ...)
 - Übungen: `uebung-X-titel.md`
 - Aufgaben: `aufgabe-X-titel.md`
-- Beispiele: `beschreibender-name.py` (Modul 1-3) oder `beispiel-X.py` (Modul 4-5, leer)
+- Beispiele: `beschreibender-name.py` (alle Module; Modul 4 zusätzlich nummeriert wie `01-begruessung.py`)
 
 ### Python-Code
 - **Variablennamen:** Deutsche Namen, snake_case (`alter`, `vorname`, `ist_gueltig`)
@@ -148,7 +148,7 @@ print("=" * 40)
 - **Package Manager:** `uv`
 - **IDE:** VS Code
 - **Deployment:** GitHub Codespaces Support
-- **Testing:** Aktuell keine Tests (siehe Nächste Schritte)
+- **Testing:** pytest, Tests unter `tests/modul-1` bis `tests/modul-5` (Modul 6 hat noch keine Tests)
 
 ## README-Standards
 
@@ -198,7 +198,7 @@ Jedes README sollte enthalten:
 ## Nächste Schritte (Priorität)
 
 1. **Testing erweitern:**
-   - Tests für alle 69 Python-Programme
+   - Tests für alle 71 Python-Programme (Module 1-5 vorhanden, Modul 6 fehlt)
    - pytest-Framework bereits eingerichtet
    - CI/CD Pipeline (GitHub Actions)
 
@@ -224,4 +224,4 @@ Jedes README sollte enthalten:
 
 ---
 
-**Letzte Aktualisierung:** 2026-03-14
+**Letzte Aktualisierung:** 2026-10-26

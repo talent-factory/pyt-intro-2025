@@ -87,7 +87,7 @@ Nach diesem Modul können Sie:
 **Nach dem Präsenztag:**
 - Aufgabe 1: Zahlenspiel mit Menü
 - Aufgabe 2: Einkaufsliste-Manager
-- Aufgabe 3: Primzahlen-Generator
+- Aufgabe 3: Primzahlen-Finder
 - Persönliche Reflexion
 
 ### [04-materialien](./04-materialien/) - Referenzmaterialien

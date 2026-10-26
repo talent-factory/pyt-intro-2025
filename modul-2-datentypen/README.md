@@ -41,9 +41,13 @@ Präsenzunterricht mit Live-Coding:
 Praktische Übungen zum Mitmachen:
 
 - Übung 1: Textformatierung (15 Min)
-- Übung 2: Benutzereingaben verarbeiten (15 Min)
-- Übung 3: Vergleiche und Bedingungen (15 Min)
+- Übung 2: Vergleiche und Bedingungen (15 Min)
+- Übung 3: Benutzereingaben verarbeiten (15 Min)
 - Übung 4: Interaktiver Rechner (20 Min)
+- Übung 5: String-Methoden (15 Min)
+- Übung 6: Formatierung (15 Min)
+- Übung 7: Input-Validierung (15 Min)
+- Übung 8: Textanalyse (15 Min)
 
 ### [03-nachbearbeitung](./03-nachbearbeitung/) (4-6 Stunden)
 
@@ -58,10 +62,10 @@ Hausaufgaben zur Vertiefung:
 
 Zusatzmaterialien und Referenzen:
 
-- Handout: String-Methoden
-- Cheatsheet: Operatoren
-- Typkonvertierung-Tabelle
-- Häufige Fehler bei Strings
+- Handout: Datentypen
+- Cheatsheet: Strings
+- Cheatsheet: String-Formatierung
+- Häufige Fehler
 
 ### [05-beispiele](./05-beispiele/)
 
@@ -72,11 +76,10 @@ Vollständige Beispielprogramme:
 - `vergleiche.py` - Boolsche Werte
 - `typkonvertierung.py` - Type Casting
 - `input_output.py` - Benutzereingaben
-- `textanalyse.py` - Textverarbeitung
-- `validator.py` - Eingabe-Validierung
-- `quiz.py` - Interaktives Quiz
-- `taschenrechner_v2.py` - Erweiterter Rechner
-- `namensschild.py` - Personalisierte Ausgabe
+- `email_validator.py` - E-Mail-Validierung
+- `passwort_validator.py` - Passwort-Prüfung
+- `tabelle.py` - Formatierte Produktliste
+- `textstatistik.py` - Erweiterte Textanalyse
 
 ## ⏱️ Zeitplan
 
