@@ -106,9 +106,9 @@ def test_string_indexierung(
 )
 def test_string_slicing(
     text: str,
-    start: int | float | str | bool,
-    end: int | float | str | bool,
-    expected: int | float,
+    start: int,
+    end: int | None,
+    expected: str,
 ) -> None:
     """Test: String-Slicing funktioniert."""
     if end is None:
