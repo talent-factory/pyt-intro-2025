@@ -25,7 +25,10 @@ refs/
 docs/plans/
 
 # Claude settings (local configuration)
+.claude/.headroom*
 .claude/settings.local.json
+.headroom/
+.serena/
 .verba/
 
 # Notizen (generiert, nicht versioniert)
