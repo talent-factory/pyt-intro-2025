@@ -3,6 +3,7 @@ Zusammengefasste Tests für alle Modul-3 Programme
 Diese Tests prüfen Import und grundlegende Funktionalität
 """
 
+import runpy
 import sys
 from io import StringIO
 from pathlib import Path
@@ -283,54 +284,46 @@ def test_multiplikationstabelle() -> None:
 
 
 # ===== muster.py =====
+# muster.py ist ein Skript ohne Funktionen (Funktionen folgen in Modul 4).
+# Die Tests führen das Skript aus und prüfen die Ausgabe.
 
 
 @pytest.mark.modul3
-def test_muster_import() -> None:
-    """Test: muster.py kann importiert werden."""
-    with patch("builtins.input", return_value="test"):
-        try:
-            import muster
-
-            assert hasattr(muster, "rechteck")
-        except Exception as e:
-            pytest.skip(f"Interaktives Modul: {e}")
-
-
-@pytest.mark.modul3
-def test_muster_funktionen_existieren() -> None:
-    """Test: Muster-Funktionen existieren."""
-    with patch("builtins.input", return_value="test"):
-        import muster
-
-        assert hasattr(muster, "dreieck")
-        assert hasattr(muster, "pyramide")
+def test_muster_skript_laeuft(capsys: pytest.CaptureFixture[str]) -> None:
+    """Test: muster.py läuft durch und zeigt alle Muster an."""
+    runpy.run_path(str(modul_pfad / "muster.py"), run_name="__main__")
+    ausgabe = capsys.readouterr().out
+    assert "=== Dreieck (Höhe 5) ===" in ausgabe
+    assert "Alle Muster angezeigt!" in ausgabe
 
 
 # ===== menu.py =====
+# menu.py ist ein Skript mit einer while-Schleife (Modul 3).
+# Die Tests liefern die Eingaben über input() und prüfen die Ausgabe.
 
 
 @pytest.mark.modul3
-def test_menu_import() -> None:
-    """Test: menu.py kann importiert werden."""
-    with patch("builtins.input", return_value="6"):
-        try:
-            import menu
-
-            assert hasattr(menu, "main")
-        except Exception as e:
-            pytest.skip(f"Interaktives Modul: {e}")
+def test_menu_beenden(capsys: pytest.CaptureFixture[str]) -> None:
+    """Test: Mit Wahl 5 beendet sich das Menü."""
+    with patch("builtins.input", side_effect=["5"]):
+        runpy.run_path(str(modul_pfad / "menu.py"), run_name="__main__")
+    assert "Auf Wiedersehen" in capsys.readouterr().out
 
 
 @pytest.mark.modul3
-def test_menu_funktionen_existieren() -> None:
-    """Test: Menü-Funktionen existieren."""
-    with patch("builtins.input", return_value="6"):
-        import menu
+def test_menu_addition(capsys: pytest.CaptureFixture[str]) -> None:
+    """Test: Addition 2 + 3 im Menü ergibt 5."""
+    with patch("builtins.input", side_effect=["1", "2", "3", "5"]):
+        runpy.run_path(str(modul_pfad / "menu.py"), run_name="__main__")
+    assert "Ergebnis: 2 + 3 = 5" in capsys.readouterr().out
 
-        assert hasattr(menu, "taschenrechner")
-        assert hasattr(menu, "temperatur_umrechner")
-        assert hasattr(menu, "bmi_rechner")
+
+@pytest.mark.modul3
+def test_menu_division_durch_null(capsys: pytest.CaptureFixture[str]) -> None:
+    """Test: Division durch 0 wird abgefangen."""
+    with patch("builtins.input", side_effect=["4", "6", "0", "5"]):
+        runpy.run_path(str(modul_pfad / "menu.py"), run_name="__main__")
+    assert "Division durch 0 ist nicht möglich" in capsys.readouterr().out
 
 
 @pytest.mark.modul3
