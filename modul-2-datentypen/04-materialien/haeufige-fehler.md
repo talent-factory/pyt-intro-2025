@@ -87,6 +87,9 @@ print(0.1 + 0.2)  # 0.30000000000000004 (nicht 0.3!)
 ```
 
 ### ✅ RICHTIG
+
+> **Vorgriff:** Dieses Konzept (z. B. Module importieren) wird in Modul 5 behandelt.
+
 ```python
 # Für Vergleiche
 import math

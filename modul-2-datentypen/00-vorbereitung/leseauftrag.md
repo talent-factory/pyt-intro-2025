@@ -123,11 +123,11 @@ print(f"Die Summe von {a} und {b} ist {a + b}")
 # Ausgabe: Die Summe von 10 und 20 ist 30
 ```
 
-## 2. Boolsche Werte
+## 2. Boolesche Werte
 
 ### True und False
 
-**Boolsche Werte** (Boolean) können nur zwei Werte haben: `True` oder `False`.
+**Boolesche Werte** (Boolean) können nur zwei Werte haben: `True` oder `False`.
 
 ```python
 ist_student = True
@@ -138,7 +138,7 @@ ist_rentner = False
 
 ### Vergleichsoperatoren
 
-Vergleiche ergeben immer einen boolschen Wert:
+Vergleiche ergeben immer einen booleschen Wert:
 
 | Operator | Bedeutung | Beispiel | Ergebnis |
 |----------|-----------|----------|----------|
@@ -164,7 +164,7 @@ ist_anna = name == "Anna"      # True
 
 ### Logische Operatoren
 
-Boolsche Werte können mit **logischen Operatoren** verknüpft werden:
+Boolesche Werte können mit **logischen Operatoren** verknüpft werden:
 
 **`and`** - Beide Bedingungen müssen wahr sein:
 
@@ -274,7 +274,7 @@ print("Zeile 2")  # Zeile 1 Zeile 2
 - **Strings** sind Zeichenketten in `"..."` oder `'...'`
 - **String-Methoden** wie `.upper()`, `.lower()`, `.strip()` sind sehr nützlich
 - **F-Strings** (`f"..."`) sind die moderne Art der Formatierung
-- **Boolsche Werte** sind `True` oder `False`
+- **Boolesche Werte** sind `True` oder `False`
 - **Vergleichsoperatoren** (`==`, `!=`, `<`, `>`, etc.) ergeben Boolean
 - **Logische Operatoren** (`and`, `or`, `not`) verknüpfen Bedingungen
 - **Typkonvertierung** mit `int()`, `float()`, `str()`, `bool()`

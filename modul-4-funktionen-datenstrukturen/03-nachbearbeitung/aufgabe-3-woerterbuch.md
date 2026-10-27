@@ -1,4 +1,4 @@
-# Hausaufgabe: Deutsch-Englisch Wörterbuch
+# Aufgabe 3: Deutsch-Englisch Wörterbuch
 
 
 Erstellen Sie ein interaktives Wörterbuch.

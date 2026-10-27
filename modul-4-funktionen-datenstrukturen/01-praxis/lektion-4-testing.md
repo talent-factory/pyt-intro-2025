@@ -227,11 +227,11 @@ def test_kontakt_ist_dictionary():
 
 ### Übung 7: Testing geführt (10 Min)
 
-Siehe [Übung 7: Testing geführt](../02-uebungen/uebung-7-testing.md)
+Siehe [Übung 7: Erste Tests schreiben](../02-uebungen/uebung-7-testing.md)
 
 ### Übung 8: Testing selbständig (5 Min)
 
-Siehe [Übung 8: Testing selbständig](../02-uebungen/uebung-8-testing.md)
+Siehe [Übung 8: Tests für Kontakte](../02-uebungen/uebung-8-testing.md)
 
 ## 📚 Zusammenfassung
 

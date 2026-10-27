@@ -1,4 +1,4 @@
-# Übung: Konfiguration JSON
+# Übung 6: Konfiguration JSON
 
 **Dauer:** 15 Minuten
 

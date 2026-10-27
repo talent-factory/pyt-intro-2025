@@ -119,6 +119,8 @@ print(f"{preis:>10.2f}")   # '     19.99'
 
 ## Datum & Zeit
 
+> **Vorgriff:** Dieses Konzept (z. B. Module importieren) wird in Modul 5 behandelt.
+
 ```python
 from datetime import datetime
 

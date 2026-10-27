@@ -1,4 +1,4 @@
-# Hausaufgabe: Tagebuch-App
+# Aufgabe 1: Tagebuch-App
 
 
 Erstellen Sie eine vollständige Tagebuch-Anwendung.

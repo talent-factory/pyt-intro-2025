@@ -184,4 +184,4 @@ print(f"Max hat die Note {noten_dict['Max']}")
 
 ## 🔗 Weiter
 
-- [Lektion 4: Testing](./lektion-4-testing.md)
+- [Lektion 4: Funktionen testen mit pytest](./lektion-4-testing.md)

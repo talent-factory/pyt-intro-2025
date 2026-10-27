@@ -11,7 +11,6 @@ Vollständige Beispielprogramme für Modul 3.
 | `for_schleifen.py` | For-Schleifen | Iteration mit range() |
 | `listen.py` | Listen-Operationen | Listen erstellen, ändern |
 | `verschachtelt.py` | Verschachtelte Strukturen | Komplexe Logik |
-| `zahlenraten.py` | Zahlenrate-Spiel | While, if, input |
 | `einkaufsliste.py` | Einkaufslisten-Manager | Listen, Menü, Schleifen |
 | `primzahlen.py` | Primzahlen-Finder | For, if, Mathematik |
 | `muster.py` | Muster zeichnen | Verschachtelte Schleifen |

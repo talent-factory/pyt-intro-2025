@@ -2,14 +2,17 @@
 
 **Dauer:** 15 Minuten  
 **Schwierigkeit:** ⭐⭐⭐ Schwer  
-**Lektion:** 5 (Vertiefung)
+**Status:** Vertiefung (zu Hause)
 
+## 📝 Aufgabe
 
-*Lektion:** 5 (Vertiefung)
- Schwer  
-ebung-7-validierung.md << 'EOF'
-dresse
-- Prüfe: @ vorhanden, . nach @, nicht leer
+Schreiben Sie ein Programm `email_pruefung.py`, das eine E-Mail-Adresse einliest und prüft, ob sie plausibel ist.
+
+- Die Eingabe darf nicht leer sein
+- Die Adresse muss genau ein `@` enthalten
+- Nach dem `@` muss ein `.` vorkommen
+- Die Adresse darf keine Leerzeichen enthalten
+- Gibt die Prüfung einen Fehler, nennen Sie den Grund
 
 ## 💡 Beispiel
 
@@ -26,7 +29,8 @@ E-Mail: test@
 
 ## ✅ Checkliste
 
-- [ ] @ vorhanden
-- [ ] . nach @ vorhanden
-- [ ] Nicht leer
-- [ ] Fehlerme ldungen klar
+- [ ] Leere Eingabe wird abgefangen
+- [ ] Genau ein `@` wird geprüft
+- [ ] Ein `.` nach dem `@` wird geprüft
+- [ ] Leerzeichen werden erkannt
+- [ ] Fehlermeldungen sind klar formuliert

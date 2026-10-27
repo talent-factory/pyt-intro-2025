@@ -109,6 +109,8 @@ Auf Wiedersehen! 👋
 
 ### Primzahl-Test (Basis)
 
+> **Vorgriff:** Dieses Konzept (Funktionen mit `def`) wird in Modul 4 behandelt.
+
 ```python
 def ist_primzahl(n):
     """Prüft ob n eine Primzahl ist"""
@@ -123,6 +125,8 @@ def ist_primzahl(n):
 ```
 
 ### Primzahl-Test (Optimiert)
+
+> **Vorgriff:** Dieses Konzept (Funktionen mit `def`) wird in Modul 4 behandelt.
 
 ```python
 def ist_primzahl(n):
@@ -148,6 +152,8 @@ def ist_primzahl(n):
 
 ### Primzahlen sammeln
 
+> **Vorgriff:** Dieses Konzept (Funktionen mit `def`) wird in Modul 4 behandelt.
+
 ```python
 def finde_primzahlen(n):
     """Findet alle Primzahlen bis n"""
@@ -161,6 +167,8 @@ def finde_primzahlen(n):
 ```
 
 ### Primfaktorzerlegung
+
+> **Vorgriff:** Dieses Konzept (Funktionen mit `def`) wird in Modul 4 behandelt.
 
 ```python
 def primfaktoren(n):
@@ -178,6 +186,8 @@ def primfaktoren(n):
 ```
 
 ### Zeitmessung
+
+> **Vorgriff:** Dieses Konzept (z. B. Module importieren) wird in Modul 5 behandelt.
 
 ```python
 import time

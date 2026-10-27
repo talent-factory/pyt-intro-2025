@@ -157,8 +157,8 @@ durchschnitt_berechnen(noten)
 
 ## ✏️ Übungen (15 Min)
 
-- [Übung 3: Produktliste](../02-uebungen/uebung-3-produkte.md)
-- [Übung 4: Notenauswertung](../02-uebungen/uebung-4-noten.md)
+- [Übung 3: Produktliste CSV](../02-uebungen/uebung-3-produkte.md)
+- [Übung 4: Notenauswertung CSV](../02-uebungen/uebung-4-noten.md)
 
 ## 📚 Zusammenfassung
 

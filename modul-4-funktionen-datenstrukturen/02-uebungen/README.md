@@ -1,19 +1,19 @@
 # Übungen: Modul 4
 
-**Gesamt:** 8 Übungen (je 15 Minuten)
+**Gesamt:** 8 Übungen (je 15 Minuten): 4 Präsenz-Übungen (zusammen 60 Minuten) und 4 Vertiefungs-Übungen (zu Hause)
 
 ## 🎯 Übersicht
 
-| Übung | Thema | Dauer | Schwierigkeit |
-|-------|-------|-------|---------------|
-| 1 | Einfache Funktionen | 15 Min | ⭐ Einfach |
-| 2 | Funktionen mit Return | 15 Min | ⭐ Einfach |
-| 3 | Parameter-Varianten | 15 Min | ⭐⭐ Mittel |
-| 4 | Funktionen & Listen | 15 Min | ⭐⭐ Mittel |
-| 5 | Listen-Methoden | 15 Min | ⭐⭐ Mittel |
-| 6 | Dictionary-Operationen | 15 Min | ⭐⭐ Mittel |
-| 7 | Erste Tests schreiben | 15 Min | ⭐⭐ Mittel |
-| 8 | Tests für Kontakte | 15 Min | ⭐⭐⭐ Schwer |
+| Übung | Thema | Dauer | Einsatz | Schwierigkeit |
+|-------|-------|-------|---------|---------------|
+| 1 | Einfache Funktionen | 15 Min | Präsenz | ⭐ Einfach |
+| 2 | Funktionen mit Return | 15 Min | Präsenz | ⭐ Einfach |
+| 3 | Parameter-Varianten | 15 Min | Vertiefung (zu Hause) | ⭐⭐ Mittel |
+| 4 | Funktionen & Listen | 15 Min | Präsenz | ⭐⭐ Mittel |
+| 5 | Listen-Methoden | 15 Min | Vertiefung (zu Hause) | ⭐⭐ Mittel |
+| 6 | Dictionary-Operationen | 15 Min | Vertiefung (zu Hause) | ⭐⭐ Mittel |
+| 7 | Erste Tests schreiben | 15 Min | Präsenz | ⭐⭐ Mittel |
+| 8 | Tests für Kontakte | 15 Min | Vertiefung (zu Hause) | ⭐⭐⭐ Schwer |
 
 ## 📝 Übungen
 
@@ -36,7 +36,7 @@
 
 ## ✅ Lösungen
 
-Musterlösungen finden Sie in [05-beispiele](../05-beispiele/)
+Jede Übungsdatei enthält eine ausklappbare Lösung. Passende Beispielprogramme finden Sie in [05-beispiele](../05-beispiele/)
 
 ## 🆘 Hilfe
 

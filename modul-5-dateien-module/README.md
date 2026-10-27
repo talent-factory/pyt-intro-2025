@@ -2,7 +2,7 @@
 
 **Dauer:** 1 Tag (4 Lektionen à 50 Minuten)
 **Voraussetzung:** Module 1-4 abgeschlossen
-**Besonderheit:** Abschlussmodul mit Mini-Projekt
+**Besonderheit:** Abschlussmodul mit Anwendungsaufgaben
 
 ## 🎯 Lernziele
 
@@ -54,11 +54,11 @@ Nach diesem Modul können Sie:
 - __name__ == "__main__"
 - Projektstruktur
 
-### Mini-Projekt
-- Kontaktverwaltung
-- Todo-Listen-Manager
-- Noten-Analyzer
-- Datenbank-Alternative
+### Anwendungsaufgaben
+- Tagebuch-App mit Textdateien
+- CSV-Datenanalyse
+- Konfigurationsverwaltung mit JSON
+- Notizen-App
 
 ## 📚 Modulstruktur
 
@@ -78,47 +78,45 @@ Nach diesem Modul können Sie:
 - **Lektion 3:** JSON-Daten manipulieren (50 Min)
 - **Lektion 4:** Module & Abschluss-Projekt (50 Min)
 
-### [02-uebungen](./02-uebungen/) - Übungen während der Präsenz
+### [02-uebungen](./02-uebungen/) - 4 Präsenz-Übungen (60 Min.) und 4 Vertiefungs-Übungen (zu Hause)
 
-**Praktische Übungen:**
-1. Textdatei-Reader
-2. Log-Datei-Analyzer
-3. CSV-Kontakte verwalten
-4. CSV-Statistiken berechnen
-5. JSON-Konfiguration laden
-6. JSON-API-Daten verarbeiten
-7. Fehlerbehandlung implementieren
-8. Eigenes Modul erstellen
+**Präsenz-Übungen** (je eine pro Lektion, zusammen 60 Min.):
+- Übung 1: Notizen-App
+- Übung 3: Produktliste CSV
+- Übung 5: Aufgabenliste JSON
+- Übung 7: Eigenes Modul
+
+**Vertiefung zu Hause** (nicht in der Präsenzzeit eingerechnet):
+- Übung 2: Textstatistik
+- Übung 4: Notenauswertung CSV
+- Übung 6: Konfiguration JSON
+- Übung 8: Standard-Module
 
 ### [03-nachbearbeitung](./03-nachbearbeitung/) - Hausaufgaben (6-8 Std)
 
 **Nach dem Präsenztag:**
-- Aufgabe 1: Kontaktverwaltung (vollständige Anwendung)
-- Aufgabe 2: Todo-Listen-Manager mit Persistenz
-- Aufgabe 3: Mini-Projekt nach Wahl
+- Aufgabe 1: Tagebuch-App (Textdatei und JSON-Export)
+- Aufgabe 2: CSV-Datenanalyse (Verkaufsdaten)
+- Aufgabe 3: Konfigurationsverwaltung (JSON)
 - Abschluss-Reflexion über den gesamten Kurs
 
 ### [04-materialien](./04-materialien/) - Referenzmaterialien
 
 **Nachschlagewerke:**
-- Cheatsheet Datei-I/O
-- Handout CSV & JSON
-- Standard-Module Übersicht
-- Best Practices Fehlerbehandlung
+- Cheatsheet CSV
+- Cheatsheet JSON
+- Handout Dateien
+- Häufige Fehler
 
 ### [05-beispiele](./05-beispiele/) - Beispielprogramme
 
-**10 vollständige Python-Programme:**
-- textdateien.py - Grundlegende Dateioperationen
-- csv_reader.py - CSV einlesen und verarbeiten
-- csv_writer.py - CSV-Dateien erstellen
-- json_handler.py - JSON-Operationen
-- fehlerbehandlung.py - Try/except Patterns
-- kontakte.py - Kontaktverwaltung
-- todo_list.py - Todo-Manager
-- log_analyzer.py - Log-Analyse
-- config_manager.py - Konfigurationsverwaltung
-- datenbank.py - Einfache Datenbank
+**13 vollständige Python-Programme** (Übersicht in der [05-beispiele/README](./05-beispiele/README.md)):
+- textdateien.py, csv_beispiel.py, json_beispiel.py - Grundlagen
+- aufgabenliste.py, notenverwaltung.py - Anwendungen mit CSV/JSON
+- config.py - Konfigurationsverwaltung mit JSON
+- datei_utils.py, text_tools.py, backup_tool.py - eigene Module
+- log_analyzer.py, daten_konverter.py - Werkzeuge
+- notizen_app.py, notizen_app_streamlit.py - Notizen-App (Konsole und Streamlit)
 
 ## ⏱️ Zeitplan
 
@@ -138,7 +136,7 @@ Nach erfolgreichem Abschluss des Moduls:
 - [ ] Alle 4 Lektionen besucht
 - [ ] Mindestens 6 von 8 Übungen gelöst
 - [ ] Alle 3 Nachbearbeitungsaufgaben eingereicht
-- [ ] Mini-Projekt abgeschlossen
+- [ ] Anwendungsaufgaben abgeschlossen
 - [ ] Abschluss-Reflexion geschrieben
 - [ ] Kurs erfolgreich abgeschlossen! 🎓
 

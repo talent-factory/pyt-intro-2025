@@ -1,4 +1,4 @@
-# Übung: Funktionen & Listen
+# Übung 4: Funktionen & Listen
 
 **Dauer:** 15 Minuten
 **Schwierigkeit:** ⭐⭐⭐ Fortgeschritten

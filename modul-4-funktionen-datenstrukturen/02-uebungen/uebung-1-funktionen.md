@@ -1,4 +1,4 @@
-# Übung: Einfache Funktionen
+# Übung 1: Einfache Funktionen
 
 **Dauer:** 15 Minuten
 

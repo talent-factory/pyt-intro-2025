@@ -8,6 +8,7 @@ Vollständige Beispielprogramme für Modul 6.
 |-------|--------------|----------|
 | `prompt_beispiele.py` | Gute vs. schlechte Prompts als Code-Kommentare | Prompting, Spezifität |
 | `code_mit_bugs.py` | Funktionen mit versteckten Fehlern | Debugging, Fehlersuche |
+| `code_mit_bugs_loesungen.md` | Musterlösung zu `code_mit_bugs.py` (alle 4 Bugs mit Fix) | Debugging, Lösungsvergleich |
 | `ki_generiert_beispiel.py` | KI-generierte Lösung mit Annotationen | Code-Bewertung |
 | `vorher_nachher.py` | Eigene vs. KI-Lösung im Vergleich | Vergleich, Bewertung |
 | `claude_md_beispiel.py` | Einfluss von CLAUDE.md auf KI-Output | Projektkontext |

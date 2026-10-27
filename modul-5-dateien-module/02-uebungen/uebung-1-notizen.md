@@ -1,4 +1,4 @@
-# Übung: Notizen-App
+# Übung 1: Notizen-App
 
 **Dauer:** 15 Minuten
 

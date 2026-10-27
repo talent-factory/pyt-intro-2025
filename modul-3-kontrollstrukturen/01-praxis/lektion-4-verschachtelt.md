@@ -128,6 +128,8 @@ Wählen Sie **eines** der folgenden Projekte:
 
 ### Option 1: Kontakt-Manager (einfach)
 
+> **Vorgriff:** Dieses Konzept (Dictionaries) wird in Modul 4 behandelt.
+
 ```python
 kontakte = []
 
@@ -153,6 +155,8 @@ while True:
 
 ### Option 2: Zahlenraten (einfach)
 
+> **Vorgriff:** Dieses Konzept (z. B. Module importieren) wird in Modul 5 behandelt.
+
 ```python
 import random
 
@@ -176,6 +180,8 @@ while True:
 ```
 
 ### Option 3: Hangman (mittel)
+
+> **Vorgriff:** Dieses Konzept (z. B. Module importieren) wird in Modul 5 behandelt.
 
 ```python
 import random
