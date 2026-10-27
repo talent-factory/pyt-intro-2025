@@ -15,7 +15,7 @@ Jede Lektion folgt dem gleichen Aufbau:
 Nach den Praxis-Lektionen können Sie:
 
 - Strings erstellen, formatieren und manipulieren
-- Boolsche Werte und Vergleichsoperatoren anwenden
+- Boolesche Werte und Vergleichsoperatoren anwenden
 - Typkonvertierung durchführen
 - Interaktive Programme mit `input()` erstellen
 - Erweiterte String-Methoden und Validierung anwenden
@@ -35,7 +35,7 @@ Nach den Praxis-Lektionen können Sie:
 
 ---
 
-### [Lektion 2: Boolsche Werte und Vergleiche](./lektion-2-booleans.md)
+### [Lektion 2: Boolesche Werte und Vergleiche](./lektion-2-booleans.md)
 
 **Thema:** Wahrheitswerte und logische Operationen
 
@@ -82,7 +82,7 @@ Nach den Praxis-Lektionen können Sie:
 |-------|-------|-------|
 | Lektion 1 | Strings – Texte verarbeiten | 50 Min. |
 | Pause | – | 10 Min. |
-| Lektion 2 | Boolsche Werte & Vergleiche | 50 Min. |
+| Lektion 2 | Boolesche Werte & Vergleiche | 50 Min. |
 | Pause | – | 10 Min. |
 | Lektion 3 | Typkonvertierung & Input/Output | 50 Min. |
 | Pause | – | 10 Min. |

@@ -1,4 +1,4 @@
-# Übung: Standard-Module
+# Übung 8: Standard-Module
 
 **Dauer:** 15 Minuten
 

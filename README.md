@@ -33,7 +33,7 @@ Der Kurs umfasst **5 Module + 1 Zusatzmodul** mit je **4 Lektionen à 50 Minuten
 **Mit Daten arbeiten**
 
 - Strings - Texte verarbeiten
-- Boolsche Werte und Vergleiche
+- Boolesche Werte und Vergleiche
 - Typkonvertierung und Input/Output
 - Interaktive Programme erstellen
 
@@ -55,14 +55,14 @@ Der Kurs umfasst **5 Module + 1 Zusatzmodul** mit je **4 Lektionen à 50 Minuten
 - Funktionen definieren und aufrufen
 - Code modular strukturieren
 
-### [Modul 5: Dateien, Module und Mini-Projekte](./modul-5-dateien-module/)
+### [Modul 5: Dateien, Module und Anwendungsaufgaben](./modul-5-dateien-module/)
 
 **Reale Anwendungen entwickeln**
 
 - Dateien lesen und schreiben
 - CSV-Dateien verarbeiten
 - Module und Modularisierung
-- Mini-Projekt-Workshop
+- Anwendungsaufgaben
 
 ### [Modul 6: KI-gestütztes Programmieren](./modul-6-ki-programmieren/) *(Zusatzmodul)*
 
@@ -115,7 +115,7 @@ Jedes Modul folgt einer konsistenten Struktur:
 
 ### 02-uebungen
 
-- Praktische Übungen während der Präsenzzeit
+- 4 Präsenz-Übungen pro Modul (je 15 Minuten), weitere 4 Übungen als Vertiefung zu Hause
 - Verschiedene Schwierigkeitsgrade
 - Pair-Programming möglich
 
@@ -199,8 +199,8 @@ git merge develop
 
 - **Vorbereitung:** 2-3 Stunden pro Modul
 - **Präsenz:** 4 Stunden pro Tag (inkl. Pausen)
-- **Nachbearbeitung:** 4-6 Stunden pro Modul
-- **Gesamt:** ca. 60-73 Stunden über 6 Wochen
+- **Nachbearbeitung:** ca. 4-8 Stunden pro Modul
+- **Gesamt:** ca. 64-80 Stunden über 6 Wochen
 
 ## 📞 Support & Kontakt
 

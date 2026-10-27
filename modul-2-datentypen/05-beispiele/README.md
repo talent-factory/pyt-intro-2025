@@ -8,13 +8,9 @@ Vollständige Beispielprogramme für Modul 2.
 |-------|--------------|----------|
 | `strings.py` | String-Operationen | Konkatenation, Slicing, Methoden |
 | `formatierung.py` | String-Formatierung | F-Strings, Formatierung |
-| `vergleiche.py` | Boolsche Werte | Vergleiche, Logische Operatoren |
+| `vergleiche.py` | Boolesche Werte | Vergleiche, Logische Operatoren |
 | `typkonvertierung.py` | Type Casting | int(), float(), str(), bool() |
 | `input_output.py` | Benutzereingaben | input(), print() |
-| `email_validator.py` | E-Mail-Validierung | String-Prüfungen, detaillierte Fehlermeldungen |
-| `passwort_validator.py` | Passwort-Prüfung | Mehrere Kriterien, Booleans |
-| `tabelle.py` | Formatierte Produktliste | Berechnungen, Formatierung |
-| `textstatistik.py` | Textanalyse | String-Methoden, Statistiken |
 
 ## 🚀 Verwendung
 

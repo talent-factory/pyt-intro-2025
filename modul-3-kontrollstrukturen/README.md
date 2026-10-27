@@ -70,17 +70,19 @@ Nach diesem Modul können Sie:
 - **Lektion 3:** For-Schleifen & Listen - Iteration (50 Min)
 - **Lektion 4:** Verschachtelte Strukturen & Mini-Projekt (50 Min)
 
-### [02-uebungen](./02-uebungen/) - Übungen während der Präsenz
+### [02-uebungen](./02-uebungen/) - 4 Präsenz-Übungen (60 Min.) und 4 Vertiefungs-Übungen (zu Hause)
 
-**Praktische Übungen:**
-1. Notensystem implementieren
-2. Rabattrechner mit Bedingungen
-3. Fakultät mit while-Schleife
-4. Zahlenraten-Spiel
-5. Gerade Zahlen filtern
-6. Notenliste verarbeiten
-7. Multiplikationstabelle
-8. Zahlen-Pyramide
+**Präsenz-Übungen** (je eine pro Lektion, zusammen 60 Min.):
+- Übung 1: Notensystem implementieren
+- Übung 3: Fakultät mit while-Schleife
+- Übung 5: Gerade Zahlen filtern
+- Übung 7: Multiplikationstabelle
+
+**Vertiefung zu Hause** (nicht in der Präsenzzeit eingerechnet):
+- Übung 2: Rabattrechner mit Bedingungen
+- Übung 4: Zahlenraten-Spiel
+- Übung 6: Notenliste verarbeiten
+- Übung 8: Zahlen-Pyramide
 
 ### [03-nachbearbeitung](./03-nachbearbeitung/) - Hausaufgaben (4-6 Std)
 
@@ -100,13 +102,12 @@ Nach diesem Modul können Sie:
 
 ### [05-beispiele](./05-beispiele/) - Beispielprogramme
 
-**13 vollständige Python-Programme:**
+**12 vollständige Python-Programme:**
 - bedingungen.py - If/elif/else Beispiele
 - while_schleifen.py - While-Loop Patterns
 - for_schleifen.py - For-Loop Varianten
 - listen.py - Listen-Operationen
 - verschachtelt.py - Verschachtelte Strukturen
-- zahlenraten.py - Interaktives Spiel
 - einkaufsliste.py - Liste verwalten
 - primzahlen.py - Mathematische Algorithmen
 - muster.py - Muster und Pyramiden

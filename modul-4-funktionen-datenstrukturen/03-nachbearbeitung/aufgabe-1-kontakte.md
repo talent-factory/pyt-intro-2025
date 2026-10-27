@@ -1,4 +1,4 @@
-# Hausaufgabe: Kontaktverwaltung
+# Aufgabe 1: Kontaktverwaltung
 
 
 Erstellen Sie ein Programm zur Verwaltung von Kontakten.

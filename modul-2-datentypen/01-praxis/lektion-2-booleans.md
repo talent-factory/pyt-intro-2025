@@ -1,11 +1,11 @@
-# Lektion 2: Boolsche Werte und Vergleiche
+# Lektion 2: Boolesche Werte und Vergleiche
 
 **Dauer:** 50 Minuten  
 **Format:** 15 Min Theorie + 20 Min Live-Coding + 15 Min Übung
 
 ## 🎯 Lernziele
 
-- Boolsche Werte (`True`/`False`) verstehen
+- Boolesche Werte (`True`/`False`) verstehen
 - Vergleichsoperatoren anwenden
 - Logische Operatoren nutzen
 - Wahrheitswerte anderer Typen kennen
@@ -14,7 +14,7 @@
 
 ## 📖 Teil 1: Theorie (15 Min)
 
-### 1.1 Boolsche Werte
+### 1.1 Boolesche Werte
 
 **Boolean** kann nur zwei Werte haben: `True` oder `False`
 
@@ -200,7 +200,7 @@ print(f"Volljährig UND warm: {alter >= 18 and temperatur > 20}")
 
 ## 🎯 Lernzielkontrolle
 
-- ✅ Boolsche Werte verstehen?
+- ✅ Boolesche Werte verstehen?
 - ✅ Vergleichsoperatoren anwenden?
 - ✅ Logische Operatoren nutzen?
 

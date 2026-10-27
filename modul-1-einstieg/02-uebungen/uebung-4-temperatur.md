@@ -1,6 +1,6 @@
 # Übung 4: Temperaturumrechner
 
-**Dauer:** 20 Minuten  
+**Dauer:** 15 Minuten  
 **Schwierigkeit:** ⭐⭐ Mittel  
 **Lektion:** 4 - Variablen und Zahlen
 
@@ -13,7 +13,7 @@
 
 ## 📝 Aufgaben
 
-### Teil 1: Celsius zu Fahrenheit (7 Min.)
+### Teil 1: Celsius zu Fahrenheit (5 Min.)
 
 Erstellen Sie `temperatur.py`:
 
@@ -33,7 +33,7 @@ Testen Sie mit verschiedenen Werten:
 - 100°C (Siedepunkt)
 - 37°C (Körpertemperatur)
 
-### Teil 2: Fahrenheit zu Celsius (7 Min.)
+### Teil 2: Fahrenheit zu Celsius (5 Min.)
 
 Fügen Sie hinzu:
 
@@ -51,7 +51,7 @@ Testen Sie:
 - 212°F (Siedepunkt)
 - 98.6°F (Körpertemperatur)
 
-### Teil 3: Kelvin-Umrechnung (6 Min.)
+### Teil 3: Kelvin-Umrechnung (5 Min.)
 
 Erweitern Sie:
 

@@ -98,6 +98,8 @@ Danke fürs Spielen! 👋
 
 ### Zufallszahl
 
+> **Vorgriff:** Dieses Konzept (z. B. Module importieren) wird in Modul 5 behandelt.
+
 ```python
 import random
 zahl = random.randint(1, 100)

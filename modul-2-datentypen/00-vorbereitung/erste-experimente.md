@@ -135,7 +135,7 @@ print(f"{name} ist {alter} Jahre alt und {groesse}m gross")
 2. Geben Sie einen Satz mit allen drei Variablen aus
 3. Berechnen Sie Ihr Alter in 5 Jahren und geben Sie es aus
 
-## 📝 Experiment 5: Boolsche Werte (10 Min)
+## 📝 Experiment 5: Boolesche Werte (10 Min)
 
 ```python
 # Vergleiche

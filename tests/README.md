@@ -1,15 +1,19 @@
 # Test-Suite für Python-Intro-2025
 
-Diese Test-Suite testet alle vollständigen Python-Programme in den Modulen 1-3 des Python-Programmierung Basis Kurses.
+Diese Test-Suite testet vollständige Python-Programme aus den Modulen 1-5 des Python-Programmierung Basis Kurses. Modul 6 hat aktuell keine Tests.
 
 ## Übersicht
 
 ### Abgedeckte Module
 
 - **Modul 1 (Einstieg)**: 10 Programme, 10 Test-Dateien
-- **Modul 2 (Datentypen)**: 9 Programme, 9 Test-Dateien
+- **Modul 2 (Datentypen)**: 5 Programme, 5 Test-Dateien
 - **Modul 3 (Kontrollstrukturen)**: 10 Programme, 1 konsolidierte Test-Datei
-- **Gesamt**: 29 Programme getestet
+- **Modul 4 (Funktionen und Datenstrukturen)**: 10 Programme, 10 Test-Dateien
+- **Modul 5 (Dateien und Module)**: 4 Programme, 4 Test-Dateien
+- **Modul 6 (KI-Programmieren)**: keine Tests
+
+**Gesamt:** 39 Programme getestet (Modul 1–5)
 
 ### Test-Struktur
 
@@ -36,14 +40,26 @@ tests/
 │   ├── test_formatierung.py
 │   ├── test_vergleiche.py
 │   ├── test_typkonvertierung.py
-│   ├── test_input_output.py
+│   └── test_input_output.py
+├── modul-3/                     # Tests für Modul 3
+│   ├── __init__.py
+│   └── test_alle_module.py
+├── modul-4/                     # Tests für Modul 4
+│   ├── test_dictionaries.py
+│   ├── test_email_validator.py
+│   ├── test_funktionen_basis.py
+│   ├── test_listen_operationen.py
+│   ├── test_parameter.py
 │   ├── test_passwort_validator.py
 │   ├── test_tabelle.py
+│   ├── test_testen_beispiel.py
 │   ├── test_textstatistik.py
-│   └── test_email_validator.py
-└── modul-3/                     # Tests für Modul 3
-    ├── __init__.py
-    └── test_alle_module.py
+│   └── test_tupel_sets.py
+└── modul-5/                     # Tests für Modul 5
+    ├── test_csv_beispiel.py
+    ├── test_json_beispiel.py
+    ├── test_notizen_app.py
+    └── test_textdateien.py
 ```
 
 ## Installation
@@ -91,6 +107,12 @@ pytest tests/modul-2/
 
 # Nur Modul 3
 pytest tests/modul-3/
+
+# Nur Modul 4
+pytest tests/modul-4/
+
+# Nur Modul 5
+pytest tests/modul-5/
 ```
 
 ### Tests mit Marker ausführen
@@ -104,6 +126,12 @@ pytest -m modul2
 
 # Nur Modul 3 Tests
 pytest -m modul3
+
+# Nur Modul 4 Tests
+pytest -m modul4
+
+# Nur Modul 5 Tests
+pytest -m modul5
 ```
 
 ### Einzelne Test-Datei ausführen
@@ -122,10 +150,10 @@ pytest tests/modul-1/test_temperatur.py::test_celsius_zu_fahrenheit
 
 ```bash
 # Coverage-Report in Terminal
-pytest --cov=modul-1-einstieg --cov=modul-2-datentypen --cov=modul-3-kontrollstrukturen
+pytest --cov=modul-1-einstieg --cov=modul-2-datentypen --cov=modul-3-kontrollstrukturen --cov=modul-4-funktionen-datenstrukturen --cov=modul-5-dateien-module
 
 # HTML-Coverage-Report erstellen
-pytest --cov=modul-1-einstieg --cov=modul-2-datentypen --cov=modul-3-kontrollstrukturen --cov-report=html
+pytest --cov=modul-1-einstieg --cov=modul-2-datentypen --cov=modul-3-kontrollstrukturen --cov=modul-4-funktionen-datenstrukturen --cov=modul-5-dateien-module --cov-report=html
 
 # HTML-Report öffnen
 open htmlcov/index.html
@@ -248,6 +276,11 @@ markers =
     modul1: Tests für Modul 1 (Einstieg)
     modul2: Tests für Modul 2 (Datentypen)
     modul3: Tests für Modul 3 (Kontrollstrukturen)
+    modul4: Tests für Modul 4 (Funktionen und Datenstrukturen)
+    modul5: Tests für Modul 5 (Dateien und Module)
+    modul6: Tests für Modul 6 (KI-Programmieren)
+    slow: Langsam laufende Tests
+    integration: Integrationstests
 ```
 
 ## Nützliche pytest-Optionen

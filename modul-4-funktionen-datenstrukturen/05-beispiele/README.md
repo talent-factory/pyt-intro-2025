@@ -27,10 +27,15 @@ Vollständige Beispielprogramme für Modul 4.
 13. `einkaufsliste_advanced.py` - Erweiterte Einkaufsliste
 14. `woerterbuch.py` - Deutsch-Englisch Wörterbuch
 15. `datenanalyse.py` - Datenanalyse mit Funktionen
+16. `email_validator.py` - E-Mail-Validierung mit Rückgabe von Tupeln
+17. `passwort_validator.py` - Passwort-Prüfung mit mehreren Kriterien
+18. `textstatistik.py` - Textanalyse mit Statistiken (Rückgabe als Dictionary)
+19. `tabelle.py` - Formatierte Produktliste (Liste von Dictionaries)
+20. `zahlenraten.py` - Zahlenrate-Spiel mit Zufallszahlen
 
 ### Testing
 
-16. `testen_beispiel.py` - Testbare Funktionen (Lernbeispiel für Testing)
+21. `testen_beispiel.py` - Testbare Funktionen (Lernbeispiel für Testing)
 
 ## 🎯 Verwendung
 

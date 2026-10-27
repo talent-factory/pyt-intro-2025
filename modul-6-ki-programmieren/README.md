@@ -79,17 +79,19 @@ Nach diesem Modul können Sie:
 - **Lektion 3:** Effektiv mit Claude Code arbeiten (50 Min)
 - **Lektion 4:** Showcase: Was noch möglich ist (50 Min)
 
-### [02-uebungen](./02-uebungen/) - Übungen während der Präsenz
+### [02-uebungen](./02-uebungen/) - 4 Präsenz-Übungen (60 Min.) und 4 Vertiefungs-Übungen (zu Hause)
 
-**Praktische Übungen:**
-1. Prompt-Werkstatt
-2. Code erklären lassen
-3. Bug-Jagd mit KI
-4. KI-gestützt programmieren
-5. Lösungsvergleich
-6. CLAUDE.md schreiben
-7. Refactoring mit KI
-8. KI-Grenzen testen
+**Präsenz-Übungen** (je eine pro Lektion, zusammen 60 Min.):
+- Übung 1: Prompt-Werkstatt
+- Übung 3: Bug-Jagd mit KI
+- Übung 5: Lösungsvergleich
+- Übung 7: Refactoring mit KI
+
+**Vertiefung zu Hause** (nicht in der Präsenzzeit eingerechnet):
+- Übung 2: Code erklären lassen
+- Übung 4: KI-gestützt programmieren
+- Übung 6: CLAUDE.md schreiben
+- Übung 8: KI-Grenzen testen
 
 ### [03-nachbearbeitung](./03-nachbearbeitung/) - Hausaufgaben (4-6 Std)
 

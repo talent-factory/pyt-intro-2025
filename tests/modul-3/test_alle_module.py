@@ -270,12 +270,6 @@ def test_multiplikationstabelle() -> None:
     assert tabelle[1] == [2, 4, 6]  # 2*1, 2*2, 2*3
 
 
-# ===== zahlenraten.py =====
-
-
-# zahlenraten.py ist ein interaktives Programm - keine automatisierten Tests
-
-
 # ===== einkaufsliste.py =====
 
 

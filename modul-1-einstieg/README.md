@@ -25,7 +25,7 @@ Bereiten Sie sich auf den Präsenztag vor.
 
 - 📄 [Installationsanleitung](./00-vorbereitung/installationsanleitung.md)
 - 📄 [Leseauftrag: Was ist Programmieren?](./00-vorbereitung/leseauftrag.md)
-- 📄 [Erste Schritte mit Python](./00-vorbereitung/erste-schritte.md)
+- 📄 [Erste Schritte mit Python](./00-vorbereitung/erste-experimente.md)
 
 ### [01-praxis/](./01-praxis/)
 
@@ -38,12 +38,12 @@ Bereiten Sie sich auf den Präsenztag vor.
 
 ### [02-uebungen/](./02-uebungen/)
 
-**Übungen während der Präsenz**
+**4 Präsenz-Übungen** (je eine pro Lektion, zusammen 60 Min.)
 
-- 💪 [Übung 1: Hello World](./02-uebungen/uebung-1-hello-world.md) (10 Min.)
+- 💪 [Übung 1: Hello World](./02-uebungen/uebung-1-hello-world.md) (15 Min.)
 - 💪 [Übung 2: Einfacher Taschenrechner](./02-uebungen/uebung-2-taschenrechner.md) (15 Min.)
 - 💪 [Übung 3: Altersrechner](./02-uebungen/uebung-3-altersrechner.md) (15 Min.)
-- 💪 [Übung 4: Temperaturumrechner](./02-uebungen/uebung-4-temperatur.md) (20 Min.)
+- 💪 [Übung 4: Temperaturumrechner](./02-uebungen/uebung-4-temperatur.md) (15 Min.)
 
 ### [03-nachbearbeitung/](./03-nachbearbeitung/)
 
@@ -76,7 +76,7 @@ Bereiten Sie sich auf den Präsenztag vor.
 |-------|-----------|-------|
 | **Vor Tag 1** | Setup + Leseauftrag + Erste Schritte | 2-3 Std |
 | **Tag 1** | 4 Lektionen Präsenzunterricht | 4 × 50 Min |
-| **Tag 1** | Pausen | 30 Min |
+| **Tag 1** | Pausen | 40 Min |
 | **Nach Tag 1** | 3 Aufgaben + Reflexion | 4-6 Std |
 | **Gesamt** | | **10-13 Std** |
 

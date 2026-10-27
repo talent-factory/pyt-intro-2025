@@ -76,7 +76,7 @@ Vor dem Präsenztag sollten Sie:
 
 ## 💡 Tipps
 
-- **Wiederholen Sie Modul 2:** Boolsche Werte und Vergleiche sind wichtig
+- **Wiederholen Sie Modul 2:** Boolesche Werte und Vergleiche sind wichtig
 - **Experimentieren Sie:** Probieren Sie verschiedene Bedingungen aus
 - **Klein anfangen:** Erst einfache, dann komplexe Schleifen
 - **Fehler sind OK:** Endlosschleifen passieren - Ctrl+C beendet sie

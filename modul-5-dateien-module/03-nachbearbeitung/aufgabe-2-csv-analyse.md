@@ -1,4 +1,4 @@
-# Hausaufgabe: CSV-Datenanalyse
+# Aufgabe 2: CSV-Datenanalyse
 
 
 Analysieren Sie eine CSV-Datei mit Verkaufsdaten.

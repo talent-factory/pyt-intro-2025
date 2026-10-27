@@ -5,7 +5,7 @@
 
 ## 📝 Aufgabe
 
-In der Datei [`../05-beispiele/code_mit_bugs.py`](../05-beispiele/code_mit_bugs.py) finden Sie 3 Funktionen mit versteckten Bugs. Bitten Sie Claude Code um Hilfe beim Debuggen und dokumentieren Sie die Ergebnisse.
+In der Datei [`../05-beispiele/code_mit_bugs.py`](../05-beispiele/code_mit_bugs.py) finden Sie 4 Funktionen mit versteckten Bugs. Bitten Sie Claude Code um Hilfe beim Debuggen und dokumentieren Sie die Ergebnisse.
 
 ### Schritt 1: Code anschauen
 
@@ -30,6 +30,7 @@ Füllen Sie für jede Funktion diese Tabelle aus:
 | Funktion 1 | Ja / Nein | Ja / Nein | ... |
 | Funktion 2 | Ja / Nein | Ja / Nein | ... |
 | Funktion 3 | Ja / Nein | Ja / Nein | ... |
+| Funktion 4 | Ja / Nein | Ja / Nein | ... |
 
 ## 💡 Tipps
 
@@ -45,7 +46,7 @@ Füllen Sie für jede Funktion diese Tabelle aus:
 
 ## ✅ Checkliste
 
-- [ ] Alle 3 Funktionen selbst analysiert
+- [ ] Alle 4 Funktionen selbst analysiert
 - [ ] Claude Code um Hilfe gebeten
 - [ ] Ergebnisse in der Tabelle dokumentiert
 - [ ] Reflexion geschrieben

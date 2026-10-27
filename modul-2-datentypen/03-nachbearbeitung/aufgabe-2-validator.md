@@ -5,7 +5,7 @@
 
 ## 🎯 Lernziel
 
-Boolsche Werte und String-Methoden für Validierung nutzen
+Boolesche Werte und String-Methoden für Validierung nutzen
 
 ## 📝 Aufgabenstellung
 

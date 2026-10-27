@@ -36,16 +36,16 @@ Bereiten Sie sich auf den Präsenztag vor.
 
 ### [02-uebungen/](./02-uebungen/)
 
-**Übungen während der Präsenz**
+**Präsenz-Übungen** (je eine pro Lektion, zusammen 60 Min.) und **Vertiefungs-Übungen** (zu Hause, nicht in der Präsenzzeit eingerechnet):
 
-- 💪 [Übung 1: Einfache Funktionen](./02-uebungen/uebung-1-funktionen.md)
-- 💪 [Übung 2: Funktionen mit Return](./02-uebungen/uebung-2-return.md)
-- 💪 [Übung 3: Parameter-Varianten](./02-uebungen/uebung-3-parameter.md)
-- 💪 [Übung 4: Funktionen & Listen](./02-uebungen/uebung-4-listen.md)
-- 💪 [Übung 5: Listen-Methoden](./02-uebungen/uebung-5-methoden.md)
-- 💪 [Übung 6: Dictionary-Operationen](./02-uebungen/uebung-6-dict.md)
-- 💪 [Übung 7: Erste Tests schreiben](./02-uebungen/uebung-7-testing.md)
-- 💪 [Übung 8: Tests für Kontakte](./02-uebungen/uebung-8-testing.md)
+- 💪 [Übung 1: Einfache Funktionen](./02-uebungen/uebung-1-funktionen.md) (Präsenz)
+- 💪 [Übung 2: Funktionen mit Return](./02-uebungen/uebung-2-return.md) (Präsenz)
+- 💪 [Übung 3: Parameter-Varianten](./02-uebungen/uebung-3-parameter.md) (Vertiefung)
+- 💪 [Übung 4: Funktionen & Listen](./02-uebungen/uebung-4-listen.md) (Präsenz)
+- 💪 [Übung 5: Listen-Methoden](./02-uebungen/uebung-5-methoden.md) (Vertiefung)
+- 💪 [Übung 6: Dictionary-Operationen](./02-uebungen/uebung-6-dict.md) (Vertiefung)
+- 💪 [Übung 7: Erste Tests schreiben](./02-uebungen/uebung-7-testing.md) (Präsenz)
+- 💪 [Übung 8: Tests für Kontakte](./02-uebungen/uebung-8-testing.md) (Vertiefung)
 
 ### [03-nachbearbeitung/](./03-nachbearbeitung/)
 
@@ -70,7 +70,7 @@ Bereiten Sie sich auf den Präsenztag vor.
 
 **Vollständige Beispielprogramme**
 
-- 💻 16 Python-Programme zum Lernen und Experimentieren (Übersicht in der [05-beispiele/README](./05-beispiele/README.md))
+- 💻 21 Python-Programme zum Lernen und Experimentieren (Übersicht in der [05-beispiele/README](./05-beispiele/README.md))
 
 ## ⏱️ Zeitplan
 
@@ -79,8 +79,8 @@ Bereiten Sie sich auf den Präsenztag vor.
 | **Vor Tag 4** | Leseauftrag + Experimente | 2-3 Std |
 | **Tag 4** | 4 Lektionen Präsenzunterricht | 4 × 50 Min |
 | **Tag 4** | Pausen | 40 Min |
-| **Nach Tag 4** | 3 Aufgaben + Reflexion | 4-6 Std |
-| **Gesamt** | | **10-13 Std** |
+| **Nach Tag 4** | 3 Aufgaben + Reflexion | 6 Std 15 Min |
+| **Gesamt** | | **12 Std 15 Min - 13 Std 15 Min** |
 
 ## 📖 Themen im Detail
 

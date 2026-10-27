@@ -8,7 +8,7 @@
 Nach diesem Modul können Sie:
 
 1. **Strings** erstellen, formatieren und manipulieren
-2. **Boolsche Werte** verstehen und Vergleichsoperatoren anwenden
+2. **Boolesche Werte** verstehen und Vergleichsoperatoren anwenden
 3. **Typkonvertierung** zwischen verschiedenen Datentypen durchführen
 4. **Input/Output** für interaktive Programme nutzen
 5. **String-Methoden** zur Textverarbeitung einsetzen
@@ -32,18 +32,21 @@ Vorbereitung vor dem Präsenztag:
 Präsenzunterricht mit Live-Coding:
 
 1. **Lektion 1:** Strings - Texte verarbeiten (50 Min)
-2. **Lektion 2:** Boolsche Werte und Vergleiche (50 Min)
+2. **Lektion 2:** Boolesche Werte und Vergleiche (50 Min)
 3. **Lektion 3:** Typkonvertierung und Input/Output (50 Min)
 4. **Lektion 4:** Interaktive Programme erstellen (50 Min)
 
-### [02-uebungen](./02-uebungen/) (während Präsenzzeit)
+### [02-uebungen](./02-uebungen/) (4 Präsenz-Übungen à 15 Min. = 60 Min.; 4 Vertiefungs-Übungen zu Hause)
 
-Praktische Übungen zum Mitmachen:
+Präsenz-Übungen (je eine pro Lektion, zusammen 60 Min.):
 
 - Übung 1: Textformatierung (15 Min)
 - Übung 2: Vergleiche und Bedingungen (15 Min)
 - Übung 3: Benutzereingaben verarbeiten (15 Min)
-- Übung 4: Interaktiver Rechner (20 Min)
+- Übung 4: Interaktiver Rechner (15 Min)
+
+Vertiefung zu Hause (nicht in der Präsenzzeit eingerechnet):
+
 - Übung 5: String-Methoden (15 Min)
 - Übung 6: Formatierung (15 Min)
 - Übung 7: Input-Validierung (15 Min)
@@ -73,13 +76,9 @@ Vollständige Beispielprogramme:
 
 - `strings.py` - String-Operationen
 - `formatierung.py` - String-Formatierung
-- `vergleiche.py` - Boolsche Werte
+- `vergleiche.py` - Boolesche Werte
 - `typkonvertierung.py` - Type Casting
 - `input_output.py` - Benutzereingaben
-- `email_validator.py` - E-Mail-Validierung
-- `passwort_validator.py` - Passwort-Prüfung
-- `tabelle.py` - Formatierte Produktliste
-- `textstatistik.py` - Erweiterte Textanalyse
 
 ## ⏱️ Zeitplan
 
@@ -108,7 +107,7 @@ Vollständige Beispielprogramme:
 - String-Methoden (`.upper()`, `.lower()`, `.strip()`, etc.)
 - F-Strings (`f"..."`)
 
-### Boolsche Werte
+### Boolesche Werte
 
 - `True` und `False`
 - Vergleichsoperatoren (`==`, `!=`, `<`, `>`, `<=`, `>=`)

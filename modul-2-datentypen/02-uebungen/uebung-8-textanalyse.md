@@ -2,7 +2,7 @@
 
 **Dauer:** 15 Minuten  
 **Schwierigkeit:** ⭐⭐⭐ Schwer  
-**Lektion:** 5 (Vertiefung)
+**Status:** Vertiefung (zu Hause)
 
 ## 📝 Aufgabe
 

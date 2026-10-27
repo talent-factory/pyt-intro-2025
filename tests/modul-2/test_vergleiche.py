@@ -1,6 +1,6 @@
 """
 Tests für vergleiche.py
-Testet Boolsche Werte und Vergleiche
+Testet Boolesche Werte und Vergleiche
 """
 
 import sys

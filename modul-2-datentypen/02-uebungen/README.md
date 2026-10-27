@@ -1,19 +1,19 @@
 # Übungen: Modul 2
 
-**Gesamt:** 8 Übungen (je 15 Minuten)
+**Gesamt:** 8 Übungen (je 15 Minuten): 4 Präsenz-Übungen (zusammen 60 Minuten) und 4 Vertiefungs-Übungen (zu Hause)
 
 ## 🎯 Übersicht
 
-| Übung | Thema | Dauer | Schwierigkeit |
-|-------|-------|-------|---------------|
-| 1 | Textformatierung | 15 Min | ⭐ Einfach |
-| 2 | Vergleiche | 15 Min | ⭐ Einfach |
-| 3 | Benutzereingaben | 15 Min | ⭐⭐ Mittel |
-| 4 | Interaktiver Rechner | 20 Min | ⭐⭐ Mittel |
-| 5 | String-Methoden | 15 Min | ⭐⭐ Mittel |
-| 6 | Formatierung | 15 Min | ⭐⭐ Mittel |
-| 7 | Input-Validierung | 15 Min | ⭐⭐⭐ Schwer |
-| 8 | Textanalyse | 15 Min | ⭐⭐⭐ Schwer |
+| Übung | Thema | Dauer | Einsatz | Schwierigkeit |
+|-------|-------|-------|---------|---------------|
+| 1 | Textformatierung | 15 Min | Präsenz | ⭐ Einfach |
+| 2 | Vergleiche | 15 Min | Präsenz | ⭐ Einfach |
+| 3 | Benutzereingaben | 15 Min | Präsenz | ⭐⭐ Mittel |
+| 4 | Interaktiver Rechner | 15 Min | Präsenz | ⭐⭐ Mittel |
+| 5 | String-Methoden | 15 Min | Vertiefung (zu Hause) | ⭐⭐ Mittel |
+| 6 | Formatierung | 15 Min | Vertiefung (zu Hause) | ⭐⭐ Mittel |
+| 7 | Input-Validierung | 15 Min | Vertiefung (zu Hause) | ⭐⭐⭐ Schwer |
+| 8 | Textanalyse | 15 Min | Vertiefung (zu Hause) | ⭐⭐⭐ Schwer |
 
 ## 📝 Übungen
 
@@ -33,7 +33,7 @@
 - Vergleichen Sie Ihre Lösung mit anderen
 - Experimentieren Sie mit Variationen
 
-## ✅ Lösungen
+## ✅ Beispiele
 
-Musterlösungen finden Sie in [05-beispiele](../05-beispiele/)
+Passende Beispielprogramme finden Sie in [05-beispiele](../05-beispiele/)
 

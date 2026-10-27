@@ -118,7 +118,7 @@ Nach der Vorbereitung sollten Sie:
 Modul 5 ist das **Abschlussmodul** des Kurses:
 
 - 🎓 Letzter Präsenztag
-- 🚀 Mini-Projekt als Abschlussarbeit
+- 🚀 Anwendungsaufgaben als Abschlussarbeit
 - 📝 Reflexion über den gesamten Kurs
 - ✅ Zertifikat nach erfolgreichem Abschluss
 

@@ -78,16 +78,18 @@ Nach diesem Modul können Sie:
 - **Lektion 3:** JSON-Daten manipulieren (50 Min)
 - **Lektion 4:** Module & Abschluss-Projekt (50 Min)
 
-### [02-uebungen](./02-uebungen/) - Übungen während der Präsenz
+### [02-uebungen](./02-uebungen/) - 4 Präsenz-Übungen (60 Min.) und 4 Vertiefungs-Übungen (zu Hause)
 
-**Praktische Übungen:**
+**Präsenz-Übungen** (je eine pro Lektion, zusammen 60 Min.):
 - Übung 1: Notizen-App
-- Übung 2: Textstatistik
 - Übung 3: Produktliste CSV
-- Übung 4: Notenauswertung CSV
 - Übung 5: Aufgabenliste JSON
-- Übung 6: Konfiguration JSON
 - Übung 7: Eigenes Modul
+
+**Vertiefung zu Hause** (nicht in der Präsenzzeit eingerechnet):
+- Übung 2: Textstatistik
+- Übung 4: Notenauswertung CSV
+- Übung 6: Konfiguration JSON
 - Übung 8: Standard-Module
 
 ### [03-nachbearbeitung](./03-nachbearbeitung/) - Hausaufgaben (6-8 Std)
