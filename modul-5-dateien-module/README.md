@@ -2,7 +2,7 @@
 
 **Dauer:** 1 Tag (4 Lektionen à 50 Minuten)
 **Voraussetzung:** Module 1-4 abgeschlossen
-**Besonderheit:** Abschlussmodul mit Mini-Projekt
+**Besonderheit:** Abschlussmodul mit Anwendungsaufgaben
 
 ## 🎯 Lernziele
 
@@ -54,7 +54,7 @@ Nach diesem Modul können Sie:
 - __name__ == "__main__"
 - Projektstruktur
 
-### Mini-Projekt
+### Anwendungsaufgaben
 - Tagebuch-App mit Textdateien
 - CSV-Datenanalyse
 - Konfigurationsverwaltung mit JSON
@@ -81,14 +81,14 @@ Nach diesem Modul können Sie:
 ### [02-uebungen](./02-uebungen/) - Übungen während der Präsenz
 
 **Praktische Übungen:**
-1. Übung 1: Notizen-App
-2. Übung 2: Textstatistik
-3. Übung 3: Produktliste CSV
-4. Übung 4: Notenauswertung CSV
-5. Übung 5: Aufgabenliste JSON
-6. Übung 6: Konfiguration JSON
-7. Übung 7: Eigenes Modul
-8. Übung 8: Standard-Module
+- Übung 1: Notizen-App
+- Übung 2: Textstatistik
+- Übung 3: Produktliste CSV
+- Übung 4: Notenauswertung CSV
+- Übung 5: Aufgabenliste JSON
+- Übung 6: Konfiguration JSON
+- Übung 7: Eigenes Modul
+- Übung 8: Standard-Module
 
 ### [03-nachbearbeitung](./03-nachbearbeitung/) - Hausaufgaben (6-8 Std)
 
@@ -110,7 +110,8 @@ Nach diesem Modul können Sie:
 
 **13 vollständige Python-Programme** (Übersicht in der [05-beispiele/README](./05-beispiele/README.md)):
 - textdateien.py, csv_beispiel.py, json_beispiel.py - Grundlagen
-- aufgabenliste.py, notenverwaltung.py, config.py - Anwendungen mit CSV/JSON
+- aufgabenliste.py, notenverwaltung.py - Anwendungen mit CSV/JSON
+- config.py - Konfigurationsverwaltung mit JSON
 - datei_utils.py, text_tools.py, backup_tool.py - eigene Module
 - log_analyzer.py, daten_konverter.py - Werkzeuge
 - notizen_app.py, notizen_app_streamlit.py - Notizen-App (Konsole und Streamlit)
@@ -133,7 +134,7 @@ Nach erfolgreichem Abschluss des Moduls:
 - [ ] Alle 4 Lektionen besucht
 - [ ] Mindestens 6 von 8 Übungen gelöst
 - [ ] Alle 3 Nachbearbeitungsaufgaben eingereicht
-- [ ] Mini-Projekt abgeschlossen
+- [ ] Anwendungsaufgaben abgeschlossen
 - [ ] Abschluss-Reflexion geschrieben
 - [ ] Kurs erfolgreich abgeschlossen! 🎓
 

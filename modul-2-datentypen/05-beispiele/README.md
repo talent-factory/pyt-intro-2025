@@ -20,7 +20,6 @@ Vollständige Beispielprogramme für Modul 2.
 
 Alle Programme können direkt ausgeführt werden:
 
-
 ```bash
 python strings.py
 python formatierung.py
@@ -28,12 +27,14 @@ python formatierung.py
 ```
 
 ## 💡 Lernhinweise
+
 - Lesen Sie den Code sorgfältig
 - Führen Sie die Programme aus
 - Experimentieren Sie mit Änderungen
 - Nutzen Sie die Programme als Vorlage
 
 ## 📖 Kommentare
+
 Alle Programme sind ausführlich kommentiert und erklären:
 - Was der Code macht
 - Warum bestimmte Entscheidungen getroffen wurden

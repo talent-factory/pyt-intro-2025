@@ -48,8 +48,8 @@ Nach diesem Modul können Sie:
 
 ### Projekt
 - Zahlenraten-Spiel
-- Einkaufsliste-Manager
-- Primzahlen-Generator
+- Einkaufsliste
+- Primzahlen-Finder
 - Menü-gesteuerte Anwendungen
 
 ## 📚 Modulstruktur
@@ -85,8 +85,8 @@ Nach diesem Modul können Sie:
 ### [03-nachbearbeitung](./03-nachbearbeitung/) - Hausaufgaben (4-6 Std)
 
 **Nach dem Präsenztag:**
-- Aufgabe 1: Zahlenspiel mit Menü
-- Aufgabe 2: Einkaufsliste-Manager
+- Aufgabe 1: Zahlenspiel
+- Aufgabe 2: Einkaufsliste
 - Aufgabe 3: Primzahlen-Finder
 - Persönliche Reflexion
 

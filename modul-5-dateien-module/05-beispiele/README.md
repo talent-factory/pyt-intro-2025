@@ -51,6 +51,7 @@ streamlit run notizen_app_streamlit.py
 ```
 
 ## 💡 Lernziele
+
 - Dateien lesen und schreiben
 - CSV-Dateien verarbeiten
 - JSON-Daten speichern

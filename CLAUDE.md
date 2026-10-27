@@ -19,12 +19,11 @@ pyt-intro-2025/
 ├── modul-4-funktionen-datenstrukturen/ ✅ Vollständig
 ├── modul-5-dateien-module/             ✅ Vollständig
 ├── modul-6-ki-programmieren/           ✅ Vollständig (Zusatzmodul)
-├── refs/                               (Referenzmaterialien)
+├── refs/                               (lokal, nicht im Repo)
 ├── .devcontainer/                      (GitHub Codespaces Config)
 ├── README.md                           (Haupt-Dokumentation)
 ├── CLAUDE.md                           (Dieses Dokument)
-├── pyproject.toml                      (Python Projekt-Config)
-└── main.py                             (Entry Point)
+└── pyproject.toml                      (Python Projekt-Config)
 ```
 
 ## Standard-Modulstruktur
@@ -58,7 +57,7 @@ modul-X-thema/
 
 ## Entwicklungsstand (Stand: 2026-10-26)
 
-### ✅ Vollständig produktionsreif
+### ✅ Inhaltlich vollständig
 
 | Modul | Status | Python-Dateien | Lektionen | Übungen |
 |-------|--------|----------------|-----------|---------|
@@ -78,7 +77,7 @@ modul-X-thema/
 - Lektionen: `lektion-X-titel.md` (X = 1, 2, 3, ...)
 - Übungen: `uebung-X-titel.md`
 - Aufgaben: `aufgabe-X-titel.md`
-- Beispiele: `beschreibender-name.py` (alle Module; Modul 4 zusätzlich nummeriert wie `01-begruessung.py`)
+- Beispiele: `beschreibender_name.py` (snake_case, alle Module; die ersten drei Beispiele in Modul 4 sind nummeriert wie `01-begruessung.py`)
 
 ### Python-Code
 - **Variablennamen:** Deutsche Namen, snake_case (`alter`, `vorname`, `ist_gueltig`)
@@ -198,7 +197,7 @@ Jedes README sollte enthalten:
 ## Nächste Schritte (Priorität)
 
 1. **Testing erweitern:**
-   - Tests für alle 71 Python-Programme (Module 1-5 vorhanden, Modul 6 fehlt)
+   - Tests für alle 71 Python-Programme (Modul 1-2 vollständig, Modul 3-5 teilweise, Modul 6 fehlt)
    - pytest-Framework bereits eingerichtet
    - CI/CD Pipeline (GitHub Actions)
 
