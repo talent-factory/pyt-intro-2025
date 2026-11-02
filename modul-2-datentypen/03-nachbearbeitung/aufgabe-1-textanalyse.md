@@ -1,11 +1,14 @@
 # Aufgabe 1: Textanalyse-Tool
 
-**Dauer:** 2 Stunden  
+**Dauer:** 2 Stunden
 **Schwierigkeit:** ⭐⭐ Mittel
 
 ## 🎯 Lernziel
 
 String-Methoden und Berechnungen kombinieren
+
+> **Hinweis:** Diese Aufgabe ist komplett mit dem Stoff aus Modul 1 und 2 lösbar –
+> Sie brauchen weder `if` noch Schleifen. Diese folgen in Modul 3.
 
 ## 📝 Aufgabenstellung
 
@@ -28,7 +31,7 @@ Erstellen Sie ein Programm `textanalyse.py`, das einen Text analysiert und folge
 
 ## 💡 Beispiel-Ausgabe
 
-```
+```text
 ========================================
         Textanalyse-Tool
 ========================================
@@ -42,14 +45,14 @@ Analyse-Ergebnisse:
 
 Grundlegende Statistiken:
 - Zeichen (mit Leerzeichen): 68
-- Zeichen (ohne Leerzeichen): 56
+- Zeichen (ohne Leerzeichen): 59
 - Wörter: 10
 - Sätze: 2
 
 Wort-Analyse:
 - Längstes Wort: Programmiersprache (18 Zeichen)
 - Kürzestes Wort: zu (2 Zeichen)
-- Durchschnittliche Wortlänge: 5.6 Zeichen
+- Durchschnittliche Wortlänge: 5.7 Zeichen
 
 Formatierungen:
 - Grossbuchstaben: PYTHON IST EINE TOLLE...
@@ -71,24 +74,31 @@ text = input("Bitte geben Sie einen Text ein:\n> ")
 ```python
 anzahl_zeichen_mit = len(text)
 anzahl_zeichen_ohne = len(text.replace(" ", ""))
-woerter = text.split()
-anzahl_woerter = len(woerter)
 anzahl_saetze = text.count(".")
 ```
 
 ### Schritt 3: Wort-Analyse
 
 ```python
-# Längstes Wort finden
-laengstes = ""
-for wort in woerter:
-    if len(wort) > len(laengstes):
-        laengstes = wort
+# Satzzeichen entfernen, damit sie nicht zur Wortlänge zählen
+text_sauber = text.replace(".", "").replace(",", "").replace("!", "").replace("?", "")
+woerter = text_sauber.split()
+anzahl_woerter = len(woerter)
 
-# Durchschnittliche Länge
-gesamt_laenge = sum(len(wort) for wort in woerter)
+# Längstes und kürzestes Wort: key=len vergleicht die Wörter nach ihrer Länge
+laengstes = max(woerter, key=len)
+kuerzestes = min(woerter, key=len)
+
+# Durchschnittliche Länge: alle Wörter aneinanderhängen und die Zeichen zählen
+gesamt_laenge = len("".join(woerter))
 durchschnitt = gesamt_laenge / anzahl_woerter
+
+print(f"Längstes Wort: {laengstes} ({len(laengstes)} Zeichen)")
 ```
+
+> 💡 `max(woerter, key=len)` liefert das Wort mit der grössten Länge,
+> `min(...)` das mit der kleinsten. `"".join(woerter)` hängt alle Wörter
+> ohne Leerzeichen aneinander.
 
 ## ✅ Checkliste
 
@@ -101,22 +111,26 @@ durchschnitt = gesamt_laenge / anzahl_woerter
 
 ## 🚀 Bonus-Aufgaben
 
-1. **Häufigste Wörter:**
+**Schon jetzt lösbar:**
+
+1. **Vokal-Analyse:**
+   - Zählen Sie Vokale (a, e, i, o, u) mit `.count()`
+
+2. **Erweiterte Satz-Erkennung:**
+   - Berücksichtigen Sie auch `!` und `?`
+
+**Nach Modul 3 bzw. Modul 5** (benötigen Schleifen bzw. Dateien):
+
+3. **Häufigste Wörter:**
    - Zählen Sie, welche Wörter am häufigsten vorkommen
 
-2. **Vokal-Analyse:**
-   - Zählen Sie Vokale (a, e, i, o, u)
-
-3. **Datei-Eingabe:**
+4. **Datei-Eingabe:**
    - Lesen Sie den Text aus einer Datei
-
-4. **Erweiterte Satz-Erkennung:**
-   - Berücksichtigen Sie auch `!` und `?`
 
 ## 💡 Tipps
 
 - Testen Sie mit verschiedenen Texten
-- Achten Sie auf Satzzeichen bei der Wort-Analyse
+- Entfernen Sie Satzzeichen vor der Wort-Analyse (siehe Schritt 3)
 - Nutzen Sie F-Strings für die Ausgabe
 - Strukturieren Sie den Code übersichtlich
 
@@ -125,28 +139,24 @@ durchschnitt = gesamt_laenge / anzahl_woerter
 **Problem:** Satzzeichen werden als Teil des Wortes gezählt
 
 **Lösung:**
+
 ```python
-# Satzzeichen entfernen
-wort_sauber = wort.strip(".,!?")
+# Satzzeichen vor dem Aufteilen entfernen
+text_sauber = text.replace(".", "").replace(",", "")
+woerter = text_sauber.split()
 ```
 
-**Problem:** Division durch Null bei leerem Text
+**Problem:** Das Programm bricht bei leerer Eingabe ab (`ValueError` bzw. `ZeroDivisionError`)
 
-**Lösung:**
-```python
-if anzahl_woerter > 0:
-    durchschnitt = gesamt_laenge / anzahl_woerter
-else:
-    durchschnitt = 0
-```
+**Lösung:** Testen Sie mit einem Text, der mindestens ein Wort enthält. Wie Sie
+leere Eingaben mit `if` abfangen, lernen Sie in Modul 3.
 
 ## 📚 Nützliche String-Methoden
 
 - `.split()` - Text in Wörter aufteilen
 - `.count()` - Zeichen/Wörter zählen
 - `.replace()` - Zeichen ersetzen
-- `.strip()` - Leerzeichen entfernen
+- `.strip()` - Leerzeichen am Rand entfernen
 - `.upper()`, `.lower()`, `.title()` - Formatierung
 
 Viel Erfolg! 🚀
-
