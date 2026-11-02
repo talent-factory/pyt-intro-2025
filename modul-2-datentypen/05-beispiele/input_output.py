@@ -9,6 +9,8 @@ Konzepte:
 - Formatierte Ausgaben
 """
 
+from datetime import date
+
 print("=" * 40)
 print("    Input/Output Demonstrator")
 print("=" * 40)
@@ -52,7 +54,7 @@ nachname = input("Nachname: ")
 alter = int(input("Alter: "))
 
 vollname = f"{vorname} {nachname}"
-geburtsjahr = 2025 - alter
+geburtsjahr = date.today().year - alter
 
 print()
 print("=" * 40)
