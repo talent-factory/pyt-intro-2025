@@ -224,7 +224,7 @@ Nächstes Jahr sind Sie 26 Jahre alt!
 - **Konvertierung:** `int()`, `float()`, `str()`, `bool()`
 - **`input()`** gibt immer String zurück
 - **Konvertierung nötig** für Berechnungen
-- **Fehlerbehandlung** bei ungültigen Werten
+- **Ungültige Werte** (z.B. `int("Hallo")`) lösen einen `ValueError` aus – Umgang damit folgt in Modul 3
 
 ## 🎯 Lernzielkontrolle
 

@@ -14,7 +14,7 @@ Nach diesem Modul können Sie:
 5. **String-Methoden** zur Textverarbeitung einsetzen
 6. **Logische Operatoren** (and, or, not) verwenden
 7. **F-Strings** für moderne String-Formatierung nutzen
-8. **Fehlerbehandlung** bei Typkonvertierung verstehen
+8. **Typfehler** (`ValueError`) erkennen und Eingaben vor der Konvertierung prüfen
 
 ## 📚 Modulstruktur
 
@@ -54,11 +54,11 @@ Vertiefung zu Hause (nicht in der Präsenzzeit eingerechnet):
 
 ### [03-nachbearbeitung](./03-nachbearbeitung/) (4-6 Stunden)
 
-Hausaufgaben zur Vertiefung:
+Hausaufgaben zur Vertiefung (ohne `if`, Schleifen und `try`/`except` lösbar – diese Themen folgen in Modul 3):
 
 - Aufgabe 1: Textanalyse-Tool (2 Std)
 - Aufgabe 2: Eingabe-Validator (1.5 Std)
-- Aufgabe 3: Interaktives Quiz (2 Std)
+- Aufgabe 3: Quiz-Auswertung mit Booleschen Werten (2 Std)
 - Reflexion und Selbsteinschätzung (30 Min)
 
 ### [04-materialien](./04-materialien/)
@@ -86,7 +86,7 @@ Vollständige Beispielprogramme:
 |-------|-----------|-------|
 | **Vor Tag 2** | Leseauftrag + Experimente | 2-3 Std |
 | **Tag 2** | 4 Lektionen Präsenzunterricht | 4 × 50 Min |
-| **Tag 2** | Pausen | 40 Min |
+| **Tag 2** | Pausen (3 × 10 Min) | 30 Min |
 | **Nach Tag 2** | 3 Aufgaben + Reflexion | 4-6 Std |
 | **Gesamt** | | **10-13 Std** |
 

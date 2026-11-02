@@ -5,11 +5,16 @@
 
 ## 🎯 Lernziele
 
-- Alle Konzepte kombinieren
+- Alle Konzepte aus Modul 2 kombinieren
 - Benutzerfreundliche Programme erstellen
-- Eingaben validieren
+- Eingaben mit String-Methoden und Vergleichen **prüfen** (Ergebnis: `True`/`False`)
 - Erweiterte String-Methoden anwenden
-- Fehlerbehandlung verstehen
+- Verstehen, warum ungültige Eingaben zu Fehlern führen
+
+> **Hinweis:** In dieser Lektion *prüfen* wir Eingaben nur und zeigen das Ergebnis
+> als Boolescher Wert an. Wie ein Programm auf das Ergebnis *reagiert*
+> (`if`/`else`, Wiederholung bei falscher Eingabe, `try`/`except`), lernen Sie
+> in **Modul 3**.
 
 ---
 
@@ -45,23 +50,40 @@ print("Titel")
 print("=" * 40)
 ```
 
-### 1.2 Eingabe-Validierung & Fehlerbehandlung
+### 1.2 Eingaben prüfen (Validierung)
+
+`input()` liefert immer einen String. Bevor wir ihn umwandeln, können wir
+**prüfen**, ob die Umwandlung gelingen würde. Das Ergebnis ist ein Boolescher Wert:
 
 ```python
-# Mit String-Methoden
 alter_str = input("Alter: ")
-if alter_str.isdigit():
-    alter = int(alter_str)
-else:
-    print("Ungültige Eingabe!")
 
-# Mit try-except
-try:
-    alter = int(input("Alter: "))
-except ValueError:
-    print("Ungültige Eingabe!")
-    alter = 0
+ist_zahl = alter_str.isdigit()        # True bei "25", False bei "abc"
+nicht_leer = len(alter_str) > 0       # True, sobald etwas eingegeben wurde
+
+print(f"Eingabe ist eine ganze Zahl: {ist_zahl}")
+print(f"Eingabe ist nicht leer:      {nicht_leer}")
 ```
+
+Warum ist das wichtig? Ohne Prüfung bricht das Programm bei ungültigen
+Eingaben ab:
+
+```python
+alter = int("abc")   # ValueError: invalid literal for int() with base 10: 'abc'
+```
+
+> 💡 **Ausblick Modul 3:** Dort lernen Sie, mit `if` auf `False` zu reagieren,
+> die Eingabe zu wiederholen und Fehler mit `try`/`except` abzufangen.
+
+Nützliche Prüfungen mit String-Methoden:
+
+| Prüfung | Bedeutung | Beispiel |
+|---------|-----------|----------|
+| `s.isdigit()` | nur Ziffern | `"123".isdigit()` → `True` |
+| `s.isalpha()` | nur Buchstaben | `"Anna".isalpha()` → `True` |
+| `s.isupper()` / `s.islower()` | nur Gross-/Kleinbuchstaben | `"ABC".isupper()` → `True` |
+| `"@" in s` | Zeichen enthalten | `"a@b.ch"` → `True` |
+| `len(s) >= 8` | Mindestlänge | `len("geheim")` → 6 → `False` |
 
 ### 1.3 Programm-Struktur
 
@@ -89,7 +111,7 @@ print(f"\nErgebnis: {ergebnis}")
 ```python
 """
 BMI-Rechner
-Berechnet den Body-Mass-Index
+Berechnet den Body-Mass-Index und zeigt die Einordnung als Wahrheitswerte
 """
 
 print("=" * 40)
@@ -106,93 +128,81 @@ gewicht_kg = float(input("Gewicht (kg): "))
 groesse_m = groesse_cm / 100
 bmi = gewicht_kg / (groesse_m ** 2)
 
-# Bewertung (vereinfacht)
-if bmi < 18.5:
-    bewertung = "Untergewicht"
-elif bmi < 25:
-    bewertung = "Normalgewicht"
-elif bmi < 30:
-    bewertung = "Übergewicht"
-else:
-    bewertung = "Starkes Übergewicht"
+# Einordnung (Vergleiche liefern True/False)
+untergewicht = bmi < 18.5
+normalgewicht = bmi >= 18.5 and bmi < 25
+uebergewicht = bmi >= 25
 
 # Ausgabe
 print()
 print("=" * 40)
 print(f"Ergebnis für {name}:")
 print(f"BMI: {bmi:.1f}")
-print(f"Bewertung: {bewertung}")
+print(f"Untergewicht:  {untergewicht}")
+print(f"Normalgewicht: {normalgewicht}")
+print(f"Übergewicht:   {uebergewicht}")
 print("=" * 40)
 ```
 
-### Beispiel 2: Passwort-Validator (10 Min)
+> 💡 In Modul 3 ersetzen Sie die drei True/False-Zeilen durch eine
+> `if`/`elif`/`else`-Kette, die direkt den passenden Text ausgibt.
+
+### Beispiel 2: Passwort-Check (10 Min)
 
 ```python
-"""Passwort-Validator mit mehreren Kriterien"""
+"""Passwort-Check mit mehreren Kriterien (Ausgabe als Checkliste)"""
 
-print("=== PASSWORT-VALIDATOR ===\n")
+print("=== PASSWORT-CHECK ===\n")
 
 passwort = input("Passwort: ")
-fehler = []
 
-# Mindestlänge
-if len(passwort) < 8:
-    fehler.append("Mindestens 8 Zeichen")
+# Jedes Kriterium ist ein Boolescher Wert
+lang_genug = len(passwort) >= 8
+hat_gross = passwort != passwort.lower()   # unterscheidet sich von der Kleinschreibung
+hat_klein = passwort != passwort.upper()   # unterscheidet sich von der Grossschreibung
+nicht_nur_buchstaben = not passwort.isalpha()   # enthält Zahl oder Sonderzeichen
 
-# Grossbuchstabe
-hat_gross = False
-for zeichen in passwort:
-    if zeichen.isupper():
-        hat_gross = True
-        break
-if not hat_gross:
-    fehler.append("Mindestens 1 Grossbuchstabe")
+alles_erfuellt = lang_genug and hat_gross and hat_klein and nicht_nur_buchstaben
 
-# Zahl
-hat_zahl = False
-for zeichen in passwort:
-    if zeichen.isdigit():
-        hat_zahl = True
-        break
-if not hat_zahl:
-    fehler.append("Mindestens 1 Zahl")
-
-# Ergebnis
-if len(fehler) == 0:
-    print("✓ Passwort ist gültig!")
-else:
-    print("\n✗ Passwort ungültig:")
-    for fehler_text in fehler:
-        print(f"  - {fehler_text}")
+print("\nPrüfungen:")
+print(f"  Mindestens 8 Zeichen:      {lang_genug}")
+print(f"  Enthält Grossbuchstaben:   {hat_gross}")
+print(f"  Enthält Kleinbuchstaben:   {hat_klein}")
+print(f"  Zahl oder Sonderzeichen:   {nicht_nur_buchstaben}")
+print(f"\nPasswort gültig: {alles_erfuellt}")
 ```
+
+**Trick erklärt:** `"Hallo" != "hallo"` ist `True` – also muss mindestens ein
+Grossbuchstabe enthalten sein. Bei `"hallo"` ist `"hallo" != "hallo"` `False`.
 
 ### Beispiel 3: Text-Statistik (5 Min)
 
 ```python
-"""Erweiterte Textanalyse"""
+"""Erweiterte Textanalyse mit String-Methoden"""
 
 text = input("Text eingeben:\n")
 
 # Statistiken
 anzahl_zeichen = len(text)
 anzahl_woerter = len(text.split())
-anzahl_buchstaben = 0
-anzahl_zahlen = 0
-
-for zeichen in text:
-    if zeichen.isalpha():
-        anzahl_buchstaben += 1
-    elif zeichen.isdigit():
-        anzahl_zahlen += 1
+anzahl_saetze = text.count(".")
+text_klein = text.lower()
+anzahl_vokale = (
+    text_klein.count("a")
+    + text_klein.count("e")
+    + text_klein.count("i")
+    + text_klein.count("o")
+    + text_klein.count("u")
+)
 
 # Ausgabe
 print("\n" + "=" * 40)
 print("TEXTANALYSE")
 print("=" * 40)
 print(f"Zeichen gesamt:        {anzahl_zeichen:6d}")
-print(f"Buchstaben:            {anzahl_buchstaben:6d}")
-print(f"Zahlen:                {anzahl_zahlen:6d}")
 print(f"Wörter:                {anzahl_woerter:6d}")
+print(f"Sätze (Punkte):        {anzahl_saetze:6d}")
+print(f"Vokale (a,e,i,o,u):    {anzahl_vokale:6d}")
 print("=" * 40)
 ```
 
@@ -200,15 +210,16 @@ print("=" * 40)
 
 ## ✏️ Teil 3: Übung (15 Min)
 
-### Übung 4-8
+### Übung 4: Interaktiver Rechner
 
-Wählen Sie eine der Übungen aus [02-uebungen](../02-uebungen/):
+Bearbeiten Sie [Übung 4: Interaktiver Rechner](../02-uebungen/uebung-4-rechner.md).
 
-- **Übung 4:** Interaktiver Rechner
-- **Übung 5:** String-Methoden
-- **Übung 6:** Formatierung
-- **Übung 7:** Input-Validierung
-- **Übung 8:** Textanalyse
+**Schon fertig?** Die Vertiefungsübungen 5–8 sind für zu Hause gedacht, Sie dürfen
+aber gerne schon starten:
+[String-Methoden](../02-uebungen/uebung-5-string-methoden.md),
+[Formatierung](../02-uebungen/uebung-6-formatierung.md),
+[Input-Validierung](../02-uebungen/uebung-7-validierung.md),
+[Textanalyse](../02-uebungen/uebung-8-textanalyse.md)
 
 ---
 
@@ -218,16 +229,17 @@ Wählen Sie eine der Übungen aus [02-uebungen](../02-uebungen/):
 - **Benutzerfreundlichkeit** ist wichtig
 - **Struktur:** Titel → Eingabe → Verarbeitung → Ausgabe
 - **Formatierung** mit F-Strings
-- **Validierung** mit String-Methoden und try-except
+- **Prüfen** von Eingaben mit String-Methoden und Vergleichen (`True`/`False`)
 - **Visuelle Elemente** (Linien, Leerzeilen)
+- **Ausblick:** Reagieren auf Prüfergebnisse (`if`, Wiederholung, `try`/`except`) in Modul 3
 
 ## 🎯 Lernzielkontrolle
 
 - ✅ Alle Konzepte kombinieren?
 - ✅ Benutzerfreundliche Programme?
-- ✅ Eingaben verarbeiten und validieren?
+- ✅ Eingaben mit String-Methoden prüfen?
 - ✅ Formatierte Ausgaben?
-- ✅ Fehlerbehandlung verstehen?
+- ✅ Verstehen, warum `int("abc")` einen `ValueError` auslöst?
 
 ## 🎓 Abschluss Modul 2
 

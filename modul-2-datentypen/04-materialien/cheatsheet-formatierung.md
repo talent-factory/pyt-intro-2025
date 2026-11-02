@@ -187,12 +187,9 @@ anteil = 0.756
 print(f"{anteil:.1%}")     # 75.6%
 
 # Tabelle
-for i in range(1, 6):
-    print(f"{i:2d} | {i**2:3d} | {i**3:4d}")
-# 1 |   1 |    1
-# 2 |   4 |    8
-# 3 |   9 |   27
-# ...
+zahl = 3
+print(f"{zahl:2d} | {zahl**2:3d} | {zahl**3:4d}")
+#  3 |   9 |   27
 
 # Fortschrittsbalken
 prozent = 0.65

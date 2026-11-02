@@ -31,6 +31,7 @@ Nach diesem Modul können Sie:
 - Break und continue
 - Endlosschleifen vermeiden
 - Zähler und Akkumulatoren
+- Eingaben validieren: Wiederholung bis zur gültigen Eingabe, `try`/`except` bei `ValueError` (Fortsetzung aus Modul 2)
 
 ### For-Schleifen & Listen
 - For-Loops über Listen

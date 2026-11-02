@@ -100,21 +100,22 @@ if math.isclose(0.1 + 0.2, 0.3):
 print(f"{0.1 + 0.2:.1f}")  # 0.3
 ```
 
-## 7. Typkonvertierung ohne Fehlerbehandlung
+## 7. Typkonvertierung ohne Prüfung
 
 ### ❌ FALSCH
 ```python
 alter = int(input("Alter: "))  # ValueError bei "abc"!
 ```
 
-### ✅ RICHTIG
+### ✅ RICHTIG (Modul 2): Eingabe vorher prüfen
 ```python
-try:
-    alter = int(input("Alter: "))
-except ValueError:
-    print("Bitte eine Zahl eingeben!")
-    alter = 0
+alter_str = input("Alter: ")
+ist_zahl = alter_str.isdigit()   # True nur bei "25", False bei "abc"
+print(f"Gültige Zahl: {ist_zahl}")
 ```
+
+> 💡 Wie Ihr Programm auf `False` reagiert (`if`) oder Fehler mit
+> `try`/`except` abfängt, lernen Sie in Modul 3.
 
 ## 8. Leerer String ist False
 
@@ -258,7 +259,7 @@ print(repr(text))  # Zeigt Escape-Sequenzen
 ✅ **Vor dem Ausführen:**
 - [ ] Input konvertiert?
 - [ ] Typfehler möglich?
-- [ ] Fehlerbehandlung vorhanden?
+- [ ] Eingabe vor der Konvertierung geprüft (z.B. `.isdigit()`)?
 - [ ] Float-Vergleiche korrekt?
 - [ ] Escape-Sequenzen beachtet?
 
