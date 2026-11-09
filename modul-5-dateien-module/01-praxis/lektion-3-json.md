@@ -187,8 +187,8 @@ for teilnehmer in kurs_daten["teilnehmer"]:
 
 ## ✏️ Übungen (15 Min)
 
-- [Übung 5: Aufgabenliste](../02-uebungen/uebung-5-aufgaben.md)
-- [Übung 6: Konfiguration](../02-uebungen/uebung-6-config.md)
+- [Übung 5: Aufgabenliste JSON](../02-uebungen/uebung-5-aufgaben.md)
+- [Übung 6: Konfiguration JSON](../02-uebungen/uebung-6-config.md)
 
 ## 📚 Zusammenfassung
 
@@ -200,5 +200,5 @@ for teilnehmer in kurs_daten["teilnehmer"]:
 
 ## 🔗 Weiter
 
-- [Lektion 4: Module & Imports](./lektion-4-module.md)
+- [Lektion 4: Module & Abschluss-Projekt](./lektion-4-module.md)
 

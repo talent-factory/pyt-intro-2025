@@ -1,6 +1,6 @@
 # Nachbearbeitung: Modul 4
 
-**Zeitaufwand:** 4-6 Stunden
+**Zeitaufwand:** 6 Std 15 Min (3 Aufgaben à 2 Std + Reflexion 15 Min)
 **Deadline:** Vor Modul 5
 
 ## 🎯 Ziel

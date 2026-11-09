@@ -36,34 +36,41 @@ Bereiten Sie sich auf den Präsenztag vor.
 
 ### [02-uebungen/](./02-uebungen/)
 
-**Übungen während der Präsenz**
+**Präsenz-Übungen** (je eine pro Lektion, zusammen 60 Min.) und **Vertiefungs-Übungen** (zu Hause, nicht in der Präsenzzeit eingerechnet):
 
-- 💪 [Übung 1-8](./02-uebungen/) (je 15 Min)
+- 💪 [Übung 1: Einfache Funktionen](./02-uebungen/uebung-1-funktionen.md) (Präsenz)
+- 💪 [Übung 2: Funktionen mit Return](./02-uebungen/uebung-2-return.md) (Präsenz)
+- 💪 [Übung 3: Parameter-Varianten](./02-uebungen/uebung-3-parameter.md) (Vertiefung)
+- 💪 [Übung 4: Funktionen & Listen](./02-uebungen/uebung-4-listen.md) (Präsenz)
+- 💪 [Übung 5: Listen-Methoden](./02-uebungen/uebung-5-methoden.md) (Vertiefung)
+- 💪 [Übung 6: Dictionary-Operationen](./02-uebungen/uebung-6-dict.md) (Vertiefung)
+- 💪 [Übung 7: Erste Tests schreiben](./02-uebungen/uebung-7-testing.md) (Präsenz)
+- 💪 [Übung 8: Tests für Kontakte](./02-uebungen/uebung-8-testing.md) (Vertiefung)
 
 ### [03-nachbearbeitung/](./03-nachbearbeitung/)
 
 **Hausaufgaben vor Modul 5**
 
-- 📝 [Aufgabe 1: Kontaktverwaltung](./03-nachbearbeitung/) (2 Std)
-- 📝 [Aufgabe 2: Notenverwaltung](./03-nachbearbeitung/) (2 Std)
-- 📝 [Aufgabe 3: Wörterbuch](./03-nachbearbeitung/) (2 Std)
+- 📝 [Aufgabe 1: Kontaktverwaltung](./03-nachbearbeitung/aufgabe-1-kontakte.md) (2 Std)
+- 📝 [Aufgabe 2: Notenverwaltung](./03-nachbearbeitung/aufgabe-2-noten.md) (2 Std)
+- 📝 [Aufgabe 3: Deutsch-Englisch Wörterbuch](./03-nachbearbeitung/aufgabe-3-woerterbuch.md) (2 Std)
 - 📝 [Reflexion](./03-nachbearbeitung/reflexion.md)
 
 ### [04-materialien/](./04-materialien/)
 
 **Referenzmaterialien**
 
-- 📚 [Handout Funktionen](./04-materialien/)
-- 📚 [Cheatsheet Datenstrukturen](./04-materialien/)
-- 📚 [Cheatsheet Listen](./04-materialien/)
-- 📚 [Cheatsheet pytest](./04-materialien/)
-- 📚 [Häufige Fehler](./04-materialien/)
+- 📚 [Handout Funktionen](./04-materialien/handout-funktionen.md)
+- 📚 [Cheatsheet Datenstrukturen](./04-materialien/cheatsheet-datenstrukturen.md)
+- 📚 [Cheatsheet Listen](./04-materialien/cheatsheet-listen.md)
+- 📚 [Cheatsheet pytest](./04-materialien/cheatsheet-pytest.md)
+- 📚 [Häufige Fehler](./04-materialien/haeufige-fehler.md)
 
 ### [05-beispiele/](./05-beispiele/)
 
 **Vollständige Beispielprogramme**
 
-- 💻 10+ Python-Programme zum Lernen und Experimentieren
+- 💻 21 Python-Programme zum Lernen und Experimentieren (Übersicht in der [05-beispiele/README](./05-beispiele/README.md))
 
 ## ⏱️ Zeitplan
 
@@ -72,8 +79,8 @@ Bereiten Sie sich auf den Präsenztag vor.
 | **Vor Tag 4** | Leseauftrag + Experimente | 2-3 Std |
 | **Tag 4** | 4 Lektionen Präsenzunterricht | 4 × 50 Min |
 | **Tag 4** | Pausen | 40 Min |
-| **Nach Tag 4** | 3 Aufgaben + Reflexion | 4-6 Std |
-| **Gesamt** | | **10-13 Std** |
+| **Nach Tag 4** | 3 Aufgaben + Reflexion | 6 Std 15 Min |
+| **Gesamt** | | **12 Std 15 Min - 13 Std 15 Min** |
 
 ## 📖 Themen im Detail
 

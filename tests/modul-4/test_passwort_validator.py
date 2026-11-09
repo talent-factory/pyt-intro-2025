@@ -9,11 +9,11 @@ from unittest.mock import patch
 
 import pytest
 
-modul_pfad = Path(__file__).parent.parent.parent / "modul-2-datentypen" / "05-beispiele"
+modul_pfad = Path(__file__).parent.parent.parent / "modul-4-funktionen-datenstrukturen" / "05-beispiele"
 sys.path.insert(0, str(modul_pfad))
 
 
-@pytest.mark.modul2
+@pytest.mark.modul4
 def test_modul_import() -> None:
     """Test: Modul kann importiert werden."""
     # Mocke input() um Endlosschleife zu vermeiden
@@ -26,7 +26,7 @@ def test_modul_import() -> None:
             pytest.skip(f"Interaktives Modul: {e}")
 
 
-@pytest.mark.modul2
+@pytest.mark.modul4
 def test_validiere_passwort_funktion_existiert() -> None:
     """Test: validiere_passwort Funktion existiert."""
     with patch("builtins.input", return_value="q"):
@@ -35,7 +35,7 @@ def test_validiere_passwort_funktion_existiert() -> None:
         assert hasattr(passwort_validator, "validiere_passwort")
 
 
-@pytest.mark.modul2
+@pytest.mark.modul4
 @pytest.mark.parametrize(
     "passwort,sollte_gueltig_sein",
     [
@@ -72,7 +72,7 @@ def test_passwort_validierung(
             assert len(fehler) > 0
 
 
-@pytest.mark.modul2
+@pytest.mark.modul4
 def test_passwort_mindestlaenge() -> None:
     """Test: Mindestlänge wird geprüft."""
     with patch("builtins.input", return_value="q"):
@@ -88,7 +88,7 @@ def test_passwort_mindestlaenge() -> None:
         assert any("8 Zeichen" in str(f) for f in fehler)
 
 
-@pytest.mark.modul2
+@pytest.mark.modul4
 def test_passwort_grossbuchstabe() -> None:
     """Test: Grossbuchstabe erforderlich."""
     with patch("builtins.input", return_value="q"):
@@ -107,7 +107,7 @@ def test_passwort_grossbuchstabe() -> None:
         )
 
 
-@pytest.mark.modul2
+@pytest.mark.modul4
 def test_passwort_kleinbuchstabe() -> None:
     """Test: Kleinbuchstabe erforderlich."""
     with patch("builtins.input", return_value="q"):
@@ -126,7 +126,7 @@ def test_passwort_kleinbuchstabe() -> None:
         )
 
 
-@pytest.mark.modul2
+@pytest.mark.modul4
 def test_passwort_zahl() -> None:
     """Test: Zahl erforderlich."""
     with patch("builtins.input", return_value="q"):
@@ -142,7 +142,7 @@ def test_passwort_zahl() -> None:
         assert any("Zahl" in str(f) or "zahl" in str(f).lower() for f in fehler)
 
 
-@pytest.mark.modul2
+@pytest.mark.modul4
 def test_passwort_sonderzeichen() -> None:
     """Test: Sonderzeichen erforderlich."""
     with patch("builtins.input", return_value="q"):

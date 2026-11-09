@@ -1,4 +1,4 @@
-# Übung: Textstatistik
+# Übung 2: Textstatistik
 
 **Dauer:** 15 Minuten
 

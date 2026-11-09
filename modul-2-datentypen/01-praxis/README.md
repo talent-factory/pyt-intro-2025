@@ -10,15 +10,17 @@ Jede Lektion folgt dem gleichen Aufbau:
 - **Live-Coding** (20 Min.) - Dozent zeigt Best Practices
 - **Übung** (15 Min.) - Studierende üben selbst
 
+> Ausnahme: Lektion 4 hat 10 Min. Theorie und 25 Min. Live-Coding.
+
 ## 🎯 Lernziele
 
 Nach den Praxis-Lektionen können Sie:
 
 - Strings erstellen, formatieren und manipulieren
-- Boolsche Werte und Vergleichsoperatoren anwenden
+- Boolesche Werte und Vergleichsoperatoren anwenden
 - Typkonvertierung durchführen
 - Interaktive Programme mit `input()` erstellen
-- Erweiterte String-Methoden und Validierung anwenden
+- Erweiterte String-Methoden anwenden und Eingaben prüfen (`True`/`False`)
 
 ## 📚 Lektionen
 
@@ -35,7 +37,7 @@ Nach den Praxis-Lektionen können Sie:
 
 ---
 
-### [Lektion 2: Boolsche Werte und Vergleiche](./lektion-2-booleans.md)
+### [Lektion 2: Boolesche Werte und Vergleiche](./lektion-2-booleans.md)
 
 **Thema:** Wahrheitswerte und logische Operationen
 
@@ -44,7 +46,7 @@ Nach den Praxis-Lektionen können Sie:
 - Logische Operatoren (`and`, `or`, `not`)
 - Wahrheitswerte anderer Typen
 
-**Übung:** [Vergleiche und Bedingungen](../02-uebungen/uebung-2-vergleiche.md)
+**Übung:** [Vergleiche und logische Operatoren](../02-uebungen/uebung-2-vergleiche.md)
 
 ---
 
@@ -55,7 +57,7 @@ Nach den Praxis-Lektionen können Sie:
 - Datentypen ermitteln mit `type()`
 - Konvertierung: `int()`, `float()`, `str()`, `bool()`
 - `input()` für Benutzereingaben
-- Fehlerbehandlung bei Konvertierung
+- Typfehler (`ValueError`) bei Konvertierung erkennen
 
 **Übung:** [Benutzereingaben verarbeiten](../02-uebungen/uebung-3-input.md)
 
@@ -66,13 +68,13 @@ Nach den Praxis-Lektionen können Sie:
 **Thema:** Konzepte kombinieren und vertiefen
 
 - Kombination aller bisherigen Konzepte
-- Eingabe-Validierung mit String-Methoden
+- Eingaben mit String-Methoden und Vergleichen prüfen
 - Benutzerfreundliche Ausgaben
-- Fehlerbehandlung (`try`/`except`)
+- Ausblick: Reagieren auf Fehler (`if`, `try`/`except`) in Modul 3
 
 **Übung:** [Interaktiver Rechner](../02-uebungen/uebung-4-rechner.md)
 
-> **Vertiefungsübungen** (Übungen 5–8) für schnelle Studierende: [String-Methoden](../02-uebungen/uebung-5-string-methoden.md), [Formatierung](../02-uebungen/uebung-6-formatierung.md), [Input-Validierung](../02-uebungen/uebung-7-validierung.md), [Textanalyse](../02-uebungen/uebung-8-textanalyse.md)
+> **Vertiefungsübungen** (Übungen 5–8) für zu Hause bzw. schnelle Studierende: [String-Methoden](../02-uebungen/uebung-5-string-methoden.md), [Formatierung](../02-uebungen/uebung-6-formatierung.md), [Input-Validierung](../02-uebungen/uebung-7-validierung.md), [Textanalyse](../02-uebungen/uebung-8-textanalyse.md)
 
 ---
 
@@ -82,7 +84,7 @@ Nach den Praxis-Lektionen können Sie:
 |-------|-------|-------|
 | Lektion 1 | Strings – Texte verarbeiten | 50 Min. |
 | Pause | – | 10 Min. |
-| Lektion 2 | Boolsche Werte & Vergleiche | 50 Min. |
+| Lektion 2 | Boolesche Werte & Vergleiche | 50 Min. |
 | Pause | – | 10 Min. |
 | Lektion 3 | Typkonvertierung & Input/Output | 50 Min. |
 | Pause | – | 10 Min. |
@@ -140,9 +142,9 @@ Jede Lektion folgt dem gleichen Muster:
 Die Übungen finden Sie im Ordner [02-uebungen](../02-uebungen/):
 
 1. **Übung 1:** Textformatierung (15 Min)
-2. **Übung 2:** Vergleiche und Bedingungen (15 Min)
+2. **Übung 2:** Vergleiche und logische Operatoren (15 Min)
 3. **Übung 3:** Benutzereingaben verarbeiten (15 Min)
-4. **Übung 4:** Interaktiver Rechner (20 Min)
+4. **Übung 4:** Interaktiver Rechner (15 Min)
 5. **Übung 5:** String-Methoden (15 Min)
 6. **Übung 6:** Formatierung (15 Min)
 7. **Übung 7:** Input-Validierung (15 Min)
@@ -158,15 +160,15 @@ Nach den Praxis-Lektionen sollten Studierende:
 - ✅ Logische Operatoren verstehen
 - ✅ Typkonvertierung durchführen
 - ✅ Interaktive Programme schreiben
-- ✅ Alle 8 Übungen gelöst haben
-- ✅ Fehlerbehandlung mit try-except verstehen
+- ✅ Übungen 1–4 gelöst haben (5–8 als Vertiefung)
+- ✅ Verstehen, warum ungültige Eingaben einen `ValueError` auslösen
 
 ## 💡 Tipps für Dozierende
 
 ### Zeitmanagement
 
 - **Pünktlich starten:** Jede Lektion beginnt zum geplanten Lektionsbeginn
-- **Pausen einplanen:** 10 Min nach 2 Lektionen
+- **Pausen einplanen:** 10 Min nach jeder Lektion
 - **Puffer einbauen:** Nicht zu viel Stoff in eine Lektion packen
 - **Flexibel bleiben:** Bei Bedarf Tempo anpassen
 
@@ -210,8 +212,9 @@ Nach den Praxis-Lektionen sollten Studierende:
 
 ## 📚 Zusatzmaterialien
 
-- [Handout String-Methoden](../04-materialien/handout-string-methoden.md)
-- [Cheatsheet Operatoren](../04-materialien/cheatsheet-operatoren.md)
+- [Handout Datentypen](../04-materialien/handout-datentypen.md)
+- [Cheatsheet Strings](../04-materialien/cheatsheet-strings.md)
+- [Cheatsheet String-Formatierung](../04-materialien/cheatsheet-formatierung.md)
 - [Häufige Fehler](../04-materialien/haeufige-fehler.md)
 - [Beispielcode](../05-beispiele/)
 

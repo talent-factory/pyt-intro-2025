@@ -58,7 +58,7 @@ Jede Lektion folgt dem gleichen Aufbau:
 - Module importieren
 - Eigene Module erstellen
 - Standard-Bibliothek nutzen
-- Abschluss-Projekt (Todo-App, Kontakte oder Notizen)
+- Abschluss-Projekt (Todo-App, Kontaktverwaltung oder Notizen-System)
 
 **Übungen:** [Eigenes Modul](../02-uebungen/uebung-7-modul.md), [Standard-Module](../02-uebungen/uebung-8-stdlib.md)
 

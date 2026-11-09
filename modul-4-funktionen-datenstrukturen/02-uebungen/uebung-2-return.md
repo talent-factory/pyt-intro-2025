@@ -1,4 +1,4 @@
-# Übung: Funktionen mit Return
+# Übung 2: Funktionen mit Return
 
 **Dauer:** 15 Minuten
 **Schwierigkeit:** ⭐⭐ Mittel

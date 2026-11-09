@@ -66,7 +66,7 @@ Schritt 3: "Ergänze eine Gesamtsumme am Ende"
 
 ```
 Was macht die for-Schleife in der Datei
-modul-3-kontrollstrukturen/05-beispiele/zahlenraten.py?
+modul-4-funktionen-datenstrukturen/05-beispiele/zahlenraten.py?
 Erkläre Zeile für Zeile.
 ```
 

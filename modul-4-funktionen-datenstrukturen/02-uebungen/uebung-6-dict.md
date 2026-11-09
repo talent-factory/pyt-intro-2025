@@ -1,4 +1,4 @@
-# Übung: Dictionary-Operationen
+# Übung 6: Dictionary-Operationen
 
 **Dauer:** 15 Minuten
 

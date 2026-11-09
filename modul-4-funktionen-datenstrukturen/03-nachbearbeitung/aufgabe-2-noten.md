@@ -1,4 +1,4 @@
-# Hausaufgabe: Notenverwaltung
+# Aufgabe 2: Notenverwaltung
 
 
 Erstellen Sie ein Notenverwaltungssystem.

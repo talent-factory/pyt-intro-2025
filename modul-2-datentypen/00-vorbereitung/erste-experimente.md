@@ -135,7 +135,7 @@ print(f"{name} ist {alter} Jahre alt und {groesse}m gross")
 2. Geben Sie einen Satz mit allen drei Variablen aus
 3. Berechnen Sie Ihr Alter in 5 Jahren und geben Sie es aus
 
-## 📝 Experiment 5: Boolsche Werte (10 Min)
+## 📝 Experiment 5: Boolesche Werte (10 Min)
 
 ```python
 # Vergleiche
@@ -246,7 +246,7 @@ python test_input.py
 **Aufgaben:**
 
 1. Erstellen Sie ein Programm, das nach Name und Alter fragt
-2. Berechnen Sie das Geburtsjahr (2025 - Alter)
+2. Berechnen Sie das Geburtsjahr (aktuelles Jahr minus Alter)
 3. Geben Sie einen Satz mit allen Informationen aus
 
 ## ✅ Checkliste

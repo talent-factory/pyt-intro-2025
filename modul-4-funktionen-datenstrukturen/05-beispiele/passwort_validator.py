@@ -1,7 +1,7 @@
 """Passwort-Validator mit mehreren Kriterien"""
 
 
-def validiere_passwort(passwort: str) -> tuple[bool, list[str]]:
+def validiere_passwort(passwort):
     """
     Validiert ein Passwort nach mehreren Kriterien.
 

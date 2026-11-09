@@ -152,10 +152,10 @@ print("C:\\Users\\Name")   # Backslash
 ✅ **DO:**
 - f-Strings für Formatierung nutzen
 - Aussagekräftige Variablennamen
-- Input validieren (try-except)
+- Input vorab prüfen (z.B. `.isdigit()`); `try`/`except` folgt in Modul 3
 
 ❌ **DON'T:**
-- Strings mit + in Schleifen verketten (langsam)
-- Typkonvertierung ohne Fehlerbehandlung
+- Viele Strings mit + verketten (besser: `join()`, ab Modul 4)
+- Typkonvertierung ohne vorherige Prüfung der Eingabe
 - Magische Zahlen ohne Erklärung
 

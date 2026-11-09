@@ -1,6 +1,6 @@
 # Übung 1: Hello World
 
-**Dauer:** 10 Minuten  
+**Dauer:** 15 Minuten  
 **Schwierigkeit:** ⭐ Einfach  
 **Lektion:** 1 - Was ist Programmieren?
 
@@ -13,7 +13,7 @@
 
 ## 📝 Aufgaben
 
-### Teil 1: Python Shell (5 Min.)
+### Teil 1: Python Shell (7 Min.)
 
 1. Öffnen Sie die Python Shell
 2. Geben Sie folgende Befehle ein:
@@ -24,7 +24,7 @@
 >>> print("Python macht Spass!")
 ```
 
-### Teil 2: Variablen (5 Min.)
+### Teil 2: Variablen (8 Min.)
 
 3. Erstellen Sie Variablen:
 

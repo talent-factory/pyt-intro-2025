@@ -1,6 +1,6 @@
 # Übung 4: Interaktiver Rechner
 
-**Dauer:** 20 Minuten  
+**Dauer:** 15 Minuten  
 **Schwierigkeit:** ⭐⭐ Mittel
 
 ## 🎯 Lernziel

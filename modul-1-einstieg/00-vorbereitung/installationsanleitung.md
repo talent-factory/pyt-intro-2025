@@ -254,7 +254,7 @@ sudo chown -R $(whoami) /usr/local/bin
 Nach erfolgreicher Installation:
 
 1. ✅ Lesen Sie den [Leseauftrag](./leseauftrag.md)
-2. ✅ Arbeiten Sie [Erste Schritte](./erste-schritte.md) durch
+2. ✅ Arbeiten Sie [Erste Schritte](./erste-experimente.md) durch
 3. ✅ Bereiten Sie sich auf den Präsenztag vor
 
 ---

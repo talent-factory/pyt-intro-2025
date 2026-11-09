@@ -1,4 +1,4 @@
-# Übung: Parameter-Varianten
+# Übung 3: Parameter-Varianten
 
 **Dauer:** 15 Minuten
 

@@ -7,7 +7,7 @@
 **Name:** Python Programmierung Basis - Einführungskurs 2025
 **Repository:** pyt-intro-2025
 **Zielgruppe:** Absolute Anfänger ohne Programmierkenntnisse
-**Umfang:** 5 Module + 1 Zusatzmodul, je 1 Präsenztag, ~60-73 Stunden gesamt
+**Umfang:** 5 Module + 1 Zusatzmodul, je 1 Präsenztag, ~64-80 Stunden gesamt
 
 ## Projektstruktur
 
@@ -18,13 +18,12 @@ pyt-intro-2025/
 ├── modul-3-kontrollstrukturen/         ✅ Vollständig
 ├── modul-4-funktionen-datenstrukturen/ ✅ Vollständig
 ├── modul-5-dateien-module/             ✅ Vollständig
-├── modul-6-ki-programmieren/           ⚠️ Zusatzmodul, in Entwicklung
-├── refs/                               (Referenzmaterialien)
+├── modul-6-ki-programmieren/           ✅ Vollständig (Zusatzmodul)
+├── refs/                               (lokal, nicht im Repo)
 ├── .devcontainer/                      (GitHub Codespaces Config)
 ├── README.md                           (Haupt-Dokumentation)
 ├── CLAUDE.md                           (Dieses Dokument)
-├── pyproject.toml                      (Python Projekt-Config)
-└── main.py                             (Entry Point)
+└── pyproject.toml                      (Python Projekt-Config)
 ```
 
 ## Standard-Modulstruktur
@@ -56,20 +55,20 @@ modul-X-thema/
 └── README.md            # Modul-Übersicht
 ```
 
-## Entwicklungsstand (Stand: 2026-03-14)
+## Entwicklungsstand (Stand: 2026-10-26)
 
-### ✅ Vollständig produktionsreif
+### ✅ Inhaltlich vollständig
 
 | Modul | Status | Python-Dateien | Lektionen | Übungen |
 |-------|--------|----------------|-----------|---------|
 | **Modul 1** | ✅ | 10 vollständig | 4 | 4 |
-| **Modul 2** | ✅ | 9 vollständig | 4 | 8 |
-| **Modul 3** | ✅ | 14 vollständig | 4 | 8 |
-| **Modul 4** | ✅ | 15 vollständig | 4 | 8 |
-| **Modul 5** | ✅ | 11 vollständig | 4 | 8 |
+| **Modul 2** | ✅ | 5 vollständig | 4 | 8 |
+| **Modul 3** | ✅ | 12 vollständig | 4 | 8 |
+| **Modul 4** | ✅ | 21 vollständig | 4 | 8 |
+| **Modul 5** | ✅ | 13 vollständig | 4 | 8 |
 | **Modul 6** *(Zusatz)* | ✅ | 10 vollständig | 4 | 8 |
 
-**Gesamt:** 69 Python-Programme, alle Module mit 4 Lektionen
+**Gesamt:** 71 Python-Programme, alle Module mit 4 Lektionen
 
 ## Naming Conventions
 
@@ -78,7 +77,7 @@ modul-X-thema/
 - Lektionen: `lektion-X-titel.md` (X = 1, 2, 3, ...)
 - Übungen: `uebung-X-titel.md`
 - Aufgaben: `aufgabe-X-titel.md`
-- Beispiele: `beschreibender-name.py` (Modul 1-3) oder `beispiel-X.py` (Modul 4-5, leer)
+- Beispiele: `beschreibender_name.py` (snake_case, alle Module; die ersten drei Beispiele in Modul 4 sind nummeriert wie `01-begruessung.py`)
 
 ### Python-Code
 - **Variablennamen:** Deutsche Namen, snake_case (`alter`, `vorname`, `ist_gueltig`)
@@ -148,7 +147,7 @@ print("=" * 40)
 - **Package Manager:** `uv`
 - **IDE:** VS Code
 - **Deployment:** GitHub Codespaces Support
-- **Testing:** Aktuell keine Tests (siehe Nächste Schritte)
+- **Testing:** pytest, Tests unter `tests/modul-1` bis `tests/modul-5` (Modul 6 hat noch keine Tests)
 
 ## README-Standards
 
@@ -198,7 +197,7 @@ Jedes README sollte enthalten:
 ## Nächste Schritte (Priorität)
 
 1. **Testing erweitern:**
-   - Tests für alle 69 Python-Programme
+   - Tests für alle 71 Python-Programme (Modul 1-2 vollständig, Modul 3-5 teilweise, Modul 6 fehlt)
    - pytest-Framework bereits eingerichtet
    - CI/CD Pipeline (GitHub Actions)
 
@@ -224,4 +223,4 @@ Jedes README sollte enthalten:
 
 ---
 
-**Letzte Aktualisierung:** 2026-03-14
+**Letzte Aktualisierung:** 2026-10-26

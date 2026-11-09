@@ -8,24 +8,22 @@ Zeigt:
 """
 
 
-def gruesse(name: str) -> None:
+def gruesse(name):
     """Begrüsst eine Person."""
     print(f"Hallo {name}!")
 
 
-def addiere(a: int | float, b: int | float) -> int | float:
+def addiere(a, b):
     """Addiert zwei Zahlen."""
     return a + b
 
 
-def formatiere_preis(betrag: float, waehrung: str = "CHF") -> str:
+def formatiere_preis(betrag, waehrung="CHF"):
     """Formatiert einen Preis."""
     return f"{betrag:.2f} {waehrung}"
 
 
-def berechne_rechteck(
-    laenge: int | float, breite: int | float
-) -> tuple[int | float, int | float]:
+def berechne_rechteck(laenge, breite):
     """Berechnet Fläche eines Rechtecks."""
     flaeche = laenge * breite
     umfang = 2 * (laenge + breite)

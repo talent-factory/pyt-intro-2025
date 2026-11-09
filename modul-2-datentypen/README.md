@@ -8,13 +8,13 @@
 Nach diesem Modul können Sie:
 
 1. **Strings** erstellen, formatieren und manipulieren
-2. **Boolsche Werte** verstehen und Vergleichsoperatoren anwenden
+2. **Boolesche Werte** verstehen und Vergleichsoperatoren anwenden
 3. **Typkonvertierung** zwischen verschiedenen Datentypen durchführen
 4. **Input/Output** für interaktive Programme nutzen
 5. **String-Methoden** zur Textverarbeitung einsetzen
 6. **Logische Operatoren** (and, or, not) verwenden
 7. **F-Strings** für moderne String-Formatierung nutzen
-8. **Fehlerbehandlung** bei Typkonvertierung verstehen
+8. **Typfehler** (`ValueError`) erkennen und Eingaben vor der Konvertierung prüfen
 
 ## 📚 Modulstruktur
 
@@ -32,36 +32,43 @@ Vorbereitung vor dem Präsenztag:
 Präsenzunterricht mit Live-Coding:
 
 1. **Lektion 1:** Strings - Texte verarbeiten (50 Min)
-2. **Lektion 2:** Boolsche Werte und Vergleiche (50 Min)
+2. **Lektion 2:** Boolesche Werte und Vergleiche (50 Min)
 3. **Lektion 3:** Typkonvertierung und Input/Output (50 Min)
 4. **Lektion 4:** Interaktive Programme erstellen (50 Min)
 
-### [02-uebungen](./02-uebungen/) (während Präsenzzeit)
+### [02-uebungen](./02-uebungen/) (4 Präsenz-Übungen à 15 Min. = 60 Min.; 4 Vertiefungs-Übungen zu Hause)
 
-Praktische Übungen zum Mitmachen:
+Präsenz-Übungen (je eine pro Lektion, zusammen 60 Min.):
 
 - Übung 1: Textformatierung (15 Min)
-- Übung 2: Benutzereingaben verarbeiten (15 Min)
-- Übung 3: Vergleiche und Bedingungen (15 Min)
-- Übung 4: Interaktiver Rechner (20 Min)
+- Übung 2: Vergleiche und logische Operatoren (15 Min)
+- Übung 3: Benutzereingaben verarbeiten (15 Min)
+- Übung 4: Interaktiver Rechner (15 Min)
+
+Vertiefung zu Hause (nicht in der Präsenzzeit eingerechnet):
+
+- Übung 5: String-Methoden (15 Min)
+- Übung 6: Formatierung (15 Min)
+- Übung 7: Input-Validierung (15 Min)
+- Übung 8: Textanalyse (15 Min)
 
 ### [03-nachbearbeitung](./03-nachbearbeitung/) (4-6 Stunden)
 
-Hausaufgaben zur Vertiefung:
+Hausaufgaben zur Vertiefung (ohne `if`, Schleifen und `try`/`except` lösbar – diese Themen folgen in Modul 3):
 
 - Aufgabe 1: Textanalyse-Tool (2 Std)
 - Aufgabe 2: Eingabe-Validator (1.5 Std)
-- Aufgabe 3: Interaktives Quiz (2 Std)
+- Aufgabe 3: Quiz-Auswertung mit Booleschen Werten (2 Std)
 - Reflexion und Selbsteinschätzung (30 Min)
 
 ### [04-materialien](./04-materialien/)
 
 Zusatzmaterialien und Referenzen:
 
-- Handout: String-Methoden
-- Cheatsheet: Operatoren
-- Typkonvertierung-Tabelle
-- Häufige Fehler bei Strings
+- Handout: Datentypen
+- Cheatsheet: Strings
+- Cheatsheet: String-Formatierung
+- Häufige Fehler
 
 ### [05-beispiele](./05-beispiele/)
 
@@ -69,14 +76,9 @@ Vollständige Beispielprogramme:
 
 - `strings.py` - String-Operationen
 - `formatierung.py` - String-Formatierung
-- `vergleiche.py` - Boolsche Werte
+- `vergleiche.py` - Boolesche Werte
 - `typkonvertierung.py` - Type Casting
 - `input_output.py` - Benutzereingaben
-- `textanalyse.py` - Textverarbeitung
-- `validator.py` - Eingabe-Validierung
-- `quiz.py` - Interaktives Quiz
-- `taschenrechner_v2.py` - Erweiterter Rechner
-- `namensschild.py` - Personalisierte Ausgabe
 
 ## ⏱️ Zeitplan
 
@@ -84,7 +86,7 @@ Vollständige Beispielprogramme:
 |-------|-----------|-------|
 | **Vor Tag 2** | Leseauftrag + Experimente | 2-3 Std |
 | **Tag 2** | 4 Lektionen Präsenzunterricht | 4 × 50 Min |
-| **Tag 2** | Pausen | 40 Min |
+| **Tag 2** | Pausen (3 × 10 Min) | 30 Min |
 | **Nach Tag 2** | 3 Aufgaben + Reflexion | 4-6 Std |
 | **Gesamt** | | **10-13 Std** |
 
@@ -105,7 +107,7 @@ Vollständige Beispielprogramme:
 - String-Methoden (`.upper()`, `.lower()`, `.strip()`, etc.)
 - F-Strings (`f"..."`)
 
-### Boolsche Werte
+### Boolesche Werte
 
 - `True` und `False`
 - Vergleichsoperatoren (`==`, `!=`, `<`, `>`, `<=`, `>=`)

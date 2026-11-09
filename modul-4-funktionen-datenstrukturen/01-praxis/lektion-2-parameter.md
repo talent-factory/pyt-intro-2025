@@ -137,11 +137,11 @@ print(f"Anzahl gerader Zahlen: {gerade}")
 
 ### Übung 3: Parameter-Varianten (10 Min)
 
-Siehe [Übung 3](../02-uebungen/uebung-3-parameter.md)
+Siehe [Übung 3: Parameter-Varianten](../02-uebungen/uebung-3-parameter.md)
 
 ### Übung 4: Funktionen & Listen (5 Min)
 
-Siehe [Übung 4](../02-uebungen/uebung-4-listen.md)
+Siehe [Übung 4: Funktionen & Listen](../02-uebungen/uebung-4-listen.md)
 
 ## 📚 Zusammenfassung
 
@@ -152,6 +152,6 @@ Siehe [Übung 4](../02-uebungen/uebung-4-listen.md)
 
 ## 🔗 Weiter
 
-- [Lektion 3: Listen vertiefen](./lektion-3-listen.md)
+- [Lektion 3: Listen, Dictionaries & Co.](./lektion-3-listen.md)
 - [Beispiele](../05-beispiele/parameter.py)
 

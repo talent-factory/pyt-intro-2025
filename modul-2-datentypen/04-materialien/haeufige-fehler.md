@@ -22,15 +22,14 @@ print(f"Ich bin {alter} Jahre alt")
 ### ❌ FALSCH
 ```python
 alter = input("Alter: ")
-if alter >= 18:  # TypeError!
-    print("Volljährig")
+ist_volljaehrig = alter >= 18  # TypeError!
 ```
 
 ### ✅ RICHTIG
 ```python
 alter = int(input("Alter: "))
-if alter >= 18:
-    print("Volljährig")
+ist_volljaehrig = alter >= 18
+print(f"Volljährig: {ist_volljaehrig}")
 ```
 
 ## 3. Division gibt immer Float
@@ -69,14 +68,14 @@ text = text.replace("H", "h")
 
 ### ❌ FALSCH
 ```python
-if x = 5:  # SyntaxError!
-    print("x ist 5")
+ist_fuenf = (x = 5)  # SyntaxError! = ist keine Vergleichsoperation
 ```
 
 ### ✅ RICHTIG
 ```python
-if x == 5:  # == ist Vergleich
-    print("x ist 5")
+x = 5                # = weist einen Wert zu
+ist_fuenf = x == 5   # == vergleicht und liefert True oder False
+print(ist_fuenf)
 ```
 
 ## 6. Float-Präzision
@@ -87,73 +86,76 @@ print(0.1 + 0.2)  # 0.30000000000000004 (nicht 0.3!)
 ```
 
 ### ✅ RICHTIG
+
+> **Vorgriff:** Dieses Konzept (z. B. Module importieren) wird in Modul 5 behandelt.
+
 ```python
 # Für Vergleiche
 import math
-if math.isclose(0.1 + 0.2, 0.3):
-    print("Gleich")
+sind_gleich = math.isclose(0.1 + 0.2, 0.3)  # True
+print(sind_gleich)
 
 # Für Ausgabe
 print(f"{0.1 + 0.2:.1f}")  # 0.3
 ```
 
-## 7. Typkonvertierung ohne Fehlerbehandlung
+## 7. Typkonvertierung ohne Prüfung
 
 ### ❌ FALSCH
 ```python
 alter = int(input("Alter: "))  # ValueError bei "abc"!
 ```
 
-### ✅ RICHTIG
+### ✅ RICHTIG (Modul 2): Eingabe vorher prüfen
 ```python
-try:
-    alter = int(input("Alter: "))
-except ValueError:
-    print("Bitte eine Zahl eingeben!")
-    alter = 0
+alter_str = input("Alter: ")
+ist_zahl = alter_str.isdigit()   # True, wenn nur Ziffern: "25" → True, "abc" → False
+print(f"Gültige Zahl: {ist_zahl}")
 ```
+
+> ⚠️ `isdigit()` erkennt nur Ziffern. Negative Zahlen (`"-5"`) und Dezimalzahlen
+> (`"2.5"`) liefern `False`, obwohl `int("-5")` bzw. `float("2.5")` funktionieren.
+
+> 💡 Wie Ihr Programm auf `False` reagiert (`if`) oder Fehler mit
+> `try`/`except` abfängt, lernen Sie in Modul 3.
 
 ## 8. Leerer String ist False
 
 ### ❌ FALSCH (Annahme)
 ```python
 name = ""
-if name == False:  # False! (name ist "", nicht False)
-    print("Leer")
+ist_leer = name == False  # False! (name ist "", nicht False)
 ```
 
 ### ✅ RICHTIG
 ```python
 name = ""
-if not name:  # True (leerer String ist "falsy")
-    print("Leer")
+ist_leer = not name  # True (leerer String ist "falsy")
 # Oder explizit:
-if name == "":
-    print("Leer")
+ist_leer = name == ""  # True
 ```
 
-## 9. String-Verkettung in Schleifen
+## 9. Viele Strings verketten
 
-### ❌ FALSCH (ineffizient)
+### ❌ FALSCH (umständlich)
 ```python
-text = ""
-for i in range(1000):
-    text += str(i)  # Sehr langsam!
+text = "a" + "b" + "c" + "d" + "e"
 ```
 
 ### ✅ RICHTIG
 ```python
-teile = []
-for i in range(1000):
-    teile.append(str(i))
-text = "".join(teile)  # Viel schneller!
+teile = ["a", "b", "c", "d", "e"]
+text = "".join(teile)  # "abcde"
 ```
+
+> **Vorgriff:** Listen lernen Sie in Modul 4 kennen. Bei sehr vielen Teilen
+> (z. B. in einer Schleife, Modul 3) ist `join()` die empfohlene und meist effizientere Variante.
 
 ## 10. Escape-Sequenzen in Pfaden
 
 ### ❌ FALSCH
 ```python
-pfad = "C:\Users\Name"  # \U und \N sind Escape-Sequenzen!
+pfad = "C:\Users\Name"  # SyntaxError: \U beginnt eine Unicode-Escape-Sequenz
 ```
 
 ### ✅ RICHTIG
@@ -170,28 +172,28 @@ pfad = "C:/Users/Name"
 
 ### ❌ FALSCH (umständlich)
 ```python
-if ist_aktiv == True:
-    print("Aktiv")
+ist_aktiv = True
+ergebnis = ist_aktiv == True
 ```
 
 ### ✅ RICHTIG
 ```python
-if ist_aktiv:  # Direkt prüfen
-    print("Aktiv")
+ist_aktiv = True
+ergebnis = ist_aktiv  # Der Wert ist bereits True oder False
 ```
 
 ## 12. None-Vergleich
 
 ### ❌ FALSCH
 ```python
-if wert == None:  # Funktioniert, aber nicht pythonic
-    print("Leer")
+wert = None
+ist_leer = wert == None  # Funktioniert, aber nicht pythonic
 ```
 
 ### ✅ RICHTIG
 ```python
-if wert is None:  # 'is' für None-Vergleich
-    print("Leer")
+wert = None
+ist_leer = wert is None  # 'is' für None-Vergleich
 ```
 
 ## 13. Formatierung mit +
@@ -255,7 +257,7 @@ print(repr(text))  # Zeigt Escape-Sequenzen
 ✅ **Vor dem Ausführen:**
 - [ ] Input konvertiert?
 - [ ] Typfehler möglich?
-- [ ] Fehlerbehandlung vorhanden?
+- [ ] Eingabe vor der Konvertierung geprüft (z.B. `.isdigit()`)?
 - [ ] Float-Vergleiche korrekt?
 - [ ] Escape-Sequenzen beachtet?
 

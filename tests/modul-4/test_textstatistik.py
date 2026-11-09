@@ -9,11 +9,11 @@ from unittest.mock import patch
 
 import pytest
 
-modul_pfad = Path(__file__).parent.parent.parent / "modul-2-datentypen" / "05-beispiele"
+modul_pfad = Path(__file__).parent.parent.parent / "modul-4-funktionen-datenstrukturen" / "05-beispiele"
 sys.path.insert(0, str(modul_pfad))
 
 
-@pytest.mark.modul2
+@pytest.mark.modul4
 def test_modul_import() -> None:
     """Test: Modul kann importiert werden."""
     with patch("builtins.input", return_value="Test"):
@@ -25,7 +25,7 @@ def test_modul_import() -> None:
             pytest.skip(f"Interaktives Modul: {e}")
 
 
-@pytest.mark.modul2
+@pytest.mark.modul4
 def test_analysiere_text_funktion_existiert() -> None:
     """Test: analysiere_text Funktion existiert."""
     with patch("builtins.input", return_value="Test"):
@@ -34,7 +34,7 @@ def test_analysiere_text_funktion_existiert() -> None:
         assert hasattr(textstatistik, "analysiere_text")
 
 
-@pytest.mark.modul2
+@pytest.mark.modul4
 @pytest.mark.parametrize(
     "text,expected_zeichen,expected_woerter",
     [
@@ -62,7 +62,7 @@ def test_text_grundstatistiken(
         assert stats["woerter"] == expected_woerter
 
 
-@pytest.mark.modul2
+@pytest.mark.modul4
 def test_zeichen_ohne_leerzeichen() -> None:
     """Test: Zeichen ohne Leerzeichen zählen."""
     with patch("builtins.input", return_value="Test"):
@@ -78,7 +78,7 @@ def test_zeichen_ohne_leerzeichen() -> None:
         assert stats["zeichen_ohne_leer"] == 9  # 10 - 1 Leerzeichen
 
 
-@pytest.mark.modul2
+@pytest.mark.modul4
 def test_saetze_zaehlen() -> None:
     """Test: Sätze zählen."""
     with patch("builtins.input", return_value="Test"):
@@ -94,7 +94,7 @@ def test_saetze_zaehlen() -> None:
         assert stats["saetze"] == 3
 
 
-@pytest.mark.modul2
+@pytest.mark.modul4
 def test_gross_und_kleinbuchstaben() -> None:
     """Test: Gross- und Kleinbuchstaben zählen."""
     with patch("builtins.input", return_value="Test"):
@@ -111,7 +111,7 @@ def test_gross_und_kleinbuchstaben() -> None:
         assert stats["klein"] == 8  # e,l,l,o,o,r,l,d
 
 
-@pytest.mark.modul2
+@pytest.mark.modul4
 def test_zahlen_im_text() -> None:
     """Test: Zahlen im Text zählen."""
     with patch("builtins.input", return_value="Test"):
@@ -127,7 +127,7 @@ def test_zahlen_im_text() -> None:
         assert stats["zahlen"] == 3
 
 
-@pytest.mark.modul2
+@pytest.mark.modul4
 def test_durchschnittliche_wortlaenge() -> None:
     """Test: Durchschnittliche Wortlänge."""
     with patch("builtins.input", return_value="Test"):
@@ -144,7 +144,7 @@ def test_durchschnittliche_wortlaenge() -> None:
         assert abs(stats["zeichen_pro_wort"] - 5.0) < 0.1
 
 
-@pytest.mark.modul2
+@pytest.mark.modul4
 def test_leerer_text() -> None:
     """Test: Leerer Text wird korrekt behandelt."""
     with patch("builtins.input", return_value="Test"):

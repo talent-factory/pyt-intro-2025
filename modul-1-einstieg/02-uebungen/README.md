@@ -1,15 +1,15 @@
 # Übungen: Modul 1
 
-**Gesamt:** 4 Übungen (je 15 Minuten)
+**Gesamt:** 4 Präsenz-Übungen, zusammen 60 Minuten (je 15 Minuten, eine pro Lektion)
 
 ## 📋 Übersicht
 
 | Übung | Thema | Dauer | Schwierigkeit |
 |-------|-------|-------|---------------|
-| [Übung 1](./uebung-1-hello-world.md) | Hello World | 10 Min. | ⭐ Einfach |
+| [Übung 1](./uebung-1-hello-world.md) | Hello World | 15 Min. | ⭐ Einfach |
 | [Übung 2](./uebung-2-taschenrechner.md) | Taschenrechner | 15 Min. | ⭐ Einfach |
 | [Übung 3](./uebung-3-altersrechner.md) | Altersrechner | 15 Min. | ⭐⭐ Mittel |
-| [Übung 4](./uebung-4-temperatur.md) | Temperaturumrechner | 20 Min. | ⭐⭐ Mittel |
+| [Übung 4](./uebung-4-temperatur.md) | Temperaturumrechner | 15 Min. | ⭐⭐ Mittel |
 
 ## 🎯 Ziele
 

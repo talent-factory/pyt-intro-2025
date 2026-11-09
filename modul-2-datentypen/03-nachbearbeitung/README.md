@@ -7,13 +7,17 @@
 
 Vertiefen Sie die Konzepte aus Modul 2 durch praktische Hausaufgaben.
 
+> Alle Aufgaben sind mit dem Stoff aus Modul 1 und 2 lösbar – **ohne** `if`, Schleifen
+> und `try`/`except`. Diese Themen folgen in Modul 3. Bonus-Aufgaben, die sie
+> benötigen, sind entsprechend gekennzeichnet.
+
 ## 📝 Aufgaben
 
 | Aufgabe | Thema | Dauer | Schwierigkeit |
 |---------|-------|-------|---------------|
 | 1 | Textanalyse-Tool | 2 Std | ⭐⭐ Mittel |
 | 2 | Eingabe-Validator | 1.5 Std | ⭐⭐ Mittel |
-| 3 | Interaktives Quiz | 2 Std | ⭐⭐⭐ Schwer |
+| 3 | Quiz-Auswertung | 2 Std | ⭐⭐ Mittel |
 | 4 | Reflexion | 30 Min | ⭐ Einfach |
 
 ## 📚 Aufgabenübersicht
@@ -22,21 +26,22 @@ Vertiefen Sie die Konzepte aus Modul 2 durch praktische Hausaufgaben.
 
 Erstellen Sie ein Programm, das einen Text analysiert:
 - Anzahl Zeichen, Wörter, Sätze
-- Häufigste Wörter
+- Längstes und kürzestes Wort
 - Durchschnittliche Wortlänge
+- Formatierungen (upper/lower/title)
 
 ### [Aufgabe 2: Eingabe-Validator](./aufgabe-2-validator.md) (1.5 Std)
 
 Erstellen Sie ein Programm, das Benutzereingaben validiert:
 - E-Mail-Adresse prüfen
-- Passwort-Stärke bewerten
-- Telefonnummer formatieren
+- Passwort-Kriterien prüfen
+- Telefonnummer prüfen
 
-### [Aufgabe 3: Interaktives Quiz](./aufgabe-3-quiz.md) (2 Std)
+### [Aufgabe 3: Quiz-Auswertung](./aufgabe-3-quiz.md) (2 Std)
 
 Erstellen Sie ein Quiz-Programm:
-- Mindestens 5 Fragen
-- Punktezählung
+- Mindestens 5 Fragen (Multiple Choice, Ja/Nein, Zahlen)
+- Punktezählung über Vergleiche (`True` zählt als 1)
 - Auswertung am Ende
 
 ### [Aufgabe 4: Reflexion](./reflexion.md) (30 Min)

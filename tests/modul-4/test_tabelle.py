@@ -9,11 +9,11 @@ from pathlib import Path
 
 import pytest
 
-modul_pfad = Path(__file__).parent.parent.parent / "modul-2-datentypen" / "05-beispiele"
+modul_pfad = Path(__file__).parent.parent.parent / "modul-4-funktionen-datenstrukturen" / "05-beispiele"
 sys.path.insert(0, str(modul_pfad))
 
 
-@pytest.mark.modul2
+@pytest.mark.modul4
 def test_modul_import() -> None:
     """Test: Modul kann importiert werden."""
     try:
@@ -24,7 +24,7 @@ def test_modul_import() -> None:
         pytest.fail(f"Import fehlgeschlagen: {e}")
 
 
-@pytest.mark.modul2
+@pytest.mark.modul4
 def test_tabelle_hat_ausgabe() -> None:
     """Test: Tabelle erzeugt Ausgabe."""
     old_stdout = sys.stdout
@@ -46,7 +46,7 @@ def test_tabelle_hat_ausgabe() -> None:
         sys.stdout = old_stdout
 
 
-@pytest.mark.modul2
+@pytest.mark.modul4
 @pytest.mark.parametrize(
     "produkt_daten",
     [
@@ -62,7 +62,7 @@ def test_berechnung_total(produkt_daten: dict[str, int | float]) -> None:
     assert abs(total - expected_total) < 0.01
 
 
-@pytest.mark.modul2
+@pytest.mark.modul4
 def test_summen_berechnung() -> None:
     """Test: Gesamtsumme wird korrekt berechnet."""
     produkte = [
@@ -77,7 +77,7 @@ def test_summen_berechnung() -> None:
     assert abs(gesamt_preis - 41.00) < 0.01
 
 
-@pytest.mark.modul2
+@pytest.mark.modul4
 def test_durchschnittspreis() -> None:
     """Test: Durchschnittspreis wird berechnet."""
     gesamt_preis = 41.00
@@ -88,7 +88,7 @@ def test_durchschnittspreis() -> None:
     assert abs(durchschnitt - 2.73) < 0.01
 
 
-@pytest.mark.modul2
+@pytest.mark.modul4
 def test_formatierung_in_tabelle() -> None:
     """Test: Zahlen-Formatierung in Tabelle."""
     preis = 2.50

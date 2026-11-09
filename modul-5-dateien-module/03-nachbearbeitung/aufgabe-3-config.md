@@ -1,4 +1,4 @@
-# Hausaufgabe: Konfigurationsverwaltung
+# Aufgabe 3: Konfigurationsverwaltung
 
 
 Erstellen Sie ein System zur Verwaltung von Programmeinstellungen.

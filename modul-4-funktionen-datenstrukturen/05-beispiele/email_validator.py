@@ -1,7 +1,7 @@
 """E-Mail-Validator mit detaillierter Prüfung"""
 
 
-def validiere_email(email: str) -> tuple[bool, str]:
+def validiere_email(email):
     """
     Validiert eine E-Mail-Adresse.
 

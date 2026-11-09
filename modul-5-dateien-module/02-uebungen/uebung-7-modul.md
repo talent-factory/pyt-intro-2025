@@ -1,4 +1,4 @@
-# Übung: Eigenes Modul
+# Übung 7: Eigenes Modul
 
 **Dauer:** 15 Minuten
 

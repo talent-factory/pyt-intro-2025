@@ -8,14 +8,9 @@ Vollständige Beispielprogramme für Modul 2.
 |-------|--------------|----------|
 | `strings.py` | String-Operationen | Konkatenation, Slicing, Methoden |
 | `formatierung.py` | String-Formatierung | F-Strings, Formatierung |
-| `vergleiche.py` | Boolsche Werte | Vergleiche, Logische Operatoren |
+| `vergleiche.py` | Boolesche Werte | Vergleiche, Logische Operatoren |
 | `typkonvertierung.py` | Type Casting | int(), float(), str(), bool() |
 | `input_output.py` | Benutzereingaben | input(), print() |
-| `textanalyse.py` | Textverarbeitung | String-Methoden, Berechnungen |
-| `validator.py` | Eingabe-Validierung | Booleans, String-Prüfungen |
-| `quiz.py` | Interaktives Quiz | Alle Konzepte kombiniert |
-| `taschenrechner_v2.py` | Erweiterter Rechner | Input, Typkonvertierung |
-| `namensschild.py` | Personalisierte Ausgabe | F-Strings, Formatierung |
 
 ## 🚀 Verwendung
 
@@ -40,4 +35,3 @@ Alle Programme sind ausführlich kommentiert und erklären:
 - Was der Code macht
 - Warum bestimmte Entscheidungen getroffen wurden
 - Welche Konzepte verwendet werden
-

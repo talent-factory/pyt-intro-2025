@@ -1,5 +1,5 @@
 """
-Boolsche Werte und Vergleiche
+Boolesche Werte und Vergleiche
 Demonstriert Vergleichsoperatoren und logische Operatoren.
 
 Konzepte:
@@ -9,8 +9,8 @@ Konzepte:
 - Wahrheitswerte
 """
 
-# Boolsche Werte
-print("=== Boolsche Werte ===\n")
+# Boolesche Werte
+print("=== Boolesche Werte ===\n")
 
 ist_student = True
 ist_rentner = False

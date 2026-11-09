@@ -28,7 +28,7 @@ Nach der Vorbereitung:
 
 ### 3. Erste Schritte
 
-- [ ] [Erste Schritte mit Python](./erste-schritte.md) durcharbeiten (60 Min.)
+- [ ] [Erste Schritte mit Python](./erste-experimente.md) durcharbeiten (60 Min.)
 - [ ] Einfache Berechnungen in der Python Shell ausprobieren
 
 ### 4. Quiz zur Selbstkontrolle
@@ -51,7 +51,7 @@ Nach der Vorbereitung:
 3. **[Leseauftrag: Was ist Programmieren?](./leseauftrag.md)**  
    Grundlegende Konzepte verstehen
 
-4. **[Erste Schritte mit Python](./erste-schritte.md)**  
+4. **[Erste Schritte mit Python](./erste-experimente.md)**  
    Praktische Einführung in die Python Shell
 
 5. **[Quiz](./quiz.md)**  

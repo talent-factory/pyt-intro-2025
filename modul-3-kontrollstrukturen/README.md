@@ -23,7 +23,6 @@ Nach diesem Modul können Sie:
 - Vergleichsoperatoren in Bedingungen
 - Logische Operatoren (and, or, not)
 - Verschachtelte Bedingungen
-- Ternärer Operator
 
 ### While-Schleifen
 - While-Syntax und Funktionsweise
@@ -31,12 +30,12 @@ Nach diesem Modul können Sie:
 - Break und continue
 - Endlosschleifen vermeiden
 - Zähler und Akkumulatoren
+- Eingaben validieren: Wiederholung bis zur gültigen Eingabe, `try`/`except` bei `ValueError` (Fortsetzung aus Modul 2)
 
 ### For-Schleifen & Listen
 - For-Loops über Listen
 - Range-Funktion
-- Enumerate und Zip
-- List Comprehensions (Einführung)
+- Enumerate
 - Iteration über Strings
 
 ### Verschachtelte Strukturen
@@ -44,12 +43,12 @@ Nach diesem Modul können Sie:
 - Bedingungen in Schleifen
 - Komplexe Algorithmen
 - Muster und Pyramiden
-- Debugging verschachtelter Code
+- Häufige Fehler und Debugging-Tipps (siehe [haeufige-fehler.md](./04-materialien/haeufige-fehler.md))
 
 ### Projekt
 - Zahlenraten-Spiel
-- Einkaufsliste-Manager
-- Primzahlen-Generator
+- Einkaufsliste
+- Primzahlen-Finder
 - Menü-gesteuerte Anwendungen
 
 ## 📚 Modulstruktur
@@ -70,24 +69,26 @@ Nach diesem Modul können Sie:
 - **Lektion 3:** For-Schleifen & Listen - Iteration (50 Min)
 - **Lektion 4:** Verschachtelte Strukturen & Mini-Projekt (50 Min)
 
-### [02-uebungen](./02-uebungen/) - Übungen während der Präsenz
+### [02-uebungen](./02-uebungen/) - 4 Präsenz-Übungen (60 Min.) und 4 Vertiefungs-Übungen (zu Hause)
 
-**Praktische Übungen:**
-1. Notensystem implementieren
-2. Rabattrechner mit Bedingungen
-3. Fakultät mit while-Schleife
-4. Zahlenraten-Spiel
-5. Gerade Zahlen filtern
-6. Notenliste verarbeiten
-7. Multiplikationstabelle
-8. Zahlen-Pyramide
+**Präsenz-Übungen** (je eine pro Lektion, zusammen 60 Min.):
+- Übung 1: Notensystem implementieren
+- Übung 3: Fakultät mit while-Schleife
+- Übung 5: Gerade Zahlen filtern
+- Übung 7: Multiplikationstabelle
+
+**Vertiefung zu Hause** (nicht in der Präsenzzeit eingerechnet):
+- Übung 2: Rabattrechner mit Bedingungen
+- Übung 4: Zahlenraten-Spiel
+- Übung 6: Notenliste verarbeiten
+- Übung 8: Zahlen-Pyramide
 
 ### [03-nachbearbeitung](./03-nachbearbeitung/) - Hausaufgaben (4-6 Std)
 
 **Nach dem Präsenztag:**
-- Aufgabe 1: Zahlenspiel mit Menü
-- Aufgabe 2: Einkaufsliste-Manager
-- Aufgabe 3: Primzahlen-Generator
+- Aufgabe 1: Zahlenspiel
+- Aufgabe 2: Einkaufsliste
+- Aufgabe 3: Primzahlen-Finder
 - Persönliche Reflexion
 
 ### [04-materialien](./04-materialien/) - Referenzmaterialien
@@ -100,13 +101,12 @@ Nach diesem Modul können Sie:
 
 ### [05-beispiele](./05-beispiele/) - Beispielprogramme
 
-**13 vollständige Python-Programme:**
+**12 vollständige Python-Programme:**
 - bedingungen.py - If/elif/else Beispiele
 - while_schleifen.py - While-Loop Patterns
 - for_schleifen.py - For-Loop Varianten
 - listen.py - Listen-Operationen
 - verschachtelt.py - Verschachtelte Strukturen
-- zahlenraten.py - Interaktives Spiel
 - einkaufsliste.py - Liste verwalten
 - primzahlen.py - Mathematische Algorithmen
 - muster.py - Muster und Pyramiden

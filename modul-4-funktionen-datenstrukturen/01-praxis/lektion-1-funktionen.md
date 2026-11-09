@@ -120,11 +120,11 @@ print()  # Neue Zeile
 
 ### Übung 1: Eigene Funktionen (10 Min)
 
-Siehe [Übung 1](../02-uebungen/uebung-1-funktionen.md)
+Siehe [Übung 1: Einfache Funktionen](../02-uebungen/uebung-1-funktionen.md)
 
 ### Übung 2: Funktionen kombinieren (5 Min)
 
-Siehe [Übung 2](../02-uebungen/uebung-2-return.md)
+Siehe [Übung 2: Funktionen mit Return](../02-uebungen/uebung-2-return.md)
 
 ## 📚 Zusammenfassung
 

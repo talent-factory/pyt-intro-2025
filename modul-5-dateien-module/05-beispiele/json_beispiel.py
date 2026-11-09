@@ -10,7 +10,7 @@ Zeigt:
 import json
 
 
-def config_erstellen() -> None:
+def config_erstellen():
     """Erstellt Standard-Konfiguration."""
     config = {
         "app": {"name": "Meine App", "version": "1.0.0"},
@@ -24,7 +24,7 @@ def config_erstellen() -> None:
     print("✓ Konfiguration erstellt")
 
 
-def config_laden() -> dict | None:
+def config_laden():
     """Lädt Konfiguration."""
     try:
         with open("config.json") as f:
@@ -33,7 +33,7 @@ def config_laden() -> dict | None:
         return None
 
 
-def config_anzeigen() -> None:
+def config_anzeigen():
     """Zeigt Konfiguration."""
     config = config_laden()
     if config:
@@ -43,7 +43,7 @@ def config_anzeigen() -> None:
         print(json.dumps(config, indent=2, ensure_ascii=False))
 
 
-def einstellung_aendern(kategorie: str, key: str, wert: str | bool | int) -> None:
+def einstellung_aendern(kategorie, key, wert):
     """Ändert eine Einstellung."""
     config = config_laden()
     if config and kategorie in config:

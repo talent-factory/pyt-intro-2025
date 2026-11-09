@@ -1,4 +1,4 @@
-# Übung: Produktliste CSV
+# Übung 3: Produktliste CSV
 
 **Dauer:** 15 Minuten
 

@@ -162,8 +162,7 @@ text.count("a")
 text.replace("alt", "neu")
 
 # Prüfen ob leer
-if not text.strip():
-    print("Leer")
+ist_leer = not text.strip()   # True, wenn nur Leerzeichen/leer
 ```
 
 ## Tipps

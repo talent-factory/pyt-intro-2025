@@ -8,7 +8,7 @@
 Sie bereiten sich auf den zweiten Kurstag vor, indem Sie:
 
 1. Grundlagen zu Strings und Textverarbeitung lernen
-2. Boolsche Werte und Vergleiche verstehen
+2. Boolesche Werte und Vergleiche verstehen
 3. Erste Experimente mit der Python Shell durchführen
 4. Ihr Wissen mit einem Quiz überprüfen
 
@@ -28,7 +28,7 @@ Schauen Sie sich folgende Videos an (optional, aber empfohlen):
   - String-Erstellung und Formatierung
   - String-Methoden
   
-- **[Boolsche Werte](https://studyflix.de/informatik/boolesche-operatoren-6897)** (10 Min)
+- **[Boolesche Werte](https://studyflix.de/informatik/boolesche-operatoren-6897)** (10 Min)
   - True/False
   - Vergleichsoperatoren
   
@@ -91,7 +91,7 @@ Nach der Vorbereitung sollten Sie:
 
 - ✅ Wissen, was Strings sind und wie man sie erstellt
 - ✅ Grundlegende String-Operationen kennen
-- ✅ Verstehen, was boolsche Werte sind
+- ✅ Verstehen, was boolesche Werte sind
 - ✅ Vergleichsoperatoren kennen
 - ✅ Die `input()` Funktion nutzen können
 - ✅ Bereit für den Präsenztag sein
