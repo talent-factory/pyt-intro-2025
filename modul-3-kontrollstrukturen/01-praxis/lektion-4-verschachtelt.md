@@ -35,6 +35,8 @@ for i in range(1, 4):
         print(f"{i} x {j} = {i*j}")
 ```
 
+![Verschachtelte Schleifen als Raster: Die äussere Schleife wählt die Zeile, die innere läuft pro Zeile durch alle Spalten](../04-materialien/abbildungen/05-verschachtelte-schleifen.png)
+
 ### If in Schleife
 
 ```python
