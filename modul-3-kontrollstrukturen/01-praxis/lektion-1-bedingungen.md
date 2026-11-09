@@ -29,6 +29,8 @@ else:
     print("Bedingung nicht erfüllt")
 ```
 
+![Flussdiagramm zu if/else: Die Bedingung punkte >= 60 teilt den Ablauf in "ja" (Bestanden) und "nein" (Nicht bestanden)](../04-materialien/abbildungen/01-if-else-flussdiagramm.png)
+
 ### If-Elif-Else
 
 ```python
@@ -39,6 +41,8 @@ elif bedingung2:
 else:
     print("Keine Bedingung erfüllt")
 ```
+
+![Wegweiser zu if/elif/else: Die Bedingungen werden von oben nach unten geprüft, das erste passende Schild gewinnt](../04-materialien/abbildungen/02-if-elif-else-wegweiser.png)
 
 ## 💻 Live-Coding (20 Min)
 

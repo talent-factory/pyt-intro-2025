@@ -23,6 +23,8 @@ while zaehler <= 5:
     zaehler += 1  # Wichtig: Bedingung muss irgendwann False werden!
 ```
 
+![Ablauf einer while-Schleife: Bedingung prüfen, bei ja den Körper ausführen und zurück zur Prüfung, bei nein weiter nach der Schleife](../04-materialien/abbildungen/03-while-kreislauf.png)
+
 ### Break
 
 Beendet Schleife vorzeitig:
