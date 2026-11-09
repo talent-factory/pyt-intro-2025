@@ -160,7 +160,7 @@ print(f"Enthält 'th': {'th' in text}")
 
 ## ✏️ Teil 3: Übung (15 Min)
 
-### Übung 2: Vergleiche und Bedingungen
+### Übung 2: Vergleiche und logische Operatoren
 
 Siehe [02-uebungen/uebung-2-vergleiche.md](../02-uebungen/uebung-2-vergleiche.md)
 

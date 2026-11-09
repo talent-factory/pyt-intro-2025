@@ -105,7 +105,12 @@ print(f"\nErgebnis: {punkte} von {gesamt_fragen} Punkten ({prozent:.0f}%)")
 ### Multiple Choice
 
 ```python
-antwort_3 = input("Welcher Datentyp ist 'Hallo'? (a: int, b: float, c: str, d: bool)\nIhre Antwort: ")
+print("Frage 3 von 5: Welcher Datentyp ist \"Hallo\"?")
+print("a) int")
+print("b) float")
+print("c) str")
+print("d) bool")
+antwort_3 = input("Ihre Antwort: ")
 
 # .lower() und .strip(): Gross-/Kleinschreibung und Leerzeichen ignorieren
 richtig_3 = antwort_3.lower().strip() == "c" or antwort_3.lower().strip() == "str"

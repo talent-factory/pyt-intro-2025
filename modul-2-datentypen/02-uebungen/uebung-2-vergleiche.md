@@ -1,4 +1,4 @@
-# Übung 2: Vergleiche und Bedingungen
+# Übung 2: Vergleiche und logische Operatoren
 
 **Dauer:** 15 Minuten  
 **Schwierigkeit:** ⭐ Einfach

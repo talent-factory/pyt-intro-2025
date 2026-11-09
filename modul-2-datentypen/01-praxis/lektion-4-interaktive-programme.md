@@ -1,7 +1,7 @@
 # Lektion 4: Interaktive Programme & Vertiefung
 
 **Dauer:** 50 Minuten
-**Format:** 10 Min Theorie + 25 Min Live-Coding + 15 Min Übung
+**Format:** 10 Min Theorie + 25 Min Live-Coding + 15 Min Übung (Tabelle in 1.2 optional, falls die Zeit knapp wird)
 
 ## 🎯 Lernziele
 
@@ -53,12 +53,12 @@ print("=" * 40)
 ### 1.2 Eingaben prüfen (Validierung)
 
 `input()` liefert immer einen String. Bevor wir ihn umwandeln, können wir
-**prüfen**, ob die Umwandlung gelingen würde. Das Ergebnis ist ein Boolescher Wert:
+**prüfen**, ob er nur aus Ziffern besteht. Das Ergebnis ist ein Boolescher Wert:
 
 ```python
 alter_str = input("Alter: ")
 
-ist_zahl = alter_str.isdigit()        # True bei "25", False bei "abc"
+ist_zahl = alter_str.isdigit()        # True bei "25", False bei "abc" oder "-5"
 nicht_leer = len(alter_str) > 0       # True, sobald etwas eingegeben wurde
 
 print(f"Eingabe ist eine ganze Zahl: {ist_zahl}")
@@ -81,8 +81,8 @@ Nützliche Prüfungen mit String-Methoden:
 |---------|-----------|----------|
 | `s.isdigit()` | nur Ziffern | `"123".isdigit()` → `True` |
 | `s.isalpha()` | nur Buchstaben | `"Anna".isalpha()` → `True` |
-| `s.isupper()` / `s.islower()` | nur Gross-/Kleinbuchstaben | `"ABC".isupper()` → `True` |
-| `"@" in s` | Zeichen enthalten | `"a@b.ch"` → `True` |
+| `s.isupper()` / `s.islower()` | alle Buchstaben gross/klein (Ziffern egal) | `"ABC".isupper()` → `True` |
+| `"@" in s` | Zeichen enthalten | `"@" in "a@b.ch"` → `True` |
 | `len(s) >= 8` | Mindestlänge | `len("geheim")` → 6 → `False` |
 
 ### 1.3 Programm-Struktur
@@ -160,7 +160,7 @@ passwort = input("Passwort: ")
 lang_genug = len(passwort) >= 8
 hat_gross = passwort != passwort.lower()   # unterscheidet sich von der Kleinschreibung
 hat_klein = passwort != passwort.upper()   # unterscheidet sich von der Grossschreibung
-nicht_nur_buchstaben = not passwort.isalpha()   # enthält Zahl oder Sonderzeichen
+nicht_nur_buchstaben = not passwort.isalpha()   # enthält Zahl oder Sonderzeichen (vereinfachte Prüfung)
 
 alles_erfuellt = lang_genug and hat_gross and hat_klein and nicht_nur_buchstaben
 

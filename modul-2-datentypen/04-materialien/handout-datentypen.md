@@ -155,7 +155,7 @@ print("C:\\Users\\Name")   # Backslash
 - Input vorab prüfen (z.B. `.isdigit()`); `try`/`except` folgt in Modul 3
 
 ❌ **DON'T:**
-- Strings mit + in Schleifen verketten (langsam)
+- Viele Strings mit + verketten (besser: `join()`, ab Modul 4)
 - Typkonvertierung ohne vorherige Prüfung der Eingabe
 - Magische Zahlen ohne Erklärung
 

@@ -7,8 +7,8 @@
 
 String-Methoden und Berechnungen kombinieren
 
-> **Hinweis:** Diese Aufgabe ist komplett mit dem Stoff aus Modul 1 und 2 lösbar –
-> Sie brauchen weder `if` noch Schleifen. Diese folgen in Modul 3.
+> **Hinweis:** Sie brauchen für diese Aufgabe weder `if` noch Schleifen – diese folgen
+> in Modul 3. Neu ist nur `max()`/`min()` mit `key=len` (Schritt 3), das im Tipp unten erklärt wird.
 
 ## 📝 Aufgabenstellung
 

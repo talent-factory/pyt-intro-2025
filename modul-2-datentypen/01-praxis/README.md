@@ -46,7 +46,7 @@ Nach den Praxis-Lektionen können Sie:
 - Logische Operatoren (`and`, `or`, `not`)
 - Wahrheitswerte anderer Typen
 
-**Übung:** [Vergleiche und Bedingungen](../02-uebungen/uebung-2-vergleiche.md)
+**Übung:** [Vergleiche und logische Operatoren](../02-uebungen/uebung-2-vergleiche.md)
 
 ---
 
@@ -142,7 +142,7 @@ Jede Lektion folgt dem gleichen Muster:
 Die Übungen finden Sie im Ordner [02-uebungen](../02-uebungen/):
 
 1. **Übung 1:** Textformatierung (15 Min)
-2. **Übung 2:** Vergleiche und Bedingungen (15 Min)
+2. **Übung 2:** Vergleiche und logische Operatoren (15 Min)
 3. **Übung 3:** Benutzereingaben verarbeiten (15 Min)
 4. **Übung 4:** Interaktiver Rechner (15 Min)
 5. **Übung 5:** String-Methoden (15 Min)
@@ -168,7 +168,7 @@ Nach den Praxis-Lektionen sollten Studierende:
 ### Zeitmanagement
 
 - **Pünktlich starten:** Jede Lektion beginnt zum geplanten Lektionsbeginn
-- **Pausen einplanen:** 10 Min nach 2 Lektionen
+- **Pausen einplanen:** 10 Min nach jeder Lektion
 - **Puffer einbauen:** Nicht zu viel Stoff in eine Lektion packen
 - **Flexibel bleiben:** Bei Bedarf Tempo anpassen
 

@@ -26,8 +26,9 @@ Vertiefen Sie die Konzepte aus Modul 2 durch praktische Hausaufgaben.
 
 Erstellen Sie ein Programm, das einen Text analysiert:
 - Anzahl Zeichen, Wörter, Sätze
-- Häufigste Wörter
+- Längstes und kürzestes Wort
 - Durchschnittliche Wortlänge
+- Formatierungen (upper/lower/title)
 
 ### [Aufgabe 2: Eingabe-Validator](./aufgabe-2-validator.md) (1.5 Std)
 

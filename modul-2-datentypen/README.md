@@ -41,7 +41,7 @@ Präsenzunterricht mit Live-Coding:
 Präsenz-Übungen (je eine pro Lektion, zusammen 60 Min.):
 
 - Übung 1: Textformatierung (15 Min)
-- Übung 2: Vergleiche und Bedingungen (15 Min)
+- Übung 2: Vergleiche und logische Operatoren (15 Min)
 - Übung 3: Benutzereingaben verarbeiten (15 Min)
 - Übung 4: Interaktiver Rechner (15 Min)
 

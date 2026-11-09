@@ -60,7 +60,7 @@ Prüfungen:
 Telefonnummer: 079 123 45 67
 
 Prüfungen:
-  Nur Zahlen/Leerzeichen:  True
+  Nur Zahlen/Leerzeichen/Bindestriche:  True
   Mindestens 10 Ziffern:   True
 → Telefonnummer gültig: True
 ========================================

@@ -12,7 +12,7 @@
 Erstellen Sie ein Programm `benutzereingaben.py`, das:
 
 1. Nach Name, Alter und Lieblingsfarbe fragt
-2. Das Geburtsjahr berechnet (2025 - Alter)
+2. Das Geburtsjahr berechnet (aktuelles Jahr minus Alter)
 3. Alle Informationen formatiert ausgibt
 4. Das Alter im nächsten Jahr berechnet
 
@@ -28,7 +28,7 @@ Lieblingsfarbe? Blau
 ========================================
 Name: Max Muster
 Alter: 25 Jahre
-Geburtsjahr: ca. 2000
+Geburtsjahr: ca. 2001
 Lieblingsfarbe: Blau
 
 Nächstes Jahr sind Sie 26 Jahre alt!
@@ -43,7 +43,8 @@ name = input("Wie heissen Sie? ")
 alter = int(input("Wie alt sind Sie? "))
 
 # Berechnung
-geburtsjahr = 2025 - alter
+aktuelles_jahr = 2026  # Aktuelles Jahr von Hand eintragen
+geburtsjahr = aktuelles_jahr - alter
 
 # Ausgabe
 print(f"Name: {name}")
