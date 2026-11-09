@@ -140,7 +140,8 @@ stadt = input("Stadt: ")
 
 # Verarbeitung
 vollname = f"{vorname} {nachname}"
-geburtsjahr = 2025 - alter
+aktuelles_jahr = 2026  # Aktuelles Jahr von Hand eintragen
+geburtsjahr = aktuelles_jahr - alter
 
 # Ausgabe
 print("\n" + "=" * 40)
@@ -210,7 +211,7 @@ Erstellen Sie ein Programm, das:
 
 Name: Max Muster
 Alter: 25 Jahre
-Geburtsjahr: ca. 2000
+Geburtsjahr: ca. 2001
 Lieblingsfarbe: Blau
 
 Nächstes Jahr sind Sie 26 Jahre alt!
@@ -224,7 +225,7 @@ Nächstes Jahr sind Sie 26 Jahre alt!
 - **Konvertierung:** `int()`, `float()`, `str()`, `bool()`
 - **`input()`** gibt immer String zurück
 - **Konvertierung nötig** für Berechnungen
-- **Fehlerbehandlung** bei ungültigen Werten
+- **Ungültige Werte** (z.B. `int("Hallo")`) lösen einen `ValueError` aus – Umgang damit folgt in Modul 3
 
 ## 🎯 Lernzielkontrolle
 

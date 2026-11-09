@@ -246,7 +246,7 @@ python test_input.py
 **Aufgaben:**
 
 1. Erstellen Sie ein Programm, das nach Name und Alter fragt
-2. Berechnen Sie das Geburtsjahr (2025 - Alter)
+2. Berechnen Sie das Geburtsjahr (aktuelles Jahr minus Alter)
 3. Geben Sie einen Satz mit allen Informationen aus
 
 ## ✅ Checkliste

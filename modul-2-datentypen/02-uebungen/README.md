@@ -18,7 +18,7 @@
 ## 📝 Übungen
 
 1. [Übung 1: Textformatierung](./uebung-1-textformatierung.md)
-2. [Übung 2: Vergleiche und Bedingungen](./uebung-2-vergleiche.md)
+2. [Übung 2: Vergleiche und logische Operatoren](./uebung-2-vergleiche.md)
 3. [Übung 3: Benutzereingaben verarbeiten](./uebung-3-input.md)
 4. [Übung 4: Interaktiver Rechner](./uebung-4-rechner.md)
 5. [Übung 5: String-Methoden](./uebung-5-string-methoden.md)

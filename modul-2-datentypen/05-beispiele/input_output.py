@@ -7,7 +7,11 @@ Konzepte:
 - print() - Ausgaben
 - Typkonvertierung bei Eingaben
 - Formatierte Ausgaben
+- datetime.date (Vorgriff auf Modul 5, nur für das aktuelle Jahr)
 """
+
+# Vorgriff Modul 5: Module importieren. Hier nur, um das aktuelle Jahr zu erhalten.
+from datetime import date
 
 print("=" * 40)
 print("    Input/Output Demonstrator")
@@ -52,7 +56,8 @@ nachname = input("Nachname: ")
 alter = int(input("Alter: "))
 
 vollname = f"{vorname} {nachname}"
-geburtsjahr = 2025 - alter
+# Ungefähr, weil der Geburtstag dieses Jahr evtl. noch nicht war
+geburtsjahr = date.today().year - alter
 
 print()
 print("=" * 40)
@@ -125,6 +130,7 @@ print("Einfacher Rechner")
 print("-" * 20)
 
 zahl1 = float(input("Erste Zahl: "))
+# Achtung: Bei 0 als zweiter Zahl bricht die Division unten mit einem Fehler ab
 zahl2 = float(input("Zweite Zahl: "))
 
 summe = zahl1 + zahl2
