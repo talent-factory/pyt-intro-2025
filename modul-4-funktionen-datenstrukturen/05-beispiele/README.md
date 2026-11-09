@@ -18,7 +18,7 @@ Vollständige Beispielprogramme für Modul 4.
 7. `listen_operationen.py` - Listen-Methoden
 8. `dictionaries.py` - Dictionary-Operationen
 9. `tupel_sets.py` - Tupel und Sets
-10. `notensystem_improved.py` - Notensystem mit Datenstruktur (Listen von Tupeln, lambda)
+10. `notensystem_improved.py` - Notensystem mit Datenstruktur (Liste von Tupeln)
 
 ### Anwendungen
 
@@ -41,3 +41,11 @@ Vollständige Beispielprogramme für Modul 4.
 
 Alle Programme sind vollständig lauffähig und kommentiert.
 Experimentieren Sie damit!
+
+### Der Block `if __name__ == "__main__":`
+
+Am Ende vieler Beispiele steht dieser Block. Er sorgt dafür, dass der Code darin nur
+läuft, wenn Sie die Datei direkt starten (`python datei.py`). Importiert eine andere
+Datei die Funktionen daraus, etwa ein Test in Lektion 4, läuft er nicht mit.
+Für den Einstieg genügt: «Hier beginnt das eigentliche Programm.»
+Wie Imports im Detail funktionieren, lernen Sie in Modul 5.

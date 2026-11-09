@@ -6,7 +6,7 @@ Schleife aufrufen kann, um repetitive Aufgaben zu erledigen.
 """
 
 
-def zeige_stern() -> None:
+def zeige_stern():
     """Zeigt einen Stern."""
     print("⭐", end=" ")
 

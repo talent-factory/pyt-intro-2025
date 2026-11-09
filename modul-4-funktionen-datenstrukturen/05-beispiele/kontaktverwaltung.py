@@ -13,7 +13,7 @@ Das Programm läuft mit einem festen Demo-Ablauf (keine Eingaben nötig).
 kontakte = []
 
 
-def neuer_kontakt(name: str, email: str, telefon: str) -> None:
+def neuer_kontakt(name, email, telefon):
     """
     Fügt einen neuen Kontakt zur Liste hinzu.
 
@@ -27,7 +27,7 @@ def neuer_kontakt(name: str, email: str, telefon: str) -> None:
     print(f"Kontakt '{name}' wurde hinzugefügt.")
 
 
-def zeige_kontakte() -> None:
+def zeige_kontakte():
     """
     Zeigt alle Kontakte nummeriert an.
 
@@ -47,7 +47,7 @@ def zeige_kontakte() -> None:
         nummer += 1
 
 
-def suche_kontakt(name: str) -> dict | None:
+def suche_kontakt(name):
     """
     Sucht einen Kontakt nach Name (Gross-/Kleinschreibung egal).
 
@@ -63,7 +63,7 @@ def suche_kontakt(name: str) -> dict | None:
     return None
 
 
-def loesche_kontakt(name: str) -> bool:
+def loesche_kontakt(name):
     """
     Löscht den Kontakt mit dem genau passenden Namen.
 

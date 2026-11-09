@@ -8,24 +8,24 @@ Zeigt:
 """
 
 
-def zeige_liste(liste: list[int], titel: str = "Liste") -> None:
+def zeige_liste(liste, titel="Liste"):
     """Zeigt eine Liste formatiert an."""
     print(f"\n{titel}:")
     print(f"  {liste}")
     print(f"  Länge: {len(liste)}")
 
 
-def nur_gerade(zahlen: list[int]) -> list[int]:
+def nur_gerade(zahlen):
     """Filtert gerade Zahlen."""
     return [x for x in zahlen if x % 2 == 0]
 
 
-def verdopple(zahlen: list[int]) -> list[int]:
+def verdopple(zahlen):
     """Verdoppelt alle Werte."""
     return [x * 2 for x in zahlen]
 
 
-def statistik(zahlen: list[int]) -> dict[str, int | float]:
+def statistik(zahlen):
     """Berechnet Statistiken."""
     return {
         "min": min(zahlen),

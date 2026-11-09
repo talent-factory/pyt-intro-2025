@@ -12,7 +12,7 @@ Konzepte:
 """
 
 
-def ist_gerade(zahl: int) -> bool:
+def ist_gerade(zahl):
     """
     Prueft ob eine Zahl gerade ist.
 
@@ -25,7 +25,7 @@ def ist_gerade(zahl: int) -> bool:
     return zahl % 2 == 0
 
 
-def berechne_durchschnitt(zahlen: list[float]) -> float:
+def berechne_durchschnitt(zahlen):
     """
     Berechnet den Durchschnitt einer Liste von Zahlen.
 
@@ -43,7 +43,7 @@ def berechne_durchschnitt(zahlen: list[float]) -> float:
     return summe / len(zahlen)
 
 
-def erstelle_kontakt(name: str, email: str, telefon: str = "") -> dict[str, str]:
+def erstelle_kontakt(name, email, telefon=""):
     """
     Erstellt einen Kontakt als Dictionary.
 

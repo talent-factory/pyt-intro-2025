@@ -11,7 +11,7 @@ Das Programm läuft mit festen Daten (keine Eingaben nötig).
 """
 
 
-def minimum(werte: list) -> float:
+def minimum(werte):
     """
     Findet den kleinsten Wert einer Liste.
 
@@ -28,7 +28,7 @@ def minimum(werte: list) -> float:
     return kleinster
 
 
-def maximum(werte: list) -> float:
+def maximum(werte):
     """
     Findet den grössten Wert einer Liste.
 
@@ -45,7 +45,7 @@ def maximum(werte: list) -> float:
     return groesster
 
 
-def mittelwert(werte: list) -> float:
+def mittelwert(werte):
     """
     Berechnet den Durchschnitt einer Liste.
 
@@ -61,7 +61,7 @@ def mittelwert(werte: list) -> float:
     return summe / len(werte)
 
 
-def median(werte: list) -> float:
+def median(werte):
     """
     Berechnet den Median (mittlerer Wert der sortierten Liste).
 
@@ -80,7 +80,7 @@ def median(werte: list) -> float:
     return (sortiert[mitte - 1] + sortiert[mitte]) / 2
 
 
-def zaehle_ueber(werte: list, grenze: float) -> int:
+def zaehle_ueber(werte, grenze):
     """
     Zählt, wie viele Werte über einer Grenze liegen.
 
@@ -98,7 +98,7 @@ def zaehle_ueber(werte: list, grenze: float) -> int:
     return anzahl
 
 
-def zaehle_pro_ort(messungen: list) -> dict:
+def zaehle_pro_ort(messungen):
     """
     Zählt, wie viele Messungen es pro Ort gibt.
 
@@ -118,7 +118,7 @@ def zaehle_pro_ort(messungen: list) -> dict:
     return zaehler
 
 
-def durchschnitt_pro_ort(messungen: list) -> dict:
+def durchschnitt_pro_ort(messungen):
     """
     Berechnet die Durchschnittstemperatur pro Ort.
 
