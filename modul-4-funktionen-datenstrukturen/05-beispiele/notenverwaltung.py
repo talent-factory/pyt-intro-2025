@@ -21,7 +21,7 @@ noten = {
 }
 
 
-def note_hinzufuegen(student: str, note: float) -> None:
+def note_hinzufuegen(student, note):
     """
     Fügt einem Studenten eine Note hinzu (legt ihn bei Bedarf neu an).
 
@@ -38,7 +38,7 @@ def note_hinzufuegen(student: str, note: float) -> None:
     noten[student].append(note)
 
 
-def durchschnitt(student: str) -> float:
+def durchschnitt(student):
     """
     Berechnet den Notendurchschnitt eines Studenten.
 
@@ -57,7 +57,7 @@ def durchschnitt(student: str) -> float:
     return summe / len(noten[student])
 
 
-def beste_note(student: str) -> float:
+def beste_note(student):
     """
     Gibt die beste (höchste) Note eines Studenten zurück.
 
@@ -77,7 +77,7 @@ def beste_note(student: str) -> float:
     return beste
 
 
-def schlechteste_note(student: str) -> float:
+def schlechteste_note(student):
     """
     Gibt die schlechteste (tiefste) Note eines Studenten zurück.
 
@@ -97,7 +97,7 @@ def schlechteste_note(student: str) -> float:
     return schlechteste
 
 
-def klassendurchschnitt() -> float:
+def klassendurchschnitt():
     """
     Berechnet den Durchschnitt aller Noten der ganzen Klasse.
 
@@ -116,7 +116,7 @@ def klassendurchschnitt() -> float:
     return summe / anzahl
 
 
-def hat_bestanden(student: str) -> bool:
+def hat_bestanden(student):
     """
     Prüft, ob der Durchschnitt eines Studenten mindestens 4.0 ist.
 
@@ -129,7 +129,7 @@ def hat_bestanden(student: str) -> bool:
     return durchschnitt(student) >= BESTANDEN_AB
 
 
-def notenverteilung() -> dict:
+def notenverteilung():
     """
     Zählt, wie oft jede ganze Note (1 bis 6) in der Klasse vorkommt.
 
@@ -146,7 +146,7 @@ def notenverteilung() -> dict:
     return verteilung
 
 
-def zeige_statistik(student: str) -> None:
+def zeige_statistik(student):
     """
     Zeigt Min, Max, Durchschnitt und Status eines Studenten.
 

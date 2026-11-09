@@ -14,7 +14,7 @@ Das Programm läuft mit einem festen Demo-Ablauf (keine Eingaben nötig).
 einkaufsliste = {}
 
 
-def artikel_hinzufuegen(name: str, menge: int, preis: float) -> None:
+def artikel_hinzufuegen(name, menge, preis):
     """
     Fügt einen Artikel hinzu. Existiert er schon, wird die Menge erhöht.
 
@@ -31,7 +31,7 @@ def artikel_hinzufuegen(name: str, menge: int, preis: float) -> None:
         print(f"{name}: {menge} x {preis:.2f} CHF hinzugefügt")
 
 
-def menge_aendern(name: str, neue_menge: int) -> None:
+def menge_aendern(name, neue_menge):
     """
     Setzt die Menge eines Artikels neu (0 entfernt den Artikel).
 
@@ -50,7 +50,7 @@ def menge_aendern(name: str, neue_menge: int) -> None:
         print(f"{name}: Menge jetzt {neue_menge}")
 
 
-def artikel_entfernen(name: str) -> None:
+def artikel_entfernen(name):
     """
     Entfernt einen Artikel von der Liste.
 
@@ -64,7 +64,7 @@ def artikel_entfernen(name: str) -> None:
         print(f"{name}: nicht auf der Liste.")
 
 
-def zeilen_total(name: str) -> float:
+def zeilen_total(name):
     """
     Berechnet Menge mal Preis für einen Artikel.
 
@@ -78,7 +78,7 @@ def zeilen_total(name: str) -> float:
     return artikel["menge"] * artikel["preis"]
 
 
-def gesamt_total() -> float:
+def gesamt_total():
     """
     Berechnet die Summe aller Zeilen-Totale.
 
@@ -91,7 +91,7 @@ def gesamt_total() -> float:
     return summe
 
 
-def teuerster_artikel() -> str | None:
+def teuerster_artikel():
     """
     Findet den Artikel mit dem höchsten Zeilen-Total.
 
@@ -108,7 +108,7 @@ def teuerster_artikel() -> str | None:
     return teuerster
 
 
-def zeige_liste() -> None:
+def zeige_liste():
     """Zeigt die Einkaufsliste als Tabelle mit Total an."""
     print("EINKAUFSLISTE")
     print("=" * 40)

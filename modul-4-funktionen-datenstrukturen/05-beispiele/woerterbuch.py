@@ -19,7 +19,7 @@ woerterbuch = {
 }
 
 
-def uebersetze(wort: str) -> str | None:
+def uebersetze(wort):
     """
     Übersetzt ein deutsches Wort ins Englische.
 
@@ -35,7 +35,7 @@ def uebersetze(wort: str) -> str | None:
     return None
 
 
-def uebersetze_rueckwaerts(englisch: str) -> str | None:
+def uebersetze_rueckwaerts(englisch):
     """
     Sucht zu einem englischen Wort das deutsche Wort.
 
@@ -51,7 +51,7 @@ def uebersetze_rueckwaerts(englisch: str) -> str | None:
     return None
 
 
-def neues_wort(deutsch: str, englisch: str) -> None:
+def neues_wort(deutsch, englisch):
     """
     Fügt ein Wort hinzu (überschreibt eine vorhandene Übersetzung).
 
@@ -63,7 +63,7 @@ def neues_wort(deutsch: str, englisch: str) -> None:
     print(f"Gespeichert: {deutsch.lower()} -> {englisch.lower()}")
 
 
-def loesche_wort(deutsch: str) -> bool:
+def loesche_wort(deutsch):
     """
     Löscht ein deutsches Wort aus dem Wörterbuch.
 
@@ -82,7 +82,7 @@ def loesche_wort(deutsch: str) -> bool:
     return False
 
 
-def zeige_alle() -> None:
+def zeige_alle():
     """Zeigt alle Wörter alphabetisch sortiert an."""
     print("Wörterbuch Deutsch-Englisch")
     print("=" * 40)
@@ -93,7 +93,7 @@ def zeige_alle() -> None:
         nummer += 1
 
 
-def anfangsbuchstaben() -> set:
+def anfangsbuchstaben():
     """
     Sammelt die Anfangsbuchstaben aller deutschen Wörter.
 
@@ -109,7 +109,7 @@ def anfangsbuchstaben() -> set:
     return buchstaben
 
 
-def quiz_frage(deutsch: str, antwort: str) -> bool:
+def quiz_frage(deutsch, antwort):
     """
     Prüft eine Quiz-Antwort (ohne Eingabe: Antwort wird übergeben).
 

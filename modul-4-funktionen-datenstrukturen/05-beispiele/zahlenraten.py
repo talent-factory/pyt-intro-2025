@@ -10,6 +10,7 @@ Konzepte:
 - break und continue
 """
 
+# Vorgriff Modul 5: Module importieren. Hier nur für Zufallszahlen.
 import random
 
 print("=" * 50)

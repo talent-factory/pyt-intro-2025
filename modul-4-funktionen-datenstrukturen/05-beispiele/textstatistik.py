@@ -1,7 +1,7 @@
 """Erweiterte Textanalyse mit Statistiken"""
 
 
-def analysiere_text(text: str) -> dict:
+def analysiere_text(text):
     """
     Analysiert einen Text und gibt Statistiken zurück.
 
