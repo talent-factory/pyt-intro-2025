@@ -69,7 +69,3 @@ liste * 3
 # Vergleichen
 liste1 == liste2
 ```
-
-## List Comprehensions
-
-> **Vorgriff:** List Comprehensions (kompakte Schreibweise für Listen) werden in Modul 4 behandelt.

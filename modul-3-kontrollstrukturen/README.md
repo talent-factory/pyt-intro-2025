@@ -23,7 +23,6 @@ Nach diesem Modul können Sie:
 - Vergleichsoperatoren in Bedingungen
 - Logische Operatoren (and, or, not)
 - Verschachtelte Bedingungen
-- Ternärer Operator
 
 ### While-Schleifen
 - While-Syntax und Funktionsweise
@@ -43,7 +42,7 @@ Nach diesem Modul können Sie:
 - Bedingungen in Schleifen
 - Komplexe Algorithmen
 - Muster und Pyramiden
-- Debugging verschachtelter Code
+- Häufige Fehler und Debugging-Tipps (siehe [haeufige-fehler.md](./04-materialien/haeufige-fehler.md))
 
 ### Projekt
 - Zahlenraten-Spiel

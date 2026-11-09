@@ -110,6 +110,7 @@ print(f"Primzahlen bis {n}:")
 for zahl in range(2, n + 1):
     ist_primzahl = True
 
+    # Es genügt, Teiler bis zur Wurzel von zahl zu prüfen
     for teiler in range(2, int(zahl ** 0.5) + 1):
         if zahl % teiler == 0:
             ist_primzahl = False
@@ -129,6 +130,7 @@ Wählen Sie **eines** der folgenden Projekte:
 ### Option 1: Kontakt-Manager (einfach)
 
 ```python
+# Gleicher Index = gleicher Kontakt: namen[0] gehört zu telefonnummern[0]
 namen = []
 telefonnummern = []
 

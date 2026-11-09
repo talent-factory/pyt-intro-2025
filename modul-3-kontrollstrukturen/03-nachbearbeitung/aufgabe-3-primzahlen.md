@@ -107,8 +107,8 @@ Auf Wiedersehen! 👋
 
 ## 💻 Hilfe
 
-> **Hinweis:** Funktionen (`def`) lernen Sie erst in Modul 4 kennen. Lösen Sie
-> die Aufgabe deshalb mit Schleifen und Bedingungen direkt im Hauptprogramm.
+> **Vorgriff:** Funktionen (`def`) werden in Modul 4 behandelt. Lösen Sie die Aufgabe
+> hier mit Schleifen und Bedingungen direkt im Hauptprogramm.
 
 ### Primzahl-Test (Basis)
 
@@ -137,7 +137,7 @@ ist_primzahl = zahl >= 2
 if zahl > 2 and zahl % 2 == 0:
     ist_primzahl = False
 
-# Nur ungerade Teiler bis zur Wurzel prüfen
+# Nur ungerade Teiler bis zur Wurzel prüfen (gerade Zahlen sind oben schon erledigt)
 teiler = 3
 while ist_primzahl and teiler * teiler <= zahl:
     if zahl % teiler == 0:
@@ -147,13 +147,19 @@ while ist_primzahl and teiler * teiler <= zahl:
 print(f"{zahl} ist eine Primzahl: {ist_primzahl}")
 ```
 
+> Hier übernimmt die `while`-Bedingung die Aufgabe des `break`: Sobald `ist_primzahl`
+> `False` ist, endet die Schleife.
+
 **Warum nur bis √n?**
-- Wenn n = a × b, dann ist a ≤ √n oder b ≤ √n
-- Beispiel: 36 = 6 × 6, √36 = 6
+- Wenn zahl = a × b, dann ist a ≤ √zahl oder b ≤ √zahl. Es genügt also, Teiler bis √zahl zu prüfen.
+- `teiler * teiler <= zahl` bedeutet dasselbe wie `teiler <= √zahl`, braucht aber keine Wurzelberechnung.
+- Beispiel: 36 = 6 × 6, √36 = 6. Bei `teiler = 7` ist 49 > 36, die Schleife endet.
+- Gerade Zahlen werden vorab ausgeschlossen, darum genügt es, nur ungerade Teiler zu prüfen (`teiler += 2`).
 
 ### Primzahlen sammeln
 
-Der Primzahl-Test steckt hier in einer äusseren Schleife über alle Zahlen:
+Die äussere Schleife geht alle Kandidaten durch, die innere Schleife ist der Primzahl-Test von oben.
+Den schnelleren Test aus dem Abschnitt «Optimiert» können Sie hier ebenfalls einsetzen:
 
 ```python
 grenze = int(input("Bis zu welcher Zahl? "))
@@ -171,6 +177,10 @@ for zahl in range(2, grenze + 1):
 print(primzahlen)
 ```
 
+> Die Ausgabeformatierung (Komma-Liste) und die Statistik ergänzen Sie selbst,
+> zum Beispiel mit `len()`, `min()`, `max()` und `", ".join()`. Beachten Sie bei `join()`:
+> Es erwartet Strings, die Zahlen müssen Sie zuerst mit `str()` umwandeln.
+
 ### Primfaktorzerlegung
 
 ```python
@@ -186,6 +196,9 @@ while n > 1:
 
 print(faktoren)
 ```
+
+> `n` wird in der Schleife verkleinert. Wollen Sie am Ende «60 = 2 × 2 × 3 × 5» ausgeben,
+> merken Sie sich den Startwert vorher in einer eigenen Variable (z. B. `original = n`).
 
 ### Zeitmessung
 
