@@ -69,16 +69,3 @@ liste * 3
 # Vergleichen
 liste1 == liste2
 ```
-
-## List Comprehension
-
-```python
-# Quadratzahlen
-quadrate = [x**2 for x in range(10)]
-
-# Filtern
-gerade = [x for x in zahlen if x % 2 == 0]
-
-# Transformieren
-gross = [name.upper() for name in namen]
-```

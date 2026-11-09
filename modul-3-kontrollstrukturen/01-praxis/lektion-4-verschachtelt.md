@@ -110,6 +110,7 @@ print(f"Primzahlen bis {n}:")
 for zahl in range(2, n + 1):
     ist_primzahl = True
 
+    # Es genügt, Teiler bis zur Wurzel von zahl zu prüfen
     for teiler in range(2, int(zahl ** 0.5) + 1):
         if zahl % teiler == 0:
             ist_primzahl = False
@@ -128,10 +129,10 @@ Wählen Sie **eines** der folgenden Projekte:
 
 ### Option 1: Kontakt-Manager (einfach)
 
-> **Vorgriff:** Dieses Konzept (Dictionaries) wird in Modul 4 behandelt.
-
 ```python
-kontakte = []
+# Gleicher Index = gleicher Kontakt: namen[0] gehört zu telefonnummern[0]
+namen = []
+telefonnummern = []
 
 while True:
     print("\n=== KONTAKT-MANAGER ===")
@@ -144,11 +145,12 @@ while True:
     if wahl == "1":
         name = input("Name: ")
         telefon = input("Telefon: ")
-        kontakte.append({"name": name, "telefon": telefon})
+        namen.append(name)
+        telefonnummern.append(telefon)
         print("✓ Gespeichert!")
     elif wahl == "2":
-        for k in kontakte:
-            print(f"- {k['name']}: {k['telefon']}")
+        for i in range(len(namen)):
+            print(f"- {namen[i]}: {telefonnummern[i]}")
     elif wahl == "3":
         break
 ```
