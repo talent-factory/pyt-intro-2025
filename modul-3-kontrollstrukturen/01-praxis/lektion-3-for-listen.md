@@ -66,6 +66,8 @@ for index, frucht in enumerate(fruechte):
     print(f"{index}: {frucht}")
 ```
 
+![for-Schleife über eine Liste: Die Variable artikel zeigt der Reihe nach auf Apfel, Brot, Milch und Käse](../04-materialien/abbildungen/04-for-liste.png)
+
 ## 💻 Live-Coding (20 Min)
 
 ### Beispiel 1: Multiplikationstabelle

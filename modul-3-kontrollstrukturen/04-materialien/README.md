@@ -8,6 +8,7 @@ Zusatzmaterialien und Referenzen für Modul 3.
 2. [Cheatsheet: Schleifen](./cheatsheet-schleifen.md)
 3. [Listen-Operationen](./listen-operationen.md)
 4. [Häufige Fehler](./haeufige-fehler.md)
+5. [Abbildungen](./abbildungen/) (Flussdiagramme und Illustrationen zu den Lektionen)
 
 ## 💡 Verwendung
 
@@ -15,6 +16,7 @@ Zusatzmaterialien und Referenzen für Modul 3.
 - **Cheatsheet:** Schnellreferenz während der Programmierung
 - **Listen-Operationen:** Übersicht über Listen-Methoden
 - **Fehler:** Hilfe bei häufigen Problemen
+- **Abbildungen:** PNG-Grafiken, die in den Lektionen eingebunden sind und sich für Folien wiederverwenden lassen
 
 ## 📖 Externe Ressourcen
 
