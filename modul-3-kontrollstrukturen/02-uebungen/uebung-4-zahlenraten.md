@@ -37,6 +37,8 @@ Richtig! Sie haben gewonnen nach 3 Versuchen!
 
 ## 💻 Tipp
 
+> **Vorgriff:** Dieses Konzept (z. B. Module importieren) wird in Modul 5 behandelt.
+
 ```python
 import random
 geheimzahl = random.randint(1, 20)

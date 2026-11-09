@@ -107,43 +107,44 @@ Auf Wiedersehen! 👋
 
 ## 💻 Hilfe
 
+> **Hinweis:** Funktionen (`def`) lernen Sie erst in Modul 4 kennen. Lösen Sie
+> die Aufgabe deshalb mit Schleifen und Bedingungen direkt im Hauptprogramm.
+
 ### Primzahl-Test (Basis)
 
-> **Vorgriff:** Dieses Konzept (Funktionen mit `def`) wird in Modul 4 behandelt.
-
 ```python
-def ist_primzahl(n):
-    """Prüft ob n eine Primzahl ist"""
-    if n < 2:
-        return False
-    
-    for teiler in range(2, n):
-        if n % teiler == 0:
-            return False
-    
-    return True
+zahl = int(input("Zahl: "))
+
+ist_primzahl = zahl >= 2          # Zahlen kleiner als 2 sind keine Primzahlen
+
+for teiler in range(2, zahl):
+    if zahl % teiler == 0:
+        ist_primzahl = False
+        break                     # Ein Teiler genügt, die Schleife kann enden
+
+if ist_primzahl:
+    print(f"✓ {zahl} ist eine Primzahl")
+else:
+    print(f"✗ {zahl} ist keine Primzahl")
 ```
 
 ### Primzahl-Test (Optimiert)
 
-> **Vorgriff:** Dieses Konzept (Funktionen mit `def`) wird in Modul 4 behandelt.
-
 ```python
-def ist_primzahl(n):
-    """Optimierter Primzahl-Test"""
-    if n < 2:
-        return False
-    if n == 2:
-        return True
-    if n % 2 == 0:
-        return False
-    
-    # Nur bis Wurzel prüfen
-    for teiler in range(3, int(n ** 0.5) + 1, 2):
-        if n % teiler == 0:
-            return False
-    
-    return True
+zahl = int(input("Zahl: "))
+
+ist_primzahl = zahl >= 2
+if zahl > 2 and zahl % 2 == 0:
+    ist_primzahl = False
+
+# Nur ungerade Teiler bis zur Wurzel prüfen
+teiler = 3
+while ist_primzahl and teiler * teiler <= zahl:
+    if zahl % teiler == 0:
+        ist_primzahl = False
+    teiler += 2
+
+print(f"{zahl} ist eine Primzahl: {ist_primzahl}")
 ```
 
 **Warum nur bis √n?**
@@ -152,37 +153,38 @@ def ist_primzahl(n):
 
 ### Primzahlen sammeln
 
-> **Vorgriff:** Dieses Konzept (Funktionen mit `def`) wird in Modul 4 behandelt.
+Der Primzahl-Test steckt hier in einer äusseren Schleife über alle Zahlen:
 
 ```python
-def finde_primzahlen(n):
-    """Findet alle Primzahlen bis n"""
-    primzahlen = []
-    
-    for zahl in range(2, n + 1):
-        if ist_primzahl(zahl):
-            primzahlen.append(zahl)
-    
-    return primzahlen
+grenze = int(input("Bis zu welcher Zahl? "))
+primzahlen = []
+
+for zahl in range(2, grenze + 1):
+    ist_primzahl = True
+    for teiler in range(2, zahl):
+        if zahl % teiler == 0:
+            ist_primzahl = False
+            break
+    if ist_primzahl:
+        primzahlen.append(zahl)
+
+print(primzahlen)
 ```
 
 ### Primfaktorzerlegung
 
-> **Vorgriff:** Dieses Konzept (Funktionen mit `def`) wird in Modul 4 behandelt.
-
 ```python
-def primfaktoren(n):
-    """Zerlegt n in Primfaktoren"""
-    faktoren = []
-    teiler = 2
-    
-    while n > 1:
-        while n % teiler == 0:
-            faktoren.append(teiler)
-            n //= teiler
-        teiler += 1
-    
-    return faktoren
+n = int(input("Zahl: "))
+faktoren = []
+teiler = 2
+
+while n > 1:
+    while n % teiler == 0:
+        faktoren.append(teiler)
+        n //= teiler
+    teiler += 1
+
+print(faktoren)
 ```
 
 ### Zeitmessung

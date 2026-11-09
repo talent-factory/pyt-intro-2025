@@ -35,8 +35,7 @@ Nach diesem Modul können Sie:
 ### For-Schleifen & Listen
 - For-Loops über Listen
 - Range-Funktion
-- Enumerate und Zip
-- List Comprehensions (Einführung)
+- Enumerate
 - Iteration über Strings
 
 ### Verschachtelte Strukturen
