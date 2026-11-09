@@ -10,7 +10,7 @@ Zeigt:
 import csv
 
 
-def kontakte_erstellen() -> None:
+def kontakte_erstellen():
     """Erstellt Beispiel-Kontakte."""
     kontakte = [
         {
@@ -39,7 +39,7 @@ def kontakte_erstellen() -> None:
     print("✓ Kontakte erstellt")
 
 
-def kontakte_anzeigen() -> None:
+def kontakte_anzeigen():
     """Zeigt alle Kontakte."""
     print("\n" + "=" * 50)
     print("KONTAKTE")
@@ -54,7 +54,7 @@ def kontakte_anzeigen() -> None:
             print()
 
 
-def kontakt_suchen(name: str) -> dict[str, str] | None:
+def kontakt_suchen(name):
     """Sucht Kontakt nach Name."""
     with open("kontakte.csv") as f:
         reader = csv.DictReader(f)

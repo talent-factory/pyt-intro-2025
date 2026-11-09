@@ -5,7 +5,7 @@ Kombiniert Datei-Operationen mit Funktionen und Datenstrukturen.
 """
 
 
-def main() -> None:
+def main():
     """Hauptfunktion."""
     print("=" * 50)
     print("NOTENVERWALTUNG MIT CSV")

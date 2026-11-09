@@ -116,7 +116,7 @@ Nach diesem Modul können Sie:
 - config.py - Konfigurationsverwaltung mit JSON
 - datei_utils.py, text_tools.py, backup_tool.py - eigene Module
 - log_analyzer.py, daten_konverter.py - Werkzeuge
-- notizen_app.py, notizen_app_streamlit.py - Notizen-App (Konsole und Streamlit)
+- notizen_app.py - Notizen-App (Konsole); notizen_app_streamlit.py - optionaler Ausblick mit Streamlit
 
 ## ⏱️ Zeitplan
 

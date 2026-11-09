@@ -8,7 +8,7 @@ Zeigt:
 """
 
 
-def tagebuch_eintrag(text: str) -> None:
+def tagebuch_eintrag(text):
     """Fügt Tagebuch-Eintrag hinzu."""
     from datetime import datetime
 
@@ -18,7 +18,7 @@ def tagebuch_eintrag(text: str) -> None:
     print("✓ Eintrag gespeichert")
 
 
-def tagebuch_anzeigen() -> None:
+def tagebuch_anzeigen():
     """Zeigt alle Einträge."""
     try:
         with open("tagebuch.txt") as f:
@@ -31,7 +31,7 @@ def tagebuch_anzeigen() -> None:
         print("Noch keine Einträge.")
 
 
-def datei_analysieren(dateiname: str) -> None:
+def datei_analysieren(dateiname):
     """Analysiert Textdatei."""
     with open(dateiname) as f:
         zeilen = f.readlines()

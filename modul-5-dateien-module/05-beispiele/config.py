@@ -1,203 +1,175 @@
 """
 Konfigurationsverwaltung mit JSON
 
-Dieses Programm zeigt, wie man JSON-Konfigurationsdateien einliest
-und die Daten in einer Klasse strukturiert verwaltet.
+Dieses Programm zeigt, wie man eine JSON-Konfigurationsdatei einliest
+und die Einstellungen in einem Dictionary auswertet.
+
+Zeigt:
+- JSON-Datei lesen (mit Kommentaren, wie sie VS Code erlaubt)
+- Fehlerbehandlung mit try / except (FileNotFoundError, JSONDecodeError)
+- Werte mit .get() und Standardwerten abfragen
+- Pfade mit dem Modul os.path zusammensetzen
 
 Autor: Talent Factory
 Datum: 2025
 """
 
 import json
-from pathlib import Path
-from typing import Any
+import os
 
 
-class VSCodeEinstellungen:
+def entferne_json_kommentare(text):
     """
-    Klasse zur Verwaltung von VS Code Einstellungen.
+    Entfernt Kommentare aus JSON-Text (VS Code erlaubt // Kommentare).
 
-    Diese Klasse liest die settings.json ein und stellt die
-    Einstellungen über Eigenschaften zur Verfügung.
+    Args:
+        text: JSON-Text mit möglichen Kommentaren
+
+    Returns:
+        Bereinigter JSON-Text ohne Kommentare
     """
+    zeilen = text.split("\n")
+    bereinigte_zeilen = []
 
-    def __init__(self, config_pfad: str | Path):
-        """
-        Initialisiert die Einstellungen aus einer JSON-Datei.
+    for zeile in zeilen:
+        # Entferne // Kommentare (aber nicht in Strings)
+        if "//" in zeile:
+            # Einfache Lösung: Entferne alles nach //
+            # (funktioniert nicht perfekt bei // in Strings, aber für VS Code Settings OK)
+            zeile = zeile.split("//")[0]
+        bereinigte_zeilen.append(zeile)
 
-        Args:
-            config_pfad: Pfad zur settings.json Datei
-        """
-        self.config_pfad = Path(config_pfad)
-        self.einstellungen: dict[str, Any] = {}
-        self.lade_einstellungen()
+    return "\n".join(bereinigte_zeilen)
 
-    def lade_einstellungen(self) -> None:
-        """Lädt die Einstellungen aus der JSON-Datei."""
-        try:
-            with open(self.config_pfad, encoding="utf-8") as datei:
-                inhalt = datei.read()
-                # Entferne Kommentare aus JSON (VS Code erlaubt Kommentare)
-                inhalt_bereinigt = self._entferne_json_kommentare(inhalt)
-                self.einstellungen = json.loads(inhalt_bereinigt)
-            print(f"✓ Einstellungen erfolgreich geladen aus: {self.config_pfad}")
-        except FileNotFoundError:
-            print(f"✗ Fehler: Datei nicht gefunden: {self.config_pfad}")
-            self.einstellungen = {}
-        except json.JSONDecodeError as e:
-            print(f"✗ Fehler beim Parsen der JSON-Datei: {e}")
-            self.einstellungen = {}
 
-    def _entferne_json_kommentare(self, text: str) -> str:
-        """
-        Entfernt Kommentare aus JSON-Text (VS Code erlaubt // Kommentare).
+def lade_einstellungen(config_pfad):
+    """
+    Lädt die Einstellungen aus einer JSON-Datei.
 
-        Args:
-            text: JSON-Text mit möglichen Kommentaren
+    Args:
+        config_pfad: Pfad zur settings.json Datei
 
-        Returns:
-            Bereinigter JSON-Text ohne Kommentare
-        """
-        zeilen = text.split("\n")
-        bereinigte_zeilen = []
+    Returns:
+        Dictionary mit den Einstellungen (leer, wenn das Laden fehlschlägt)
+    """
+    try:
+        with open(config_pfad, encoding="utf-8") as datei:
+            inhalt = datei.read()
+        # Entferne Kommentare aus JSON (VS Code erlaubt Kommentare)
+        inhalt_bereinigt = entferne_json_kommentare(inhalt)
+        einstellungen = json.loads(inhalt_bereinigt)
+        print(f"✓ Einstellungen erfolgreich geladen aus: {config_pfad}")
+        return einstellungen
+    except FileNotFoundError:
+        print(f"✗ Fehler: Datei nicht gefunden: {config_pfad}")
+        return {}
+    except json.JSONDecodeError as fehler:
+        print(f"✗ Fehler beim Parsen der JSON-Datei: {fehler}")
+        return {}
 
-        for zeile in zeilen:
-            # Entferne // Kommentare (aber nicht in Strings)
-            if "//" in zeile:
-                # Einfache Lösung: Entferne alles nach //
-                # (funktioniert nicht perfekt bei // in Strings, aber für VS Code Settings OK)
-                zeile = zeile.split("//")[0]
-            bereinigte_zeilen.append(zeile)
 
-        return "\n".join(bereinigte_zeilen)
+def hole_wert(einstellungen, schluessel, standard=None):
+    """
+    Holt einen Wert aus den Einstellungen.
 
-    def hole_wert(self, schluessel: str, standard: Any = None) -> Any:
-        """
-        Holt einen Wert aus den Einstellungen.
+    Args:
+        einstellungen: Dictionary mit den Einstellungen
+        schluessel: Der Schlüssel der Einstellung
+        standard: Standardwert, falls der Schlüssel nicht existiert
 
-        Args:
-            schluessel: Der Schlüssel der Einstellung
-            standard: Standardwert, falls Schlüssel nicht existiert
+    Returns:
+        Der Wert der Einstellung oder der Standardwert
+    """
+    return einstellungen.get(schluessel, standard)
 
-        Returns:
-            Der Wert der Einstellung oder der Standardwert
-        """
-        return self.einstellungen.get(schluessel, standard)
 
-    # Python-spezifische Einstellungen
-    @property
-    def python_interpreter(self) -> str:
-        """Gibt den Python Interpreter Pfad zurück."""
-        return self.hole_wert("python.defaultInterpreterPath", "")
+def zeige_zusammenfassung(einstellungen):
+    """Zeigt eine Zusammenfassung der wichtigsten Einstellungen."""
+    interpreter = hole_wert(einstellungen, "python.defaultInterpreterPath", "")
+    pytest_aktiv = hole_wert(einstellungen, "python.testing.pytestEnabled", False)
+    pytest_args = hole_wert(einstellungen, "python.testing.pytestArgs", [])
 
-    @property
-    def python_testing_enabled(self) -> bool:
-        """Prüft, ob pytest aktiviert ist."""
-        return self.hole_wert("python.testing.pytestEnabled", False)
+    tab_groesse = hole_wert(einstellungen, "editor.tabSize", 4)
+    lineale = hole_wert(einstellungen, "editor.rulers", [])
+    python_einstellungen = hole_wert(einstellungen, "[python]", {})
+    format_on_save = python_einstellungen.get("editor.formatOnSave", False)
 
-    @property
-    def pytest_args(self) -> list[str]:
-        """Gibt die pytest Argumente zurück."""
-        return self.hole_wert("python.testing.pytestArgs", [])
+    ruff_aktiv = hole_wert(einstellungen, "ruff.enable", False)
+    ruff_pfad = hole_wert(einstellungen, "ruff.path", [])
 
-    # Editor-Einstellungen
-    @property
-    def editor_tab_size(self) -> int:
-        """Gibt die Tab-Grösse zurück."""
-        return self.hole_wert("editor.tabSize", 4)
+    print("\n" + "=" * 60)
+    print("VS CODE EINSTELLUNGEN - ZUSAMMENFASSUNG")
+    print("=" * 60)
 
-    @property
-    def editor_rulers(self) -> list[int]:
-        """Gibt die Editor-Lineale zurück."""
-        return self.hole_wert("editor.rulers", [])
+    print("\n📁 PYTHON-KONFIGURATION:")
+    print(f"  • Interpreter: {interpreter}")
+    print(f"  • Pytest aktiviert: {pytest_aktiv}")
+    print(f"  • Pytest Args: {', '.join(pytest_args)}")
 
-    @property
-    def format_on_save(self) -> bool:
-        """Prüft, ob Format-on-Save aktiviert ist."""
-        python_settings = self.hole_wert("[python]", {})
-        return python_settings.get("editor.formatOnSave", False)
+    print("\n✏️  EDITOR-EINSTELLUNGEN:")
+    print(f"  • Tab-Grösse: {tab_groesse}")
+    print(f"  • Lineale bei: {lineale}")
+    print(f"  • Format on Save: {format_on_save}")
 
-    # Ruff-Einstellungen
-    @property
-    def ruff_enabled(self) -> bool:
-        """Prüft, ob Ruff aktiviert ist."""
-        return self.hole_wert("ruff.enable", False)
+    print("\n🔧 CODE-QUALITÄT (RUFF):")
+    print(f"  • Ruff aktiviert: {ruff_aktiv}")
+    if ruff_pfad:
+        print(f"  • Ruff Pfad: {ruff_pfad[0]}")
 
-    @property
-    def ruff_path(self) -> list[str]:
-        """Gibt den Ruff-Pfad zurück."""
-        return self.hole_wert("ruff.path", [])
-
-    def zeige_zusammenfassung(self) -> None:
-        """Zeigt eine Zusammenfassung der wichtigsten Einstellungen."""
-        print("\n" + "=" * 60)
-        print("VS CODE EINSTELLUNGEN - ZUSAMMENFASSUNG")
-        print("=" * 60)
-
-        print("\n📁 PYTHON-KONFIGURATION:")
-        print(f"  • Interpreter: {self.python_interpreter}")
-        print(f"  • Pytest aktiviert: {self.python_testing_enabled}")
-        print(f"  • Pytest Args: {', '.join(self.pytest_args)}")
-
-        print("\n✏️  EDITOR-EINSTELLUNGEN:")
-        print(f"  • Tab-Grösse: {self.editor_tab_size}")
-        print(f"  • Lineale bei: {self.editor_rulers}")
-        print(f"  • Format on Save: {self.format_on_save}")
-
-        print("\n🔧 CODE-QUALITÄT (RUFF):")
-        print(f"  • Ruff aktiviert: {self.ruff_enabled}")
-        if self.ruff_path:
-            print(f"  • Ruff Pfad: {self.ruff_path[0]}")
-
-        print("\n" + "=" * 60)
+    print("\n" + "=" * 60)
 
 
 if __name__ == "__main__":
     # Pfad zur VS Code Settings-Datei
     # Annahme: Das Skript liegt in modul-5-dateien-module/05-beispiele/
     # und die settings.json in .vscode/settings.json
-    projekt_root = Path(__file__).parent.parent.parent
-    settings_pfad = projekt_root / ".vscode" / "settings.json"
+    skript_ordner = os.path.dirname(os.path.abspath(__file__))
+    projekt_root = os.path.join(skript_ordner, "..", "..")
+    settings_pfad = os.path.join(projekt_root, ".vscode", "settings.json")
 
     print("=" * 60)
     print("KONFIGURATIONSVERWALTUNG MIT JSON")
     print("=" * 60)
 
     # Einstellungen laden
-    config = VSCodeEinstellungen(settings_pfad)
+    einstellungen = lade_einstellungen(settings_pfad)
 
     # Zusammenfassung anzeigen
-    config.zeige_zusammenfassung()
+    zeige_zusammenfassung(einstellungen)
 
     # Einzelne Werte abfragen
     print("\n📋 EINZELNE WERTE ABFRAGEN:")
-    print(
-        f"  • Terminal (macOS): {config.hole_wert('terminal.integrated.defaultProfile.osx', 'nicht gesetzt')}"
+    terminal = hole_wert(
+        einstellungen, "terminal.integrated.defaultProfile.osx", "nicht gesetzt"
     )
-    print(f"  • Minimap aktiviert: {config.hole_wert('editor.minimap.enabled', False)}")
-    print(
-        f"  • Bracket Colorization: {config.hole_wert('editor.bracketPairColorization.enabled', False)}"
+    minimap = hole_wert(einstellungen, "editor.minimap.enabled", False)
+    klammern = hole_wert(einstellungen, "editor.bracketPairColorization.enabled", False)
+    leerzeichen = hole_wert(einstellungen, "editor.renderWhitespace", "none")
+    auto_import = hole_wert(
+        einstellungen, "python.analysis.autoImportCompletions", False
     )
-    print(
-        f"  • Whitespace Rendering: {config.hole_wert('editor.renderWhitespace', 'none')}"
-    )
-    print(
-        f"  • Auto-Import: {config.hole_wert('python.analysis.autoImportCompletions', False)}"
-    )
+
+    print(f"  • Terminal (macOS): {terminal}")
+    print(f"  • Minimap aktiviert: {minimap}")
+    print(f"  • Bracket Colorization: {klammern}")
+    print(f"  • Whitespace Rendering: {leerzeichen}")
+    print(f"  • Auto-Import: {auto_import}")
 
     # Alle Einstellungen anzeigen (optional)
     print("\n🔍 ANZAHL GELADENER EINSTELLUNGEN:")
-    print(f"  • Gesamt: {len(config.einstellungen)} Einstellungen")
+    print(f"  • Gesamt: {len(einstellungen)} Einstellungen")
 
     # Beispiel: Alle Python-bezogenen Einstellungen finden
     print("\n🐍 ALLE PYTHON-EINSTELLUNGEN:")
-    python_keys = [
-        key for key in config.einstellungen.keys() if key.startswith("python.")
-    ]
+    python_keys = []
+    for key in einstellungen:
+        if key.startswith("python."):
+            python_keys.append(key)
+
     for key in sorted(python_keys):
-        wert = config.einstellungen[key]
+        wert = einstellungen[key]
         # Kürze lange Werte für bessere Lesbarkeit
-        if isinstance(wert, list | dict) and len(str(wert)) > 50:
-            print(f"  • {key}: {type(wert).__name__} mit {len(wert)} Elementen")
+        if len(str(wert)) > 50:
+            print(f"  • {key}: (langer Wert, {len(str(wert))} Zeichen)")
         else:
             print(f"  • {key}: {wert}")
