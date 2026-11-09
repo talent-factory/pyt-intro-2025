@@ -22,7 +22,7 @@ from notizen_app import formatiere_notiz
 STANDARD_DATEINAME = "notizen.txt"
 
 
-def lade_hochgeladene_datei() -> None:
+def lade_hochgeladene_datei():
     """
     Zeigt den Datei-Auswahl-Dialog und lädt die gewählte Datei.
 
@@ -54,7 +54,7 @@ def lade_hochgeladene_datei() -> None:
     st.success(f"✓ Datei '{datei.name}' geladen.")
 
 
-def neue_notiz_erfassen() -> None:
+def neue_notiz_erfassen():
     """Zeigt das Eingabefeld und hängt eine neue Notiz an den Arbeitsstand an."""
     notiz = st.text_area("Neue Notiz", placeholder="Was möchtest du festhalten?")
 
@@ -67,7 +67,7 @@ def neue_notiz_erfassen() -> None:
             st.success("✓ Notiz hinzugefügt")
 
 
-def notizen_anzeigen() -> None:
+def notizen_anzeigen():
     """Zeigt die aktuell erfassten Notizen an."""
     inhalt = st.session_state["notizen_inhalt"]
 
@@ -77,7 +77,7 @@ def notizen_anzeigen() -> None:
         st.text(inhalt)
 
 
-def main() -> None:
+def main():
     """Baut die Streamlit-Oberfläche auf."""
     st.title("📝 Notizen-App")
     st.write("Eine Web-Version der Notizen-App aus Modul 5.")

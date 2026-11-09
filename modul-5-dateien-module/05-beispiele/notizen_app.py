@@ -19,7 +19,7 @@ from datetime import datetime
 NOTIZEN_DATEI = "notizen.txt"
 
 
-def formatiere_notiz(notiz: str, zeitpunkt: datetime | None = None) -> str:
+def formatiere_notiz(notiz, zeitpunkt=None):
     """
     Erzeugt eine Notiz-Zeile mit Zeitstempel.
 
@@ -39,7 +39,7 @@ def formatiere_notiz(notiz: str, zeitpunkt: datetime | None = None) -> str:
     return f"[{zeit}] {notiz}"
 
 
-def neue_notiz() -> None:
+def neue_notiz():
     """
     Fragt den Benutzer nach einer Notiz und speichert sie.
 
@@ -61,7 +61,7 @@ def neue_notiz() -> None:
     print("✓ Notiz gespeichert")
 
 
-def zeige_notizen() -> None:
+def zeige_notizen():
     """
     Zeigt alle gespeicherten Notizen an.
 
@@ -88,7 +88,7 @@ def zeige_notizen() -> None:
         print("Keine Notizen vorhanden.")
 
 
-def menue_anzeigen() -> None:
+def menue_anzeigen():
     """Zeigt das Auswahlmenü an."""
     print()
     print("=" * 50)
@@ -100,7 +100,7 @@ def menue_anzeigen() -> None:
     print("=" * 50)
 
 
-def main() -> None:
+def main():
     """Hauptprogramm: zeigt das Menü und fragt nach Notizen."""
     print("Willkommen in deiner Notizen-App!")
 
