@@ -10,6 +10,8 @@ authors = [
 ]
 
 dependencies = [
+    "cartopy>=0.26.0",
+    "matplotlib>=3.11.2",
     "numpy>=2.4.6",
     "pydantic>=2.12.5",
     "ruff>=0.14.8",
