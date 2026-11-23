@@ -1,6 +1,6 @@
 # Lektion 1: Dateien lesen & schreiben
 
-**Dauer:** 50 Minuten  
+**Dauer:** 50 Minuten
 **Format:** 15 Min Theorie + 20 Min Live-Coding + 15 Min Übung
 
 ## 🎯 Lernziele
@@ -29,8 +29,6 @@ datei.close()  # WICHTIG!
 - `"w"` - Schreiben (write) - Überschreibt Datei!
 - `"a"` - Anhängen (append) - Fügt am Ende hinzu
 - `"r+"` - Lesen und Schreiben
-
-![Die Modi r, w und a als Schultafel: Nur Gucken, Alles NEU, Unten dran](../04-materialien/abbildungen/04-read-write-append-tafel.svg)
 
 ![Die drei Datei-Modi als Notizbuch: r liest, w überschreibt, a hängt an](../04-materialien/abbildungen/02-datei-modi.svg)
 
@@ -112,11 +110,11 @@ def analysiere_datei(dateiname):
     """Analysiert eine Textdatei."""
     with open(dateiname, "r") as f:
         zeilen = f.readlines()
-    
+
     anzahl_zeilen = len(zeilen)
     anzahl_woerter = sum(len(zeile.split()) for zeile in zeilen)
     anzahl_zeichen = sum(len(zeile) for zeile in zeilen)
-    
+
     print(f"Datei: {dateiname}")
     print(f"  Zeilen: {anzahl_zeilen}")
     print(f"  Wörter: {anzahl_woerter}")
@@ -133,10 +131,10 @@ def kopiere_datei(quelle, ziel):
     """Kopiert eine Datei."""
     with open(quelle, "r") as f_quelle:
         inhalt = f_quelle.read()
-    
+
     with open(ziel, "w") as f_ziel:
         f_ziel.write(inhalt)
-    
+
     print(f"✓ {quelle} → {ziel}")
 
 kopiere_datei("tagebuch.txt", "tagebuch_backup.txt")
