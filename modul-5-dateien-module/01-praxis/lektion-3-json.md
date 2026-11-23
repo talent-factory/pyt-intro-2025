@@ -16,6 +16,8 @@
 
 JSON = **J**ava**S**cript **O**bject **N**otation
 
+![Aufbau einer JSON-Datei mit String, Zahl, Array und verschachteltem Objekt](../04-materialien/abbildungen/09-json-aufbau.svg)
+
 Beispiel `person.json`:
 ```json
 {
@@ -34,6 +36,8 @@ Beispiel `person.json`:
 ```python
 import json
 ```
+
+![json.dump und json.load für Dateien, json.dumps und json.loads für Strings](../04-materialien/abbildungen/11-dump-load.svg)
 
 ### Python → JSON (Serialisierung)
 
@@ -69,6 +73,8 @@ person = json.loads(json_string)
 ```
 
 ### Datentyp-Mapping
+
+![Zuordnung der Datentypen zwischen Python und JSON, inklusive true/false und None zu null](../04-materialien/abbildungen/10-python-json-mapping.svg)
 
 | Python | JSON |
 |--------|------|
@@ -149,6 +155,8 @@ kontakte_speichern(kontakte)
 ```
 
 ### Beispiel 3: Verschachtelte Daten
+
+![Verschachtelte Kursdaten wie Matroschka-Puppen: Zugriff auf kurs["teilnehmer"][0]["noten"][1] liefert 6.0](../04-materialien/abbildungen/12-verschachtelte-daten.svg)
 
 ```python
 import json

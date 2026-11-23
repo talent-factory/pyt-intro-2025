@@ -8,14 +8,14 @@ Zusatzmaterialien und Referenzen für Modul 5.
 2. [Cheatsheet: CSV](./cheatsheet-csv.md)
 3. [Cheatsheet: JSON](./cheatsheet-json.md)
 4. [Häufige Fehler](./haeufige-fehler.md)
-5. [Abbildungen](./abbildungen/) (Illustrationen zu Ein-/Ausgabe, Datei-Modi, `with` und Modulen)
+5. [Abbildungen](./abbildungen/) (Illustrationen zu Ein-/Ausgabe, Datei-Modi, `with`, JSON und Modulen)
 
 ## 💡 Verwendung
 
 - **Handout:** Zum Ausdrucken und Mitnehmen
 - **Cheatsheet:** Schnellreferenz während der Programmierung
 - **Fehler:** Hilfe bei häufigen Problemen
-- **Abbildungen:** SVG-Grafiken, die in Lektion 1 eingebunden sind und sich für Folien wiederverwenden lassen
+- **Abbildungen:** SVG-Grafiken, die in den Lektionen 1, 3 und 4 eingebunden sind und sich für Folien wiederverwenden lassen
 
 ## 📖 Externe Ressourcen
 

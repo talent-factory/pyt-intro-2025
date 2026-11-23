@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" font-family="'Comic Sans MS','Chalkboard SE','Segoe Print',sans-serif">
+  <title>Datentyp-Mapping zwischen Python und JSON</title>
+  <defs>
+    <marker id="spitze" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#333"/></marker>
+  </defs>
+  <rect width="960" height="560" fill="#fffbe9"/>
+  <text x="480" y="48" text-anchor="middle" font-size="30" font-weight="bold" fill="#333">Python und JSON: Wer wird zu wem?</text>
+  <text x="480" y="78" text-anchor="middle" font-size="17" fill="#555">Beim Speichern und Laden übersetzt das <tspan font-family="monospace">json</tspan>-Modul automatisch.</text>
+
+  <rect x="50" y="98" width="340" height="42" rx="12" fill="#e3f2fd" stroke="#2a7de1" stroke-width="3"/>
+  <text x="220" y="127" text-anchor="middle" font-size="22" font-weight="bold" fill="#2a7de1">Python</text>
+  <rect x="570" y="98" width="340" height="42" rx="12" fill="#fff3e0" stroke="#e1872a" stroke-width="3"/>
+  <text x="740" y="127" text-anchor="middle" font-size="22" font-weight="bold" fill="#e1872a">JSON</text>
+  <text x="480" y="114" text-anchor="middle" font-size="14" font-family="monospace" fill="#555">json.dump →</text>
+  <text x="480" y="134" text-anchor="middle" font-size="14" font-family="monospace" fill="#555">← json.load</text>
+  <g transform="translate(0,156)" font-size="20">
+    <rect x="50" width="340" height="48" rx="10" fill="#fff" stroke="#333" stroke-width="2"/>
+    <rect x="570" width="340" height="48" rx="10" fill="#fff" stroke="#333" stroke-width="2"/>
+    <text x="70" y="31" font-family="monospace" font-weight="bold" fill="#2a7de1">dict</text><text x="370" y="31" text-anchor="end" font-family="monospace" fill="#555">{"a": 1}</text>
+    <text x="590" y="31" font-weight="bold" fill="#e1872a">object</text><text x="890" y="31" text-anchor="end" font-family="monospace" fill="#555">{"a": 1}</text>
+    <path d="M400,24 H560" stroke="#333" stroke-width="3" marker-start="url(#spitze)" marker-end="url(#spitze)"/>
+  </g>
+  <g transform="translate(0,214)" font-size="20">
+    <rect x="50" width="340" height="48" rx="10" fill="#fff" stroke="#333" stroke-width="2"/>
+    <rect x="570" width="340" height="48" rx="10" fill="#fff" stroke="#333" stroke-width="2"/>
+    <text x="70" y="31" font-family="monospace" font-weight="bold" fill="#2a7de1">list</text><text x="370" y="31" text-anchor="end" font-family="monospace" fill="#555">[1, 2, 3]</text>
+    <text x="590" y="31" font-weight="bold" fill="#e1872a">array</text><text x="890" y="31" text-anchor="end" font-family="monospace" fill="#555">[1, 2, 3]</text>
+    <path d="M400,24 H560" stroke="#333" stroke-width="3" marker-start="url(#spitze)" marker-end="url(#spitze)"/>
+  </g>
+  <g transform="translate(0,272)" font-size="20">
+    <rect x="50" width="340" height="48" rx="10" fill="#fff" stroke="#333" stroke-width="2"/>
+    <rect x="570" width="340" height="48" rx="10" fill="#fff" stroke="#333" stroke-width="2"/>
+    <text x="70" y="31" font-family="monospace" font-weight="bold" fill="#2a7de1">str</text><text x="370" y="31" text-anchor="end" font-family="monospace" fill="#555">"Anna"</text>
+    <text x="590" y="31" font-weight="bold" fill="#e1872a">string</text><text x="890" y="31" text-anchor="end" font-family="monospace" fill="#555">"Anna"</text>
+    <path d="M400,24 H560" stroke="#333" stroke-width="3" marker-start="url(#spitze)" marker-end="url(#spitze)"/>
+  </g>
+  <g transform="translate(0,330)" font-size="20">
+    <rect x="50" width="340" height="48" rx="10" fill="#fff" stroke="#333" stroke-width="2"/>
+    <rect x="570" width="340" height="48" rx="10" fill="#fff" stroke="#333" stroke-width="2"/>
+    <text x="70" y="31" font-family="monospace" font-weight="bold" fill="#2a7de1">int, float</text><text x="370" y="31" text-anchor="end" font-family="monospace" fill="#555">25, 1.5</text>
+    <text x="590" y="31" font-weight="bold" fill="#e1872a">number</text><text x="890" y="31" text-anchor="end" font-family="monospace" fill="#555">25, 1.5</text>
+    <path d="M400,24 H560" stroke="#333" stroke-width="3" marker-start="url(#spitze)" marker-end="url(#spitze)"/>
+  </g>
+  <g transform="translate(0,388)" font-size="20">
+    <rect x="50" width="340" height="48" rx="10" fill="#fff" stroke="#c0392b" stroke-width="3"/>
+    <rect x="570" width="340" height="48" rx="10" fill="#fff" stroke="#c0392b" stroke-width="3"/>
+    <text x="70" y="31" font-family="monospace" font-weight="bold" fill="#2a7de1">True / False</text><text x="370" y="31" text-anchor="end" font-family="monospace" fill="#c0392b">True</text>
+    <text x="590" y="31" font-weight="bold" fill="#e1872a">true / false</text><text x="890" y="31" text-anchor="end" font-family="monospace" fill="#c0392b">true</text>
+    <path d="M400,24 H560" stroke="#333" stroke-width="3" marker-start="url(#spitze)" marker-end="url(#spitze)"/>
+  </g>
+  <g transform="translate(0,446)" font-size="20">
+    <rect x="50" width="340" height="48" rx="10" fill="#fff" stroke="#c0392b" stroke-width="3"/>
+    <rect x="570" width="340" height="48" rx="10" fill="#fff" stroke="#c0392b" stroke-width="3"/>
+    <text x="70" y="31" font-family="monospace" font-weight="bold" fill="#2a7de1">None</text><text x="370" y="31" text-anchor="end" font-family="monospace" fill="#c0392b">None</text>
+    <text x="590" y="31" font-weight="bold" fill="#e1872a">null</text><text x="890" y="31" text-anchor="end" font-family="monospace" fill="#c0392b">null</text>
+    <path d="M400,24 H560" stroke="#333" stroke-width="3" marker-start="url(#spitze)" marker-end="url(#spitze)"/>
+  </g>
+  <text x="480" y="540" text-anchor="middle" font-size="17" fill="#c0392b">Falle: JSON schreibt <tspan font-family="monospace">true</tspan> und <tspan font-family="monospace">false</tspan> klein, und aus <tspan font-family="monospace">None</tspan> wird <tspan font-family="monospace">null</tspan>.</text>
+</svg>
