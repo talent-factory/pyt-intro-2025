@@ -119,7 +119,11 @@ print(f"Zufallszahl: {zahl}")
 
 Wählen Sie **eines** der folgenden Projekte:
 
+![Das Projekt kombiniert Funktionen, Dateien, Kontrollstrukturen und Module](../04-materialien/abbildungen/18-projekt-bausteine.svg)
+
 ### Projekt 1: Aufgabenverwaltung (Todo-App)
+
+![Ablauf der Todo-App: laden, Menü-Schleife, hinzufügen, anzeigen, beenden](../04-materialien/abbildungen/17-projekt-ablauf.svg)
 
 ```python
 import json
