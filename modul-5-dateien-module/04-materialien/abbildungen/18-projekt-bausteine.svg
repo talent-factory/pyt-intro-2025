@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" font-family="'Comic Sans MS','Chalkboard SE','Segoe Print',sans-serif">
+  <title>Das Abschluss-Projekt kombiniert Funktionen, Dateien, Module und Kontrollstrukturen</title>
+  <defs><marker id="spitze" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#333"/></marker></defs>
+  <rect width="960" height="560" fill="#fffbe9"/>
+  <text x="480" y="48" text-anchor="middle" font-size="30" font-weight="bold" fill="#333">Alles zusammen im Abschluss-Projekt</text>
+  <text x="480" y="78" text-anchor="middle" font-size="17" fill="#555">Jeder Baustein stammt aus dem Kurs. Das Projekt setzt sie zusammen.</text>
+
+  <g transform="translate(300,120)">
+    <rect width="360" height="90" rx="18" fill="#fff9c4" stroke="#c9a400" stroke-width="3"/>
+    <text x="180" y="38" text-anchor="middle" font-size="24" font-weight="bold" fill="#8a6d00">Ihr Projekt</text>
+    <text x="180" y="68" text-anchor="middle" font-size="15" font-family="monospace" fill="#333">todo.py · kontakte.py · notizen.py</text>
+  </g>
+
+  <g stroke="#333" stroke-width="3" fill="none" marker-end="url(#spitze)">
+    <path d="M360,210 L180,275"/><path d="M450,210 L400,275"/><path d="M510,210 L560,275"/><path d="M600,210 L780,275"/>
+  </g>
+
+  <g transform="translate(40,280)">
+    <rect width="200" height="170" rx="14" fill="#e3f2fd" stroke="#2a7de1" stroke-width="3"/>
+    <text x="100" y="34" text-anchor="middle" font-size="19" font-weight="bold" fill="#2a7de1">Funktionen</text>
+    <text x="100" y="66" text-anchor="middle" font-size="14" font-family="monospace" fill="#333">laden()</text>
+    <text x="100" y="90" text-anchor="middle" font-size="14" font-family="monospace" fill="#333">speichern()</text>
+    <text x="100" y="114" text-anchor="middle" font-size="14" font-family="monospace" fill="#333">hauptmenu()</text>
+    <text x="100" y="148" text-anchor="middle" font-size="13" fill="#555">Modul 4</text>
+  </g>
+  <g transform="translate(260,280)">
+    <rect width="200" height="170" rx="14" fill="#fff3e0" stroke="#e1872a" stroke-width="3"/>
+    <text x="100" y="34" text-anchor="middle" font-size="19" font-weight="bold" fill="#e1872a">Dateien</text>
+    <text x="100" y="66" text-anchor="middle" font-size="14" font-family="monospace" fill="#333">with open(...)</text>
+    <text x="100" y="90" text-anchor="middle" font-size="14" font-family="monospace" fill="#333">json.load / dump</text>
+    <text x="100" y="114" text-anchor="middle" font-size="14" font-family="monospace" fill="#333">csv.DictReader</text>
+    <text x="100" y="148" text-anchor="middle" font-size="13" fill="#555">Lektion 1 bis 3</text>
+  </g>
+  <g transform="translate(480,280)">
+    <rect width="200" height="170" rx="14" fill="#e8f5e9" stroke="#2e9e4f" stroke-width="3"/>
+    <text x="100" y="34" text-anchor="middle" font-size="19" font-weight="bold" fill="#2e9e4f">Kontrolle</text>
+    <text x="100" y="66" text-anchor="middle" font-size="14" font-family="monospace" fill="#333">while True / break</text>
+    <text x="100" y="90" text-anchor="middle" font-size="14" font-family="monospace" fill="#333">if / elif</text>
+    <text x="100" y="114" text-anchor="middle" font-size="14" font-family="monospace" fill="#333">try / except</text>
+    <text x="100" y="148" text-anchor="middle" font-size="13" fill="#555">Modul 3</text>
+  </g>
+  <g transform="translate(700,280)">
+    <rect width="220" height="170" rx="14" fill="#f3e5f5" stroke="#8e44ad" stroke-width="3"/>
+    <text x="110" y="34" text-anchor="middle" font-size="19" font-weight="bold" fill="#8e44ad">Module</text>
+    <text x="110" y="66" text-anchor="middle" font-size="14" font-family="monospace" fill="#333">import json, csv</text>
+    <text x="110" y="90" text-anchor="middle" font-size="14" font-family="monospace" fill="#333">from datetime import …</text>
+    <text x="110" y="114" text-anchor="middle" font-size="14" font-family="monospace" fill="#333">if __name__ == "__main__"</text>
+    <text x="110" y="148" text-anchor="middle" font-size="13" fill="#555">Lektion 4</text>
+  </g>
+
+  <text x="480" y="492" text-anchor="middle" font-size="17" fill="#333"><tspan font-weight="bold">Mindestens 3 Funktionen</tspan>, Daten in einer Datei, Code kommentiert.</text>
+  <text x="480" y="522" text-anchor="middle" font-size="16" fill="#555">Wählen Sie ein Projekt: Todo-App, Kontaktverwaltung oder Notizen-System.</text>
+</svg>

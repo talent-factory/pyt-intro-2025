@@ -1,6 +1,6 @@
 # Lektion 1: Dateien lesen & schreiben
 
-**Dauer:** 50 Minuten  
+**Dauer:** 50 Minuten
 **Format:** 15 Min Theorie + 20 Min Live-Coding + 15 Min Übung
 
 ## 🎯 Lernziele
@@ -11,6 +11,8 @@
 - Context Manager (`with`) verwenden
 
 ## 📖 Theorie (15 Min)
+
+![Ein- und Ausgabe: Ein Python-Roboter erhält Daten von Tastatur und Datei und gibt sie auf den Bildschirm und in eine Datei aus](../04-materialien/abbildungen/01-ein-ausgabe-ueberblick.svg)
 
 ### Dateien öffnen
 
@@ -28,6 +30,8 @@ datei.close()  # WICHTIG!
 - `"a"` - Anhängen (append) - Fügt am Ende hinzu
 - `"r+"` - Lesen und Schreiben
 
+![Die drei Datei-Modi als Notizbuch: r liest, w überschreibt, a hängt an](../04-materialien/abbildungen/02-datei-modi.svg)
+
 ### Context Manager (Best Practice!)
 
 ```python
@@ -36,7 +40,11 @@ with open("text.txt", "r") as datei:
 # Datei wird automatisch geschlossen!
 ```
 
+![Ohne with bleibt die Schublade offen, mit with schliesst sie sich selbst](../04-materialien/abbildungen/03-with-context-manager.svg)
+
 ### Lesen
+
+![Drei Wege zum Lesen: read liefert einen String, die for-Schleife einzelne Zeilen, readlines eine Liste](../04-materialien/abbildungen/19-lese-methoden.svg)
 
 ```python
 # Alles lesen
@@ -54,6 +62,8 @@ with open("datei.txt", "r") as f:
 ```
 
 ### Schreiben
+
+![write setzt keinen Zeilenumbruch, strip entfernt ihn beim Lesen](../04-materialien/abbildungen/20-zeilenumbruch.svg)
 
 ```python
 # Überschreiben
@@ -104,11 +114,11 @@ def analysiere_datei(dateiname):
     """Analysiert eine Textdatei."""
     with open(dateiname, "r") as f:
         zeilen = f.readlines()
-    
+
     anzahl_zeilen = len(zeilen)
     anzahl_woerter = sum(len(zeile.split()) for zeile in zeilen)
     anzahl_zeichen = sum(len(zeile) for zeile in zeilen)
-    
+
     print(f"Datei: {dateiname}")
     print(f"  Zeilen: {anzahl_zeilen}")
     print(f"  Wörter: {anzahl_woerter}")
@@ -125,10 +135,10 @@ def kopiere_datei(quelle, ziel):
     """Kopiert eine Datei."""
     with open(quelle, "r") as f_quelle:
         inhalt = f_quelle.read()
-    
+
     with open(ziel, "w") as f_ziel:
         f_ziel.write(inhalt)
-    
+
     print(f"✓ {quelle} → {ziel}")
 
 kopiere_datei("tagebuch.txt", "tagebuch_backup.txt")

@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" font-family="'Comic Sans MS','Chalkboard SE','Segoe Print',sans-serif">
+  <title>Ablauf der Todo-App: Aufgaben laden, Menü-Schleife, Speichern, Beenden</title>
+  <defs><marker id="spitze" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#333"/></marker></defs>
+  <rect width="960" height="560" fill="#fffbe9"/>
+  <text x="480" y="48" text-anchor="middle" font-size="30" font-weight="bold" fill="#333">Ablauf der Todo-App</text>
+  <text x="480" y="78" text-anchor="middle" font-size="17" fill="#555">Laden, Menü-Schleife, Speichern: das Grundmuster fast jedes Datei-Projekts.</text>
+
+  <!-- Start: Laden -->
+  <g transform="translate(40,130)">
+    <rect width="230" height="110" rx="16" fill="#e3f2fd" stroke="#2a7de1" stroke-width="3"/>
+    <text x="115" y="36" text-anchor="middle" font-size="20" font-weight="bold" fill="#2a7de1">1. Start</text>
+    <text x="115" y="64" text-anchor="middle" font-size="15" font-family="monospace" fill="#333">aufgaben_laden()</text>
+    <text x="115" y="90" text-anchor="middle" font-size="14" fill="#555">fehlt die Datei: leere Liste</text>
+  </g>
+
+  <!-- Menü -->
+  <g transform="translate(360,130)">
+    <rect width="240" height="110" rx="16" fill="#fff9c4" stroke="#c9a400" stroke-width="3"/>
+    <text x="120" y="36" text-anchor="middle" font-size="20" font-weight="bold" fill="#8a6d00">2. Menü (while True)</text>
+    <text x="120" y="64" text-anchor="middle" font-size="15" font-family="monospace" fill="#333">wahl = input("Wahl: ")</text>
+    <text x="120" y="90" text-anchor="middle" font-size="14" fill="#555">1 hinzufügen · 2 anzeigen · 3 Ende</text>
+  </g>
+
+  <!-- Datei -->
+  <g transform="translate(690,130)">
+    <rect width="230" height="110" rx="16" fill="#fff3e0" stroke="#e1872a" stroke-width="3"/>
+    <text x="115" y="36" text-anchor="middle" font-size="20" font-weight="bold" fill="#e1872a">aufgaben.json</text>
+    <text x="115" y="64" text-anchor="middle" font-size="14" font-family="monospace" fill="#333">[{"titel": "...",</text>
+    <text x="115" y="86" text-anchor="middle" font-size="14" font-family="monospace" fill="#333">  "erledigt": false}]</text>
+  </g>
+
+  <g stroke="#333" stroke-width="3" fill="none" marker-end="url(#spitze)">
+    <path d="M270,185 L350,185"/>
+    <path d="M600,175 L680,175"/>
+  </g>
+  <g font-size="13" font-family="monospace" fill="#555" text-anchor="middle">
+    <text x="640" y="163">speichern</text>
+  </g>
+
+  <!-- Verzweigungen -->
+  <g stroke="#333" stroke-width="3" fill="none" marker-end="url(#spitze)">
+    <path d="M400,240 L240,320"/><path d="M480,240 L480,320"/><path d="M560,240 L720,320"/>
+  </g>
+
+  <g transform="translate(40,325)">
+    <rect width="270" height="110" rx="14" fill="#e8f5e9" stroke="#2e9e4f" stroke-width="3"/>
+    <text x="135" y="34" text-anchor="middle" font-size="18" font-weight="bold" fill="#2e9e4f">Wahl 1: hinzufügen</text>
+    <text x="135" y="62" text-anchor="middle" font-size="14" font-family="monospace" fill="#333">aufgaben.append({...})</text>
+    <text x="135" y="86" text-anchor="middle" font-size="14" font-family="monospace" fill="#333">aufgaben_speichern()</text>
+  </g>
+  <g transform="translate(345,325)">
+    <rect width="270" height="110" rx="14" fill="#e8f5e9" stroke="#2e9e4f" stroke-width="3"/>
+    <text x="135" y="34" text-anchor="middle" font-size="18" font-weight="bold" fill="#2e9e4f">Wahl 2: anzeigen</text>
+    <text x="135" y="62" text-anchor="middle" font-size="14" font-family="monospace" fill="#333">for i, a in enumerate(...)</text>
+    <text x="135" y="86" text-anchor="middle" font-size="14" font-family="monospace" fill="#333">1. [✓] Titel</text>
+  </g>
+  <g transform="translate(650,325)">
+    <rect width="270" height="110" rx="14" fill="#ffebee" stroke="#d32f2f" stroke-width="3"/>
+    <text x="135" y="34" text-anchor="middle" font-size="18" font-weight="bold" fill="#d32f2f">Wahl 3: beenden</text>
+    <text x="135" y="62" text-anchor="middle" font-size="14" font-family="monospace" fill="#333">break</text>
+    <text x="135" y="86" text-anchor="middle" font-size="14" fill="#555">Schleife verlassen</text>
+  </g>
+
+  <!-- Rückpfeil -->
+  <path d="M175,435 V478 H340 M480,435 V478 H340" stroke="#555" stroke-width="2.5" stroke-dasharray="6 4" fill="none"/>
+  <path d="M340,478 H20 V105 H480 V122" stroke="#555" stroke-width="2.5" stroke-dasharray="6 4" fill="none" marker-end="url(#spitze)"/>
+  <text x="480" y="522" text-anchor="middle" font-size="16" fill="#555">Nach Wahl 1 und 2 geht es zurück ins Menü. Nur <tspan font-family="monospace">break</tspan> beendet das Programm.</text>
+</svg>

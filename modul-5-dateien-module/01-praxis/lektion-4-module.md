@@ -18,6 +18,8 @@ Module sind **Python-Dateien** mit wiederverwendbarem Code.
 
 ### Importieren
 
+![Drei Import-Varianten am Beispiel eines Werkzeugkastens: import math, from math import pi und sqrt, import datetime as dt](../04-materialien/abbildungen/05-import-varianten.svg)
+
 ```python
 # Ganzes Modul
 import math
@@ -34,6 +36,8 @@ heute = dt.date.today()
 ```
 
 ### Eigenes Modul erstellen
+
+![Die Datei rechner.py wird in main.py importiert und liefert addiere(5, 3) gleich 8](../04-materialien/abbildungen/06-eigenes-modul.svg)
 
 Datei `rechner.py`:
 ```python
@@ -53,6 +57,8 @@ print(rechner.addiere(5, 3))
 
 ### `if __name__ == "__main__":`
 
+![Direkt gestartet läuft der if-Block, beim Import wird er übersprungen](../04-materialien/abbildungen/07-name-main.svg)
+
 ```python
 def gruesse(name):
     return f"Hallo {name}!"
@@ -63,6 +69,8 @@ if __name__ == "__main__":
 ```
 
 ### Wichtige Standard-Module
+
+![Sechs wichtige Standard-Module als Schubladen: datetime, random, math, os, json, csv](../04-materialien/abbildungen/08-standard-module.svg)
 
 ```python
 import datetime   # Datum/Zeit
@@ -111,7 +119,11 @@ print(f"Zufallszahl: {zahl}")
 
 Wählen Sie **eines** der folgenden Projekte:
 
+![Das Projekt kombiniert Funktionen, Dateien, Kontrollstrukturen und Module](../04-materialien/abbildungen/18-projekt-bausteine.svg)
+
 ### Projekt 1: Aufgabenverwaltung (Todo-App)
+
+![Ablauf der Todo-App: laden, Menü-Schleife, hinzufügen, anzeigen, beenden](../04-materialien/abbildungen/17-projekt-ablauf.svg)
 
 ```python
 import json

@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" font-family="'Comic Sans MS','Chalkboard SE','Segoe Print',sans-serif">
+  <title>CSV schreiben: writer mit Listen, DictWriter mit Dictionaries und writeheader</title>
+  <defs><marker id="spitze" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#333"/></marker></defs>
+  <rect width="960" height="560" fill="#fffbe9"/>
+  <text x="480" y="48" text-anchor="middle" font-size="30" font-weight="bold" fill="#333">CSV schreiben</text>
+  <text x="480" y="78" text-anchor="middle" font-size="17" fill="#555">Daten in Python → Writer → Zeilen in der Datei</text>
+
+  <g transform="translate(40,120)">
+    <rect width="250" height="150" rx="16" fill="#e3f2fd" stroke="#2a7de1" stroke-width="3"/>
+    <text x="125" y="34" text-anchor="middle" font-size="19" font-weight="bold" fill="#2a7de1">Liste von Listen</text>
+    <g font-family="monospace" font-size="14" fill="#333">
+      <text x="16" y="66">[["Name","Stadt"],</text><text x="16" y="88"> ["Anna","Zürich"],</text><text x="16" y="110"> ["Max","Bern"]]</text>
+    </g>
+  </g>
+  <g transform="translate(40,300)">
+    <rect width="250" height="150" rx="16" fill="#e8f5e9" stroke="#2e9e4f" stroke-width="3"/>
+    <text x="125" y="34" text-anchor="middle" font-size="19" font-weight="bold" fill="#2e9e4f">Liste von Dicts</text>
+    <g font-family="monospace" font-size="14" fill="#333">
+      <text x="16" y="66">[{"name":"Anna",</text><text x="16" y="88">  "stadt":"Zürich"},</text><text x="16" y="110"> {"name":"Max", …}]</text>
+    </g>
+  </g>
+
+  <g stroke="#333" stroke-width="3" fill="none" marker-end="url(#spitze)">
+    <path d="M300,195 L380,195"/><path d="M300,375 L380,375"/><path d="M670,195 L750,195"/><path d="M670,375 L750,375"/>
+  </g>
+
+  <g transform="translate(390,150)">
+    <rect width="270" height="90" rx="14" fill="#fff" stroke="#2a7de1" stroke-width="3"/>
+    <text x="135" y="36" text-anchor="middle" font-size="17" font-family="monospace" font-weight="bold" fill="#2a7de1">csv.writer(f)</text>
+    <text x="135" y="64" text-anchor="middle" font-size="15" font-family="monospace" fill="#333">writer.writerows(daten)</text>
+  </g>
+  <g transform="translate(390,320)">
+    <rect width="270" height="110" rx="14" fill="#fff" stroke="#2e9e4f" stroke-width="3"/>
+    <text x="135" y="32" text-anchor="middle" font-size="16" font-family="monospace" font-weight="bold" fill="#2e9e4f">csv.DictWriter(f,</text>
+    <text x="135" y="52" text-anchor="middle" font-size="16" font-family="monospace" font-weight="bold" fill="#2e9e4f">  fieldnames=[…])</text>
+    <text x="135" y="78" text-anchor="middle" font-size="15" font-family="monospace" fill="#333">writer.writeheader()</text>
+    <text x="135" y="98" text-anchor="middle" font-size="15" font-family="monospace" fill="#333">writer.writerows(daten)</text>
+  </g>
+
+  <g transform="translate(760,150)">
+    <rect width="160" height="300" rx="16" fill="#fff3e0" stroke="#e1872a" stroke-width="3"/>
+    <text x="80" y="34" text-anchor="middle" font-size="19" font-weight="bold" fill="#e1872a">ausgabe.csv</text>
+    <g font-family="monospace" font-size="14" fill="#333">
+      <text x="14" y="80">Name,Stadt</text><text x="14" y="104">Anna,Zürich</text><text x="14" y="128">Max,Bern</text>
+      <text x="14" y="190" font-weight="bold">name,stadt</text><text x="14" y="214">Anna,Zürich</text><text x="14" y="238">Max,Bern</text>
+    </g>
+    <path d="M14,160 H146" stroke="#e1872a" stroke-width="2" stroke-dasharray="6 4"/>
+  </g>
+
+  <text x="480" y="492" text-anchor="middle" font-size="17" fill="#333">Beim <tspan font-family="monospace">DictWriter</tspan> schreibt <tspan font-family="monospace" font-weight="bold">writeheader()</tspan> die Spaltennamen. Beim <tspan font-family="monospace">writer</tspan> steht der Header in den Daten.</text>
+  <text x="480" y="522" text-anchor="middle" font-size="16" fill="#555">Zum Schreiben immer <tspan font-family="monospace">open(..., "w", newline="")</tspan> verwenden.</text>
+</svg>

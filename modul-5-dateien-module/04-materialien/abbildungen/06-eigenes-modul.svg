@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" font-family="'Comic Sans MS','Chalkboard SE','Segoe Print',sans-serif">
+  <title>Eigenes Modul: rechner.py wird in main.py importiert</title>
+  <defs>
+    <marker id="pfeil" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#e1572a"/></marker>
+  </defs>
+  <rect width="960" height="560" fill="#fffbe9"/>
+  <text x="480" y="48" text-anchor="middle" font-size="30" font-weight="bold" fill="#333">Eigenes Modul: Jede .py-Datei ist eines</text>
+  <text x="480" y="78" text-anchor="middle" font-size="17" fill="#555">Zwei Dateien im selben Ordner: die eine bietet an, die andere nutzt.</text>
+
+  <!-- Datei rechner.py -->
+  <g transform="translate(40,120)">
+    <rect width="360" height="300" rx="12" fill="#fff" stroke="#333" stroke-width="3"/>
+    <rect width="360" height="44" rx="12" fill="#e3f2fd" stroke="#333" stroke-width="3"/>
+    <text x="20" y="30" font-size="22" font-weight="bold" font-family="monospace" fill="#2a7de1">rechner.py</text>
+    <text x="340" y="30" text-anchor="end" font-size="15" fill="#555">das Modul</text>
+    <g font-family="monospace" font-size="18" fill="#333">
+      <text x="20" y="90" fill="#777">"""Einfacher Rechner."""</text>
+      <text x="20" y="140"><tspan fill="#2a7de1" font-weight="bold">def</tspan> addiere(a, b):</text>
+      <text x="44" y="168"><tspan fill="#2a7de1" font-weight="bold">return</tspan> a + b</text>
+      <text x="20" y="218">PI = 3.14159</text>
+    </g>
+    <rect x="14" y="108" width="332" height="74" rx="8" fill="none" stroke="#2a7de1" stroke-width="2" stroke-dasharray="6 5"/>
+    <rect x="14" y="196" width="332" height="32" rx="8" fill="none" stroke="#2a7de1" stroke-width="2" stroke-dasharray="6 5"/>
+    <text x="180" y="262" text-anchor="middle" font-size="16" fill="#2a7de1">Angebot: Funktion addiere()</text>
+    <text x="180" y="284" text-anchor="middle" font-size="16" fill="#2a7de1">und Konstante PI</text>
+  </g>
+
+  <!-- Pfeil -->
+  <path d="M410,250 H545" stroke="#e1572a" stroke-width="4" fill="none" stroke-linecap="round" marker-end="url(#pfeil)"/>
+  <rect x="415" y="200" width="125" height="40" rx="20" fill="#fff" stroke="#e1572a" stroke-width="3"/>
+  <text x="477" y="227" text-anchor="middle" font-size="16" font-weight="bold" font-family="monospace" fill="#e1572a">import</text>
+
+  <!-- Datei main.py -->
+  <g transform="translate(560,120)">
+    <rect width="360" height="300" rx="12" fill="#fff" stroke="#333" stroke-width="3"/>
+    <rect width="360" height="44" rx="12" fill="#e8f5e9" stroke="#333" stroke-width="3"/>
+    <text x="20" y="30" font-size="22" font-weight="bold" font-family="monospace" fill="#2e9e4f">main.py</text>
+    <text x="340" y="30" text-anchor="end" font-size="15" fill="#555">das Hauptprogramm</text>
+    <g font-family="monospace" font-size="18" fill="#333">
+      <text x="20" y="90"><tspan fill="#2e9e4f" font-weight="bold">import</tspan> rechner</text>
+      <text x="20" y="140">print(rechner.addiere(5, 3))</text>
+    </g>
+    <text x="20" y="176" font-size="14" fill="#777">Schreibweise: modulname.funktion(...)</text>
+    <rect x="20" y="222" width="320" height="56" rx="10" fill="#1e1e1e"/>
+    <text x="36" y="246" font-size="13" font-family="monospace" fill="#999">Ausgabe:</text>
+    <text x="36" y="268" font-size="20" font-family="monospace" fill="#7ee787">8</text>
+  </g>
+
+  <!-- Merkkasten -->
+  <g transform="translate(40,445)">
+    <rect width="880" height="70" rx="14" fill="#fff3e0" stroke="#e1872a" stroke-width="3"/>
+    <text x="440" y="30" text-anchor="middle" font-size="18" fill="#333">Modulname = Dateiname <tspan font-weight="bold">ohne</tspan> <tspan font-family="monospace">.py</tspan> (also <tspan font-family="monospace">rechner.py</tspan> wird zu <tspan font-family="monospace">rechner</tspan>)</text>
+    <text x="440" y="56" text-anchor="middle" font-size="16" fill="#555">Beide Dateien müssen im selben Ordner liegen, sonst meldet Python <tspan font-family="monospace" fill="#c0392b">ModuleNotFoundError</tspan>.</text>
+  </g>
+</svg>

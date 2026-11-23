@@ -23,6 +23,8 @@ Anna Muster,anna@example.com,079 123 45 67
 Max Meier,max@example.com,078 987 65 43
 ```
 
+![CSV als Tabelle und als Text: erste Zeile ist der Header, Kommas trennen die Spalten](../04-materialien/abbildungen/13-csv-aufbau.svg)
+
 ### CSV-Modul
 
 ```python
@@ -39,6 +41,8 @@ with open("daten.csv", "r") as f:
     for zeile in reader:
         print(zeile)  # Liste: ['Name', 'Email', 'Telefon']
 ```
+
+![reader liefert Listen, DictReader liefert Dictionaries](../04-materialien/abbildungen/14-reader-dictreader.svg)
 
 ### CSV schreiben
 
@@ -57,6 +61,8 @@ with open("ausgabe.csv", "w", newline="") as f:
 ```
 
 **Wichtig:** `newline=""` verhindert Leerzeilen!
+
+![Ohne newline="" entstehen Leerzeilen, mit newline="" nicht](../04-materialien/abbildungen/16-newline-leerzeilen.svg)
 
 ### DictReader & DictWriter
 
@@ -81,6 +87,8 @@ with open("ausgabe.csv", "w", newline="") as f:
     writer.writeheader()
     writer.writerows(daten)
 ```
+
+![writer schreibt Listen, DictWriter schreibt Dictionaries mit writeheader](../04-materialien/abbildungen/15-csv-schreiben.svg)
 
 ## 💻 Live-Coding (20 Min)
 

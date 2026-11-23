@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" font-family="'Comic Sans MS','Chalkboard SE','Segoe Print',sans-serif">
+  <title>Standard-Bibliothek: Sechs wichtige Module wie Schubladen eines Schranks</title>
+  <defs>
+    <g id="griff"><rect x="-30" y="0" width="60" height="12" rx="6" fill="#fff" stroke="#333" stroke-width="3"/></g>
+  </defs>
+  <rect width="960" height="560" fill="#fffbe9"/>
+  <text x="480" y="48" text-anchor="middle" font-size="30" font-weight="bold" fill="#333">Die Standard-Bibliothek: Batterien inklusive</text>
+  <text x="480" y="78" text-anchor="middle" font-size="17" fill="#555">Diese Module sind bei Python dabei. Nichts installieren, einfach <tspan font-family="monospace">import</tspan>.</text>
+
+  <!-- Schrank -->
+  <rect x="40" y="105" width="880" height="395" rx="22" fill="#d7b98e" stroke="#333" stroke-width="3"/>
+
+  <!-- Reihe 1 -->
+  <g transform="translate(65,130)">
+    <rect width="270" height="160" rx="12" fill="#e3f2fd" stroke="#2a7de1" stroke-width="3"/>
+    <text x="135" y="46" text-anchor="middle" font-size="28" font-weight="bold" font-family="monospace" fill="#2a7de1">datetime</text>
+    <text x="135" y="78" text-anchor="middle" font-size="18" font-weight="bold" fill="#333">Datum und Zeit</text>
+    <text x="135" y="106" text-anchor="middle" font-size="16" font-family="monospace" fill="#555">date.today()</text>
+    <use href="#griff" x="135" y="130"/>
+  </g>
+  <g transform="translate(345,130)">
+    <rect width="270" height="160" rx="12" fill="#fff3e0" stroke="#e1872a" stroke-width="3"/>
+    <text x="135" y="46" text-anchor="middle" font-size="28" font-weight="bold" font-family="monospace" fill="#e1872a">random</text>
+    <text x="135" y="78" text-anchor="middle" font-size="18" font-weight="bold" fill="#333">Zufallszahlen</text>
+    <text x="135" y="106" text-anchor="middle" font-size="16" font-family="monospace" fill="#555">randint(1, 100)</text>
+    <use href="#griff" x="135" y="130"/>
+  </g>
+  <g transform="translate(625,130)">
+    <rect width="270" height="160" rx="12" fill="#e8f5e9" stroke="#2e9e4f" stroke-width="3"/>
+    <text x="135" y="46" text-anchor="middle" font-size="28" font-weight="bold" font-family="monospace" fill="#2e9e4f">math</text>
+    <text x="135" y="78" text-anchor="middle" font-size="18" font-weight="bold" fill="#333">Mathematik</text>
+    <text x="135" y="106" text-anchor="middle" font-size="16" font-family="monospace" fill="#555">sqrt(16), pi</text>
+    <use href="#griff" x="135" y="130"/>
+  </g>
+
+  <!-- Reihe 2 -->
+  <g transform="translate(65,315)">
+    <rect width="270" height="160" rx="12" fill="#f3e5f5" stroke="#8e44ad" stroke-width="3"/>
+    <text x="135" y="46" text-anchor="middle" font-size="28" font-weight="bold" font-family="monospace" fill="#8e44ad">os</text>
+    <text x="135" y="78" text-anchor="middle" font-size="18" font-weight="bold" fill="#333">Betriebssystem</text>
+    <text x="135" y="106" text-anchor="middle" font-size="16" font-family="monospace" fill="#555">getcwd(), listdir()</text>
+    <use href="#griff" x="135" y="130"/>
+  </g>
+  <g transform="translate(345,315)">
+    <rect width="270" height="160" rx="12" fill="#ffebee" stroke="#e1572a" stroke-width="3"/>
+    <text x="135" y="46" text-anchor="middle" font-size="28" font-weight="bold" font-family="monospace" fill="#e1572a">json</text>
+    <text x="135" y="78" text-anchor="middle" font-size="18" font-weight="bold" fill="#333">JSON-Dateien</text>
+    <text x="135" y="106" text-anchor="middle" font-size="16" font-family="monospace" fill="#555">load(), dump()</text>
+    <use href="#griff" x="135" y="130"/>
+  </g>
+  <g transform="translate(625,315)">
+    <rect width="270" height="160" rx="12" fill="#e0f7fa" stroke="#00838f" stroke-width="3"/>
+    <text x="135" y="46" text-anchor="middle" font-size="28" font-weight="bold" font-family="monospace" fill="#00838f">csv</text>
+    <text x="135" y="78" text-anchor="middle" font-size="18" font-weight="bold" fill="#333">CSV-Dateien</text>
+    <text x="135" y="106" text-anchor="middle" font-size="16" font-family="monospace" fill="#555">reader(), writer()</text>
+    <use href="#griff" x="135" y="130"/>
+  </g>
+
+  <text x="480" y="535" text-anchor="middle" font-size="17" fill="#555">Und es gibt noch viele weitere Schubladen: Die Übersicht steht in der Python-Dokumentation.</text>
+</svg>

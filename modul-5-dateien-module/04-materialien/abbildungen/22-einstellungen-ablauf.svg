@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" font-family="'Comic Sans MS','Chalkboard SE','Segoe Print',sans-serif">
+  <title>Einstellungen laden: Datei vorhanden oder Standardwerte, ändern, speichern</title>
+  <defs><marker id="spitze" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#333"/></marker></defs>
+  <rect width="960" height="560" fill="#fffbe9"/>
+  <text x="480" y="48" text-anchor="middle" font-size="30" font-weight="bold" fill="#333">Einstellungen laden und speichern</text>
+  <text x="480" y="78" text-anchor="middle" font-size="17" fill="#555">Beim ersten Start gibt es noch keine Datei. Dafür gibt es Standardwerte.</text>
+
+  <g transform="translate(40,130)">
+    <rect width="220" height="100" rx="16" fill="#e3f2fd" stroke="#2a7de1" stroke-width="3"/>
+    <text x="110" y="36" text-anchor="middle" font-size="19" font-weight="bold" fill="#2a7de1">1. Laden</text>
+    <text x="110" y="64" text-anchor="middle" font-size="14" font-family="monospace" fill="#333">json.load(f)</text>
+    <text x="110" y="84" text-anchor="middle" font-size="13" fill="#555">in try / except</text>
+  </g>
+
+  <g stroke="#333" stroke-width="3" fill="none" marker-end="url(#spitze)">
+    <path d="M260,165 L370,115"/><path d="M260,195 L370,255"/>
+  </g>
+
+  <g transform="translate(380,70)">
+    <rect width="260" height="90" rx="14" fill="#e8f5e9" stroke="#2e9e4f" stroke-width="3" transform="translate(0,20)"/>
+    <text x="130" y="55" text-anchor="middle" font-size="17" font-weight="bold" fill="#2e9e4f">Datei vorhanden</text>
+    <text x="130" y="80" text-anchor="middle" font-size="14" fill="#333">gespeicherte Werte nutzen</text>
+  </g>
+  <g transform="translate(380,210)">
+    <rect width="260" height="110" rx="14" fill="#fff3e0" stroke="#e1872a" stroke-width="3"/>
+    <text x="130" y="32" text-anchor="middle" font-size="16" font-weight="bold" fill="#e1872a">FileNotFoundError</text>
+    <text x="130" y="58" text-anchor="middle" font-size="13" fill="#333">Standard-Einstellungen:</text>
+    <text x="130" y="80" text-anchor="middle" font-size="13" font-family="monospace" fill="#333">{"sprache": "de", …}</text>
+  </g>
+
+  <g stroke="#333" stroke-width="3" fill="none" marker-end="url(#spitze)">
+    <path d="M640,125 L730,165"/><path d="M640,265 L730,215"/>
+  </g>
+
+  <g transform="translate(740,130)">
+    <rect width="190" height="100" rx="16" fill="#fff9c4" stroke="#c9a400" stroke-width="3"/>
+    <text x="95" y="36" text-anchor="middle" font-size="19" font-weight="bold" fill="#8a6d00">2. Ändern</text>
+    <text x="95" y="64" text-anchor="middle" font-size="13" font-family="monospace" fill="#333">config["sprache"]</text>
+    <text x="95" y="84" text-anchor="middle" font-size="13" font-family="monospace" fill="#333">  = "en"</text>
+  </g>
+
+  <path d="M835,230 V380" stroke="#333" stroke-width="3" fill="none" marker-end="url(#spitze)"/>
+  <g transform="translate(700,385)">
+    <rect width="230" height="100" rx="16" fill="#f3e5f5" stroke="#8e44ad" stroke-width="3"/>
+    <text x="115" y="36" text-anchor="middle" font-size="19" font-weight="bold" fill="#8e44ad">3. Speichern</text>
+    <text x="115" y="64" text-anchor="middle" font-size="13" font-family="monospace" fill="#333">json.dump(config, f,</text>
+    <text x="115" y="84" text-anchor="middle" font-size="13" font-family="monospace" fill="#333">  indent=2)</text>
+  </g>
+  <path d="M700,435 L560,435" stroke="#333" stroke-width="3" fill="none" marker-end="url(#spitze)"/>
+  <g transform="translate(330,385)">
+    <rect width="230" height="100" rx="16" fill="#fff3e0" stroke="#e1872a" stroke-width="3"/>
+    <text x="115" y="40" text-anchor="middle" font-size="19" font-weight="bold" fill="#e1872a">config.json</text>
+    <text x="115" y="68" text-anchor="middle" font-size="14" fill="#555">liegt jetzt auf der Festplatte</text>
+  </g>
+
+  <text x="40" y="440" font-size="16" fill="#333">Beim nächsten Start:</text>
+  <text x="40" y="466" font-size="16" fill="#333">Datei ist da → Fall «vorhanden».</text>
+  <text x="480" y="526" text-anchor="middle" font-size="16" fill="#555">So merkt sich das Programm die Einstellungen über das Beenden hinaus.</text>
+</svg>

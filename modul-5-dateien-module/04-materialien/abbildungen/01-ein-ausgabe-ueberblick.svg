@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" font-family="'Comic Sans MS','Chalkboard SE','Segoe Print',sans-serif">
+  <title>Ein- und Ausgabe (I/O): Daten fliessen ins Programm hinein und wieder hinaus</title>
+  <defs>
+    <marker id="pfeil" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#333"/>
+    </marker>
+  </defs>
+  <rect width="960" height="540" fill="#fffbe9"/>
+  <text x="480" y="48" text-anchor="middle" font-size="30" font-weight="bold" fill="#333">I/O: Input &amp; Output</text>
+  <text x="480" y="78" text-anchor="middle" font-size="17" fill="#555">Dein Programm lebt nicht allein: Daten kommen rein, Daten gehen raus.</text>
+
+  <!-- Bereichs-Labels -->
+  <text x="150" y="130" text-anchor="middle" font-size="22" font-weight="bold" fill="#2a7de1">INPUT</text>
+  <text x="810" y="130" text-anchor="middle" font-size="22" font-weight="bold" fill="#e1572a">OUTPUT</text>
+
+  <!-- Tastatur -->
+  <g transform="translate(40,140)">
+    <rect width="220" height="90" rx="14" fill="#dbe9fb" stroke="#333" stroke-width="3"/>
+    <g fill="#fff" stroke="#333" stroke-width="2">
+      <rect x="16" y="14" width="26" height="22" rx="4"/><rect x="48" y="14" width="26" height="22" rx="4"/>
+      <rect x="80" y="14" width="26" height="22" rx="4"/><rect x="112" y="14" width="26" height="22" rx="4"/>
+      <rect x="144" y="14" width="26" height="22" rx="4"/><rect x="176" y="14" width="26" height="22" rx="4"/>
+      <rect x="40" y="46" width="140" height="24" rx="4"/>
+    </g>
+    <text x="110" y="116" text-anchor="middle" font-size="18" font-weight="bold" fill="#333">Tastatur</text>
+    <text x="110" y="138" text-anchor="middle" font-size="16" font-family="monospace" fill="#2a7de1">input()</text>
+  </g>
+
+  <!-- Datei links (lesen) -->
+  <g transform="translate(70,340)">
+    <path d="M0,0 H90 L120,30 V130 H0 Z" fill="#fff" stroke="#333" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M90,0 V30 H120" fill="#dbe9fb" stroke="#333" stroke-width="3" stroke-linejoin="round"/>
+    <g stroke="#999" stroke-width="3" stroke-linecap="round"><path d="M15,55 H100"/><path d="M15,75 H100"/><path d="M15,95 H70"/></g>
+    <text x="150" y="60" font-size="18" font-weight="bold" fill="#333">daten.txt</text>
+    <text x="150" y="86" font-size="16" font-family="monospace" fill="#2a7de1">read()</text>
+  </g>
+
+  <!-- Roboter in der Mitte -->
+  <g transform="translate(480,330)">
+    <line x1="0" y1="-150" x2="0" y2="-125" stroke="#333" stroke-width="4"/>
+    <circle cx="0" cy="-155" r="10" fill="#ffcc33" stroke="#333" stroke-width="3"/>
+    <rect x="-85" y="-125" width="170" height="120" rx="26" fill="#ffd966" stroke="#333" stroke-width="4"/>
+    <circle cx="-35" cy="-80" r="20" fill="#fff" stroke="#333" stroke-width="3"/>
+    <circle cx="35" cy="-80" r="20" fill="#fff" stroke="#333" stroke-width="3"/>
+    <circle cx="-30" cy="-78" r="8" fill="#333"/><circle cx="40" cy="-78" r="8" fill="#333"/>
+    <path d="M-35,-38 Q0,-18 35,-38" fill="none" stroke="#333" stroke-width="4" stroke-linecap="round"/>
+    <rect x="-70" y="-2" width="140" height="95" rx="18" fill="#ffe9a6" stroke="#333" stroke-width="4"/>
+    <text x="0" y="40" text-anchor="middle" font-size="22" font-weight="bold" fill="#333">Python</text>
+    <text x="0" y="66" text-anchor="middle" font-size="16" fill="#555">Programm</text>
+    <rect x="-100" y="10" width="26" height="14" rx="7" fill="#ffd966" stroke="#333" stroke-width="3"/>
+    <rect x="74" y="10" width="26" height="14" rx="7" fill="#ffd966" stroke="#333" stroke-width="3"/>
+  </g>
+
+  <!-- Bildschirm -->
+  <g transform="translate(700,140)">
+    <rect width="220" height="110" rx="12" fill="#fde3d9" stroke="#333" stroke-width="3"/>
+    <rect x="12" y="12" width="196" height="86" rx="6" fill="#222"/>
+    <text x="24" y="42" font-size="15" font-family="monospace" fill="#7CFC9A">Hallo Welt!</text>
+    <text x="24" y="66" font-size="15" font-family="monospace" fill="#7CFC9A">Summe: 42 _</text>
+    <rect x="95" y="110" width="30" height="14" fill="#fde3d9" stroke="#333" stroke-width="3"/>
+    <rect x="70" y="124" width="80" height="10" rx="4" fill="#fde3d9" stroke="#333" stroke-width="3"/>
+    <text x="110" y="162" text-anchor="middle" font-size="18" font-weight="bold" fill="#333">Bildschirm</text>
+    <text x="110" y="184" text-anchor="middle" font-size="16" font-family="monospace" fill="#e1572a">print()</text>
+  </g>
+
+  <!-- Datei rechts (schreiben) -->
+  <g transform="translate(700,340)">
+    <path d="M0,0 H90 L120,30 V130 H0 Z" fill="#fff" stroke="#333" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M90,0 V30 H120" fill="#fde3d9" stroke="#333" stroke-width="3" stroke-linejoin="round"/>
+    <g stroke="#999" stroke-width="3" stroke-linecap="round"><path d="M15,55 H100"/><path d="M15,75 H100"/><path d="M15,95 H70"/></g>
+    <text x="140" y="60" font-size="18" font-weight="bold" fill="#333">ergebnis.txt</text>
+    <text x="140" y="86" font-size="16" font-family="monospace" fill="#e1572a">write()</text>
+  </g>
+
+  <!-- Pfeile -->
+  <g stroke="#333" stroke-width="4" fill="none" stroke-linecap="round" marker-end="url(#pfeil)">
+    <path d="M270,185 Q380,185 400,255"/>
+    <path d="M200,380 Q300,380 390,360"/>
+    <path d="M565,300 Q640,220 690,195"/>
+    <path d="M565,370 Q640,400 690,400"/>
+  </g>
+
+  <text x="480" y="520" text-anchor="middle" font-size="17" fill="#555">Dateien sind dein Gedächtnis: Ohne sie ist alles weg, sobald das Programm endet.</text>
+</svg>

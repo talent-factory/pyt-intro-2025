@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" font-family="'Comic Sans MS','Chalkboard SE','Segoe Print',sans-serif">
+  <title>Aufbau einer JSON-Datei: Objekt, String, Zahl und Array</title>
+  <rect width="960" height="560" fill="#fffbe9"/>
+  <text x="480" y="48" text-anchor="middle" font-size="30" font-weight="bold" fill="#333">JSON: So sieht Struktur aus</text>
+  <text x="480" y="78" text-anchor="middle" font-size="17" fill="#555">Eine Datei <tspan font-family="monospace">person.json</tspan> besteht aus wenigen Bausteinen.</text>
+
+  <!-- Code-Karte -->
+  <rect x="30" y="105" width="490" height="345" rx="14" fill="#fff" stroke="#333" stroke-width="3"/>
+  <rect x="30" y="105" width="490" height="38" rx="14" fill="#eceff1" stroke="#333" stroke-width="3"/>
+  <text x="50" y="132" font-size="18" font-weight="bold" font-family="monospace" fill="#333">person.json</text>
+
+  <!-- Hervorhebungen -->
+  <rect x="44" y="170" width="462" height="30" rx="6" fill="#e3f2fd" stroke="#2a7de1" stroke-width="2"/>
+  <rect x="44" y="204" width="462" height="30" rx="6" fill="#fff3e0" stroke="#e1872a" stroke-width="2"/>
+  <rect x="44" y="238" width="462" height="30" rx="6" fill="#e8f5e9" stroke="#2e9e4f" stroke-width="2"/>
+  <rect x="44" y="272" width="462" height="132" rx="6" fill="#f3e5f5" stroke="#8e44ad" stroke-width="2"/>
+
+  <g font-family="monospace" font-size="17" fill="#333">
+    <text x="56" y="162">{</text>
+    <text x="76" y="192">"name": "Anna Muster",</text>
+    <text x="76" y="226">"alter": 25,</text>
+    <text x="76" y="260">"hobbies": ["Lesen", "Sport", "Musik"],</text>
+    <text x="76" y="294">"adresse": {</text>
+    <text x="100" y="328">"strasse": "Hauptstrasse 1",</text>
+    <text x="100" y="362">"stadt": "Zürich"</text>
+    <text x="76" y="396">}</text>
+    <text x="56" y="438">}</text>
+  </g>
+
+  <!-- Erklärungen -->
+  <g stroke-width="3" fill="none" stroke-linecap="round">
+    <path d="M510,185 H545" stroke="#2a7de1"/>
+    <path d="M510,219 H545" stroke="#e1872a"/>
+    <path d="M510,253 H545" stroke="#2e9e4f"/>
+  </g>
+  <g transform="translate(550,160)">
+    <rect width="380" height="52" rx="10" fill="#e3f2fd" stroke="#2a7de1" stroke-width="3"/>
+    <text x="16" y="23" font-size="18" font-weight="bold" fill="#2a7de1">String</text>
+    <text x="16" y="43" font-size="15" fill="#333">Text in doppelten Anführungszeichen</text>
+  </g>
+  <g transform="translate(550,224)">
+    <rect width="380" height="52" rx="10" fill="#fff3e0" stroke="#e1872a" stroke-width="3"/>
+    <text x="16" y="23" font-size="18" font-weight="bold" fill="#e1872a">Zahl</text>
+    <text x="16" y="43" font-size="15" fill="#333">Ohne Anführungszeichen</text>
+  </g>
+  <g transform="translate(550,288)">
+    <rect width="380" height="52" rx="10" fill="#e8f5e9" stroke="#2e9e4f" stroke-width="3"/>
+    <text x="16" y="23" font-size="18" font-weight="bold" fill="#2e9e4f">Array</text>
+    <text x="16" y="43" font-size="15" fill="#333">Liste von Werten in eckigen Klammern</text>
+  </g>
+  <g transform="translate(550,352)">
+    <rect width="380" height="52" rx="10" fill="#f3e5f5" stroke="#8e44ad" stroke-width="3"/>
+    <text x="16" y="23" font-size="18" font-weight="bold" fill="#8e44ad">Objekt</text>
+    <text x="16" y="43" font-size="15" fill="#333">Schlüssel-Wert-Paare in geschweiften Klammern</text>
+  </g>
+  <path d="M510,378 H545" stroke="#8e44ad" stroke-width="3" fill="none" stroke-linecap="round"/>
+
+  <text x="480" y="490" text-anchor="middle" font-size="17" fill="#333">Das ganze Dokument ist selbst ein Objekt: <tspan font-family="monospace">{ ... }</tspan> um alles.</text>
+  <text x="480" y="525" text-anchor="middle" font-size="17" fill="#c0392b">Achtung: Schlüssel brauchen immer "doppelte" Anführungszeichen, 'einfache' sind ungültig.</text>
+</svg>
