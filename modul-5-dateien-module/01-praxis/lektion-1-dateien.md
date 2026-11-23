@@ -44,6 +44,8 @@ with open("text.txt", "r") as datei:
 
 ### Lesen
 
+![Drei Wege zum Lesen: read liefert einen String, die for-Schleife einzelne Zeilen, readlines eine Liste](../04-materialien/abbildungen/19-lese-methoden.svg)
+
 ```python
 # Alles lesen
 with open("datei.txt", "r") as f:
@@ -60,6 +62,8 @@ with open("datei.txt", "r") as f:
 ```
 
 ### Schreiben
+
+![write setzt keinen Zeilenumbruch, strip entfernt ihn beim Lesen](../04-materialien/abbildungen/20-zeilenumbruch.svg)
 
 ```python
 # Überschreiben
