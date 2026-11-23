@@ -58,6 +58,8 @@ with open("person.json", "w") as f:
 json_string = json.dumps(person, indent=2)
 ```
 
+![indent macht die Datei lesbar, ensure_ascii=False erhält Umlaute](../04-materialien/abbildungen/21-json-formatierung.svg)
+
 ### JSON → Python (Deserialisierung)
 
 ```python
@@ -88,6 +90,8 @@ person = json.loads(json_string)
 ## 💻 Live-Coding (20 Min)
 
 ### Beispiel 1: Einstellungen speichern
+
+![Einstellungen laden: Datei vorhanden oder Standardwerte, dann ändern und speichern](../04-materialien/abbildungen/22-einstellungen-ablauf.svg)
 
 ```python
 import json
