@@ -8,7 +8,7 @@ Zusatzmaterialien und Referenzen für Modul 5.
 2. [Cheatsheet: CSV](./cheatsheet-csv.md)
 3. [Cheatsheet: JSON](./cheatsheet-json.md)
 4. [Häufige Fehler](./haeufige-fehler.md)
-5. [Abbildungen](./abbildungen/) (Illustrationen zu Ein-/Ausgabe, Datei-Modi und `with`)
+5. [Abbildungen](./abbildungen/) (Illustrationen zu Ein-/Ausgabe, Datei-Modi, `with` und Modulen)
 
 ## 💡 Verwendung
 
