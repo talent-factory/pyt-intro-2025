@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" font-family="'Comic Sans MS','Chalkboard SE','Segoe Print',sans-serif">
+  <title>CSV-Aufbau: dieselben Daten als Tabelle und als Text mit Kommas</title>
+  <defs><marker id="spitze" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#333"/></marker></defs>
+  <rect width="960" height="560" fill="#fffbe9"/>
+  <text x="480" y="48" text-anchor="middle" font-size="30" font-weight="bold" fill="#333">Was ist eine CSV-Datei?</text>
+  <text x="480" y="78" text-anchor="middle" font-size="17" fill="#555">Eine Tabelle als reiner Text: eine Zeile pro Datensatz, Werte durch Kommas getrennt.</text>
+
+  <g transform="translate(40,130)">
+    <text x="190" y="0" text-anchor="middle" font-size="20" font-weight="bold" fill="#2a7de1">So sehen wir es (Tabelle)</text>
+    <g font-size="16" text-anchor="middle" fill="#333">
+      <rect x="0" y="20" width="420" height="40" fill="#e3f2fd" stroke="#2a7de1" stroke-width="2"/>
+      <rect x="0" y="60" width="420" height="40" fill="#fff" stroke="#333" stroke-width="2"/>
+      <rect x="0" y="100" width="420" height="40" fill="#fff" stroke="#333" stroke-width="2"/>
+      <path d="M110,20 V140 M280,20 V140" stroke="#333" stroke-width="2"/>
+      <g font-weight="bold"><text x="55" y="46">Name</text><text x="195" y="46">Email</text><text x="350" y="46">Telefon</text></g>
+      <text x="55" y="86">Anna Muster</text><text x="195" y="86">anna@example.com</text><text x="350" y="86">079 123 45 67</text>
+      <text x="55" y="126">Max Meier</text><text x="195" y="126">max@example.com</text><text x="350" y="126">078 987 65 43</text>
+    </g>
+  </g>
+
+  <path d="M475,230 L525,230" stroke="#333" stroke-width="3" fill="none" marker-end="url(#spitze)"/>
+
+  <g transform="translate(540,130)">
+    <text x="190" y="0" text-anchor="middle" font-size="20" font-weight="bold" fill="#e1872a">So steht es in der Datei</text>
+    <rect x="0" y="20" width="380" height="120" rx="10" fill="#fff3e0" stroke="#e1872a" stroke-width="3"/>
+    <g font-family="monospace" font-size="13" fill="#333">
+      <text x="14" y="52" font-weight="bold">Name,Email,Telefon</text>
+      <text x="14" y="86">Anna Muster,anna@example.com,079 123 45 67</text>
+      <text x="14" y="120">Max Meier,max@example.com,078 987 65 43</text>
+    </g>
+  </g>
+
+  <g transform="translate(40,330)" font-size="17" fill="#333">
+    <rect width="880" height="150" rx="16" fill="#fff" stroke="#333" stroke-width="2"/>
+    <text x="24" y="38" font-weight="bold">Die Regeln:</text>
+    <text x="24" y="70">1. Erste Zeile = <tspan font-weight="bold">Header</tspan> (die Spaltennamen)</text>
+    <text x="24" y="100">2. Jede weitere Zeile = ein <tspan font-weight="bold">Datensatz</tspan></text>
+    <text x="24" y="130">3. Das <tspan font-weight="bold">Komma</tspan> trennt die Spalten (CSV = Comma-Separated Values)</text>
+  </g>
+  <text x="480" y="522" text-anchor="middle" font-size="16" fill="#555">Alle Werte sind in der Datei Text, Zahlen müssen wir selbst mit <tspan font-family="monospace">int()</tspan> oder <tspan font-family="monospace">float()</tspan> umwandeln.</text>
+</svg>
