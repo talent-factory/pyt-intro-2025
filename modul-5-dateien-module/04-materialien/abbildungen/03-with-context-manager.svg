@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" font-family="'Comic Sans MS','Chalkboard SE','Segoe Print',sans-serif">
+  <title>Der with-Block schliesst die Datei automatisch</title>
+  <rect width="960" height="560" fill="#fffbe9"/>
+  <text x="480" y="48" text-anchor="middle" font-size="30" font-weight="bold" fill="#333">with open(...): Die Schublade schliesst sich selbst</text>
+
+  <!-- Links: ohne with -->
+  <g transform="translate(30,85)">
+    <rect width="430" height="430" rx="20" fill="#ffebee" stroke="#e1572a" stroke-width="3"/>
+    <text x="215" y="38" text-anchor="middle" font-size="22" font-weight="bold" fill="#c0392b">✗ Ohne with</text>
+    <rect x="25" y="55" width="380" height="95" rx="10" fill="#2b2b2b"/>
+    <text x="40" y="85" font-size="16" font-family="monospace" fill="#fff">datei = open("a.txt")</text>
+    <text x="40" y="110" font-size="16" font-family="monospace" fill="#fff">inhalt = datei.read()</text>
+    <text x="40" y="135" font-size="16" font-family="monospace" fill="#ff8a80">... close() vergessen!</text>
+    <!-- Offene Schublade -->
+    <g transform="translate(70,185)">
+      <rect x="0" y="0" width="200" height="150" rx="8" fill="#b0bec5" stroke="#333" stroke-width="3"/>
+      <rect x="15" y="105" width="170" height="35" rx="6" fill="#cfd8dc" stroke="#333" stroke-width="3"/>
+      <circle cx="100" cy="122" r="7" fill="#fff" stroke="#333" stroke-width="3"/>
+      <!-- offene Lade -->
+      <path d="M15,50 L185,50 L205,95 L-5,95 Z" fill="#eceff1" stroke="#333" stroke-width="3" stroke-linejoin="round"/>
+      <rect x="40" y="25" width="55" height="40" fill="#fff" stroke="#333" stroke-width="2" transform="rotate(-8 60 45)"/>
+      <rect x="105" y="20" width="55" height="45" fill="#fff" stroke="#333" stroke-width="2" transform="rotate(6 130 40)"/>
+    </g>
+    <!-- Wütende Wolke -->
+    <g transform="translate(330,250)">
+      <path d="M-40,10 Q-55,-15 -25,-18 Q-20,-45 10,-35 Q40,-45 45,-15 Q70,-5 50,15 Z" fill="#fff" stroke="#333" stroke-width="3" stroke-linejoin="round"/>
+      <text x="2" y="2" text-anchor="middle" font-size="22" font-weight="bold" fill="#c0392b">!?#</text>
+    </g>
+    <text x="215" y="375" text-anchor="middle" font-size="16" fill="#333">Bei einem Fehler bleibt die Datei offen:</text>
+    <text x="215" y="398" text-anchor="middle" font-size="16" fill="#333">gesperrt, unvollständig, Daten gehen verloren.</text>
+  </g>
+
+  <!-- Rechts: mit with -->
+  <g transform="translate(500,85)">
+    <rect width="430" height="430" rx="20" fill="#e8f5e9" stroke="#2e9e4f" stroke-width="3"/>
+    <text x="215" y="38" text-anchor="middle" font-size="22" font-weight="bold" fill="#2e9e4f">✓ Mit with</text>
+    <rect x="25" y="55" width="380" height="95" rx="10" fill="#2b2b2b"/>
+    <text x="40" y="85" font-size="16" font-family="monospace" fill="#fff">with open("a.txt") as datei:</text>
+    <text x="40" y="110" font-size="16" font-family="monospace" fill="#fff">    inhalt = datei.read()</text>
+    <text x="40" y="135" font-size="16" font-family="monospace" fill="#7CFC9A"># hier ist sie schon zu</text>
+    <!-- Geschlossene Schublade -->
+    <g transform="translate(70,185)">
+      <rect x="0" y="0" width="200" height="150" rx="8" fill="#b0bec5" stroke="#333" stroke-width="3"/>
+      <rect x="15" y="15" width="170" height="55" rx="6" fill="#cfd8dc" stroke="#333" stroke-width="3"/>
+      <circle cx="100" cy="42" r="7" fill="#fff" stroke="#333" stroke-width="3"/>
+      <rect x="15" y="85" width="170" height="55" rx="6" fill="#cfd8dc" stroke="#333" stroke-width="3"/>
+      <circle cx="100" cy="112" r="7" fill="#fff" stroke="#333" stroke-width="3"/>
+    </g>
+    <!-- Haken + Sterne -->
+    <g transform="translate(330,250)">
+      <circle r="38" fill="#fff" stroke="#2e9e4f" stroke-width="4"/>
+      <path d="M-18,2 L-5,16 L20,-14" fill="none" stroke="#2e9e4f" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <g fill="#ffcc33" stroke="#333" stroke-width="2"><path d="M290,200 l4,9 10,1 -8,6 3,10 -9,-5 -9,5 3,-10 -8,-6 10,-1z"/><path d="M370,200 l3,7 8,1 -6,5 2,8 -7,-4 -7,4 2,-8 -6,-5 8,-1z"/></g>
+    <text x="215" y="375" text-anchor="middle" font-size="16" fill="#333">Python räumt hinter dir auf: auch bei Fehlern!</text>
+    <text x="215" y="398" text-anchor="middle" font-size="16" fill="#333">Immer die Schublade zu: Best Practice.</text>
+  </g>
+
+  <text x="480" y="540" text-anchor="middle" font-size="17" fill="#555">Merksatz: Datei öffnen? Immer mit with.</text>
+</svg>

@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" font-family="'Comic Sans MS','Chalkboard SE','Segoe Print',sans-serif">
+  <title>Die drei Datei-Modi: r (lesen), w (überschreiben), a (anhängen)</title>
+  <defs>
+    <g id="notiz">
+      <rect width="230" height="170" rx="10" fill="#fff" stroke="#333" stroke-width="3"/>
+      <rect width="230" height="28" rx="10" fill="#cfd8dc" stroke="#333" stroke-width="3"/>
+      <g fill="#fff" stroke="#333" stroke-width="2"><circle cx="40" cy="6" r="5"/><circle cx="90" cy="6" r="5"/><circle cx="140" cy="6" r="5"/><circle cx="190" cy="6" r="5"/></g>
+    </g>
+  </defs>
+  <rect width="960" height="560" fill="#fffbe9"/>
+  <text x="480" y="48" text-anchor="middle" font-size="30" font-weight="bold" fill="#333">open(): Welcher Modus darf es sein?</text>
+  <text x="480" y="78" text-anchor="middle" font-size="17" fill="#555">Stell dir die Datei als Notizbuch vor.</text>
+
+  <!-- Modus r -->
+  <g transform="translate(30,120)">
+    <rect x="-10" y="-10" width="290" height="400" rx="20" fill="#e3f2fd" stroke="#2a7de1" stroke-width="3"/>
+    <text x="135" y="25" text-anchor="middle" font-size="30" font-weight="bold" font-family="monospace" fill="#2a7de1">"r"</text>
+    <text x="135" y="52" text-anchor="middle" font-size="19" font-weight="bold" fill="#333">read: nur lesen</text>
+    <g transform="translate(20,75)">
+      <use href="#notiz"/>
+      <g stroke="#555" stroke-width="3" stroke-linecap="round"><path d="M20,55 H200"/><path d="M20,80 H200"/><path d="M20,105 H160"/><path d="M20,130 H190"/></g>
+    </g>
+    <!-- Auge -->
+    <g transform="translate(205,215) scale(0.9)">
+      <path d="M-45,0 Q0,-35 45,0 Q0,35 -45,0 Z" fill="#fff" stroke="#333" stroke-width="3"/>
+      <circle cx="0" cy="0" r="14" fill="#2a7de1" stroke="#333" stroke-width="3"/><circle cx="0" cy="0" r="6" fill="#333"/>
+    </g>
+    <text x="135" y="300" text-anchor="middle" font-size="16" fill="#333">Inhalt bleibt unverändert.</text>
+    <text x="135" y="324" text-anchor="middle" font-size="16" fill="#c0392b">Datei fehlt? FileNotFoundError!</text>
+    <text x="135" y="360" text-anchor="middle" font-size="15" font-family="monospace" fill="#555">open("notiz.txt", "r")</text>
+  </g>
+
+  <!-- Modus w -->
+  <g transform="translate(345,120)">
+    <rect x="-10" y="-10" width="290" height="400" rx="20" fill="#ffebee" stroke="#e1572a" stroke-width="3"/>
+    <text x="135" y="25" text-anchor="middle" font-size="30" font-weight="bold" font-family="monospace" fill="#e1572a">"w"</text>
+    <text x="135" y="52" text-anchor="middle" font-size="19" font-weight="bold" fill="#333">write: überschreiben</text>
+    <g transform="translate(20,75)">
+      <use href="#notiz"/>
+      <g stroke="#ccc" stroke-width="3" stroke-linecap="round" stroke-dasharray="6 8"><path d="M20,55 H200"/><path d="M20,80 H200"/><path d="M20,105 H160"/></g>
+      <path d="M20,130 H120" stroke="#333" stroke-width="3" stroke-linecap="round"/>
+    </g>
+    <!-- Radiergummi -->
+    <g transform="translate(150,170) rotate(-20)">
+      <rect width="70" height="32" rx="6" fill="#ff9aa2" stroke="#333" stroke-width="3"/>
+      <rect x="40" width="30" height="32" rx="6" fill="#fff" stroke="#333" stroke-width="3"/>
+    </g>
+    <text x="135" y="300" text-anchor="middle" font-size="16" fill="#333">Alles Alte wird gelöscht!</text>
+    <text x="135" y="324" text-anchor="middle" font-size="16" fill="#c0392b">Datei fehlt? Wird neu angelegt.</text>
+    <text x="135" y="360" text-anchor="middle" font-size="15" font-family="monospace" fill="#555">open("notiz.txt", "w")</text>
+  </g>
+
+  <!-- Modus a -->
+  <g transform="translate(660,120)">
+    <rect x="-10" y="-10" width="290" height="400" rx="20" fill="#e8f5e9" stroke="#2e9e4f" stroke-width="3"/>
+    <text x="135" y="25" text-anchor="middle" font-size="30" font-weight="bold" font-family="monospace" fill="#2e9e4f">"a"</text>
+    <text x="135" y="52" text-anchor="middle" font-size="19" font-weight="bold" fill="#333">append: anhängen</text>
+    <g transform="translate(20,75)">
+      <use href="#notiz"/>
+      <g stroke="#555" stroke-width="3" stroke-linecap="round"><path d="M20,55 H200"/><path d="M20,80 H200"/><path d="M20,105 H160"/></g>
+      <path d="M20,130 H130" stroke="#2e9e4f" stroke-width="4" stroke-linecap="round"/>
+    </g>
+    <!-- Stift -->
+    <g transform="translate(150,185) rotate(35)">
+      <rect width="80" height="16" rx="3" fill="#ffd966" stroke="#333" stroke-width="3"/>
+      <path d="M0,0 L-18,8 L0,16 Z" fill="#f5deb3" stroke="#333" stroke-width="3" stroke-linejoin="round"/>
+      <path d="M-18,8 L-12,8" stroke="#333" stroke-width="4"/>
+    </g>
+    <text x="135" y="300" text-anchor="middle" font-size="16" fill="#333">Neues kommt ans Ende.</text>
+    <text x="135" y="324" text-anchor="middle" font-size="16" fill="#2e9e4f">Altes bleibt erhalten.</text>
+    <text x="135" y="360" text-anchor="middle" font-size="15" font-family="monospace" fill="#555">open("notiz.txt", "a")</text>
+  </g>
+
+  <text x="480" y="535" text-anchor="middle" font-size="17" fill="#555">Achtung Falle: "w" auf eine wichtige Datei = Inhalt weg, ohne Rückfrage!</text>
+</svg>

@@ -12,6 +12,8 @@
 
 ## 📖 Theorie (15 Min)
 
+![Ein- und Ausgabe: Ein Python-Roboter erhält Daten von Tastatur und Datei und gibt sie auf den Bildschirm und in eine Datei aus](../04-materialien/abbildungen/01-ein-ausgabe-ueberblick.svg)
+
 ### Dateien öffnen
 
 ```python
@@ -28,6 +30,10 @@ datei.close()  # WICHTIG!
 - `"a"` - Anhängen (append) - Fügt am Ende hinzu
 - `"r+"` - Lesen und Schreiben
 
+![Die Modi r, w und a als Schultafel: Nur Gucken, Alles NEU, Unten dran](../04-materialien/abbildungen/04-read-write-append-tafel.svg)
+
+![Die drei Datei-Modi als Notizbuch: r liest, w überschreibt, a hängt an](../04-materialien/abbildungen/02-datei-modi.svg)
+
 ### Context Manager (Best Practice!)
 
 ```python
@@ -35,6 +41,8 @@ with open("text.txt", "r") as datei:
     inhalt = datei.read()
 # Datei wird automatisch geschlossen!
 ```
+
+![Ohne with bleibt die Schublade offen, mit with schliesst sie sich selbst](../04-materialien/abbildungen/03-with-context-manager.svg)
 
 ### Lesen
 
